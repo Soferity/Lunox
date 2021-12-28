@@ -18,7 +18,6 @@ jobs:
             GitHub
         ]
         solution: [
-            src/Lunox.Core.sln,
             src/Lunox.sln
         ]
 
