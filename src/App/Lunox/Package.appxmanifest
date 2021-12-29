@@ -7,20 +7,20 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="5a218344-a8d9-4cf6-bfd9-edc2e3527e08"
-    Publisher="CN=Taiizor"
+    Name="aabf5f1e-03c5-49ba-b43e-fc4c4284affa"
+    Publisher="CN=Soferity"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="5a218344-a8d9-4cf6-bfd9-edc2e3527e08" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="aabf5f1e-03c5-49ba-b43e-fc4c4284affa" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>Lunox</DisplayName>
-    <PublisherDisplayName>Taiizor</PublisherDisplayName>
+    <PublisherDisplayName>Soferity</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
   <Dependencies>
-    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
   </Dependencies>
 
   <Resources>
@@ -39,8 +39,19 @@
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape"/>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscapeFlipped"/>
+          <uap:Rotation Preference="portraitFlipped"/></uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>
 
+  <Capabilities>
+    <uap:Capability Name="picturesLibrary"/>
+    <uap:Capability Name="videosLibrary"/>
+    <Capability Name="internetClient"/>
+    <uap:Capability Name="musicLibrary"/>
+  </Capabilities>
 </Package>

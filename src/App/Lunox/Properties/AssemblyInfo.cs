@@ -1,29 +1,30 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+using System.Resources;
 using System.Runtime.InteropServices;
 
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
+// Bir bütünleştirilmiş koda ilişkin Genel Bilgiler aşağıdaki öznitelikler kümesiyle
+// denetlenir. Bütünleştirilmiş kod ile ilişkili bilgileri değiştirmek için
+// bu öznitelik değerlerini değiştirin.
 [assembly: AssemblyTitle("Lunox")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyDescription("Best with fast and convenient file conversions.")]
+[assembly: AssemblyConfiguration("Release")]
+[assembly: AssemblyCompany("Soferity LLC")]
 [assembly: AssemblyProduct("Lunox")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright © 2021 Soferity LLC")]
+[assembly: AssemblyTrademark("Lunox")]
 [assembly: AssemblyCulture("")]
 
-// Version information for an assembly consists of the following four values:
+// Bir derlemenin sürüm bilgileri aşağıdaki dört değerden oluşur:
 //
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
+//      Ana Sürüm
+//      İkincil Sürüm 
+//      Yapı Numarası
+//      Düzeltme
 //
-// You can specify all the values or you can default the Build and Revision Numbers 
-// by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+// Tüm değerleri belirtebilir veya varsayılan Derleme ve Düzeltme Numaralarını kullanmak için 
+// aşağıda gösterildiği gibi '*' kullanabilirsiniz:
+// [derleme: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("1.0.0.1")]
+[assembly: AssemblyFileVersion("1.0.0.1")]
 [assembly: ComVisible(false)]
+[assembly: NeutralResourcesLanguage("en-GB")] 
