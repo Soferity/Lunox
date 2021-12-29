@@ -184,6 +184,7 @@
     <PRIResource Include="Strings\en-GB\Resources.resw" />
     <PRIResource Include="Strings\tr-TR\Resources.resw" />
   </ItemGroup>
+  <Import Project="..\Core\Lunox.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
