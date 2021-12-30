@@ -1,1 +1,1 @@
-MainPackage=G:\MyProject\Soferity\Lunox\Pro\Lunox\src\App\bin\x64\Debug\Lunox_1.0.0.0_x64_Debug.msix
+MainPackage=G:\MyProject\Soferity\Lunox\Pro\Lunox\src\App\bin\x64\Release\Lunox_1.0.0.0_x64.msix

@@ -10,9 +10,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Core\Method\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\Reference\" />
     <Folder Include="$(MSBuildThisFileDirectory)Core\Value\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Enum\RecognitionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Enum\MatrixType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Enum\DocumentType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Enum\VideoType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Enum\AudioType.cs" />
