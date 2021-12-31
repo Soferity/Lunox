@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="Lunox.Pages.GitHubPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Lunox.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
+    <Page.Background>
+        <ImageBrush ImageSource="ms-appx:///Assets/Pages/GitHub/Back.gif" Stretch="UniformToFill"/>
+    </Page.Background>
+
+    <muxc:WebView2 x:Name="WebView" Source="https://github.com/Taiizor/ReaLTaiizor" Width="Auto" Height="Auto" Opacity="0" NavigationCompleted="WebView_NavigationCompleted" />
+</Page>

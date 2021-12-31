@@ -18,6 +18,8 @@
         CR2,
         RW2,
         SRW,
-        ORF
+        ORF,
+        PJP,
+        PJPEG
     }
 }

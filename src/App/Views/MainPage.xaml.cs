@@ -43,7 +43,6 @@ namespace Lunox.Views
             {
                 ActivatePage = ActivateControl;
                 ContentFrame.Navigate(Type.GetType(ActivatePage));
-                SendDialog("Changed", ActivatePage);
             }
         }
 

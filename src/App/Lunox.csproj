@@ -133,6 +133,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\GitHubPage.xaml.cs">
+      <DependentUpon>GitHubPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\NotFoundPage.xaml.cs">
       <DependentUpon>NotFoundPage.xaml</DependentUpon>
     </Compile>
@@ -150,6 +153,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Pages\GitHub\Back.gif" />
     <Content Include="Assets\Pages\NotFound\404.png" />
     <Content Include="Assets\Pages\NotFound\Back.jpg" />
     <Content Include="Properties\Default.rd.xml" />
@@ -166,6 +170,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Pages\GitHubPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\NotFoundPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

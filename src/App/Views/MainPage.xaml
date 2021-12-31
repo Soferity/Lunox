@@ -9,12 +9,12 @@
     x:Class="Lunox.Views.MainPage"
     mc:Ignorable="d"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
-
+    
     <muxc:NavigationView x:Name="NavigationView"
                          IsSettingsVisible="True"
                          IsBackButtonVisible="Collapsed"
                          IsBackEnabled="True"
-                         IsTabStop="False"
+                         IsTabStop="True"
                          IsPaneOpen="True"
                          IsPaneToggleButtonVisible="True"
                          SelectionChanged="NavigationView_SelectionChanged"
@@ -23,14 +23,10 @@
                          PaneTitle=""
                          PaneDisplayMode="Left"
                          ExpandedModeThresholdWidth="500"
-                         SelectionFollowsFocus="Enabled">
+                         CompactModeThresholdWidth="500"
+                         SelectionFollowsFocus="Disabled">
 
         <muxc:NavigationView.MenuItems>
-
-            <muxc:NavigationViewItem Icon="Play" Content="Menu Item1" Tag="SamplePage1" />
-            <muxc:NavigationViewItem Icon="Save" Content="Menu Item2" Tag="SamplePage2" />
-            <muxc:NavigationViewItem Icon="Refresh" Content="Menu Item3" Tag="SamplePage3" />
-            <muxc:NavigationViewItem Icon="Download" Content="Menu Item4" Tag="SamplePage4" />
 
             <muxc:NavigationViewItem Content="Welcome" Tag="Welcome">
                 <muxc:NavigationViewItem.Icon>
