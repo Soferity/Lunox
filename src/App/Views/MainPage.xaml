@@ -26,8 +26,13 @@
                          SelectionFollowsFocus="Enabled">
 
         <muxc:NavigationView.MenuItems>
-            
-            <muxc:NavigationViewItem Content="Welcome" Tag="Welcome" x:Name="SamplePage1Item">
+
+            <muxc:NavigationViewItem Icon="Play" Content="Menu Item1" Tag="SamplePage1" />
+            <muxc:NavigationViewItem Icon="Save" Content="Menu Item2" Tag="SamplePage2" />
+            <muxc:NavigationViewItem Icon="Refresh" Content="Menu Item3" Tag="SamplePage3" />
+            <muxc:NavigationViewItem Icon="Download" Content="Menu Item4" Tag="SamplePage4" />
+
+            <muxc:NavigationViewItem Content="Welcome" Tag="Welcome">
                 <muxc:NavigationViewItem.Icon>
                     <iconPacks:PathIconFontAwesome Kind="ScrollSolid" />
                 </muxc:NavigationViewItem.Icon>
@@ -35,13 +40,13 @@
             
             <muxc:NavigationViewItemHeader Content="Actions"/>
             
-            <muxc:NavigationViewItem Content="Menu Item2" Tag="SamplePage2" x:Name="SamplePage2Item" SelectsOnInvoked="True">
+            <muxc:NavigationViewItem Content="Menu Item2" Tag="SamplePage2" SelectsOnInvoked="True">
                 <muxc:NavigationViewItem.Icon>
                     <SymbolIcon Symbol="Save" />
                 </muxc:NavigationViewItem.Icon>
             </muxc:NavigationViewItem>
             
-            <muxc:NavigationViewItem Content="Menu Item3" Tag="SamplePage3" x:Name="SamplePage3Item">
+            <muxc:NavigationViewItem Content="Menu Item3" Tag="SamplePage3">
                 <muxc:NavigationViewItem.Icon>
                     <SymbolIcon Symbol="Refresh" />
                 </muxc:NavigationViewItem.Icon>

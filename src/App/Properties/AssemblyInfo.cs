@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("Release")]
 [assembly: AssemblyCompany("Soferity LLC")]
 [assembly: AssemblyProduct("Lunox")]
-[assembly: AssemblyCopyright("Copyright © 2021 Soferity LLC")]
+[assembly: AssemblyCopyright("Copyright © 2022 Soferity LLC")]
 [assembly: AssemblyTrademark("Lunox")]
 [assembly: AssemblyCulture("")]
 
