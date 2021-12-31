@@ -1,5 +1,0 @@
-MainPackage=G:\MyProject\Soferity\Lunox\Pro\Lunox\src\App\bin\x64\Release\Lunox_1.0.1.0_x64.msix
-ResourcePack=G:\MyProject\Soferity\Lunox\Pro\Lunox\src\App\bin\x64\Release\Lunox_1.0.1.0_language-de.msix
-ResourcePack=G:\MyProject\Soferity\Lunox\Pro\Lunox\src\App\bin\x64\Release\Lunox_1.0.1.0_language-es.msix
-ResourcePack=G:\MyProject\Soferity\Lunox\Pro\Lunox\src\App\bin\x64\Release\Lunox_1.0.1.0_language-fr.msix
-ResourcePack=G:\MyProject\Soferity\Lunox\Pro\Lunox\src\App\bin\x64\Release\Lunox_1.0.1.0_language-tr.msix
