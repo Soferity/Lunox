@@ -133,6 +133,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\DiscordPage.xaml.cs">
+      <DependentUpon>DiscordPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\GitHubPage.xaml.cs">
       <DependentUpon>GitHubPage.xaml</DependentUpon>
     </Compile>
@@ -153,6 +156,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Pages\Discord\Back.gif" />
     <Content Include="Assets\Pages\GitHub\Back.gif" />
     <Content Include="Assets\Pages\NotFound\404.png" />
     <Content Include="Assets\Pages\NotFound\Back.jpg" />
@@ -170,6 +174,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Pages\DiscordPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\GitHubPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
