@@ -1,53 +1,69 @@
-﻿using Lunox.Core.Enum;
-using Lunox.Pages;
-using System;
-using System.Collections.ObjectModel;
-using Windows.UI.Xaml;
+﻿using System;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Markup;
-using Windows.UI.Xaml.Navigation;
-
-// Boş Sayfa öğe şablonu https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x41f adresinde açıklanmaktadır
 
 namespace Lunox.Views
 {
-    /// <summary>
-    /// Kendi başına kullanılabilecek ya da bir Çerçeve içine taşınabilecek boş bir sayfa.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
+        private string ActivatePage = null;
+        private string ActivateControl = null;
+
+        private readonly string PagePrefix = "Lunox.Pages.";
+        private readonly string PageSuffix = "Page";
+
         public MainPage()
         {
             InitializeComponent();
-
-            _ = new ContentDialog
-            {
-                Title = "TEST",
-                Content = $"{ImageType.ARW}",
-                CloseButtonText = "Close",
-                IsPrimaryButtonEnabled = true,
-                IsSecondaryButtonEnabled = true
-            }.ShowAsync();
-
         }
 
         private void NavigationView_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
         {
             if (args.IsSettingsSelected)
             {
-                contentFrame.Navigate(typeof(SampleSettingsPage));
+                ActivateControl = $"{PagePrefix}Settings{PageSuffix}";
             }
             else
             {
-                var selectedItem = (Microsoft.UI.Xaml.Controls.NavigationViewItem)args.SelectedItem;
-                if (selectedItem != null)
+                Microsoft.UI.Xaml.Controls.NavigationViewItem SelectedItem = (Microsoft.UI.Xaml.Controls.NavigationViewItem)args.SelectedItem;
+
+                string ItemTag = $"{SelectedItem.Tag}";
+                sender.Header = $"Activate Page {ItemTag}";
+
+                string PageName = $"{PagePrefix}{ItemTag}{PageSuffix}";
+
+                if (Type.GetType(PageName) == null)
                 {
-                    string selectedItemTag = ((string)selectedItem.Tag);
-                    sender.Header = "Sample Page " + selectedItemTag.Substring(selectedItemTag.Length - 1);
-                    string pageName = "Lunox.Pages." + selectedItemTag;
-                    Type pageType = Type.GetType(pageName);
-                    //contentFrame.Navigate(pageType);
+                    PageName = $"{PagePrefix}NotFound{PageSuffix}";
                 }
+
+                ActivateControl = PageName;
+            }
+
+            if (ActivatePage != ActivateControl)
+            {
+                ActivatePage = ActivateControl;
+                ContentFrame.Navigate(Type.GetType(ActivatePage));
+                SendDialog("Changed", ActivatePage);
+            }
+        }
+
+        private void SendDialog(string Title = "Title", string Content = "Content")
+        {
+            try
+            {
+                _ = new ContentDialog
+                {
+                    Title = Title,
+                    Content = Content,
+                    CloseButtonText = "Çıkış",
+                    PrimaryButtonText = "Öncelik",
+                    IsPrimaryButtonEnabled = true,
+                    IsSecondaryButtonEnabled = true
+                }.ShowAsync();
+            }
+            catch
+            {
+                //
             }
         }
     }

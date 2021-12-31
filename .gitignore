@@ -19,6 +19,9 @@ bld/
 [Bb]in/
 [Oo]bj/
 
+# Bundle Artifact Temporary Files
+BundleArtifacts/
+
 # Visual Studio 2015/2017 cache/options directory
 .vs/
 

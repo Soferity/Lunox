@@ -10,15 +10,17 @@
     mc:Ignorable="d"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
-    <muxc:NavigationView x:Name="nvSample"
+    <muxc:NavigationView x:Name="NavigationView"
                          IsSettingsVisible="True"
                          IsBackButtonVisible="Collapsed"
                          IsBackEnabled="True"
                          IsTabStop="False"
+                         IsPaneOpen="True"
+                         IsPaneToggleButtonVisible="True"
                          SelectionChanged="NavigationView_SelectionChanged"
                          Header="Welcome"
-                         AlwaysShowHeader="True"
-                         PaneTitle="Pane Title"
+                         AlwaysShowHeader="False"
+                         PaneTitle=""
                          PaneDisplayMode="Left"
                          ExpandedModeThresholdWidth="500"
                          SelectionFollowsFocus="Enabled">
@@ -72,15 +74,15 @@
                 </muxc:NavigationViewItem.Icon>
             </muxc:NavigationViewItem>
             
-            <muxc:NavigationViewItem Content="Help" Tag="Discord">
+            <muxc:NavigationViewItem Content="Help" Tag="Help">
                 <muxc:NavigationViewItem.Icon>
                     <iconPacks:PathIconFontAwesome Kind="QuestionSolid" />
                 </muxc:NavigationViewItem.Icon>
             </muxc:NavigationViewItem>
-            
+
         </muxc:NavigationView.FooterMenuItems>
 
-        <Frame x:Name="contentFrame" />
-        
+        <Frame x:Name="ContentFrame" />
+
     </muxc:NavigationView>
 </Page>
