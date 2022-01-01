@@ -9,23 +9,24 @@
     <Import_RootNamespace>Lunox</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Core\Method\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Core\Extension\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Core\Interface\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Core\Reference\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Core\Value\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Cores\Method\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Cores\Extension\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Cores\Interface\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Cores\Native\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Cores\Reference\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Cores\Value\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Enum\RecognitionType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Enum\MatrixType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Enum\DocumentType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Enum\VideoType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Enum\AudioType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Enum\ImageType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Helper\Dialog.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Helper\Restart.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Util\Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cores\Enum\RecognitionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cores\Enum\MatrixType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cores\Enum\DocumentType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cores\Enum\VideoType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cores\Enum\AudioType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cores\Enum\ImageType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cores\Helper\Dialog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cores\Helper\Restart.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cores\Util\Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\DiscordPage.xaml.cs">
       <DependentUpon>DiscordPage.xaml</DependentUpon>
     </Compile>
