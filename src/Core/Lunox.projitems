@@ -14,6 +14,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Core\Interface\" />
     <Folder Include="$(MSBuildThisFileDirectory)Core\Reference\" />
     <Folder Include="$(MSBuildThisFileDirectory)Core\Value\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Core\Enum\RecognitionType.cs" />

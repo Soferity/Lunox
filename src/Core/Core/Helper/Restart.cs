@@ -1,13 +1,13 @@
 ﻿#region Imports
 
-using Lunox.Core.Util;
+using Lunox.Cores.Util;
 using System;
 using System.Diagnostics;
 using Windows.ApplicationModel.Core;
 
 #endregion
 
-namespace Lunox.Core.Helper
+namespace Lunox.Cores.Helper
 {
     #region RestartHelper
 

@@ -1,12 +1,12 @@
 ﻿#region Imports
 
-using Lunox.Core.Helper;
+using Lunox.Cores.Helper;
 using Windows.Storage;
 using Windows.UI.Xaml;
 
 #endregion
 
-namespace Lunox.Core.Util
+namespace Lunox.Cores.Util
 {
     #region SettingsUtil
 
@@ -137,7 +137,7 @@ namespace Lunox.Core.Util
                 {
                     SetValue("Theme", (int)value);
                     Dialog.SendDialog("Ayarların geçerli olabilmesi için uygulamayı yeniden başlatmanız gerekmektedir.", "Uygulama yeniden başlatılsın mı?");
-                    Core.Helper.Restart.RestartRequest();
+                    Helper.Restart.RestartRequest();
                 }
             }
         }

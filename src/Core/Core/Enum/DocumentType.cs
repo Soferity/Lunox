@@ -1,4 +1,4 @@
-﻿namespace Lunox.Core.Enum
+﻿namespace Lunox.Cores.Enum
 {
     #region DocumentTypeEnum
 

@@ -1,4 +1,4 @@
-﻿using Lunox.Core.Util;
+﻿using Lunox.Cores.Util;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 

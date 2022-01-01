@@ -1,4 +1,6 @@
-﻿using Lunox.Core.Util;
+﻿#region Imports
+
+using Lunox.Cores.Util;
 using System;
 using System.Linq;
 using Windows.UI.Xaml;
@@ -6,23 +8,73 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
+#endregion
+
 namespace Lunox.Views
 {
+    #region MainPageViews
+
+    /// <summary>
+    /// 
+    /// </summary>
     public sealed partial class MainPage : Page
     {
+        #region Variables
+
+        /// <summary>
+        /// 
+        /// </summary>
         private string ActivatePage = null;
+        /// <summary>
+        /// 
+        /// </summary>
         private string ActivateControl = null;
 
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly string PagePrefix = "Lunox.Pages.";
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly string PageSuffix = "Page";
 
+        /// <summary>
+        /// 
+        /// </summary>
         private bool IsRestart = false;
 
+        #endregion
+
+        #region Functions
+
+        #region Main Function
+
+        /// <summary>
+        /// 
+        /// </summary>
         public MainPage()
         {
             InitializeComponent();
         }
 
+        #endregion
+
+        #region Helper Functions
+
+        #region Normal Functions
+
+        //
+
+        #endregion
+
+        #region Event Functions
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void NavigationView_SelectionChanged(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs args)
         {
             if (args.IsSettingsSelected)
@@ -53,6 +105,10 @@ namespace Lunox.Views
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             if (e.Parameter != null && e.Parameter is string Parameter)
@@ -64,7 +120,12 @@ namespace Lunox.Views
             }
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
             if (IsRestart)
             {
@@ -78,5 +139,13 @@ namespace Lunox.Views
                          .First();
             }
         }
+
+        #endregion
+
+        #endregion
+
+        #endregion
     }
+
+    #endregion
 }

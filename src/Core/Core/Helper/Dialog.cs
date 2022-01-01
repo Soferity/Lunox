@@ -4,7 +4,7 @@ using Windows.UI.Xaml.Controls;
 
 #endregion
 
-namespace Lunox.Core.Helper
+namespace Lunox.Cores.Helper
 {
     #region DialogHelper
 

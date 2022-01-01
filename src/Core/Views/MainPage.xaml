@@ -9,7 +9,7 @@
     xmlns:iconPacks="using:MahApps.Metro.IconPacks"
     x:Class="Lunox.Views.MainPage"
     mc:Ignorable="d"
-    Loaded="Page_Loaded"
+    Loaded="MainPage_Loaded"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <Grid>
