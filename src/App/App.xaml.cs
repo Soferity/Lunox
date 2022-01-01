@@ -2,6 +2,7 @@
 using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.Globalization;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -19,6 +20,9 @@ namespace Lunox
         /// </summary>
         public App()
         {
+            App.Current.RequestedTheme = Settings.Theme;
+            ApplicationLanguages.PrimaryLanguageOverride = Settings.Language;
+
             InitializeComponent();
             Suspending += OnSuspending;
         }
@@ -62,6 +66,38 @@ namespace Lunox
                 // Geçerli pencerenin etkin olduğundan emin olun
                 Window.Current.Activate();
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args"></param>
+        protected override void OnActivated(IActivatedEventArgs args)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+
+            // Pencerede içerik varken uygulama başlatmayı tekrarlamayın,
+            // pencerenin etkin olduğundan emin olun
+            if (rootFrame == null)
+            {
+                // Gezinti bağlamı olarak kullanılacak bir Çerçeve oluşturun ve ilk sayfaya gidin
+                rootFrame = new Frame();
+
+                rootFrame.NavigationFailed += OnNavigationFailed;
+
+                // Çerçeveyi geçerli Pencereye yerleştirin
+                Window.Current.Content = rootFrame;
+            }
+
+            if (rootFrame.Content == null)
+            {
+                // Gezinme yığını geri yüklenmediğinde, ilk sayfaya gidin,
+                // gerekli bilgiyi gezinti parametresi olarak geçirerek
+                // oluşturun
+                rootFrame.Navigate(typeof(MainPage), args);
+            }
+            // Geçerli pencerenin etkin olduğundan emin olun
+            Window.Current.Activate();
         }
 
         /// <summary>

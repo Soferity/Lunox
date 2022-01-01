@@ -9,7 +9,7 @@
   <Identity
     Name="aabf5f1e-03c5-49ba-b43e-fc4c4284affa"
     Publisher="CN=Soferity"
-    Version="1.0.1.0" />
+    Version="1.0.3.0" />
 
   <mp:PhoneIdentity PhoneProductId="aabf5f1e-03c5-49ba-b43e-fc4c4284affa" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

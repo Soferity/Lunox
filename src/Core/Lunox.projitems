@@ -20,5 +20,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Core\Enum\VideoType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Enum\AudioType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Enum\ImageType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Helper\Dialog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Helper\Restart.cs" />
   </ItemGroup>
 </Project>

@@ -12,5 +12,9 @@
         <ImageBrush ImageSource="ms-appx:///Assets/Pages/Discord/Back.gif" Stretch="UniformToFill"/>
     </Page.Background>
 
-    <muxc:WebView2 x:Name="WebView" Width="Auto" Height="Auto" Opacity="0" NavigationCompleted="WebView_NavigationCompleted" />
+    <muxc:WebView2 x:Name="WebView" Width="Auto" Height="Auto" Opacity="0" NavigationCompleted="WebView_NavigationCompleted">
+        <muxc:WebView2.OpacityTransition>
+            <ScalarTransition />
+        </muxc:WebView2.OpacityTransition>
+    </muxc:WebView2>
 </Page>

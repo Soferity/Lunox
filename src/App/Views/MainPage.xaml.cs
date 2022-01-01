@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Linq;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Animation;
+using Windows.UI.Xaml.Navigation;
 
 namespace Lunox.Views
 {
@@ -10,6 +14,8 @@ namespace Lunox.Views
 
         private readonly string PagePrefix = "Lunox.Pages.";
         private readonly string PageSuffix = "Page";
+
+        private bool IsRestart = false;
 
         public MainPage()
         {
@@ -42,27 +48,33 @@ namespace Lunox.Views
             if (ActivatePage != ActivateControl)
             {
                 ActivatePage = ActivateControl;
-                ContentFrame.Navigate(Type.GetType(ActivatePage));
+                ContentFrame.Navigate(Type.GetType(ActivatePage), null, new DrillInNavigationTransitionInfo());
             }
         }
 
-        private void SendDialog(string Title = "Title", string Content = "Content")
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            try
+            if (e.Parameter != null && e.Parameter is string Parameter)
             {
-                _ = new ContentDialog
+                if (Parameter == Settings.Restart)
                 {
-                    Title = Title,
-                    Content = Content,
-                    CloseButtonText = "Çıkış",
-                    PrimaryButtonText = "Öncelik",
-                    IsPrimaryButtonEnabled = true,
-                    IsSecondaryButtonEnabled = true
-                }.ShowAsync();
+                    IsRestart = true;
+                }
             }
-            catch
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (IsRestart)
             {
-                //
+                NavigationView.SelectedItem = NavigationView.SettingsItem;
+            }
+            else
+            {
+                NavigationView.SelectedItem = NavigationView.MenuItems
+                         .OfType<Microsoft.UI.Xaml.Controls.NavigationViewItem>()
+                         .Where(Item => Item.Tag.ToString() == Settings.Welcome)
+                         .First();
             }
         }
     }

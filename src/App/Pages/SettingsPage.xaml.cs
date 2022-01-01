@@ -1,17 +1,37 @@
-﻿using Windows.UI.Xaml.Controls;
-
-// Boş Sayfa öğe şablonu https://go.microsoft.com/fwlink/?LinkId=234238 adresinde açıklanmaktadır
+﻿using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 
 namespace Lunox.Pages
 {
-    /// <summary>
-    /// Kendi başına kullanılabilecek ya da bir Çerçeve içine gezinebilecek boş bir sayfa.
-    /// </summary>
     public sealed partial class SettingsPage : Page
     {
         public SettingsPage()
         {
             InitializeComponent();
+        }
+
+        private void Tema_Click(object sender, RoutedEventArgs e)
+        {
+            if (Settings.Theme == ApplicationTheme.Light)
+            {
+                Settings.Theme = ApplicationTheme.Dark;
+            }
+            else
+            {
+                Settings.Theme = ApplicationTheme.Light;
+            }
+        }
+
+        private void Dil_Click(object sender, RoutedEventArgs e)
+        {
+            if (Settings.Language == "en-GB")
+            {
+                Settings.Language = "tr-TR";
+            }
+            else
+            {
+                Settings.Language = "en-GB";
+            }
         }
     }
 }
