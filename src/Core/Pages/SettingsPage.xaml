@@ -10,7 +10,7 @@
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <TextBlock Text="Sample Settings Page" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TitleTextBlockStyle}" />
+        <TextBlock x:Uid="/Settings/PageTitle" Text="Settings Page" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TitleTextBlockStyle}" />
         <Button Content="Tema Change" Name="Tema" Click="Tema_Click"/>
         <Button Content="Dil Change" Name="Dil" Click="Dil_Click"/>
     </StackPanel>

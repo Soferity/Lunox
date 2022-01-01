@@ -1,13 +1,38 @@
-﻿using Lunox.Core.Helper;
+﻿#region Imports
+
+using Lunox.Core.Helper;
 using Windows.Storage;
 using Windows.UI.Xaml;
 
-namespace Lunox
+#endregion
+
+namespace Lunox.Core.Util
 {
+    #region SettingsUtil
+
+    /// <summary>
+    /// 
+    /// </summary>
     public static class Settings
     {
+        #region Variables
+
+        /// <summary>
+        /// 
+        /// </summary>
         private static readonly ApplicationDataContainer AppSettings = ApplicationData.Current.LocalSettings;
 
+        #endregion
+
+        #region Functions
+
+        #region Helper Functions
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Key"></param>
+        /// <returns></returns>
         private static bool GetKey(string Key)
         {
             try
@@ -27,6 +52,11 @@ namespace Lunox
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Key"></param>
+        /// <returns></returns>
         private static object GetValue(string Key)
         {
             if (GetKey(Key))
@@ -39,6 +69,12 @@ namespace Lunox
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Key"></param>
+        /// <param name="Value"></param>
+        /// <returns></returns>
         private static bool KeyValue(string Key, object Value)
         {
             try
@@ -58,16 +94,32 @@ namespace Lunox
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Key"></param>
         private static void SetKey(string Key)
         {
             AppSettings.Values[Key] = null;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Key"></param>
+        /// <param name="Value"></param>
         private static void SetValue(string Key, object Value)
         {
             AppSettings.Values[Key] = Value;
         }
 
+        #endregion
+
+        #region Setting Functions
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static ApplicationTheme Theme
         {
             get
@@ -90,6 +142,9 @@ namespace Lunox
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static string Language
         {
             get
@@ -110,6 +165,9 @@ namespace Lunox
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static string Restart
         {
             get
@@ -130,6 +188,9 @@ namespace Lunox
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static string Welcome
         {
             get
@@ -149,5 +210,11 @@ namespace Lunox
                 }
             }
         }
+
+        #endregion
+
+        #endregion
     }
+
+    #endregion
 }

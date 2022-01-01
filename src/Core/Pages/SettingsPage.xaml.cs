@@ -1,4 +1,5 @@
-﻿using Windows.UI.Xaml;
+﻿using Lunox.Core.Util;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
 namespace Lunox.Pages

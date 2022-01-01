@@ -10,6 +10,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Core\Method\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\Extension\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\Interface\" />
     <Folder Include="$(MSBuildThisFileDirectory)Core\Reference\" />
     <Folder Include="$(MSBuildThisFileDirectory)Core\Value\" />
   </ItemGroup>
@@ -22,5 +24,55 @@
     <Compile Include="$(MSBuildThisFileDirectory)Core\Enum\ImageType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Helper\Dialog.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Helper\Restart.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Util\Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\DiscordPage.xaml.cs">
+      <DependentUpon>DiscordPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\GitHubPage.xaml.cs">
+      <DependentUpon>GitHubPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\NotFoundPage.xaml.cs">
+      <DependentUpon>NotFoundPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\de-DE\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\de-DE\Settings.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-GB\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-GB\Settings.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\es-ES\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\es-ES\Settings.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\fr-FR\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\fr-FR\Settings.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\tr-TR\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\tr-TR\Settings.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Pages\DiscordPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Pages\GitHubPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Pages\NotFoundPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Pages\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>

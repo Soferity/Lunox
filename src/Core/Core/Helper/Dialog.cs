@@ -1,19 +1,45 @@
-﻿using Windows.UI.Xaml.Controls;
+﻿#region Imports
+
+using Windows.UI.Xaml.Controls;
+
+#endregion
 
 namespace Lunox.Core.Helper
 {
+    #region DialogHelper
+
+    /// <summary>
+    /// 
+    /// </summary>
     public static class Dialog
     {
+        #region Functions
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Content"></param>
         public static void SendDialog(string Content = "Content")
         {
             SendDialog(Content, null, false);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Content"></param>
+        /// <param name="Title"></param>
         public static void SendDialog(string Content = "Content", string Title = "Title")
         {
             SendDialog(Content, Title, false);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Content"></param>
+        /// <param name="Title"></param>
+        /// <param name="Drag"></param>
         public static void SendDialog(string Content = "Content", string Title = "Title", bool Drag = true)
         {
             try
@@ -35,5 +61,9 @@ namespace Lunox.Core.Helper
                 //
             }
         }
+
+        #endregion
     }
+
+    #endregion
 }

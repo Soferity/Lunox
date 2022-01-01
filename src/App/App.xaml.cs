@@ -1,4 +1,5 @@
-﻿using Lunox.Views;
+﻿using Lunox.Core.Util;
+using Lunox.Views;
 using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;

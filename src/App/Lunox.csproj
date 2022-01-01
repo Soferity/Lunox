@@ -133,22 +133,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\DiscordPage.xaml.cs">
-      <DependentUpon>DiscordPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\GitHubPage.xaml.cs">
-      <DependentUpon>GitHubPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\NotFoundPage.xaml.cs">
-      <DependentUpon>NotFoundPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\SettingsPage.xaml.cs">
-      <DependentUpon>SettingsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Settings.cs" />
-    <Compile Include="Views\MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -175,26 +159,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Pages\DiscordPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Pages\GitHubPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\NotFoundPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\SettingsPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MahApps.Metro.IconPacks">
@@ -215,11 +179,6 @@
     <None Include="Properties\PublishProfiles\win10-arm64.pubxml" />
     <None Include="Properties\PublishProfiles\win10-x64.pubxml" />
     <None Include="Properties\PublishProfiles\win10-x86.pubxml" />
-    <PRIResource Include="Strings\fr-FR\Resources.resw" />
-    <PRIResource Include="Strings\de-DE\Resources.resw" />
-    <PRIResource Include="Strings\es-ES\Resources.resw" />
-    <PRIResource Include="Strings\en-GB\Resources.resw" />
-    <PRIResource Include="Strings\tr-TR\Resources.resw" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="..\Core\Lunox.projitems" Label="Shared" />
