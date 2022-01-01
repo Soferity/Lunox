@@ -9,9 +9,25 @@
     mc:Ignorable="d"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
         <TextBlock x:Uid="/Settings/PageTitle" Text="Settings Page" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TitleTextBlockStyle}" />
         <Button Content="Tema Change" Name="Tema" Click="Tema_Click"/>
         <Button Content="Dil Change" Name="Dil" Click="Dil_Click"/>
+        
+        <muxc:RadioButtons SelectedIndex="0" MaxColumns="2" Header="Theme Type">
+            <x:String>Dark</x:String>
+            <x:String>Light</x:String>
+        </muxc:RadioButtons>
+
+        <ComboBox Header="Theme Type" PlaceholderText="Select a theme" SelectedValuePath="Item0" Width="200">
+            <x:String>Dark</x:String>
+            <x:String>Light</x:String>
+        </ComboBox>
+
+        <ListBox Width="200">
+            <x:String>Dark</x:String>
+            <x:String>Light</x:String>
+        </ListBox>
+
     </StackPanel>
 </Page>

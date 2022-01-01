@@ -16,8 +16,9 @@
         <Grid.BackgroundTransition>
             <BrushTransition />
         </Grid.BackgroundTransition>
-
-        <muxc:NavigationView x:Name="NavigationView"
+        
+        <muxc:NavigationView
+                         x:Name="NavigationView"
                          IsSettingsVisible="True"
                          IsBackButtonVisible="Collapsed"
                          IsBackEnabled="True"
