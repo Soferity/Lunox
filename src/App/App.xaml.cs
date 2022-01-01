@@ -48,6 +48,14 @@ namespace Lunox
 
         #endregion
 
+        #region Helper Function
+
+        #region Normal Functions
+
+        //
+
+        #endregion
+
         #region Event Functions
 
         /// <summary>
@@ -127,6 +135,8 @@ namespace Lunox
             //TODO: Uygulama durumunu kaydet ve tüm arka plan etkinliklerini durdur
             deferral.Complete();
         }
+
+        #endregion
 
         #endregion
 
