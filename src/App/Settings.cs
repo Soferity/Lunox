@@ -8,22 +8,82 @@ namespace Lunox
     {
         private static readonly ApplicationDataContainer AppSettings = ApplicationData.Current.LocalSettings;
 
+        private static bool GetKey(string Key)
+        {
+            try
+            {
+                if (AppSettings.Values[Key] == null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return true;
+            }
+        }
+
+        private static object GetValue(string Key)
+        {
+            if (GetKey(Key))
+            {
+                return null;
+            }
+            else
+            {
+                return AppSettings.Values[Key];
+            }
+        }
+
+        private static bool KeyValue(string Key, object Value)
+        {
+            try
+            {
+                if (AppSettings.Values[Key] == Value)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            catch
+            {
+                return true;
+            }
+        }
+
+        private static void SetKey(string Key)
+        {
+            AppSettings.Values[Key] = null;
+        }
+
+        private static void SetValue(string Key, object Value)
+        {
+            AppSettings.Values[Key] = Value;
+        }
+
         public static ApplicationTheme Theme
         {
             get
             {
-                if (AppSettings.Values["Theme"] == null)
+                if (GetKey("Theme"))
                 {
-                    Theme = ApplicationTheme.Dark;
+                    SetValue("Theme", (int)ApplicationTheme.Dark);
                 }
 
-                return (ApplicationTheme)AppSettings.Values["Theme"];
+                return (ApplicationTheme)GetValue("Theme");
             }
             set
             {
-                if ((int)AppSettings.Values["Theme"] != (int)value)
+                if (KeyValue("Theme", (int)value))
                 {
-                    AppSettings.Values["Theme"] = (int)value;
+                    SetValue("Theme", (int)value);
                     Dialog.SendDialog("Ayarların geçerli olabilmesi için uygulamayı yeniden başlatmanız gerekmektedir.", "Uygulama yeniden başlatılsın mı?");
                     Core.Helper.Restart.RestartRequest();
                 }
@@ -34,42 +94,60 @@ namespace Lunox
         {
             get
             {
-                if (AppSettings.Values["Language"] == null)
+                if (GetKey("Language"))
                 {
                     Language = "en-GB";
                 }
 
-                return (string)AppSettings.Values["Language"];
+                return (string)GetValue("Language");
             }
-            set => AppSettings.Values["Language"] = (string)value;
+            set
+            {
+                if (KeyValue("Language", value))
+                {
+                    SetValue("Language", value);
+                }
+            }
         }
 
         public static string Restart
         {
             get
             {
-                if (AppSettings.Values["Restart"] == null)
+                if (GetKey("Restart"))
                 {
                     Restart = "Restart";
                 }
 
                 return (string)AppSettings.Values["Restart"];
             }
-            set => AppSettings.Values["Restart"] = (string)value;
+            set
+            {
+                if (KeyValue("Restart", value))
+                {
+                    SetValue("Restart", value);
+                }
+            }
         }
 
         public static string Welcome
         {
             get
             {
-                if (AppSettings.Values["Welcome"] == null)
+                if (GetKey("Welcome"))
                 {
                     Welcome = "Welcome";
                 }
 
                 return (string)AppSettings.Values["Welcome"];
             }
-            set => AppSettings.Values["Welcome"] = (string)value;
+            set
+            {
+                if (KeyValue("Welcome", value))
+                {
+                    SetValue("Welcome", value);
+                }
+            }
         }
     }
 }
