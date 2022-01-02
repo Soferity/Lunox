@@ -13,13 +13,13 @@
     </Page.Background>
 
     <Grid>
-        <WebView x:Name="WebView" Width="Auto" Height="Auto" Opacity="0" NavigationCompleted="WebView_NavigationCompleted">
+        <WebView x:Name="WebViewOld" Width="0" Height="0" Opacity="0" NavigationCompleted="WebViewOld_NavigationCompleted">
         <WebView.OpacityTransition>
             <ScalarTransition />
         </WebView.OpacityTransition>
         </WebView>
         
-        <muxc:WebView2 x:Name="WebViewM" Width="Auto" Height="Auto" Opacity="0" NavigationCompleted="WebViewM_NavigationCompleted">
+        <muxc:WebView2 x:Name="WebViewNew" Width="0" Height="0" Opacity="0" NavigationCompleted="WebViewNew_NavigationCompleted">
             <muxc:WebView2.OpacityTransition>
                 <ScalarTransition />
             </muxc:WebView2.OpacityTransition>

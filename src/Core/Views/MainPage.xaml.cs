@@ -56,6 +56,7 @@ namespace Lunox.Views
         public MainPage()
         {
             InitializeComponent();
+            NavigationView.PaneDisplayMode = Settings.Navigation;
         }
 
         #endregion

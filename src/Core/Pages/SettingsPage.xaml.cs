@@ -89,9 +89,20 @@ namespace Lunox.Pages
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+        private void Navigation_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Settings.Navigation = (Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode)Navigation.SelectedIndex;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SettingsPage_Loaded(object sender, RoutedEventArgs e)
         {
             Browser.SelectedIndex = Browser.Items.ToList().IndexOf(Settings.Browser);
+            Navigation.SelectedIndex = Navigation.Items.ToList().IndexOf(Settings.Navigation.ToString());
         }
 
         #endregion

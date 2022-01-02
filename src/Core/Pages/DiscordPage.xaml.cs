@@ -32,11 +32,11 @@ namespace Lunox.Pages
 
             if (Settings.Browser == "WebView")
             {
-                WebView.Source = new Uri(Uri);
+                WebViewOld.Source = new Uri(Uri);
             }
             else
             {
-                WebViewM.Source = new Uri(Uri);
+                WebViewNew.Source = new Uri(Uri);
             }
         }
 
@@ -57,11 +57,13 @@ namespace Lunox.Pages
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        private void WebView_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
+        private void WebViewOld_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
         {
-            if (WebView.Opacity == 0D)
+            if (WebViewOld.Opacity == 0D)
             {
-                WebView.Opacity = 1D;
+                WebViewOld.Width = double.NaN;
+                WebViewOld.Height = double.NaN;
+                WebViewOld.Opacity = 1D;
             }
         }
 
@@ -70,14 +72,16 @@ namespace Lunox.Pages
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        private void WebViewM_NavigationCompleted(WebView2 sender, CoreWebView2NavigationCompletedEventArgs args)
+        private void WebViewNew_NavigationCompleted(WebView2 sender, CoreWebView2NavigationCompletedEventArgs args)
         {
-            if (WebViewM.Opacity == 0D)
+            if (WebViewNew.Opacity == 0D)
             {
-                WebViewM.Opacity = 1D;
-                //WebViewM.CoreWebView2.Settings.AreDevToolsEnabled = false;
-                //WebViewM.CoreWebView2.Settings.IsZoomControlEnabled = false;
-                //WebViewM.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
+                WebViewNew.Width = double.NaN;
+                WebViewNew.Height = double.NaN;
+                WebViewNew.Opacity = 1D;
+                //WebViewNew.CoreWebView2.Settings.AreDevToolsEnabled = false;
+                //WebViewNew.CoreWebView2.Settings.IsZoomControlEnabled = false;
+                //WebViewNew.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
             }
         }
 

@@ -1,6 +1,7 @@
 ﻿#region Imports
 
 using Lunox.Cores.Helper;
+using Microsoft.UI.Xaml.Controls;
 using Windows.Storage;
 using Windows.UI.Xaml;
 
@@ -230,6 +231,29 @@ namespace Lunox.Cores.Util
                 if (KeyValue("Browser", value))
                 {
                     SetValue("Browser", value);
+                }
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static NavigationViewPaneDisplayMode Navigation
+        {
+            get
+            {
+                if (GetKey("Navigation"))
+                {
+                    Navigation = NavigationViewPaneDisplayMode.Left;
+                }
+
+                return (NavigationViewPaneDisplayMode)GetValue("Navigation");
+            }
+            set
+            {
+                if (KeyValue("Navigation", (int)value))
+                {
+                    SetValue("Navigation", (int)value);
                 }
             }
         }
