@@ -191,22 +191,45 @@ namespace Lunox.Cores.Util
         /// <summary>
         /// 
         /// </summary>
-        public static string Welcome
+        public static string Glance
         {
             get
             {
-                if (GetKey("Welcome"))
+                if (GetKey("Glance"))
                 {
-                    Welcome = "Welcome";
+                    Glance = "Welcome";
                 }
 
-                return (string)AppSettings.Values["Welcome"];
+                return (string)AppSettings.Values["Glance"];
             }
             set
             {
-                if (KeyValue("Welcome", value))
+                if (KeyValue("Glance", value))
                 {
-                    SetValue("Welcome", value);
+                    SetValue("Glance", value);
+                }
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static string Browser
+        {
+            get
+            {
+                if (GetKey("Browser"))
+                {
+                    Browser = "WebView";
+                }
+
+                return (string)AppSettings.Values["Browser"];
+            }
+            set
+            {
+                if (KeyValue("Browser", value))
+                {
+                    SetValue("Browser", value);
                 }
             }
         }

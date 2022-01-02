@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
+    Loaded="SettingsPage_Loaded"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
 
     <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
@@ -28,6 +29,11 @@
             <x:String>Dark</x:String>
             <x:String>Light</x:String>
         </ListBox>
+
+        <muxc:RadioButtons x:Name="Browser" MaxColumns="2" Header="Browser Type" SelectionChanged="Browser_SelectionChanged">
+            <x:String>WebView</x:String>
+            <x:String>WebView2</x:String>
+        </muxc:RadioButtons>
 
     </StackPanel>
 </Page>

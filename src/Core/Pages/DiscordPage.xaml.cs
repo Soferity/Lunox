@@ -1,5 +1,6 @@
 ﻿#region Imports
 
+using Lunox.Cores.Util;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.Web.WebView2.Core;
 using System;
@@ -26,7 +27,17 @@ namespace Lunox.Pages
         public DiscordPage()
         {
             InitializeComponent();
-            WebView.Source = new Uri($"https://discord.com/widget?id=587709969852268564&theme={App.Current.RequestedTheme.ToString().ToLowerInvariant()}");
+
+            string Uri = $"https://discord.com/widget?id=587709969852268564&theme={Settings.Theme.ToString().ToLowerInvariant()}";
+
+            if (Settings.Browser == "WebView")
+            {
+                WebView.Source = new Uri(Uri);
+            }
+            else
+            {
+                WebViewM.Source = new Uri(Uri);
+            }
         }
 
         #endregion
@@ -46,14 +57,27 @@ namespace Lunox.Pages
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        private void WebView_NavigationCompleted(WebView2 sender, CoreWebView2NavigationCompletedEventArgs args)
+        private void WebView_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
         {
             if (WebView.Opacity == 0D)
             {
                 WebView.Opacity = 1D;
-                //WebView.CoreWebView2.Settings.AreDevToolsEnabled = false;
-                //WebView.CoreWebView2.Settings.IsZoomControlEnabled = false;
-                //WebView.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void WebViewM_NavigationCompleted(WebView2 sender, CoreWebView2NavigationCompletedEventArgs args)
+        {
+            if (WebViewM.Opacity == 0D)
+            {
+                WebViewM.Opacity = 1D;
+                //WebViewM.CoreWebView2.Settings.AreDevToolsEnabled = false;
+                //WebViewM.CoreWebView2.Settings.IsZoomControlEnabled = false;
+                //WebViewM.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
             }
         }
 

@@ -1,6 +1,7 @@
 ﻿#region Imports
 
 using Lunox.Cores.Util;
+using System.Linq;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -71,6 +72,26 @@ namespace Lunox.Pages
             {
                 Settings.Language = "en-GB";
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Browser_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Settings.Browser = Browser.SelectedItem as string;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SettingsPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            Browser.SelectedIndex = Browser.Items.ToList().IndexOf(Settings.Browser);
         }
 
         #endregion

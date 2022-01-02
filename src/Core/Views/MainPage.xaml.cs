@@ -135,7 +135,7 @@ namespace Lunox.Views
             {
                 NavigationView.SelectedItem = NavigationView.MenuItems
                          .OfType<Microsoft.UI.Xaml.Controls.NavigationViewItem>()
-                         .Where(Item => Item.Tag.ToString() == Settings.Welcome)
+                         .Where(Item => Item.Tag.ToString() == Settings.Glance)
                          .First();
             }
         }
