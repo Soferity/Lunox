@@ -22,6 +22,9 @@ bld/
 # Bundle Artifact Temporary Files
 BundleArtifacts/
 
+# Microsoft Store Association
+Package.StoreAssociation.xml
+
 # Visual Studio 2015/2017 cache/options directory
 .vs/
 

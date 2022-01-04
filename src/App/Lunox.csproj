@@ -22,22 +22,23 @@
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <GenerateTestArtifacts>True</GenerateTestArtifacts>
     <AppxBundle>Always</AppxBundle>
-    <AppxBundlePlatforms>x64</AppxBundlePlatforms>
+    <AppxBundlePlatforms>x86|x64|arm|arm64</AppxBundlePlatforms>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
     <AppxPackageDir>G:\MyProject\Soferity\Lunox\Appx\</AppxPackageDir>
-    <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
+    <AppxSymbolPackageEnabled>True</AppxSymbolPackageEnabled>
     <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
     <AppInstallerUri>https://github.com/Soferity/Lunox/releases</AppInstallerUri>
     <PackageCertificateKeyFile>
     </PackageCertificateKeyFile>
-    <PackageCertificateThumbprint>BACA0A3CFCF3A011D6A7B0C89DE9C6FD05D511A6</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>A3CB5279FC1E683A1B2364E52E8F3D28FF1D80BA</PackageCertificateThumbprint>
     <AppxPackageSigningTimestampServerUrl />
+    <GenerateTemporaryStoreCertificate>True</GenerateTemporaryStoreCertificate>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\x86\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
-    <NoWarn>;2008</NoWarn>
+    <NoWarn>2008;WMC1501;CS8305</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
@@ -48,7 +49,7 @@
     <OutputPath>bin\x86\Release\</OutputPath>
     <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <Optimize>true</Optimize>
-    <NoWarn>;2008</NoWarn>
+    <NoWarn>2008;WMC1501;CS8305</NoWarn>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
@@ -60,7 +61,7 @@
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\ARM\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
-    <NoWarn>;2008</NoWarn>
+    <NoWarn>2008;WMC1501;CS8305</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>ARM</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
@@ -71,7 +72,7 @@
     <OutputPath>bin\ARM\Release\</OutputPath>
     <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <Optimize>true</Optimize>
-    <NoWarn>;2008</NoWarn>
+    <NoWarn>2008;WMC1501;CS8305</NoWarn>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>ARM</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
@@ -83,7 +84,7 @@
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\ARM64\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
-    <NoWarn>;2008</NoWarn>
+    <NoWarn>2008;WMC1501;CS8305</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>ARM64</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
@@ -95,7 +96,7 @@
     <OutputPath>bin\ARM64\Release\</OutputPath>
     <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <Optimize>true</Optimize>
-    <NoWarn>;2008</NoWarn>
+    <NoWarn>2008;WMC1501;CS8305</NoWarn>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>ARM64</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
@@ -107,7 +108,7 @@
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\x64\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
-    <NoWarn>2008W;WMC1501;CS8305</NoWarn>
+    <NoWarn>2008;WMC1501;CS8305</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
@@ -118,7 +119,7 @@
     <OutputPath>bin\x64\Release\</OutputPath>
     <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <Optimize>true</Optimize>
-    <NoWarn>;2008</NoWarn>
+    <NoWarn>2008;WMC1501;CS8305</NoWarn>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
@@ -145,6 +146,7 @@
     <Content Include="Assets\Pages\GitHub\Back.gif" />
     <Content Include="Assets\Pages\NotFound\404.png" />
     <Content Include="Assets\Pages\NotFound\Back.jpg" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -180,10 +182,6 @@
     <None Include="app.manifest" />
     <None Include="Lunox_TemporaryKey.pfx" />
     <None Include="Properties\launchSettings.json" />
-    <None Include="Properties\PublishProfiles\win10-arm.pubxml" />
-    <None Include="Properties\PublishProfiles\win10-arm64.pubxml" />
-    <None Include="Properties\PublishProfiles\win10-x64.pubxml" />
-    <None Include="Properties\PublishProfiles\win10-x86.pubxml" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="..\Core\Lunox.projitems" Label="Shared" />

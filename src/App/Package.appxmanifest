@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="aabf5f1e-03c5-49ba-b43e-fc4c4284affa"
-    Publisher="CN=Soferity"
-    Version="1.0.9.0" />
+    Name="Soferity.Taiizor.Lunox"
+    Publisher="CN=BAEB534D-BC36-4432-8EEF-E0088D896FB9"
+    Version="1.0.12.0" />
 
-  <mp:PhoneIdentity PhoneProductId="aabf5f1e-03c5-49ba-b43e-fc4c4284affa" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="0f003e1b-f4c4-4dca-b16e-a2fb83c3c4a3" PhonePublisherId="35d623ac-ca3f-4961-b357-4907d492d2d2"/>
 
   <Properties>
     <DisplayName>Lunox</DisplayName>
-    <PublisherDisplayName>Soferity</PublisherDisplayName>
+    <PublisherDisplayName>Taiizor</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -43,7 +43,8 @@
           <uap:Rotation Preference="landscape"/>
           <uap:Rotation Preference="portrait"/>
           <uap:Rotation Preference="landscapeFlipped"/>
-          <uap:Rotation Preference="portraitFlipped"/></uap:InitialRotationPreference>
+          <uap:Rotation Preference="portraitFlipped"/>
+        </uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>
