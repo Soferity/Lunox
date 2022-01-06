@@ -7,6 +7,7 @@ using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Channel;
 using Microsoft.AppCenter.Crashes;
 using System;
+using System.Globalization;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
@@ -29,8 +30,8 @@ namespace Lunox
             Resuming += App_Resuming;
 
             // TODO WTS: Add your app in the app center and set your secret here. More at https://docs.microsoft.com/appcenter/sdk/getting-started/uwp
-            //AppCenter.SetCountryCode("TR");
-            //AppCenter.LogLevel = LogLevel.Verbose;
+            AppCenter.LogLevel = LogLevel.Verbose;
+            AppCenter.SetCountryCode(RegionInfo.CurrentRegion.TwoLetterISORegionName);
             AppCenter.Start("APP-SECRET", typeof(Analytics), typeof(Crashes), typeof(Channel));
             UnhandledException += OnAppUnhandledException;
 

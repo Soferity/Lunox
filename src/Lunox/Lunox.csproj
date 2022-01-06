@@ -160,9 +160,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <PRIResource Include="Strings\en-GB\Resources.resw" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Activation\ActivationHandler.cs" />
     <Compile Include="Activation\SchemeActivationConfig.cs" />
     <Compile Include="Activation\SchemeActivationData.cs" />
@@ -377,6 +374,7 @@
       <Name>Lunox.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="..\Lunox.Language\Lunox.Language.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
