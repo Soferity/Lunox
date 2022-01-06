@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         configuration: [
-            GitHub
+            Debug
         ]
         solution: [
             src/Lunox.sln
