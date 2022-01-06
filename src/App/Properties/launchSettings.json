@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+        "Lunox (Package)": {
+            "commandName": "MsixPackage"
+        },
+        "Lunox (Unpackaged)": {
+            "commandName": "Project"
+        }
+    }
+}

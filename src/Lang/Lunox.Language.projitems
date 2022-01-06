@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>23ef746e-3e58-4240-8e0d-01dfd89c5950</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Lunox.Language</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\de-DE\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\de-DE\Settings.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-GB\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-GB\Settings.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\es-ES\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\es-ES\Settings.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\fr-FR\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\fr-FR\Settings.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\tr-TR\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\tr-TR\Settings.resw" />
+  </ItemGroup>
+</Project>
