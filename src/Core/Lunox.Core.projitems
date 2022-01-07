@@ -39,6 +39,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Services\ActivationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\FirstRunDisplayService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AppCenterService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\NavigationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\SuspendAndResumeArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\SuspendAndResumeService.cs" />

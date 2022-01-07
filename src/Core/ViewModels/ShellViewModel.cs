@@ -9,10 +9,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.System;
-using Windows.UI.Xaml.Controls;
+using WUIX = Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Navigation;
-using WinUI = Microsoft.UI.Xaml.Controls;
+using MUIX = Microsoft.UI.Xaml.Controls;
 
 namespace Lunox.ViewModels
 {
@@ -23,8 +23,8 @@ namespace Lunox.ViewModels
 
         private bool _isBackEnabled;
         private IList<KeyboardAccelerator> _keyboardAccelerators;
-        private WinUI.NavigationView _navigationView;
-        private WinUI.NavigationViewItem _selected;
+        private MUIX.NavigationView _navigationView;
+        private MUIX.NavigationViewItem _selected;
         private ICommand _loadedCommand;
         private ICommand _itemInvokedCommand;
 
@@ -34,7 +34,7 @@ namespace Lunox.ViewModels
             set => SetProperty(ref _isBackEnabled, value);
         }
 
-        public WinUI.NavigationViewItem Selected
+        public MUIX.NavigationViewItem Selected
         {
             get => _selected;
             set => SetProperty(ref _selected, value);
@@ -42,13 +42,13 @@ namespace Lunox.ViewModels
 
         public ICommand LoadedCommand => _loadedCommand ?? (_loadedCommand = new RelayCommand(OnLoaded));
 
-        public ICommand ItemInvokedCommand => _itemInvokedCommand ?? (_itemInvokedCommand = new RelayCommand<WinUI.NavigationViewItemInvokedEventArgs>(OnItemInvoked));
+        public ICommand ItemInvokedCommand => _itemInvokedCommand ?? (_itemInvokedCommand = new RelayCommand<MUIX.NavigationViewItemInvokedEventArgs>(OnItemInvoked));
 
         public ShellViewModel()
         {
         }
 
-        public void Initialize(Frame frame, WinUI.NavigationView navigationView, IList<KeyboardAccelerator> keyboardAccelerators)
+        public void Initialize(WUIX.Frame frame, MUIX.NavigationView navigationView, IList<KeyboardAccelerator> keyboardAccelerators)
         {
             _navigationView = navigationView;
             _keyboardAccelerators = keyboardAccelerators;
@@ -67,7 +67,7 @@ namespace Lunox.ViewModels
             await Task.CompletedTask;
         }
 
-        private void OnItemInvoked(WinUI.NavigationViewItemInvokedEventArgs args)
+        private void OnItemInvoked(MUIX.NavigationViewItemInvokedEventArgs args)
         {
             if (args.IsSettingsInvoked)
             {
@@ -75,7 +75,7 @@ namespace Lunox.ViewModels
             }
             else
             {
-                WinUI.NavigationViewItem selectedItem = args.InvokedItemContainer as WinUI.NavigationViewItem;
+                MUIX.NavigationViewItem selectedItem = args.InvokedItemContainer as MUIX.NavigationViewItem;
                 Type pageType = selectedItem?.GetValue(NavHelper.NavigateToProperty) as Type;
 
                 if (pageType != null)
@@ -85,7 +85,7 @@ namespace Lunox.ViewModels
             }
         }
 
-        private void OnBackRequested(WinUI.NavigationView sender, WinUI.NavigationViewBackRequestedEventArgs args)
+        private void OnBackRequested(MUIX.NavigationView sender, MUIX.NavigationViewBackRequestedEventArgs args)
         {
             NavigationService.GoBack();
         }
@@ -100,27 +100,27 @@ namespace Lunox.ViewModels
             IsBackEnabled = NavigationService.CanGoBack;
             if (e.SourcePageType == typeof(SettingsPage))
             {
-                Selected = _navigationView.SettingsItem as WinUI.NavigationViewItem;
+                Selected = _navigationView.SettingsItem as MUIX.NavigationViewItem;
                 return;
             }
 
-            WinUI.NavigationViewItem selectedItem = GetSelectedItem(_navigationView.MenuItems, e.SourcePageType);
+            MUIX.NavigationViewItem selectedItem = GetSelectedItem(_navigationView.MenuItems, e.SourcePageType);
             if (selectedItem != null)
             {
                 Selected = selectedItem;
             }
         }
 
-        private WinUI.NavigationViewItem GetSelectedItem(IEnumerable<object> menuItems, Type pageType)
+        private MUIX.NavigationViewItem GetSelectedItem(IEnumerable<object> menuItems, Type pageType)
         {
-            foreach (WinUI.NavigationViewItem item in menuItems.OfType<WinUI.NavigationViewItem>())
+            foreach (MUIX.NavigationViewItem item in menuItems.OfType<MUIX.NavigationViewItem>())
             {
                 if (IsMenuItemForPageType(item, pageType))
                 {
                     return item;
                 }
 
-                WinUI.NavigationViewItem selectedChild = GetSelectedItem(item.MenuItems, pageType);
+                MUIX.NavigationViewItem selectedChild = GetSelectedItem(item.MenuItems, pageType);
                 if (selectedChild != null)
                 {
                     return selectedChild;
@@ -130,7 +130,7 @@ namespace Lunox.ViewModels
             return null;
         }
 
-        private bool IsMenuItemForPageType(WinUI.NavigationViewItem menuItem, Type sourcePageType)
+        private bool IsMenuItemForPageType(MUIX.NavigationViewItem menuItem, Type sourcePageType)
         {
             Type pageType = menuItem.GetValue(NavHelper.NavigateToProperty) as Type;
             return pageType == sourcePageType;

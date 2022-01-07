@@ -4,12 +4,7 @@ using Lunox.Library.Helper;
 using Lunox.Library.Util;
 using Lunox.Services;
 using Lunox.Views;
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Channel;
-using Microsoft.AppCenter.Crashes;
 using System;
-using System.Globalization;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Globalization;
@@ -49,19 +44,12 @@ namespace Lunox
 
             InitializeComponent();
 
+            UnhandledException += OnAppUnhandledException;
             EnteredBackground += App_EnteredBackground;
             Resuming += App_Resuming;
 
             // TODO WTS: Add your app in the app center and set your secret here. More at https://docs.microsoft.com/appcenter/sdk/getting-started/uwp
-
-            //Crashes.SetEnabledAsync(true);
-            //AppCenter.LogLevel = LogLevel.Verbose;
-            AppCenter.SetUserId(Environment.MachineName);
-            //AppCenter.SetCountryCode(RegionInfo.CurrentRegion.TwoLetterISORegionName);
-            AppCenter.SetCountryCode(CultureInfo.InstalledUICulture.TwoLetterISOLanguageName);
-            AppCenter.Start("APP-CENTER", typeof(Analytics), typeof(Crashes), typeof(Channel));
-
-            UnhandledException += OnAppUnhandledException;
+            AppCenterService.Engine();
 
             // Deferred execution until used. Check https://docs.microsoft.com/dotnet/api/system.lazy-1 for further info on Lazy<T> class.
             _activationService = new Lazy<ActivationService>(CreateActivationService);
@@ -104,8 +92,7 @@ namespace Lunox
         {
             // TODO WTS: Please log and handle the exception as appropriate to your scenario
             // For more info see https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.unhandledexception
-            Crashes.TrackError(e.Exception);
-            Dialog.SendDialog(e.Exception.Message + "\n" + e.Exception.StackTrace, e.Exception.Source);
+            AppCenterService.Exception(e);
         }
 
         #endregion
