@@ -16,16 +16,22 @@
 -->
 
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
-  <Application>
-    <!--
+    <Application>
+        <!--
       Name="*Application*" değerine sahip Assembly öğesi, uygulama paketindeki tüm bütünleştirilmiş kodlar
       için geçerlidir. Yıldız işaretleri joker karakter değildir.
     -->
-    <Assembly Name="*Application*" Dynamic="Required All" />
-    
-    
-    <!-- Uygulamanıza özgü çalışma zamanı yönergelerini buraya ekleyin. -->
+        <Assembly Name="*Application*" Dynamic="Required All" />
 
 
-  </Application>
+        <!-- Uygulamanıza özgü çalışma zamanı yönergelerini buraya ekleyin. -->
+
+
+        <Type Name="Windows.Foundation.TypedEventHandler{Microsoft.UI.Xaml.Controls.NavigationView,Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs}" MarshalObject="Public" />
+
+        <Type Name="Microsoft.UI.Xaml.Controls.NavigationView">
+            <Event Name="ItemInvoked" Dynamic="Required"/>
+        </Type>
+
+    </Application>
 </Directives>

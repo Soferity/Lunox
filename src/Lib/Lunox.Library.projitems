@@ -16,7 +16,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Enum\RecognitionType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enum\VideoType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helper\Dialog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\Json.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helper\Restart.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\Singleton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\Settings.cs" />
   </ItemGroup>
   <ItemGroup>

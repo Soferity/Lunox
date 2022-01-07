@@ -2,14 +2,18 @@
 
 using Lunox.Library.Helper;
 using Lunox.Library.Util;
+using Lunox.Services;
 using Lunox.Views;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Channel;
+using Microsoft.AppCenter.Crashes;
 using System;
+using System.Globalization;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Globalization;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Navigation;
 
 #endregion
 
@@ -22,6 +26,14 @@ namespace Lunox
     /// </summary>
     public sealed partial class App : Application
     {
+        #region Variables
+
+        private readonly Lazy<ActivationService> _activationService;
+
+        private ActivationService ActivationService => _activationService.Value;
+
+        #endregion
+
         #region Functions
 
         #region App Function
@@ -32,18 +44,27 @@ namespace Lunox
         /// </summary>
         public App()
         {
-            try
-            {
-                App.Current.RequestedTheme = Settings.Theme;
-                ApplicationLanguages.PrimaryLanguageOverride = Settings.Language;
+            App.Current.RequestedTheme = Settings.Theme;
+            ApplicationLanguages.PrimaryLanguageOverride = Settings.Language;
 
-                InitializeComponent();
-                Suspending += OnSuspending;
-            }
-            catch (Exception Ex)
-            {
-                Dialog.SendDialog(Ex.Message + "\n" + Ex.StackTrace, Ex.Source);
-            }
+            InitializeComponent();
+
+            EnteredBackground += App_EnteredBackground;
+            Resuming += App_Resuming;
+
+            // TODO WTS: Add your app in the app center and set your secret here. More at https://docs.microsoft.com/appcenter/sdk/getting-started/uwp
+
+            //Crashes.SetEnabledAsync(true);
+            //AppCenter.LogLevel = LogLevel.Verbose;
+            AppCenter.SetUserId(Environment.MachineName);
+            //AppCenter.SetCountryCode(RegionInfo.CurrentRegion.TwoLetterISORegionName);
+            AppCenter.SetCountryCode(CultureInfo.InstalledUICulture.TwoLetterISOLanguageName);
+            AppCenter.Start("APP-CENTER", typeof(Analytics), typeof(Crashes), typeof(Channel));
+
+            UnhandledException += OnAppUnhandledException;
+
+            // Deferred execution until used. Check https://docs.microsoft.com/dotnet/api/system.lazy-1 for further info on Lazy<T> class.
+            _activationService = new Lazy<ActivationService>(CreateActivationService);
         }
 
         #endregion
@@ -52,7 +73,40 @@ namespace Lunox
 
         #region Normal Functions
 
-        //
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void App_EnteredBackground(object sender, EnteredBackgroundEventArgs e)
+        {
+            Windows.Foundation.Deferral deferral = e.GetDeferral();
+            await Singleton<SuspendAndResumeService>.Instance.SaveStateAsync();
+            deferral.Complete();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void App_Resuming(object sender, object e)
+        {
+            Singleton<SuspendAndResumeService>.Instance.ResumeApp();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnAppUnhandledException(object sender, Windows.UI.Xaml.UnhandledExceptionEventArgs e)
+        {
+            // TODO WTS: Please log and handle the exception as appropriate to your scenario
+            // For more info see https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.unhandledexception
+            Crashes.TrackError(e.Exception);
+            Dialog.SendDialog(e.Exception.Message + "\n" + e.Exception.StackTrace, e.Exception.Source);
+        }
 
         #endregion
 
@@ -62,30 +116,12 @@ namespace Lunox
         /// Invoked when the application is launched normally by the end user. Other entry points
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
-        /// <param name="e">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        /// <param name="args"></param>
+        protected override async void OnLaunched(LaunchActivatedEventArgs args)
         {
-            if (!(Window.Current.Content is Frame rootFrame))
+            if (!args.PrelaunchActivated)
             {
-                rootFrame = new Frame();
-
-                rootFrame.NavigationFailed += OnNavigationFailed;
-
-                if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
-                {
-                    //TODO: Önceki askıya alınmış uygulamadan durumu yükle
-                }
-
-                Window.Current.Content = rootFrame;
-            }
-
-            if (e.PrelaunchActivated == false)
-            {
-                if (rootFrame.Content == null)
-                {
-                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
-                }
-                Window.Current.Activate();
+                await ActivationService.ActivateAsync(args);
             }
         }
 
@@ -93,47 +129,36 @@ namespace Lunox
         /// 
         /// </summary>
         /// <param name="args"></param>
-        protected override void OnActivated(IActivatedEventArgs args)
+        protected override async void OnActivated(IActivatedEventArgs args)
         {
-            if (!(Window.Current.Content is Frame rootFrame))
-            {
-                rootFrame = new Frame();
-
-                rootFrame.NavigationFailed += OnNavigationFailed;
-
-                Window.Current.Content = rootFrame;
-            }
-
-            if (rootFrame.Content == null)
-            {
-                rootFrame.Navigate(typeof(MainPage), args);
-            }
-
-            Window.Current.Activate();
+            await ActivationService.ActivateAsync(args);
         }
 
         /// <summary>
-        /// Invoked when Navigation to a certain page fails
+        /// 
         /// </summary>
-        /// <param name="sender">The Frame which failed navigation</param>
-        /// <param name="e">Details about the navigation failure</param>
-        private void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
+        /// <returns></returns>
+        private ActivationService CreateActivationService()
         {
-            throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
+            return new ActivationService(this, typeof(MainPage), new Lazy<UIElement>(CreateShell));
         }
 
         /// <summary>
-        /// Invoked when application execution is being suspended. Application state is saved
-        /// without knowing whether the application will be terminated or resumed with the contents
-        /// of memory still intact.
+        /// 
         /// </summary>
-        /// <param name="sender">The source of the suspend request.</param>
-        /// <param name="e">Details about the suspend request.</param>
-        private void OnSuspending(object sender, SuspendingEventArgs e)
+        /// <returns></returns>
+        private UIElement CreateShell()
         {
-            SuspendingDeferral deferral = e.SuspendingOperation.GetDeferral();
-            //TODO: Uygulama durumunu kaydet ve tüm arka plan etkinliklerini durdur
-            deferral.Complete();
+            return new ShellPage();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args"></param>
+        protected override async void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
+        {
+            await ActivationService.ActivateFromShareTargetAsync(args);
         }
 
         #endregion

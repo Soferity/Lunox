@@ -1,5 +1,4 @@
-﻿//using Lunox.ViewModels;
-
+﻿using Lunox.ViewModels;
 using Xunit;
 
 namespace Lunox.Tests.XUnit
@@ -12,8 +11,6 @@ namespace Lunox.Tests.XUnit
         {
             //TODO WTS: xXx
         }
-
-        /*
 
         // TODO WTS: Add tests for functionality you add to MainViewModel.
         [Fact]
@@ -41,7 +38,5 @@ namespace Lunox.Tests.XUnit
             WebViewViewModel vm = new WebViewViewModel();
             Assert.NotNull(vm);
         }
-
-        */
     }
 }

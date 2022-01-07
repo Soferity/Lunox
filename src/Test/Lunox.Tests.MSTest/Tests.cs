@@ -1,4 +1,4 @@
-﻿//using Lunox.ViewModels;
+﻿using Lunox.ViewModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lunox.Tests.MSTest
@@ -12,8 +12,6 @@ namespace Lunox.Tests.MSTest
         {
             //TODO WTS: xXx
         }
-
-        /*
 
         // TODO WTS: Add tests for functionality you add to MainViewModel.
         [TestMethod]
@@ -41,7 +39,5 @@ namespace Lunox.Tests.MSTest
             WebViewViewModel vm = new WebViewViewModel();
             Assert.IsNotNull(vm);
         }
-
-        */
     }
 }
