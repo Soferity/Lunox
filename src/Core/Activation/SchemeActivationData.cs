@@ -1,25 +1,59 @@
-﻿using System;
+﻿#region Imports
+
+using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Web;
+
+#endregion
 
 namespace Lunox.Activation
 {
+    #region SchemeActivationData
+
+    /// <summary>
+    /// 
+    /// </summary>
     public class SchemeActivationData
     {
-        // TODO WTS: Open package.appxmanifest and change the declaration for the scheme (from the default of 'wtsapp') to what you want for your app.
-        // More details about this functionality can be found at https://github.com/Microsoft/WindowsTemplateStudio/blob/release/docs/UWP/features/deep-linking.md
-        // TODO WTS: Change the image in Assets/Logo.png to one for display if the OS asks the user which app to launch.
-        // Also update this protocol name with the same value as package.appxmanifest.
-        private const string ProtocolName = "wtsapp";
+        #region Variables
 
+        /// <summary>
+        /// TODO WTS: Open package.appxmanifest and change the declaration for the scheme (from the default of 'wtsapp') to what you want for your app.
+        /// More details about this functionality can be found at https://github.com/Microsoft/WindowsTemplateStudio/blob/release/docs/UWP/features/deep-linking.md
+        /// TODO WTS: Change the image in Assets/Logo.png to one for display if the OS asks the user which app to launch.
+        /// Also update this protocol name with the same value as package.appxmanifest.
+        /// </summary>
+        private const string ProtocolName = "lnxapp";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public Type PageType { get; private set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public Uri Uri { get; private set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public Dictionary<string, string> Parameters { get; private set; } = new Dictionary<string, string>();
 
+        /// <summary>
+        /// 
+        /// </summary>
         public bool IsValid => PageType != null;
 
+        #endregion
+
+        #region Functions
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="activationUri"></param>
         public SchemeActivationData(Uri activationUri)
         {
             PageType = SchemeActivationConfig.GetPage(activationUri.AbsolutePath);
@@ -29,13 +63,18 @@ namespace Lunox.Activation
                 return;
             }
 
-            System.Collections.Specialized.NameValueCollection uriQuery = HttpUtility.ParseQueryString(activationUri.Query);
+            NameValueCollection uriQuery = HttpUtility.ParseQueryString(activationUri.Query);
             foreach (string paramKey in uriQuery.AllKeys)
             {
                 Parameters.Add(paramKey, uriQuery.Get(paramKey));
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pageType"></param>
+        /// <param name="parameters"></param>
         public SchemeActivationData(Type pageType, Dictionary<string, string> parameters = null)
         {
             PageType = pageType;
@@ -43,11 +82,15 @@ namespace Lunox.Activation
             Uri = BuildUri();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private Uri BuildUri()
         {
             string pageKey = SchemeActivationConfig.GetPageKey(PageType);
             UriBuilder uriBuilder = new UriBuilder($"{ProtocolName}:{pageKey}");
-            System.Collections.Specialized.NameValueCollection query = HttpUtility.ParseQueryString(string.Empty);
+            NameValueCollection query = HttpUtility.ParseQueryString(string.Empty);
 
             foreach (KeyValuePair<string, string> parameter in Parameters)
             {
@@ -57,5 +100,9 @@ namespace Lunox.Activation
             uriBuilder.Query = query.ToString();
             return new Uri(uriBuilder.ToString());
         }
+
+        #endregion
     }
+
+    #endregion
 }

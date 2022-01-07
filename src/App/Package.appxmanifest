@@ -53,6 +53,14 @@
         </uap:InitialRotationPreference>
         <uap:LockScreen BadgeLogo="Assets\App\BadgeLogo.png" Notification="badgeAndTileText"/>
       </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="lnxapp">
+            <uap:DisplayName>Lunox</uap:DisplayName>
+            <uap:Logo>Assets\App\AppLogo.png</uap:Logo>
+          </uap:Protocol>
+        </uap:Extension>
+      </Extensions>
     </Application>
   </Applications>
 

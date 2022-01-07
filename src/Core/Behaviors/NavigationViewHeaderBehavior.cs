@@ -1,69 +1,136 @@
-﻿using Lunox.Services;
+﻿#region Imports
 
+using Lunox.Services;
 using Microsoft.Xaml.Interactivity;
-
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using WUIX = Windows.UI.Xaml.Controls;
+using MUIX = Microsoft.UI.Xaml.Controls;
 
-using WinUI = Microsoft.UI.Xaml.Controls;
+#endregion
 
 namespace Lunox.Behaviors
 {
-    public class NavigationViewHeaderBehavior : Behavior<WinUI.NavigationView>
-    {
-        private static NavigationViewHeaderBehavior _current;
-        private Page _currentPage;
+    #region NavigationViewHeaderBehavior
 
+    /// <summary>
+    /// 
+    /// </summary>
+    public class NavigationViewHeaderBehavior : Behavior<MUIX.NavigationView>
+    {
+        #region Variables
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private static NavigationViewHeaderBehavior _current;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private WUIX.Page _currentPage;
+
+        /// <summary>
+        /// 
+        /// </summary>
         public DataTemplate DefaultHeaderTemplate { get; set; }
 
+        #endregion
+
+        #region Functions
+
+        /// <summary>
+        /// 
+        /// </summary>
         public object DefaultHeader
         {
             get => GetValue(DefaultHeaderProperty);
             set => SetValue(DefaultHeaderProperty, value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static readonly DependencyProperty DefaultHeaderProperty = DependencyProperty.Register("DefaultHeader", typeof(object), typeof(NavigationViewHeaderBehavior), new PropertyMetadata(null, (d, e) => _current.UpdateHeader()));
 
-        public static NavigationViewHeaderMode GetHeaderMode(Page item)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public static NavigationViewHeaderMode GetHeaderMode(WUIX.Page item)
         {
             return (NavigationViewHeaderMode)item.GetValue(HeaderModeProperty);
         }
 
-        public static void SetHeaderMode(Page item, NavigationViewHeaderMode value)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="value"></param>
+        public static void SetHeaderMode(WUIX.Page item, NavigationViewHeaderMode value)
         {
             item.SetValue(HeaderModeProperty, value);
         }
 
-        public static readonly DependencyProperty HeaderModeProperty =
-            DependencyProperty.RegisterAttached("HeaderMode", typeof(bool), typeof(NavigationViewHeaderBehavior), new PropertyMetadata(NavigationViewHeaderMode.Always, (d, e) => _current.UpdateHeader()));
+        /// <summary>
+        /// 
+        /// </summary>
+        public static readonly DependencyProperty HeaderModeProperty = DependencyProperty.RegisterAttached("HeaderMode", typeof(bool), typeof(NavigationViewHeaderBehavior), new PropertyMetadata(NavigationViewHeaderMode.Always, (d, e) => _current.UpdateHeader()));
 
-        public static object GetHeaderContext(Page item)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public static object GetHeaderContext(WUIX.Page item)
         {
             return item.GetValue(HeaderContextProperty);
         }
 
-        public static void SetHeaderContext(Page item, object value)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="value"></param>
+        public static void SetHeaderContext(WUIX.Page item, object value)
         {
             item.SetValue(HeaderContextProperty, value);
         }
 
-        public static readonly DependencyProperty HeaderContextProperty =
-            DependencyProperty.RegisterAttached("HeaderContext", typeof(object), typeof(NavigationViewHeaderBehavior), new PropertyMetadata(null, (d, e) => _current.UpdateHeader()));
-
-        public static DataTemplate GetHeaderTemplate(Page item)
+        /// <summary>
+        /// 
+        /// </summary>
+        public static readonly DependencyProperty HeaderContextProperty = DependencyProperty.RegisterAttached("HeaderContext", typeof(object), typeof(NavigationViewHeaderBehavior), new PropertyMetadata(null, (d, e) => _current.UpdateHeader()));
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public static DataTemplate GetHeaderTemplate(WUIX.Page item)
         {
             return (DataTemplate)item.GetValue(HeaderTemplateProperty);
         }
 
-        public static void SetHeaderTemplate(Page item, DataTemplate value)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="value"></param>
+        public static void SetHeaderTemplate(WUIX.Page item, DataTemplate value)
         {
             item.SetValue(HeaderTemplateProperty, value);
         }
 
-        public static readonly DependencyProperty HeaderTemplateProperty =
-            DependencyProperty.RegisterAttached("HeaderTemplate", typeof(DataTemplate), typeof(NavigationViewHeaderBehavior), new PropertyMetadata(null, (d, e) => _current.UpdateHeaderTemplate()));
+        /// <summary>
+        /// 
+        /// </summary>
+        public static readonly DependencyProperty HeaderTemplateProperty = DependencyProperty.RegisterAttached("HeaderTemplate", typeof(DataTemplate), typeof(NavigationViewHeaderBehavior), new PropertyMetadata(null, (d, e) => _current.UpdateHeaderTemplate()));
 
+        /// <summary>
+        /// 
+        /// </summary>
         protected override void OnAttached()
         {
             base.OnAttached();
@@ -71,16 +138,24 @@ namespace Lunox.Behaviors
             NavigationService.Navigated += OnNavigated;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         protected override void OnDetaching()
         {
             base.OnDetaching();
             NavigationService.Navigated -= OnNavigated;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnNavigated(object sender, NavigationEventArgs e)
         {
-            Frame frame = sender as Frame;
-            if (frame.Content is Page page)
+            WUIX.Frame frame = sender as WUIX.Frame;
+            if (frame.Content is WUIX.Page page)
             {
                 _currentPage = page;
 
@@ -89,6 +164,9 @@ namespace Lunox.Behaviors
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void UpdateHeader()
         {
             if (_currentPage != null)
@@ -123,6 +201,9 @@ namespace Lunox.Behaviors
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void UpdateHeaderTemplate()
         {
             if (_currentPage != null)
@@ -131,5 +212,9 @@ namespace Lunox.Behaviors
                 AssociatedObject.HeaderTemplate = headerTemplate ?? DefaultHeaderTemplate;
             }
         }
+
+        #endregion
     }
+
+    #endregion
 }

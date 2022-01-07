@@ -212,8 +212,6 @@
     <Content Include="Assets\Pages\NotFound\404.png" />
     <Content Include="Assets\Pages\NotFound\Back.jpg" />
     <None Include="Package.StoreAssociation.xml" />
-    <None Include=".editorconfig" />
-    <None Include="Settings.XamlStyler" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>

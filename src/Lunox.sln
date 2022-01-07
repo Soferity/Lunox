@@ -31,6 +31,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lunox.Core.Tests.NUnit", "T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lunox.Core.Tests.MSTest", "Test\Lunox.Core.Tests.MSTest\Lunox.Core.Tests.MSTest.csproj", "{367D61B2-825E-41B6-B1EB-BB4CE4C744DF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{8DA6752B-E9C8-411C-9801-2EEDE24FBE2B}"
+	ProjectSection(SolutionItems) = preProject
+		Config\.editorconfig = Config\.editorconfig
+		Config\Settings.XamlStyler = Config\Settings.XamlStyler
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Lang\Lunox.Language.projitems*{23ef746e-3e58-4240-8e0d-01dfd89c5950}*SharedItemsImports = 13

@@ -1,4 +1,6 @@
-﻿using Lunox.Models;
+﻿#region Imports
+
+using Lunox.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,18 +9,31 @@ using Windows.ApplicationModel.DataTransfer;
 using Windows.Storage;
 using Windows.Storage.Streams;
 
+#endregion
+
 namespace Lunox.Helpers
 {
-    // TODO WTS: Start sharing data from your pages / views with these steps:
-    // - Step 1. Setup a DataTransferManager object in your page / view and add a DataRequested event handler
-    //   (i.e. OnDataRequested) to be called whenever the user invokes share.
-    // - Step 2. Within the OnDataRequested event handler create a ShareSourceData instance and add the data you want to share.
-    // - Step 3. Call the SetData extension method before leaving the event handler (i.e. args.Request.SetData(shareSourceData))
-    // - Step 4. Call the DataTransferManager.ShowShareUI method from your command or handler to start the sharing action
-    // Also consider registering for the DataPackage ShareComplete event handler (args.Request.Data.ShareCompleted) to run code when the sharing operation ends. Be sure to unregister the ShareComplete event handler when done.
-    // More details on sharing data at https://docs.microsoft.com/windows/uwp/app-to-app/share-data
+    #region DataRequestExtensions
+
+    /// <summary>
+    /// TODO WTS: Start sharing data from your pages / views with these steps:
+    /// - Step 1. Setup a DataTransferManager object in your page / view and add a DataRequested event handler
+    ///   (i.e. OnDataRequested) to be called whenever the user invokes share.
+    /// - Step 2. Within the OnDataRequested event handler create a ShareSourceData instance and add the data you want to share.
+    /// - Step 3. Call the SetData extension method before leaving the event handler (i.e. args.Request.SetData(shareSourceData))
+    /// - Step 4. Call the DataTransferManager.ShowShareUI method from your command or handler to start the sharing action
+    /// Also consider registering for the DataPackage ShareComplete event handler (args.Request.Data.ShareCompleted) to run code when the sharing operation ends. Be sure to unregister the ShareComplete event handler when done.
+    /// More details on sharing data at https://docs.microsoft.com/windows/uwp/app-to-app/share-data
+    /// </summary>
     public static class DataRequestExtensions
     {
+        #region Functions
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dataRequest"></param>
+        /// <param name="config"></param>
         public static void SetData(this DataRequest dataRequest, ShareSourceData config)
         {
             DataRequestDeferral deferral = dataRequest.GetDeferral();
@@ -72,6 +87,12 @@ namespace Lunox.Helpers
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="requestData"></param>
+        /// <param name="image"></param>
+        /// <param name="storageItems"></param>
         private static void FillImage(this DataPackage requestData, StorageFile image, List<IStorageItem> storageItems)
         {
             storageItems.Add(image);
@@ -80,6 +101,12 @@ namespace Lunox.Helpers
             requestData.SetBitmap(streamReference);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="requestData"></param>
+        /// <param name="sourceItems"></param>
+        /// <param name="storageItems"></param>
         private static void FillStorageItems(this DataPackage requestData, IEnumerable<IStorageItem> sourceItems, List<IStorageItem> storageItems)
         {
             foreach (IStorageItem item in sourceItems)
@@ -88,6 +115,12 @@ namespace Lunox.Helpers
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="requestData"></param>
+        /// <param name="deferredDataFormatId"></param>
+        /// <param name="getDeferredDataAsyncFunc"></param>
         private static void FillDeferredContent(this DataPackage requestData, string deferredDataFormatId, Func<Task<object>> getDeferredDataAsyncFunc)
         {
             requestData.SetDataProvider(deferredDataFormatId, async (providerRequest) =>
@@ -104,5 +137,9 @@ namespace Lunox.Helpers
                 }
             });
         }
+
+        #endregion
     }
+
+    #endregion
 }

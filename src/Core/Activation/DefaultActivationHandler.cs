@@ -1,20 +1,47 @@
-﻿using Lunox.Library.Helper;
+﻿#region Imports
+
+using Lunox.Library.Helper;
 using Lunox.Services;
 using System;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Activation;
 
+#endregion
+
 namespace Lunox.Activation
 {
+    #region DefaultActivationHandler
+
+    /// <summary>
+    /// 
+    /// </summary>
     internal class DefaultActivationHandler : ActivationHandler<IActivatedEventArgs>
     {
+        #region Variables
+
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly Type _navElement;
 
+        #endregion
+
+        #region Functions
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="navElement"></param>
         public DefaultActivationHandler(Type navElement)
         {
             _navElement = navElement;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         protected override async Task HandleInternalAsync(IActivatedEventArgs args)
         {
             // When the navigation stack isn't restored, navigate to the first page and configure
@@ -33,10 +60,19 @@ namespace Lunox.Activation
             await Task.CompletedTask;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         protected override bool CanHandleInternal(IActivatedEventArgs args)
         {
             // None of the ActivationHandlers has handled the app activation
             return NavigationService.Frame.Content == null && _navElement != null;
         }
+
+        #endregion
     }
+
+    #endregion
 }
