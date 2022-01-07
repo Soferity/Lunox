@@ -1,53 +1,104 @@
-﻿using System;
+﻿#region Imports
+
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-
 using Windows.ApplicationModel.DataTransfer;
 using Windows.ApplicationModel.DataTransfer.ShareTarget;
 using Windows.Storage;
 using Windows.Storage.Streams;
 
+#endregion
+
 namespace Lunox.Helpers
 {
+    #region ShareOperationExtensions
+
+    /// <summary>
+    /// 
+    /// </summary>
     public static class ShareOperationExtensions
     {
+        #region Functions
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="shareOperation"></param>
+        /// <returns></returns>
         public static async Task<Uri> GetApplicationLinkAsync(this ShareOperation shareOperation)
         {
             return await GetOperationDataAsync<Uri>(shareOperation, StandardDataFormats.ApplicationLink);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="shareOperation"></param>
+        /// <returns></returns>
         public static async Task<RandomAccessStreamReference> GetBitmapAsync(this ShareOperation shareOperation)
         {
             return await GetOperationDataAsync<RandomAccessStreamReference>(shareOperation, StandardDataFormats.Bitmap);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="shareOperation"></param>
+        /// <returns></returns>
         public static async Task<string> GetHtmlFormatAsync(this ShareOperation shareOperation)
         {
             return await GetOperationDataAsync<string>(shareOperation, StandardDataFormats.Html);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="shareOperation"></param>
+        /// <returns></returns>
         public static async Task<string> GetRtfAsync(this ShareOperation shareOperation)
         {
             return await GetOperationDataAsync<string>(shareOperation, StandardDataFormats.Rtf);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="shareOperation"></param>
+        /// <returns></returns>
         public static async Task<IReadOnlyList<IStorageItem>> GetStorageItemsAsync(this ShareOperation shareOperation)
         {
             return await GetOperationDataAsync<IReadOnlyList<IStorageItem>>(shareOperation, StandardDataFormats.StorageItems);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="shareOperation"></param>
+        /// <returns></returns>
         public static async Task<string> GetTextAsync(this ShareOperation shareOperation)
         {
             return await GetOperationDataAsync<string>(shareOperation, StandardDataFormats.Text);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="shareOperation"></param>
+        /// <returns></returns>
         public static async Task<Uri> GetWebLinkAsync(this ShareOperation shareOperation)
         {
             return await GetOperationDataAsync<Uri>(shareOperation, StandardDataFormats.WebLink) as Uri;
         }
 
-        private static async Task<T> GetOperationDataAsync<T>(this ShareOperation shareOperation, string dataFormat)
-            where T : class
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="shareOperation"></param>
+        /// <param name="dataFormat"></param>
+        /// <returns></returns>
+        private static async Task<T> GetOperationDataAsync<T>(this ShareOperation shareOperation, string dataFormat) where T : class
         {
             try
             {
@@ -93,5 +144,9 @@ namespace Lunox.Helpers
 
             return default;
         }
+
+        #endregion
     }
+
+#endregion
 }

@@ -1,20 +1,48 @@
-﻿using System;
+﻿#region Imports
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
 using Windows.Storage;
+
+#endregion
 
 namespace Lunox.Models
 {
+    #region ShareSourceData
+
+    /// <summary>
+    /// 
+    /// </summary>
     public class ShareSourceData
     {
+        #region Variables
+
+        /// <summary>
+        /// 
+        /// </summary>
         public string Title { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string Description { get; set; }
-
+        /// <summary>
+        /// 
+        /// </summary>
         internal List<ShareSourceItem> Items { get; }
 
+        #endregion
+
+        #region Functions
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="title"></param>
+        /// <param name="desciption"></param>
+        /// <exception cref="ArgumentException"></exception>
         public ShareSourceData(string title, string desciption = null)
         {
             if (string.IsNullOrEmpty(title))
@@ -27,6 +55,11 @@ namespace Lunox.Models
             Description = desciption;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="text"></param>
+        /// <exception cref="ArgumentException"></exception>
         public void SetText(string text)
         {
             if (string.IsNullOrEmpty(text))
@@ -37,6 +70,11 @@ namespace Lunox.Models
             Items.Add(ShareSourceItem.FromText(text));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="webLink"></param>
+        /// <exception cref="ArgumentNullException"></exception>
         public void SetWebLink(Uri webLink)
         {
             if (webLink == null)
@@ -47,8 +85,12 @@ namespace Lunox.Models
             Items.Add(ShareSourceItem.FromWebLink(webLink));
         }
 
-        // To share a link to your app you must first register it to handle URI activation
-        // More details at https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation
+        /// <summary>
+        /// To share a link to your app you must first register it to handle URI activation
+        /// More details at https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation
+        /// </summary>
+        /// <param name="applicationLink"></param>
+        /// <exception cref="ArgumentNullException"></exception>
         public void SetApplicationLink(Uri applicationLink)
         {
             if (applicationLink == null)
@@ -59,6 +101,11 @@ namespace Lunox.Models
             Items.Add(ShareSourceItem.FromApplicationLink(applicationLink));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="html"></param>
+        /// <exception cref="ArgumentException"></exception>
         public void SetHtml(string html)
         {
             if (string.IsNullOrEmpty(html))
@@ -69,6 +116,11 @@ namespace Lunox.Models
             Items.Add(ShareSourceItem.FromHtml(html));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="image"></param>
+        /// <exception cref="ArgumentNullException"></exception>
         public void SetImage(StorageFile image)
         {
             if (image == null)
@@ -79,6 +131,11 @@ namespace Lunox.Models
             Items.Add(ShareSourceItem.FromImage(image));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="storageItems"></param>
+        /// <exception cref="ArgumentException"></exception>
         public void SetStorageItems(IEnumerable<IStorageItem> storageItems)
         {
             if (storageItems == null || !storageItems.Any())
@@ -89,9 +146,14 @@ namespace Lunox.Models
             Items.Add(ShareSourceItem.FromStorageItems(storageItems));
         }
 
-        // Use this method to add content to share when you do not want to process the data until the target app actually requests it.
-        // The deferredDataFormatId parameter must be a const value from StandardDataFormats class.
-        // The getDeferredDataAsyncFunc parameter is the function that returns the object you want to share.
+        /// <summary>
+        /// Use this method to add content to share when you do not want to process the data until the target app actually requests it.
+        /// The deferredDataFormatId parameter must be a const value from StandardDataFormats class.
+        /// The getDeferredDataAsyncFunc parameter is the function that returns the object you want to share.
+        /// </summary>
+        /// <param name="deferredDataFormatId"></param>
+        /// <param name="getDeferredDataAsyncFunc"></param>
+        /// <exception cref="ArgumentException"></exception>
         public void SetDeferredContent(string deferredDataFormatId, Func<Task<object>> getDeferredDataAsyncFunc)
         {
             if (string.IsNullOrEmpty(deferredDataFormatId))
@@ -101,5 +163,9 @@ namespace Lunox.Models
 
             Items.Add(ShareSourceItem.FromDeferredContent(deferredDataFormatId, getDeferredDataAsyncFunc));
         }
+
+        #endregion
     }
+
+#endregion
 }

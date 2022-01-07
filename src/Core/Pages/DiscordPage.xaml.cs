@@ -1,10 +1,10 @@
 ﻿#region Imports
 
 using Lunox.Library.Util;
-using Microsoft.UI.Xaml.Controls;
+using MUIX = Microsoft.UI.Xaml.Controls;
 using Microsoft.Web.WebView2.Core;
 using System;
-using Windows.UI.Xaml.Controls;
+using WUIX = Windows.UI.Xaml.Controls;
 
 #endregion
 
@@ -15,7 +15,7 @@ namespace Lunox.Pages
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class DiscordPage : Page
+    public sealed partial class DiscordPage : WUIX.Page
     {
         #region Functions
 
@@ -33,7 +33,6 @@ namespace Lunox.Pages
             if (Settings.Browser == "WebView")
             {
                 WebViewOld.Source = new Uri(Uri);
-                Convert.ToInt32("53X");
             }
             else
             {
@@ -58,7 +57,7 @@ namespace Lunox.Pages
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        private void WebViewOld_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
+        private void WebViewOld_NavigationCompleted(WUIX.WebView sender, WUIX.WebViewNavigationCompletedEventArgs args)
         {
             if (WebViewOld.Opacity == 0D)
             {
@@ -73,7 +72,7 @@ namespace Lunox.Pages
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        private void WebViewNew_NavigationCompleted(WebView2 sender, CoreWebView2NavigationCompletedEventArgs args)
+        private void WebViewNew_NavigationCompleted(MUIX.WebView2 sender, CoreWebView2NavigationCompletedEventArgs args)
         {
             if (WebViewNew.Opacity == 0D)
             {

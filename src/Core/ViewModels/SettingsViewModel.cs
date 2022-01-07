@@ -1,4 +1,6 @@
-﻿using Lunox.Helpers;
+﻿#region Imports
+
+using Lunox.Helpers;
 using Lunox.Services;
 using Microsoft.Services.Store.Engagement;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
@@ -10,13 +12,27 @@ using System.Windows.Input;
 using Windows.ApplicationModel;
 using Windows.UI.Xaml;
 
+#endregion
+
 namespace Lunox.ViewModels
 {
-    // TODO WTS: Add other settings as necessary. For help see https://github.com/Microsoft/WindowsTemplateStudio/blob/release/docs/UWP/pages/settings.md
+    #region SettingsViewModel
+
+    /// <summary>
+    /// TODO WTS: Add other settings as necessary. For help see https://github.com/Microsoft/WindowsTemplateStudio/blob/release/docs/UWP/pages/settings.md
+    /// </summary>
     public class SettingsViewModel : ObservableObject
     {
+        #region Functions
+
+        /// <summary>
+        /// 
+        /// </summary>
         private ElementTheme _elementTheme = ThemeSelectorService.Theme;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public ElementTheme ElementTheme
         {
             get => _elementTheme;
@@ -24,8 +40,14 @@ namespace Lunox.ViewModels
             set => SetProperty(ref _elementTheme, value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private string _versionDescription;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string VersionDescription
         {
             get => _versionDescription;
@@ -33,8 +55,14 @@ namespace Lunox.ViewModels
             set => SetProperty(ref _versionDescription, value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private ICommand _switchThemeCommand;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public ICommand SwitchThemeCommand
         {
             get
@@ -56,10 +84,19 @@ namespace Lunox.ViewModels
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public Visibility FeedbackLinkVisibility => StoreServicesFeedbackLauncher.IsSupported() ? Visibility.Visible : Visibility.Collapsed;
 
+        /// <summary>
+        /// 
+        /// </summary>
         private ICommand _launchFeedbackHubCommand;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public ICommand LaunchFeedbackHubCommand
         {
             get
@@ -79,16 +116,27 @@ namespace Lunox.ViewModels
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public SettingsViewModel()
         {
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public async Task InitializeAsync()
         {
             VersionDescription = GetVersionDescription();
             await Task.CompletedTask;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private string GetVersionDescription()
         {
             string appName = "AppDisplayName".GetLocalized();
@@ -98,5 +146,9 @@ namespace Lunox.ViewModels
 
             return $"{appName} - {version.Major}.{version.Minor}.{version.Build}.{version.Revision}";
         }
+
+        #endregion
     }
+
+    #endregion
 }
