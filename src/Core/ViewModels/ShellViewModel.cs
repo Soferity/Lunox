@@ -11,10 +11,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.System;
-using WUIX = Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Navigation;
 using MUIX = Microsoft.UI.Xaml.Controls;
+using WUIX = Windows.UI.Xaml.Controls;
 
 #endregion
 
@@ -33,7 +33,7 @@ namespace Lunox.ViewModels
         /// 
         /// </summary>
         private readonly KeyboardAccelerator _altLeftKeyboardAccelerator = BuildKeyboardAccelerator(VirtualKey.Left, VirtualKeyModifiers.Menu);
-        
+
         /// <summary>
         /// 
         /// </summary>
@@ -43,27 +43,27 @@ namespace Lunox.ViewModels
         /// 
         /// </summary>
         private bool _isBackEnabled;
-        
+
         /// <summary>
         /// 
         /// </summary>
         private IList<KeyboardAccelerator> _keyboardAccelerators;
-        
+
         /// <summary>
         /// 
         /// </summary>
         private MUIX.NavigationView _navigationView;
-        
+
         /// <summary>
         /// 
         /// </summary>
         private MUIX.NavigationViewItem _selected;
-        
+
         /// <summary>
         /// 
         /// </summary>
         private ICommand _loadedCommand;
-        
+
         /// <summary>
         /// 
         /// </summary>
@@ -77,7 +77,7 @@ namespace Lunox.ViewModels
             get => _isBackEnabled;
             set => SetProperty(ref _isBackEnabled, value);
         }
-        
+
         /// <summary>
         /// 
         /// </summary>

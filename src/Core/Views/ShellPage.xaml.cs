@@ -2,8 +2,8 @@
 
 using Lunox.Services;
 using Lunox.ViewModels;
-using WUIX = Windows.UI.Xaml.Controls;
 using MUIX = Microsoft.UI.Xaml.Controls;
+using WUIX = Windows.UI.Xaml.Controls;
 
 #endregion
 

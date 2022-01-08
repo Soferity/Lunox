@@ -4,8 +4,8 @@ using Lunox.Services;
 using Microsoft.Xaml.Interactivity;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Navigation;
-using WUIX = Windows.UI.Xaml.Controls;
 using MUIX = Microsoft.UI.Xaml.Controls;
+using WUIX = Windows.UI.Xaml.Controls;
 
 #endregion
 
@@ -102,7 +102,7 @@ namespace Lunox.Behaviors
         /// 
         /// </summary>
         public static readonly DependencyProperty HeaderContextProperty = DependencyProperty.RegisterAttached("HeaderContext", typeof(object), typeof(NavigationViewHeaderBehavior), new PropertyMetadata(null, (d, e) => _current.UpdateHeader()));
-        
+
         /// <summary>
         /// 
         /// </summary>
