@@ -1,4 +1,6 @@
-﻿using Lunox.Helpers;
+﻿#region Imports
+
+using Lunox.Helpers;
 using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -8,16 +10,36 @@ using Windows.Storage;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 
+#endregion
+
 namespace Lunox.ViewModels
 {
+    #region SharedDataStorageItemsViewModel
+
+    /// <summary>
+    /// 
+    /// </summary>
     public class SharedDataStorageItemsViewModel : SharedDataViewModelBase
     {
+        #region Functions
+
+        /// <summary>
+        /// 
+        /// </summary>
         public ObservableCollection<ImageSource> Images { get; } = new ObservableCollection<ImageSource>();
 
+        /// <summary>
+        /// 
+        /// </summary>
         public SharedDataStorageItemsViewModel()
         {
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="shareOperation"></param>
+        /// <returns></returns>
         public override async Task LoadDataAsync(ShareOperation shareOperation)
         {
             await base.LoadDataAsync(shareOperation);
@@ -39,5 +61,9 @@ namespace Lunox.ViewModels
                 }
             }
         }
+
+        #endregion
     }
+
+    #endregion
 }

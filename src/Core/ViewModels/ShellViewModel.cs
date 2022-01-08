@@ -1,4 +1,6 @@
-﻿using Lunox.Helpers;
+﻿#region Imports
+
+using Lunox.Helpers;
 using Lunox.Services;
 using Lunox.Views;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
@@ -14,40 +16,100 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Navigation;
 using MUIX = Microsoft.UI.Xaml.Controls;
 
+#endregion
+
 namespace Lunox.ViewModels
 {
+    #region ShellViewModel
+
+    /// <summary>
+    /// 
+    /// </summary>
     public class ShellViewModel : ObservableObject
     {
+        #region Functions
+
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly KeyboardAccelerator _altLeftKeyboardAccelerator = BuildKeyboardAccelerator(VirtualKey.Left, VirtualKeyModifiers.Menu);
+        
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly KeyboardAccelerator _backKeyboardAccelerator = BuildKeyboardAccelerator(VirtualKey.GoBack);
 
+        /// <summary>
+        /// 
+        /// </summary>
         private bool _isBackEnabled;
+        
+        /// <summary>
+        /// 
+        /// </summary>
         private IList<KeyboardAccelerator> _keyboardAccelerators;
+        
+        /// <summary>
+        /// 
+        /// </summary>
         private MUIX.NavigationView _navigationView;
+        
+        /// <summary>
+        /// 
+        /// </summary>
         private MUIX.NavigationViewItem _selected;
+        
+        /// <summary>
+        /// 
+        /// </summary>
         private ICommand _loadedCommand;
+        
+        /// <summary>
+        /// 
+        /// </summary>
         private ICommand _itemInvokedCommand;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public bool IsBackEnabled
         {
             get => _isBackEnabled;
             set => SetProperty(ref _isBackEnabled, value);
         }
-
+        
+        /// <summary>
+        /// 
+        /// </summary>
         public MUIX.NavigationViewItem Selected
         {
             get => _selected;
             set => SetProperty(ref _selected, value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public ICommand LoadedCommand => _loadedCommand ?? (_loadedCommand = new RelayCommand(OnLoaded));
 
+        /// <summary>
+        /// 
+        /// </summary>
         public ICommand ItemInvokedCommand => _itemInvokedCommand ?? (_itemInvokedCommand = new RelayCommand<MUIX.NavigationViewItemInvokedEventArgs>(OnItemInvoked));
 
+        /// <summary>
+        /// 
+        /// </summary>
         public ShellViewModel()
         {
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="frame"></param>
+        /// <param name="navigationView"></param>
+        /// <param name="keyboardAccelerators"></param>
         public void Initialize(WUIX.Frame frame, MUIX.NavigationView navigationView, IList<KeyboardAccelerator> keyboardAccelerators)
         {
             _navigationView = navigationView;
@@ -58,6 +120,9 @@ namespace Lunox.ViewModels
             _navigationView.BackRequested += OnBackRequested;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private async void OnLoaded()
         {
             // Keyboard accelerators are added here to avoid showing 'Alt + left' tooltip on the page.
@@ -67,6 +132,10 @@ namespace Lunox.ViewModels
             await Task.CompletedTask;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args"></param>
         private void OnItemInvoked(MUIX.NavigationViewItemInvokedEventArgs args)
         {
             if (args.IsSettingsInvoked)
@@ -85,16 +154,31 @@ namespace Lunox.ViewModels
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnBackRequested(MUIX.NavigationView sender, MUIX.NavigationViewBackRequestedEventArgs args)
         {
             NavigationService.GoBack();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Frame_NavigationFailed(object sender, NavigationFailedEventArgs e)
         {
             throw e.Exception;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Frame_Navigated(object sender, NavigationEventArgs e)
         {
             IsBackEnabled = NavigationService.CanGoBack;
@@ -111,6 +195,12 @@ namespace Lunox.ViewModels
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="menuItems"></param>
+        /// <param name="pageType"></param>
+        /// <returns></returns>
         private MUIX.NavigationViewItem GetSelectedItem(IEnumerable<object> menuItems, Type pageType)
         {
             foreach (MUIX.NavigationViewItem item in menuItems.OfType<MUIX.NavigationViewItem>())
@@ -130,12 +220,24 @@ namespace Lunox.ViewModels
             return null;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="menuItem"></param>
+        /// <param name="sourcePageType"></param>
+        /// <returns></returns>
         private bool IsMenuItemForPageType(MUIX.NavigationViewItem menuItem, Type sourcePageType)
         {
             Type pageType = menuItem.GetValue(NavHelper.NavigateToProperty) as Type;
             return pageType == sourcePageType;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="modifiers"></param>
+        /// <returns></returns>
         private static KeyboardAccelerator BuildKeyboardAccelerator(VirtualKey key, VirtualKeyModifiers? modifiers = null)
         {
             KeyboardAccelerator keyboardAccelerator = new KeyboardAccelerator() { Key = key };
@@ -148,10 +250,19 @@ namespace Lunox.ViewModels
             return keyboardAccelerator;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private static void OnKeyboardAcceleratorInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
         {
             bool result = NavigationService.GoBack();
             args.Handled = result;
         }
+
+        #endregion
     }
+
+    #endregion
 }
