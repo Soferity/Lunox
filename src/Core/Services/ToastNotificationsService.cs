@@ -1,13 +1,28 @@
-﻿using Lunox.Activation;
+﻿#region Imports
+
+using Lunox.Activation;
 using System;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Notifications;
 
+#endregion
+
 namespace Lunox.Services
 {
+    #region ToastNotificationsService
+
+    /// <summary>
+    /// 
+    /// </summary>
     internal partial class ToastNotificationsService : ActivationHandler<ToastNotificationActivatedEventArgs>
     {
+        #region Functions
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="toastNotification"></param>
         public void ShowToastNotification(ToastNotification toastNotification)
         {
             try
@@ -20,6 +35,11 @@ namespace Lunox.Services
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         protected override async Task HandleInternalAsync(ToastNotificationActivatedEventArgs args)
         {
             //// TODO WTS: Handle activation from toast notification
@@ -27,5 +47,9 @@ namespace Lunox.Services
 
             await Task.CompletedTask;
         }
+
+        #endregion
     }
+
+#endregion
 }

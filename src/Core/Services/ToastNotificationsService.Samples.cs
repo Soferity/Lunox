@@ -1,11 +1,25 @@
-﻿using Microsoft.Toolkit.Uwp.Notifications;
+﻿#region Imports
+
+using Microsoft.Toolkit.Uwp.Notifications;
 
 using Windows.UI.Notifications;
 
+#endregion
+
 namespace Lunox.Services
 {
+    #region ToastNotificationsService
+
+    /// <summary>
+    /// 
+    /// </summary>
     internal partial class ToastNotificationsService
     {
+        #region Functions
+
+        /// <summary>
+        /// 
+        /// </summary>
         public void ShowToastNotificationSample()
         {
             // Create the toast content
@@ -59,5 +73,9 @@ namespace Lunox.Services
             // And show the toast
             ShowToastNotification(toast);
         }
+
+        #endregion
     }
+
+    #endregion
 }

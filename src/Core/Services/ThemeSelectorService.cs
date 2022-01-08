@@ -1,4 +1,6 @@
-﻿using Lunox.Helpers;
+﻿#region Imports
+
+using Lunox.Helpers;
 using System;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Core;
@@ -6,19 +8,47 @@ using Windows.Storage;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 
+#endregion
+
 namespace Lunox.Services
 {
+    #region ThemeSelectorService
+
+    /// <summary>
+    /// 
+    /// </summary>
     public static class ThemeSelectorService
     {
+        #region Variables
+
+        /// <summary>
+        /// 
+        /// </summary>
         private const string SettingsKey = "AppBackgroundRequestedTheme";
 
+        #endregion
+
+        #region Functions
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static ElementTheme Theme { get; set; } = ElementTheme.Default;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static async Task InitializeAsync()
         {
             Theme = await LoadThemeFromSettingsAsync();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="theme"></param>
+        /// <returns></returns>
         public static async Task SetThemeAsync(ElementTheme theme)
         {
             Theme = theme;
@@ -27,6 +57,10 @@ namespace Lunox.Services
             await SaveThemeInSettingsAsync(Theme);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static async Task SetRequestedThemeAsync()
         {
             foreach (CoreApplicationView view in CoreApplication.Views)
@@ -41,6 +75,10 @@ namespace Lunox.Services
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private static async Task<ElementTheme> LoadThemeFromSettingsAsync()
         {
             ElementTheme cacheTheme = ElementTheme.Default;
@@ -54,9 +92,18 @@ namespace Lunox.Services
             return cacheTheme;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="theme"></param>
+        /// <returns></returns>
         private static async Task SaveThemeInSettingsAsync(ElementTheme theme)
         {
             await ApplicationData.Current.LocalSettings.SaveAsync(SettingsKey, theme.ToString());
         }
+
+        #endregion
     }
+
+    #endregion
 }
