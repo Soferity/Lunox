@@ -1,4 +1,6 @@
-﻿using Lunox.Activation;
+﻿#region Imports
+
+using Lunox.Activation;
 using Lunox.Library.Helper;
 using System;
 using System.Collections.Generic;
@@ -8,18 +10,50 @@ using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
+#endregion
+
 namespace Lunox.Services
 {
-    // For more information on understanding and extending activation flow see
-    // https://github.com/Microsoft/WindowsTemplateStudio/blob/release/docs/UWP/activation.md
+    #region ActivationService
+
+    /// <summary>
+    /// For more information on understanding and extending activation flow see
+    /// https://github.com/Microsoft/WindowsTemplateStudio/blob/release/docs/UWP/activation.md
+    /// </summary>
     internal class ActivationService
     {
+        #region Variables
+
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly App _app;
+
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly Type _defaultNavItem;
+
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly Lazy<UIElement> _shell;
 
+        /// <summary>
+        /// 
+        /// </summary>
         private object _lastActivationArgs;
 
+        #endregion
+
+        #region Functions
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="defaultNavItem"></param>
+        /// <param name="shell"></param>
         public ActivationService(App app, Type defaultNavItem, Lazy<UIElement> shell = null)
         {
             _app = app;
@@ -27,6 +61,11 @@ namespace Lunox.Services
             _defaultNavItem = defaultNavItem;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="activationArgs"></param>
+        /// <returns></returns>
         public async Task ActivateAsync(object activationArgs)
         {
             if (IsInteractive(activationArgs))
@@ -65,11 +104,20 @@ namespace Lunox.Services
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private async Task InitializeAsync()
         {
             await ThemeSelectorService.InitializeAsync().ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="activationArgs"></param>
+        /// <returns></returns>
         private async Task HandleActivationAsync(object activationArgs)
         {
             ActivationHandler activationHandler = GetActivationHandlers()
@@ -90,6 +138,10 @@ namespace Lunox.Services
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private async Task StartupAsync()
         {
             await ThemeSelectorService.SetRequestedThemeAsync();
@@ -97,6 +149,10 @@ namespace Lunox.Services
             await WhatsNewDisplayService.ShowIfAppropriateAsync();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private IEnumerable<ActivationHandler> GetActivationHandlers()
         {
             yield return Singleton<SuspendAndResumeService>.Instance;
@@ -105,11 +161,21 @@ namespace Lunox.Services
             yield return Singleton<ShareTargetActivationHandler>.Instance;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         private bool IsInteractive(object args)
         {
             return args is IActivatedEventArgs;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="activationArgs"></param>
+        /// <returns></returns>
         internal async Task ActivateFromShareTargetAsync(ShareTargetActivatedEventArgs activationArgs)
         {
             ActivationHandler shareTargetHandler = GetActivationHandlers().FirstOrDefault(h => h.CanHandle(activationArgs));
@@ -118,5 +184,9 @@ namespace Lunox.Services
                 await shareTargetHandler.HandleAsync(activationArgs);
             }
         }
+
+        #endregion
     }
+
+    #endregion
 }

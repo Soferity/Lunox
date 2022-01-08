@@ -6,7 +6,6 @@ using Microsoft.Services.Store.Engagement;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.ApplicationModel;
@@ -72,9 +71,9 @@ namespace Lunox.ViewModels
                     _switchThemeCommand = new RelayCommand<ElementTheme>(
                         async (param) =>
                         {
-                            //AppCenterService.TrackEvent("ChangeTheme", new Dictionary<string, string>() { { $"{ElementTheme}", $"{param}" } });
-                            AppCenterService.TrackEvent("EVENT", new Dictionary<string, string>() { { "ChangeTheme", $"{ElementTheme}->{param}" } });
-                            //AppCenterService.TrackEvent("Settings", new Dictionary<string, string>() { { "ChangeTheme", $"{ElementTheme}->{param}" } });
+                            //AppCenterService.TrackEvent("ChangeTheme", $"{ElementTheme}", $"{param}");
+                            AppCenterService.TrackEvent("EVENT", "ChangeTheme", $"{ElementTheme}->{param}");
+                            //AppCenterService.TrackEvent("Settings", "ChangeTheme", $"{ElementTheme}->{param}");
                             ElementTheme = param;
                             await ThemeSelectorService.SetThemeAsync(param);
                         });
