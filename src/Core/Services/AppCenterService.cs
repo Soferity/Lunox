@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Security.Principal;
 using System.Text;
-using WUIX = Windows.UI.Xaml;
+using WUX = Windows.UI.Xaml;
 
 #endregion
 
@@ -51,7 +51,7 @@ namespace Lunox.Services
         /// 
         /// </summary>
         /// <param name="e"></param>
-        public static void Exception(WUIX.UnhandledExceptionEventArgs e)
+        public static void Exception(WUX.UnhandledExceptionEventArgs e)
         {
             TrackError(e.Exception);
         }
