@@ -2,8 +2,8 @@
 
 using Lunox.Services;
 using Lunox.ViewModels;
-using MUIX = Microsoft.UI.Xaml.Controls;
-using WUIX = Windows.UI.Xaml.Controls;
+using MUXC = Microsoft.UI.Xaml.Controls;
+using WUXC = Windows.UI.Xaml.Controls;
 
 #endregion
 
@@ -14,7 +14,7 @@ namespace Lunox.Views
     /// <summary>
     /// TODO WTS: Change the icons and titles for all NavigationViewItems in ShellPage.xaml.
     /// </summary>
-    public sealed partial class ShellPage : WUIX.Page
+    public sealed partial class ShellPage : WUXC.Page
     {
         #region Functions
 
@@ -38,9 +38,9 @@ namespace Lunox.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        private void navigationView_SelectionChanged(MUIX.NavigationView sender, MUIX.NavigationViewSelectionChangedEventArgs args)
+        private void navigationView_SelectionChanged(MUXC.NavigationView sender, MUXC.NavigationViewSelectionChangedEventArgs args)
         {
-            MUIX.NavigationViewItem SelectedItem = (MUIX.NavigationViewItem)args.SelectedItem;
+            MUXC.NavigationViewItem SelectedItem = (MUXC.NavigationViewItem)args.SelectedItem;
 
             if (SelectedItem.Tag == null)
             {

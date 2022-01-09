@@ -14,7 +14,7 @@
                 <Image
                     Width="40"
                     Height="40"
-                    Source="ms-appx:///Assets/StoreLogo.png" />
+                    Source="ms-appx:///Assets/App/StoreLogo.png" />
                 <TextBlock
                     Margin="{StaticResource SmallLeftMargin}"
                     VerticalAlignment="Center"

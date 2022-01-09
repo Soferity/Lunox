@@ -5,7 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:behaviors="using:Lunox.Behaviors"
-    xmlns:winui="using:Microsoft.UI.Xaml.Controls"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:helpers="using:Lunox.Helpers"
     xmlns:views="using:Lunox.Views"
     xmlns:ic="using:Microsoft.Xaml.Interactions.Core"
@@ -18,24 +18,25 @@
         </ic:EventTriggerBehavior>
     </i:Interaction.Behaviors>
 
-    <winui:NavigationView
+    <muxc:NavigationView
         x:Name="navigationView"
         IsBackButtonVisible="Visible"
         IsBackEnabled="{x:Bind ViewModel.IsBackEnabled, Mode=OneWay}"
         SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
         IsSettingsVisible="True"
         Background="{ThemeResource SystemControlBackgroundAltHighBrush}" SelectionChanged="navigationView_SelectionChanged">
-        <winui:NavigationView.MenuItems>
+        <muxc:NavigationView.MenuItems>
             <!--
             TODO WTS: Change the symbols for each item as appropriate for your app
             More on Segoe UI Symbol icons: https://docs.microsoft.com/windows/uwp/style/segoe-ui-symbol-font
             Or to use an IconElement instead of a Symbol see https://github.com/Microsoft/WindowsTemplateStudio/blob/release/docs/UWP/projectTypes/navigationpane.md
             Edit String/en-US/Resources.resw: Add a menu item title for each page
             -->
-            <winui:NavigationViewItem x:Uid="Shell_Main" Tag="Main" Icon="Document" helpers:NavHelper.NavigateTo="views:MainPage" />
-            <winui:NavigationViewItem x:Uid="Shell_WebView" Tag="WebView" Icon="Document" helpers:NavHelper.NavigateTo="views:WebViewPage" />
-            <winui:NavigationViewItem x:Uid="Shell_SchemeActivationSample" Tag="SchemeActivation" Icon="Document" helpers:NavHelper.NavigateTo="views:SchemeActivationSamplePage" />
-        </winui:NavigationView.MenuItems>
+            <muxc:NavigationViewItem x:Uid="Shell_Main" Tag="Main" Icon="Document" helpers:NavHelper.NavigateTo="views:MainPage" />
+            <muxc:NavigationViewItem x:Uid="Shell_WebView" Tag="WebView" Icon="Document" helpers:NavHelper.NavigateTo="views:WebViewPage" />
+            <muxc:NavigationViewItem x:Uid="Shell_SchemeActivationSample" Tag="SchemeActivation" Icon="Document" helpers:NavHelper.NavigateTo="views:SchemeActivationSamplePage" />
+            <muxc:NavigationViewItem x:Uid="Shell_Test" Tag="Test" Icon="Audio" />
+        </muxc:NavigationView.MenuItems>
         <i:Interaction.Behaviors>
             <behaviors:NavigationViewHeaderBehavior
                 DefaultHeader="{x:Bind ViewModel.Selected.Content, Mode=OneWay}">
@@ -57,5 +58,5 @@
         <Grid>
             <Frame x:Name="shellFrame" />
         </Grid>
-    </winui:NavigationView>
+    </muxc:NavigationView>
 </Page>

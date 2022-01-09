@@ -21,7 +21,7 @@ namespace Lunox.Helpers
         /// This helper class allows to specify the page that will be shown when you click on a NavigationViewItem
         ///
         /// Usage in xaml:
-        /// <winui:NavigationViewItem x:Uid="Shell_Main" Icon="Document" helpers:NavHelper.NavigateTo="views:MainPage" />
+        /// <muxc:NavigationViewItem x:Uid="Shell_Main" Icon="Document" helpers:NavHelper.NavigateTo="views:MainPage" />
         ///
         /// Usage in code:
         /// NavHelper.SetNavigateTo(navigationViewItem, typeof(MainPage));
