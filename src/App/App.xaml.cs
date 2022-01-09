@@ -8,7 +8,7 @@ using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Globalization;
-using Windows.UI.Xaml;
+using WUX = Windows.UI.Xaml;
 
 #endregion
 
@@ -19,12 +19,18 @@ namespace Lunox
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class App : Application
+    public sealed partial class App : WUX.Application
     {
         #region Variables
 
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly Lazy<ActivationService> _activationService;
 
+        /// <summary>
+        /// 
+        /// </summary>
         private ActivationService ActivationService => _activationService.Value;
 
         #endregion
@@ -45,6 +51,9 @@ namespace Lunox
             InitializeComponent();
 
             UnhandledException += OnAppUnhandledException;
+            App.Current.UnhandledException += OnAppUnhandledException;
+            WUX.Application.Current.UnhandledException += OnAppUnhandledException;
+
             EnteredBackground += App_EnteredBackground;
             Resuming += App_Resuming;
 
@@ -88,7 +97,7 @@ namespace Lunox
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void OnAppUnhandledException(object sender, Windows.UI.Xaml.UnhandledExceptionEventArgs e)
+        private void OnAppUnhandledException(object sender, WUX.UnhandledExceptionEventArgs e)
         {
             // TODO WTS: Please log and handle the exception as appropriate to your scenario
             // For more info see https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.unhandledexception
@@ -127,14 +136,14 @@ namespace Lunox
         /// <returns></returns>
         private ActivationService CreateActivationService()
         {
-            return new ActivationService(this, typeof(MainPage), new Lazy<UIElement>(CreateShell));
+            return new ActivationService(this, typeof(MainPage), new Lazy<WUX.UIElement>(CreateShell));
         }
 
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        private UIElement CreateShell()
+        private WUX.UIElement CreateShell()
         {
             return new ShellPage();
         }

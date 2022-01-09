@@ -37,6 +37,7 @@ namespace Lunox.Pages
             else
             {
                 WebViewNew.Source = new Uri(Uri);
+                Convert.ToInt32("53X");
             }
         }
 

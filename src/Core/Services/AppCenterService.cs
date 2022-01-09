@@ -53,7 +53,16 @@ namespace Lunox.Services
         /// <param name="e"></param>
         public static void Exception(WUX.UnhandledExceptionEventArgs e)
         {
-            TrackError(e.Exception);
+            TrackError(e.Exception, Error(e.Exception, e.Message));
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        public static void Exception(Exception e)
+        {
+            TrackError(e, Error(e));
         }
 
         /// <summary>
@@ -128,13 +137,11 @@ namespace Lunox.Services
         /// <param name="Extension"></param>
         public static void TrackError(Exception Exception, IDictionary<string, string> Properties = null, string Text = "Hello World!", string TextFile = "Hello.txt", string Image = "Fake Image", string ImageFile = "fake_image.jpeg", string Extension = "image/jpeg")
         {
-            ErrorAttachmentLog[] Attachments = new ErrorAttachmentLog[]
+            TrackError(Exception, Properties, new ErrorAttachmentLog[]
             {
                 ErrorAttachmentLog.AttachmentWithText(Text, TextFile),
                 ErrorAttachmentLog.AttachmentWithBinary(Encoding.UTF8.GetBytes(Image), ImageFile, Extension)
-            };
-
-            TrackError(Exception, Properties, Attachments);
+            });
         }
 
         /// <summary>
@@ -149,13 +156,11 @@ namespace Lunox.Services
         /// <param name="Extension"></param>
         public static void TrackError(Exception Exception, IDictionary<string, string> Properties = null, string Text = "Hello World!", string TextFile = "Hello.txt", byte[] Image = null, string ImageFile = "fake_image.jpeg", string Extension = "image/jpeg")
         {
-            ErrorAttachmentLog[] Attachments = new ErrorAttachmentLog[]
+            Crashes.TrackError(Exception, Properties, new ErrorAttachmentLog[]
             {
                 ErrorAttachmentLog.AttachmentWithText(Text, TextFile),
                 ErrorAttachmentLog.AttachmentWithBinary(Image, ImageFile, Extension)
-            };
-
-            Crashes.TrackError(Exception, Properties, Attachments);
+            });
         }
 
         /// <summary>
@@ -230,6 +235,77 @@ namespace Lunox.Services
         private static void Enabled()
         {
             Crashes.SetEnabledAsync(true);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Exception"></param>
+        /// <returns></returns>
+        private static Dictionary<string, string> Error(Exception Exception, string Message = null)
+        {
+            try
+            {
+                Dictionary<string, string> Properties = new()
+                {
+                    { "Data", $"{Exception.Data}" },
+                    { "Source", Exception.Source },
+                    { "HResult", $"{Exception.HResult}" },
+                    { "Message", Exception.Message },
+                    { "HelpLink", Exception.HelpLink },
+                    { "StackTrace", Exception.StackTrace }
+                };
+
+                if (Message != null)
+                {
+                    Properties.Add("Description", Message);
+                }
+
+                if (Exception.TargetSite != null)
+                {
+                    Properties.Add("TargetSite->Name", Exception.TargetSite.Name);
+                    Properties.Add("TargetSite->Module->Name", Exception.TargetSite.Module.Name);
+                    Properties.Add("TargetSite->Module->ScopeName", Exception.TargetSite.Module.ScopeName);
+                    Properties.Add("TargetSite->Module->FullyQualifiedName", Exception.TargetSite.Module.FullyQualifiedName);
+                    Properties.Add("TargetSite->DeclaringType", $"{Exception.TargetSite.DeclaringType}");
+                }
+
+                if (Exception.InnerException != null)
+                {
+                    Properties.Add("InnerException->Data", $"{Exception.InnerException.Data}");
+                    Properties.Add("InnerException->Source", Exception.InnerException.Source);
+                    Properties.Add("InnerException->HResult", $"{Exception.InnerException.HResult}");
+                    Properties.Add("InnerException->Message", Exception.InnerException.Message);
+                    Properties.Add("InnerException->HelpLink", Exception.InnerException.HelpLink);
+                    Properties.Add("InnerException->StackTrace", Exception.InnerException.StackTrace);
+                    Properties.Add("InnerException->TargetSite->Name", Exception.InnerException.TargetSite.Name);
+                    Properties.Add("InnerException->TargetSite->Module->Name", Exception.InnerException.TargetSite.Module.Name);
+                    Properties.Add("InnerException->TargetSite->Module->ScopeName", Exception.InnerException.TargetSite.Module.ScopeName);
+                    Properties.Add("InnerException->TargetSite->Module->FullyQualifiedName", Exception.InnerException.TargetSite.Module.FullyQualifiedName);
+                    Properties.Add("InnerException->TargetSite->DeclaringType", $"{Exception.InnerException.TargetSite.DeclaringType}");
+                }
+
+                return Properties;
+            }
+            catch
+            {
+                try
+                {
+                    return new Dictionary<string, string>()
+                    {
+                        { "Data", $"{Exception.Data}" },
+                        { "Source", Exception.Source },
+                        { "HResult", $"{Exception.HResult}" },
+                        { "Message", Exception.Message },
+                        { "HelpLink", Exception.HelpLink },
+                        { "StackTrace", Exception.StackTrace }
+                    };
+                }
+                catch
+                {
+                    return null;
+                }
+            }
         }
 
         #endregion

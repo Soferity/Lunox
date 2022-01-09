@@ -120,8 +120,7 @@ namespace Lunox.Services
         /// <returns></returns>
         private async Task HandleActivationAsync(object activationArgs)
         {
-            ActivationHandler activationHandler = GetActivationHandlers()
-                                                .FirstOrDefault(h => h.CanHandle(activationArgs));
+            ActivationHandler activationHandler = GetActivationHandlers().FirstOrDefault(h => h.CanHandle(activationArgs));
 
             if (activationHandler != null)
             {
