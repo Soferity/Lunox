@@ -7,7 +7,9 @@ using Lunox.Views;
 using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.Foundation;
 using Windows.Globalization;
+using Windows.UI.ViewManagement;
 using WUX = Windows.UI.Xaml;
 
 #endregion
@@ -47,6 +49,9 @@ namespace Lunox
         {
             App.Current.RequestedTheme = Settings.Theme;
             ApplicationLanguages.PrimaryLanguageOverride = Settings.Language;
+
+            ApplicationView.PreferredLaunchViewSize = new Size(512, 512);
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.Auto; //ApplicationViewWindowingMode.PreferredLaunchViewSize
 
             InitializeComponent();
 
@@ -118,6 +123,7 @@ namespace Lunox
             if (!args.PrelaunchActivated)
             {
                 await ActivationService.ActivateAsync(args);
+                ApplicationView.GetForCurrentView().SetPreferredMinSize(ApplicationView.PreferredLaunchViewSize);
             }
         }
 

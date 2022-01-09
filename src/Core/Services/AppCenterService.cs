@@ -53,7 +53,15 @@ namespace Lunox.Services
         /// <param name="e"></param>
         public static void Exception(WUX.UnhandledExceptionEventArgs e)
         {
-            TrackError(e.Exception, Error(e.Exception, e.Message));
+            //TrackError(e.Exception, "Message", e.Message);
+            
+            /*
+            if (SHOWN)
+            {
+                SHOWN = false;
+                Dialog.SendDialog(e.Exception.Message);
+            }
+            */
         }
 
         /// <summary>
@@ -62,7 +70,15 @@ namespace Lunox.Services
         /// <param name="e"></param>
         public static void Exception(Exception e)
         {
-            TrackError(e, Error(e));
+            //TrackError(e);
+            
+            /*
+            if (SHOWN)
+            {
+                SHOWN = false;
+                Dialog.SendDialog(e.Exception.Message);
+            }
+            */
         }
 
         /// <summary>
@@ -201,6 +217,7 @@ namespace Lunox.Services
         private static void User()
         {
             string Name = WindowsIdentity.GetCurrent().Name;
+            string Unique = "Unknown";
 
             if (Name.Contains("\\"))
             {
@@ -216,9 +233,14 @@ namespace Lunox.Services
                 Name = Environment.UserName;
             }
 
-            Name += "-" + WindowsIdentity.GetCurrent().User.Value.Split('-')[5];
+            string Try = WindowsIdentity.GetCurrent().User.Value;
 
-            AppCenter.SetUserId(Name);
+            if (!string.IsNullOrEmpty(Try) && Try.Contains("-") && Try.Split('-').Length >= 6)
+            {
+                Unique = WindowsIdentity.GetCurrent().User.Value.Split('-')[5];
+            }
+
+            AppCenter.SetUserId($"{Name}-{Unique}");
         }
 
         /// <summary>
@@ -235,77 +257,6 @@ namespace Lunox.Services
         private static void Enabled()
         {
             Crashes.SetEnabledAsync(true);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Exception"></param>
-        /// <returns></returns>
-        private static Dictionary<string, string> Error(Exception Exception, string Message = null)
-        {
-            try
-            {
-                Dictionary<string, string> Properties = new()
-                {
-                    { "Data", $"{Exception.Data}" },
-                    { "Source", Exception.Source },
-                    { "HResult", $"{Exception.HResult}" },
-                    { "Message", Exception.Message },
-                    { "HelpLink", Exception.HelpLink },
-                    { "StackTrace", Exception.StackTrace }
-                };
-
-                if (Message != null)
-                {
-                    Properties.Add("Description", Message);
-                }
-
-                if (Exception.TargetSite != null)
-                {
-                    Properties.Add("TargetSite->Name", Exception.TargetSite.Name);
-                    Properties.Add("TargetSite->Module->Name", Exception.TargetSite.Module.Name);
-                    Properties.Add("TargetSite->Module->ScopeName", Exception.TargetSite.Module.ScopeName);
-                    Properties.Add("TargetSite->Module->FullyQualifiedName", Exception.TargetSite.Module.FullyQualifiedName);
-                    Properties.Add("TargetSite->DeclaringType", $"{Exception.TargetSite.DeclaringType}");
-                }
-
-                if (Exception.InnerException != null)
-                {
-                    Properties.Add("InnerException->Data", $"{Exception.InnerException.Data}");
-                    Properties.Add("InnerException->Source", Exception.InnerException.Source);
-                    Properties.Add("InnerException->HResult", $"{Exception.InnerException.HResult}");
-                    Properties.Add("InnerException->Message", Exception.InnerException.Message);
-                    Properties.Add("InnerException->HelpLink", Exception.InnerException.HelpLink);
-                    Properties.Add("InnerException->StackTrace", Exception.InnerException.StackTrace);
-                    Properties.Add("InnerException->TargetSite->Name", Exception.InnerException.TargetSite.Name);
-                    Properties.Add("InnerException->TargetSite->Module->Name", Exception.InnerException.TargetSite.Module.Name);
-                    Properties.Add("InnerException->TargetSite->Module->ScopeName", Exception.InnerException.TargetSite.Module.ScopeName);
-                    Properties.Add("InnerException->TargetSite->Module->FullyQualifiedName", Exception.InnerException.TargetSite.Module.FullyQualifiedName);
-                    Properties.Add("InnerException->TargetSite->DeclaringType", $"{Exception.InnerException.TargetSite.DeclaringType}");
-                }
-
-                return Properties;
-            }
-            catch
-            {
-                try
-                {
-                    return new Dictionary<string, string>()
-                    {
-                        { "Data", $"{Exception.Data}" },
-                        { "Source", Exception.Source },
-                        { "HResult", $"{Exception.HResult}" },
-                        { "Message", Exception.Message },
-                        { "HelpLink", Exception.HelpLink },
-                        { "StackTrace", Exception.StackTrace }
-                    };
-                }
-                catch
-                {
-                    return null;
-                }
-            }
         }
 
         #endregion
