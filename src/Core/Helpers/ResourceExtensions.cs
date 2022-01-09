@@ -39,7 +39,7 @@ namespace Lunox.Helpers
                 if (Key.Contains("|"))
                 {
                     string[] Keygen = Key.Split('|');
-                    
+
                     ResourceLoader Loader = new ResourceLoader(Keygen[0]);
                     Value = Loader.GetString(Keygen[1]);
                 }
