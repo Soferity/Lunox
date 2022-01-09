@@ -31,7 +31,21 @@ namespace Lunox.Helpers
         /// <returns></returns>
         public static string GetLocalized(this string resourceKey)
         {
-            return _resLoader.GetString(resourceKey);
+            string Key = resourceKey.Replace('.', '/');
+            string Value = _resLoader.GetString(Key);
+
+            if (string.IsNullOrEmpty(Value))
+            {
+                if (Key.Contains("|"))
+                {
+                    string[] Keygen = Key.Split('|');
+                    
+                    ResourceLoader Loader = new ResourceLoader(Keygen[0]);
+                    Value = Loader.GetString(Keygen[1]);
+                }
+            }
+
+            return string.IsNullOrEmpty(Value) ? $"[{resourceKey}]" : Value;
         }
 
         #endregion
