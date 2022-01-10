@@ -111,6 +111,16 @@
                             <lang:LanguageType>fr_FR</lang:LanguageType>
                         </RadioButton.CommandParameter>
                     </RadioButton>
+                    <RadioButton
+                        x:Uid="Settings_Language_Polish"
+                        Command="{x:Bind ViewModel.SwitchLanguageCommand}"
+                        IsChecked="{x:Bind ViewModel.LanguageType, Converter={StaticResource EnumToBooleanLanguageConverter}, ConverterParameter=pl_PL, Mode=OneWay}"
+                        FontSize="15"
+                        GroupName="AppLanguage">
+                        <RadioButton.CommandParameter>
+                            <lang:LanguageType>pl_PL</lang:LanguageType>
+                        </RadioButton.CommandParameter>
+                    </RadioButton>
                 </StackPanel>
             </StackPanel>
 

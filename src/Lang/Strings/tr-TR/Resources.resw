@@ -298,4 +298,7 @@ Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Ma
   <data name="Shell_Test.Content" xml:space="preserve">
     <value>Deneme</value>
   </data>
+  <data name="Settings_Language_Polish.Content" xml:space="preserve">
+    <value>Lehçe</value>
+  </data>
 </root>

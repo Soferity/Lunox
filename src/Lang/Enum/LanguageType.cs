@@ -30,7 +30,11 @@
         /// <summary>
         /// Français (France)
         /// </summary>
-        fr_FR
+        fr_FR,
+        /// <summary>
+        /// Polski (Polska)
+        /// </summary>
+        pl_PL
     }
 
     #endregion

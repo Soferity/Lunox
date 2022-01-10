@@ -75,7 +75,7 @@ namespace Lunox.Library.Value
         /// <summary>
         /// 
         /// </summary>
-        public static Dictionary<EventType, string> Events => new Dictionary<EventType, string>()
+        public static Dictionary<EventType, string> Events => new()
         {
             { EventType.Page, "Page-" },
             { EventType.Theme, "Switch-Theme" },
@@ -96,7 +96,7 @@ namespace Lunox.Library.Value
         /// <summary>
         /// 
         /// </summary>
-        public static Uri PrivacyTerms => new Uri("https://github.com/Soferity/Lunox/blob/develop/CODE_OF_CONDUCT.md");
+        public static Uri PrivacyTerms => new("https://github.com/Soferity/Lunox/blob/develop/CODE_OF_CONDUCT.md");
 
         #endregion
     }
