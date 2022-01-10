@@ -8,6 +8,10 @@
     public enum LanguageType
     {
         /// <summary>
+        /// Auto (Detect)
+        /// </summary>
+        //Auto,
+        /// <summary>
         /// English (United Kingdom)
         /// </summary>
         en_GB,

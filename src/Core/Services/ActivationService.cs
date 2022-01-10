@@ -1,12 +1,14 @@
 ﻿#region Imports
 
 using Lunox.Activation;
+using Lunox.Language.Enum;
 using Lunox.Library.Helper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Activation;
+using Windows.Globalization;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -73,6 +75,7 @@ namespace Lunox.Services
                 // Initialize services that you need before app activation
                 // take into account that the splash screen is shown while this code runs.
                 await InitializeAsync();
+                await Personalization();
 
                 // Do not repeat app initialization when the Window already has content,
                 // just ensure that the window is active
@@ -112,6 +115,22 @@ namespace Lunox.Services
         {
             await ThemeSelectorService.InitializeAsync().ConfigureAwait(false);
             await LanguageSelectorService.InitializeAsync().ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        private async Task Personalization()
+        {
+            if (ThemeSelectorService.Theme != ElementTheme.Default)
+            {
+                //App.Current.RequestedTheme = (ApplicationTheme)ThemeSelectorService.Theme;
+                await ThemeSelectorService.SetRequestedThemeAsync();
+            }
+
+            //ApplicationLanguages.PrimaryLanguageOverride = LanguageSelectorService.Language.ToString().Replace("_", "-");
+            await LanguageSelectorService.SetRequestedLanguageAsync();
         }
 
         /// <summary>
