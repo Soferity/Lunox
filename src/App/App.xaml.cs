@@ -1,8 +1,8 @@
 ﻿#region Imports
 
 using Lunox.Library.Helper;
+using Lunox.Library.Value;
 using Lunox.Services;
-using Lunox.Views;
 using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
@@ -128,7 +128,7 @@ namespace Lunox
         /// <returns></returns>
         private ActivationService CreateActivationService()
         {
-            return new ActivationService(this, typeof(MainPage), new Lazy<UIElement>(CreateShell));
+            return new ActivationService(this, Default.DefaultNav, new Lazy<UIElement>(CreateShell));
         }
 
         /// <summary>
@@ -137,7 +137,7 @@ namespace Lunox
         /// <returns></returns>
         private UIElement CreateShell()
         {
-            return new ShellPage();
+            return Default.DefaultShell;
         }
 
         /// <summary>

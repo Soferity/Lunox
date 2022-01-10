@@ -2,6 +2,7 @@
 
 using Lunox.Helpers;
 using Lunox.Language.Enum;
+using Lunox.Library.Value;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -28,7 +29,7 @@ namespace Lunox.Services
         /// <summary>
         /// 
         /// </summary>
-        private const string SettingsKey = "AppRequestedLanguage";
+        private static readonly string SettingsKey = Default.LanguageKey;
 
         #endregion
 
@@ -37,12 +38,12 @@ namespace Lunox.Services
         /// <summary>
         /// 
         /// </summary>
-        public static LanguageType Language { get; set; } = LanguageType.en_GB;
+        public static LanguageType Language { get; set; } = Default.DefaultLanguage;
 
         /// <summary>
         /// 
         /// </summary>
-        public static IReadOnlyList<string> Languages = ApplicationLanguages.ManifestLanguages;
+        public static IReadOnlyList<string> Languages = Default.Languages;
 
         /// <summary>
         /// 

@@ -2,6 +2,8 @@
 
 using Lunox.Helpers;
 using Lunox.Language.Enum;
+using Lunox.Library.Enum;
+using Lunox.Library.Value;
 using Lunox.Services;
 using Microsoft.Services.Store.Engagement;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
@@ -10,6 +12,7 @@ using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.ApplicationModel;
+using Windows.System;
 using Windows.UI.Xaml;
 
 #endregion
@@ -87,11 +90,12 @@ namespace Lunox.ViewModels
                     _switchThemeCommand = new RelayCommand<ElementTheme>(
                         async (param) =>
                         {
-                            //AppCenterService.TrackEvent("ChangeTheme", $"{ElementTheme}", $"{param}");
-                            AppCenterService.TrackEvent("EVENT", "ChangeTheme", $"{ElementTheme}->{param}");
-                            //AppCenterService.TrackEvent("Settings", "ChangeTheme", $"{ElementTheme}->{param}");
-                            ElementTheme = param;
-                            await ThemeSelectorService.SetThemeAsync(param);
+                            if (ElementTheme != param)
+                            {
+                                AppCenterService.TrackEvent(Default.Events[EventType.Theme], $"{ElementTheme}", $"{param}");
+                                ElementTheme = param;
+                                await ThemeSelectorService.SetThemeAsync(param);
+                            }
                         });
                 }
 
@@ -116,11 +120,12 @@ namespace Lunox.ViewModels
                     _switchLanguageCommand = new RelayCommand<LanguageType>(
                         async (param) =>
                         {
-                            //AppCenterService.TrackEvent("ChangeLanguage", $"{LanguageType}", $"{param}");
-                            AppCenterService.TrackEvent("EVENT", "ChangeLanguage", $"{LanguageType}->{param}");
-                            //AppCenterService.TrackEvent("Settings", "ChangeLanguage", $"{LanguageType}->{param}");
-                            LanguageType = param;
-                            await LanguageSelectorService.SetLanguageAsync(param);
+                            if (LanguageType != param)
+                            {
+                                AppCenterService.TrackEvent(Default.Events[EventType.Language], $"{LanguageType}", $"{param}");
+                                LanguageType = param;
+                                await LanguageSelectorService.SetLanguageAsync(param);
+                            }
                         });
                 }
 
@@ -131,12 +136,21 @@ namespace Lunox.ViewModels
         /// <summary>
         /// 
         /// </summary>
-        public Visibility FeedbackLinkVisibility => StoreServicesFeedbackLauncher.IsSupported() ? Visibility.Visible : Visibility.Collapsed;
+        public Visibility FeedbackLinkVisibility => Default.FeedbackLinkVisibility;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Visibility PrivacyLinkVisibility => Default.PrivacyLinkVisibility;
 
         /// <summary>
         /// 
         /// </summary>
         private ICommand _launchFeedbackHubCommand;
+        /// <summary>
+        /// 
+        /// </summary>
+        private ICommand _launchPrivacyTermsCommand;
 
         /// <summary>
         /// 
@@ -157,6 +171,26 @@ namespace Lunox.ViewModels
                 }
 
                 return _launchFeedbackHubCommand;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public ICommand LaunchPrivacyTermsCommand
+        {
+            get
+            {
+                if (_launchPrivacyTermsCommand == null)
+                {
+                    _launchPrivacyTermsCommand = new RelayCommand(
+                        async () =>
+                        {
+                            await Launcher.LaunchUriAsync(Default.PrivacyTerms);
+                        });
+                }
+
+                return _launchPrivacyTermsCommand;
             }
         }
 

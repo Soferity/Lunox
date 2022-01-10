@@ -9,6 +9,7 @@
     <Import_RootNamespace>Lunox.Library</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Enum\EventType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enum\AudioType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enum\DocumentType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enum\ImageType.cs" />
@@ -20,13 +21,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Helper\Restart.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helper\Singleton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Value\Default.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Extension\" />
     <Folder Include="$(MSBuildThisFileDirectory)Interface\" />
     <Folder Include="$(MSBuildThisFileDirectory)Method\" />
     <Folder Include="$(MSBuildThisFileDirectory)Native\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Value\" />
     <Folder Include="$(MSBuildThisFileDirectory)Reference\" />
   </ItemGroup>
 </Project>

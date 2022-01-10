@@ -1,6 +1,7 @@
 ﻿#region Imports
 
 using Lunox.Helpers;
+using Lunox.Library.Value;
 using System;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Core;
@@ -24,7 +25,7 @@ namespace Lunox.Services
         /// <summary>
         /// 
         /// </summary>
-        private const string SettingsKey = "AppBackgroundRequestedTheme";
+        private static readonly string SettingsKey = Default.ThemeKey;
 
         #endregion
 
@@ -33,7 +34,7 @@ namespace Lunox.Services
         /// <summary>
         /// 
         /// </summary>
-        public static ElementTheme Theme { get; set; } = ElementTheme.Default;
+        public static ElementTheme Theme { get; set; } = Default.DefaultTheme;
 
         /// <summary>
         /// 

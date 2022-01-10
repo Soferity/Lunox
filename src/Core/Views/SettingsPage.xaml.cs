@@ -11,7 +11,7 @@ namespace Lunox.Views
     #region SettingsPage
 
     /// <summary>
-    /// TODO WTS: Change the URL for your privacy policy in the Resource File, currently set to https://YourPrivacyUrlGoesHere
+    /// 
     /// </summary>
     public sealed partial class SettingsPage : Page
     {

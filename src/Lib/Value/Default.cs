@@ -1,0 +1,89 @@
+﻿#region Imports
+
+using Lunox.Language.Enum;
+using Lunox.Library.Enum;
+using Lunox.Views;
+using Microsoft.Services.Store.Engagement;
+using System;
+using System.Collections.Generic;
+using Windows.Globalization;
+using Windows.UI.Xaml;
+
+#endregion
+
+namespace Lunox.Library.Value
+{
+    #region DefaultValue
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public static class Default
+    {
+        #region Variables
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static string ThemeKey => "AppRequestedTheme";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ElementTheme DefaultTheme => ElementTheme.Default;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static string LanguageKey => "AppRequestedLanguage";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static LanguageType DefaultLanguage => LanguageType.en_GB;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IReadOnlyList<string> Languages = ApplicationLanguages.ManifestLanguages;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Type DefaultNav => typeof(MainPage);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static UIElement DefaultShell => new ShellPage();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Dictionary<EventType, string> Events => new Dictionary<EventType, string>()
+        {
+            { EventType.Page, "{0}" },
+            { EventType.Theme, "SwitchTheme" },
+            { EventType.Language, "SwitchLanguage" }
+        };
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Visibility FeedbackLinkVisibility => StoreServicesFeedbackLauncher.IsSupported() ? Visibility.Visible : Visibility.Collapsed;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Visibility PrivacyLinkVisibility => Visibility.Visible;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Uri PrivacyTerms => new Uri("https://github.com/Soferity/Lunox/blob/develop/CODE_OF_CONDUCT.md");
+
+        #endregion
+    }
+
+    #endregion
+}
