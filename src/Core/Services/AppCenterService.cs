@@ -6,9 +6,9 @@ using Microsoft.AppCenter.Channel;
 using Microsoft.AppCenter.Crashes;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Security.Principal;
 using System.Text;
+using Windows.System.UserProfile;
 using WUX = Windows.UI.Xaml;
 
 #endregion
@@ -207,7 +207,8 @@ namespace Lunox.Services
         /// </summary>
         private static void Country()
         {
-            AppCenter.SetCountryCode(RegionInfo.CurrentRegion.TwoLetterISORegionName);
+            AppCenter.SetCountryCode(GlobalizationPreferences.HomeGeographicRegion);
+            //AppCenter.SetCountryCode(RegionInfo.CurrentRegion.TwoLetterISORegionName);
             //AppCenter.SetCountryCode(CultureInfo.InstalledUICulture.TwoLetterISOLanguageName);
         }
 

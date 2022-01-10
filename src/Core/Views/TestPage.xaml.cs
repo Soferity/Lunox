@@ -1,5 +1,8 @@
-﻿using Lunox.Services;
+﻿using Lunox.Library.Helper;
+using Lunox.Services;
 using Windows.UI.Xaml.Controls;
+using Windows.System.UserProfile;
+using System;
 
 // Boş Sayfa öğe şablonu https://go.microsoft.com/fwlink/?LinkId=234238 adresinde açıklanmaktadır
 
@@ -27,6 +30,18 @@ namespace Lunox.Views
         private async void Glance_TextChanged(object sender, TextChangedEventArgs e)
         {
             await GlanceSelectorService.SetGlanceAsync(Glance.Text + "Page");
+        }
+
+        private async void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            string Text = string.Empty;
+
+            //await Windows.System.UserProfile.UserProfilePersonalizationSettings.Current.TrySetWallpaperImageAsync(null);
+            //Windows.System.Profile.AnalyticsInfo.
+
+            Text = Windows.System.UserProfile.GlobalizationPreferences.HomeGeographicRegion;
+
+            Dialog.SendDialog(Text);
         }
     }
 }

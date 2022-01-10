@@ -8,7 +8,8 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
         <TextBox x:Name="Glance" TextChanged="Glance_TextChanged" />
-    </Grid>
+        <Button x:Name="Button" Content="Göster" Click="Button_Click"/>
+    </StackPanel>
 </Page>
