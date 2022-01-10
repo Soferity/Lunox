@@ -128,16 +128,7 @@ namespace Lunox
         /// <returns></returns>
         private ActivationService CreateActivationService()
         {
-            return new ActivationService(this, Default.DefaultNav, new Lazy<UIElement>(CreateShell));
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        private UIElement CreateShell()
-        {
-            return Default.DefaultShell;
+            return new ActivationService(this, Default.DefaultGlance, new Lazy<UIElement>(Default.DefaultShell));
         }
 
         /// <summary>

@@ -19,6 +19,10 @@
         /// 
         /// </summary>
         Language,
+        /// <summary>
+        /// 
+        /// </summary>
+        Glance,
     }
 
     #endregion

@@ -50,7 +50,22 @@ namespace Lunox.Library.Value
         /// <summary>
         /// 
         /// </summary>
-        public static Type DefaultNav => typeof(MainPage);
+        public static string GlanceKey => "AppRequestedGlance";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Type DefaultGlance => typeof(MainPage);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static string DefaultGlanceClass => typeof(MainPage).ToString();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static string DefaultGlancePrefix => "Lunox.Views.";
 
         /// <summary>
         /// 
@@ -62,9 +77,10 @@ namespace Lunox.Library.Value
         /// </summary>
         public static Dictionary<EventType, string> Events => new Dictionary<EventType, string>()
         {
-            { EventType.Page, "{0}" },
-            { EventType.Theme, "SwitchTheme" },
-            { EventType.Language, "SwitchLanguage" }
+            { EventType.Page, "Page-" },
+            { EventType.Theme, "Switch-Theme" },
+            { EventType.Glance, "Switch-Glance" },
+            { EventType.Language, "Switch-Language" }
         };
 
         /// <summary>

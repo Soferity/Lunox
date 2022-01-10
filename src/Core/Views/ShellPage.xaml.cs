@@ -1,5 +1,7 @@
 ﻿#region Imports
 
+using Lunox.Library.Enum;
+using Lunox.Library.Value;
 using Lunox.Services;
 using Lunox.ViewModels;
 using MUXC = Microsoft.UI.Xaml.Controls;
@@ -44,11 +46,11 @@ namespace Lunox.Views
 
             if (SelectedItem.Tag == null)
             {
-                AppCenterService.TrackEvent($"{SelectedItem.Content}");
+                AppCenterService.TrackEvent($"{Default.Events[EventType.Page]}{SelectedItem.Content}");
             }
             else
             {
-                AppCenterService.TrackEvent($"{SelectedItem.Tag}");
+                AppCenterService.TrackEvent($"{Default.Events[EventType.Page]}{SelectedItem.Tag}");
             }
         }
 

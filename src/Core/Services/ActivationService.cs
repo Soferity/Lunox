@@ -32,7 +32,7 @@ namespace Lunox.Services
         /// <summary>
         /// 
         /// </summary>
-        private readonly Type _defaultNavItem;
+        private Type _defaultNavItem;
 
         /// <summary>
         /// 
@@ -112,6 +112,7 @@ namespace Lunox.Services
         private async Task InitializeAsync()
         {
             await ThemeSelectorService.InitializeAsync().ConfigureAwait(false);
+            await GlanceSelectorService.InitializeAsync().ConfigureAwait(false);
             await LanguageSelectorService.InitializeAsync().ConfigureAwait(false);
         }
 
@@ -129,6 +130,8 @@ namespace Lunox.Services
 
             //ApplicationLanguages.PrimaryLanguageOverride = LanguageSelectorService.Language.ToString().Replace("_", "-");
             await LanguageSelectorService.SetRequestedLanguageAsync();
+
+            _defaultNavItem = GlanceSelectorService.Glance;
         }
 
         /// <summary>

@@ -35,7 +35,7 @@
             <muxc:NavigationViewItem x:Uid="Shell_Main" Tag="Main" Icon="Document" helpers:NavHelper.NavigateTo="views:MainPage" />
             <muxc:NavigationViewItem x:Uid="Shell_WebView" Tag="WebView" Icon="Document" helpers:NavHelper.NavigateTo="views:WebViewPage" />
             <muxc:NavigationViewItem x:Uid="Shell_SchemeActivationSample" Tag="SchemeActivation" Icon="Document" helpers:NavHelper.NavigateTo="views:SchemeActivationSamplePage" />
-            <muxc:NavigationViewItem x:Uid="Shell_Test" Tag="Test" Icon="Audio" />
+            <muxc:NavigationViewItem x:Uid="Shell_Test" Tag="Test" Icon="Audio" helpers:NavHelper.NavigateTo="views:TestPage" />
         </muxc:NavigationView.MenuItems>
         <i:Interaction.Behaviors>
             <behaviors:NavigationViewHeaderBehavior

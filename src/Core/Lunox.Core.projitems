@@ -45,6 +45,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\SuspendAndResumeService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\SuspensionState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\LanguageSelectorService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\GlanceSelectorService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ThemeSelectorService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ToastNotificationsService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ToastNotificationsService.Samples.cs" />
@@ -76,6 +77,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\ShellPage.xaml.cs">
       <DependentUpon>ShellPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TestPage.xaml.cs">
+      <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\WebViewPage.xaml.cs">
       <DependentUpon>WebViewPage.xaml</DependentUpon>
@@ -142,6 +146,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)Views\ShellPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\TestPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
