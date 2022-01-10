@@ -7,15 +7,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Style="{StaticResource PageStyle}"
     xmlns:xaml="using:Windows.UI.Xaml"
+    xmlns:lang="using:Lunox.Language.Enum"
     mc:Ignorable="d">
     <Page.Resources>
-        <helper:EnumToBooleanConverter x:Key="EnumToBooleanConverter" EnumType="ElementTheme" />
+        <helper:EnumToBooleanConverter x:Key="EnumToBooleanThemeConverter" EnumType="ElementTheme" />
+        <helper:EnumToBooleanConverter x:Key="EnumToBooleanLanguageConverter" EnumType="lang:LanguageType" />
     </Page.Resources>
 
     <Grid Margin="{StaticResource MediumLeftRightMargin}">
         <StackPanel
             x:Name="ContentArea">
+            
             <TextBlock x:Uid="Settings_Personalization" Style="{ThemeResource SubtitleTextBlockStyle}" />
+
             <StackPanel Margin="{StaticResource SmallTopBottomMargin}">
                 <TextBlock x:Uid="Settings_Theme" />
 
@@ -23,7 +27,7 @@
                     <RadioButton
                         x:Uid="Settings_Theme_Light"
                         Command="{x:Bind ViewModel.SwitchThemeCommand}"
-                        IsChecked="{x:Bind ViewModel.ElementTheme, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Light, Mode=OneWay}"
+                        IsChecked="{x:Bind ViewModel.ElementTheme, Converter={StaticResource EnumToBooleanThemeConverter}, ConverterParameter=Light, Mode=OneWay}"
                         FontSize="15"
                         GroupName="AppTheme">
                         <RadioButton.CommandParameter>
@@ -33,7 +37,7 @@
                     <RadioButton
                         x:Uid="Settings_Theme_Dark"
                         Command="{x:Bind ViewModel.SwitchThemeCommand}"
-                        IsChecked="{x:Bind ViewModel.ElementTheme, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Dark, Mode=OneWay}"
+                        IsChecked="{x:Bind ViewModel.ElementTheme, Converter={StaticResource EnumToBooleanThemeConverter}, ConverterParameter=Dark, Mode=OneWay}"
                         FontSize="15"
                         GroupName="AppTheme">
                         <RadioButton.CommandParameter>
@@ -43,11 +47,68 @@
                     <RadioButton
                         x:Uid="Settings_Theme_Default"
                         Command="{x:Bind ViewModel.SwitchThemeCommand}"
-                        IsChecked="{x:Bind ViewModel.ElementTheme, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Default, Mode=OneWay}"
+                        IsChecked="{x:Bind ViewModel.ElementTheme, Converter={StaticResource EnumToBooleanThemeConverter}, ConverterParameter=Default, Mode=OneWay}"
                         FontSize="15"
                         GroupName="AppTheme">
                         <RadioButton.CommandParameter>
                             <xaml:ElementTheme>Default</xaml:ElementTheme>
+                        </RadioButton.CommandParameter>
+                    </RadioButton>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Margin="{StaticResource SmallTopBottomMargin}">
+                <TextBlock x:Uid="Settings_Language" />
+
+                <StackPanel Margin="{StaticResource XSmallTopMargin}">
+                    <RadioButton
+                        x:Uid="Settings_Language_English"
+                        Command="{x:Bind ViewModel.SwitchLanguageCommand}"
+                        IsChecked="{x:Bind ViewModel.LanguageType, Converter={StaticResource EnumToBooleanLanguageConverter}, ConverterParameter=en_GB, Mode=OneWay}"
+                        FontSize="15"
+                        GroupName="AppLanguage">
+                        <RadioButton.CommandParameter>
+                            <lang:LanguageType>en_GB</lang:LanguageType>
+                        </RadioButton.CommandParameter>
+                    </RadioButton>
+                    <RadioButton
+                        x:Uid="Settings_Language_Turkish"
+                        Command="{x:Bind ViewModel.SwitchLanguageCommand}"
+                        IsChecked="{x:Bind ViewModel.LanguageType, Converter={StaticResource EnumToBooleanLanguageConverter}, ConverterParameter=tr_TR, Mode=OneWay}"
+                        FontSize="15"
+                        GroupName="AppLanguage">
+                        <RadioButton.CommandParameter>
+                            <lang:LanguageType>tr_TR</lang:LanguageType>
+                        </RadioButton.CommandParameter>
+                    </RadioButton>
+                    <RadioButton
+                        x:Uid="Settings_Language_German"
+                        Command="{x:Bind ViewModel.SwitchLanguageCommand}"
+                        IsChecked="{x:Bind ViewModel.LanguageType, Converter={StaticResource EnumToBooleanLanguageConverter}, ConverterParameter=de_DE, Mode=OneWay}"
+                        FontSize="15"
+                        GroupName="AppLanguage">
+                        <RadioButton.CommandParameter>
+                            <lang:LanguageType>de_DE</lang:LanguageType>
+                        </RadioButton.CommandParameter>
+                    </RadioButton>
+                    <RadioButton
+                        x:Uid="Settings_Language_Spanish"
+                        Command="{x:Bind ViewModel.SwitchLanguageCommand}"
+                        IsChecked="{x:Bind ViewModel.LanguageType, Converter={StaticResource EnumToBooleanLanguageConverter}, ConverterParameter=es_ES, Mode=OneWay}"
+                        FontSize="15"
+                        GroupName="AppLanguage">
+                        <RadioButton.CommandParameter>
+                            <lang:LanguageType>es_ES</lang:LanguageType>
+                        </RadioButton.CommandParameter>
+                    </RadioButton>
+                    <RadioButton
+                        x:Uid="Settings_Language_French"
+                        Command="{x:Bind ViewModel.SwitchLanguageCommand}"
+                        IsChecked="{x:Bind ViewModel.LanguageType, Converter={StaticResource EnumToBooleanLanguageConverter}, ConverterParameter=fr_FR, Mode=OneWay}"
+                        FontSize="15"
+                        GroupName="AppLanguage">
+                        <RadioButton.CommandParameter>
+                            <lang:LanguageType>fr_FR</lang:LanguageType>
                         </RadioButton.CommandParameter>
                     </RadioButton>
                 </StackPanel>

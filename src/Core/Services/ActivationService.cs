@@ -111,6 +111,7 @@ namespace Lunox.Services
         private async Task InitializeAsync()
         {
             await ThemeSelectorService.InitializeAsync().ConfigureAwait(false);
+            await LanguageSelectorService.InitializeAsync().ConfigureAwait(false);
         }
 
         /// <summary>
@@ -146,6 +147,7 @@ namespace Lunox.Services
             await ThemeSelectorService.SetRequestedThemeAsync();
             await FirstRunDisplayService.ShowIfAppropriateAsync();
             await WhatsNewDisplayService.ShowIfAppropriateAsync();
+            await LanguageSelectorService.SetRequestedLanguageAsync();
         }
 
         /// <summary>

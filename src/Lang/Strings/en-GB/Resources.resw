@@ -144,7 +144,7 @@
     <value>retry</value>
     <comment>Retry button for WebView</comment>
   </data>
-    <data name="WebView_BrowserBackButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+  <data name="WebView_BrowserBackButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
     <value>Back</value>
     <comment>WebView back button automation name property for WebView</comment>
   </data>
@@ -196,23 +196,23 @@
     <value>Light</value>
     <comment>Light theme text for Settings</comment>
   </data>
-  <data name="Settings_About.Text" xml:space="preserve">    
+  <data name="Settings_About.Text" xml:space="preserve">
     <value>About this application</value>
     <comment>About this application title for Settings</comment>
   </data>
-  <data name="Settings_AboutDescription.Text" xml:space="preserve">    
+  <data name="Settings_AboutDescription.Text" xml:space="preserve">
     <value>Settings page placeholder text.  Your app description goes here.</value>
     <comment>About this application description for Settings</comment>
   </data>
-  <data name="Settings_PrivacyTermsLink.Content" xml:space="preserve">    
+  <data name="Settings_PrivacyTermsLink.Content" xml:space="preserve">
     <value>Privacy Statement</value>
     <comment>Privacy Statement link content for Settings</comment>
   </data>
-  <data name="Settings_PrivacyTermsLink.NavigateUri" xml:space="preserve">  
+  <data name="Settings_PrivacyTermsLink.NavigateUri" xml:space="preserve">
     <value>https://YourPrivacyUrlGoesHere/</value>
     <comment>Here is your Privacy Statement url for Settings</comment>
   </data>
-  <data name="Settings_Personalization.Text" xml:space="preserve">   
+  <data name="Settings_Personalization.Text" xml:space="preserve">
     <value>Personalization</value>
     <comment>Personalization text for Settings</comment>
   </data>
@@ -280,5 +280,23 @@ Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Ma
   <data name="SchemeActivationSamplePage_Description.Text" xml:space="preserve">
     <value>This is a sample page that will show activation parameters if the app is activated from Deep Linking.</value>
     <comment>Description text for SchemeActivationSamplePage</comment>
+  </data>
+  <data name="Settings_Language.Text" xml:space="preserve">
+    <value>Choose Language</value>
+  </data>
+  <data name="Settings_Language_English.Content" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Settings_Language_French.Content" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="Settings_Language_German.Content" xml:space="preserve">
+    <value>German</value>
+  </data>
+  <data name="Settings_Language_Spanish.Content" xml:space="preserve">
+    <value>Spanish</value>
+  </data>
+  <data name="Settings_Language_Turkish.Content" xml:space="preserve">
+    <value>Turkish</value>
   </data>
 </root>

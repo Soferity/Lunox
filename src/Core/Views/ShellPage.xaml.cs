@@ -2,6 +2,7 @@
 
 using Lunox.Services;
 using Lunox.ViewModels;
+using Windows.ApplicationModel.Resources.Core;
 using MUXC = Microsoft.UI.Xaml.Controls;
 using WUXC = Windows.UI.Xaml.Controls;
 

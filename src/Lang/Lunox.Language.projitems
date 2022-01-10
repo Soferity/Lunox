@@ -20,4 +20,10 @@
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\tr-TR\Resources.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\tr-TR\Settings.resw" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Enum\LanguageType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Enum\" />
+  </ItemGroup>
 </Project>

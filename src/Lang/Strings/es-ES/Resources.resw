@@ -281,4 +281,22 @@ Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Ma
     <value>This is a sample page that will show activation parameters if the app is activated from Deep Linking.</value>
     <comment>Description text for SchemeActivationSamplePage</comment>
   </data>
+  <data name="Settings_Language.Text" xml:space="preserve">
+    <value>Choose Language</value>
+  </data>
+  <data name="Settings_Language_English.Content" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Settings_Language_French.Content" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="Settings_Language_German.Content" xml:space="preserve">
+    <value>German</value>
+  </data>
+  <data name="Settings_Language_Spanish.Content" xml:space="preserve">
+    <value>Spanish</value>
+  </data>
+  <data name="Settings_Language_Turkish.Content" xml:space="preserve">
+    <value>Turkish</value>
+  </data>
 </root>

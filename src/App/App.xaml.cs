@@ -45,15 +45,9 @@ namespace Lunox
         /// </summary>
         public App()
         {
-            App.Current.RequestedTheme = Settings.Theme;
-            ApplicationLanguages.PrimaryLanguageOverride = Settings.Language;
-
             InitializeComponent();
 
             UnhandledException += OnAppUnhandledException;
-            App.Current.UnhandledException += OnAppUnhandledException;
-            WUX.Application.Current.UnhandledException += OnAppUnhandledException;
-
             EnteredBackground += App_EnteredBackground;
             Resuming += App_Resuming;
 
