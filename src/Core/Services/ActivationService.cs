@@ -1,14 +1,12 @@
 ﻿#region Imports
 
 using Lunox.Activation;
-using Lunox.Language.Enum;
 using Lunox.Library.Helper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Activation;
-using Windows.Globalization;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
