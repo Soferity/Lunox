@@ -1,13 +1,11 @@
 ﻿#region Imports
 
 using Lunox.Library.Helper;
-using Lunox.Library.Util;
 using Lunox.Services;
 using Lunox.Views;
 using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Globalization;
 using WUX = Windows.UI.Xaml;
 
 #endregion

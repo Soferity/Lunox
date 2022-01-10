@@ -54,7 +54,7 @@ namespace Lunox.Services
         public static void Exception(WUX.UnhandledExceptionEventArgs e)
         {
             //TrackError(e.Exception, "Message", e.Message);
-            
+
             /*
             if (SHOWN)
             {
@@ -71,7 +71,7 @@ namespace Lunox.Services
         public static void Exception(Exception e)
         {
             //TrackError(e);
-            
+
             /*
             if (SHOWN)
             {
