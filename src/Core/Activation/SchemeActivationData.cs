@@ -7,7 +7,7 @@ using System.Web;
 
 #endregion
 
-namespace Lunox.Activation
+namespace Lunox.Core.Activation
 {
     #region SchemeActivationData
 

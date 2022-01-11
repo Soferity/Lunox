@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Lunox.Views.WebViewPage"
+    x:Class="Lunox.Core.Views.WebViewPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,7 +7,7 @@
     Style="{StaticResource PageStyle}"
     xmlns:i="using:Microsoft.Xaml.Interactivity"
     xmlns:ic="using:Microsoft.Xaml.Interactions.Core"
-    xmlns:behaviors="using:Lunox.Behaviors"
+    xmlns:behaviors="using:Lunox.Core.Behaviors"
     behaviors:NavigationViewHeaderBehavior.HeaderMode="Minimal"
     mc:Ignorable="d">
     <Page.Resources>

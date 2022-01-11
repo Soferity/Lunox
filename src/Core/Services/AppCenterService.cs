@@ -13,7 +13,7 @@ using WUX = Windows.UI.Xaml;
 
 #endregion
 
-namespace Lunox.Services
+namespace Lunox.Core.Services
 {
     #region AppCenterService
 

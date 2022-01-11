@@ -1,10 +1,10 @@
 ﻿#region Imports
 
-using Lunox.Helpers;
+using Lunox.Core.Helpers;
 using Lunox.Language.Enum;
 using Lunox.Library.Enum;
 using Lunox.Library.Value;
-using Lunox.Services;
+using Lunox.Core.Services;
 using Microsoft.Services.Store.Engagement;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
@@ -17,7 +17,7 @@ using Windows.UI.Xaml;
 
 #endregion
 
-namespace Lunox.ViewModels
+namespace Lunox.Core.ViewModels
 {
     #region SettingsViewModel
 

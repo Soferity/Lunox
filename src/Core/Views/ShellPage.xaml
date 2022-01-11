@@ -1,13 +1,13 @@
 ﻿<Page
-    x:Class="Lunox.Views.ShellPage"
+    x:Class="Lunox.Core.Views.ShellPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:behaviors="using:Lunox.Behaviors"
+    xmlns:behaviors="using:Lunox.Core.Behaviors"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
-    xmlns:helpers="using:Lunox.Helpers"
-    xmlns:views="using:Lunox.Views"
+    xmlns:helpers="using:Lunox.Core.Helpers"
+    xmlns:views="using:Lunox.Core.Views"
     xmlns:ic="using:Microsoft.Xaml.Interactions.Core"
     xmlns:i="using:Microsoft.Xaml.Interactivity"
     mc:Ignorable="d">

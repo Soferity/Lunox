@@ -1,14 +1,14 @@
 ﻿#region Imports
 
 using Lunox.Library.Helper;
-using Lunox.Services;
+using Lunox.Core.Services;
 using System;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Activation;
 
 #endregion
 
-namespace Lunox.Activation
+namespace Lunox.Core.Activation
 {
     #region DefaultActivationHandler
 

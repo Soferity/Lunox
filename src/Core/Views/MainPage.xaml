@@ -1,13 +1,13 @@
 ﻿<Page
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Lunox"
+    xmlns:local="using:Lunox.Core.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     xmlns:iconPacks="using:MahApps.Metro.IconPacks"
-    x:Class="Lunox.Views.MainPage"
+    x:Class="Lunox.Core.Views.MainPage"
     mc:Ignorable="d"
     Loaded="MainPage_Loaded"
     muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">

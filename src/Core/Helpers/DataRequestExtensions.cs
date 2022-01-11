@@ -1,6 +1,6 @@
 ﻿#region Imports
 
-using Lunox.Models;
+using Lunox.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,7 @@ using Windows.Storage.Streams;
 
 #endregion
 
-namespace Lunox.Helpers
+namespace Lunox.Core.Helpers
 {
     #region DataRequestExtensions
 

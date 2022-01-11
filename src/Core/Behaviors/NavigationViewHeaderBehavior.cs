@@ -1,6 +1,6 @@
 ﻿#region Imports
 
-using Lunox.Services;
+using Lunox.Core.Services;
 using Microsoft.Xaml.Interactivity;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Navigation;
@@ -9,7 +9,7 @@ using WUXC = Windows.UI.Xaml.Controls;
 
 #endregion
 
-namespace Lunox.Behaviors
+namespace Lunox.Core.Behaviors
 {
     #region NavigationViewHeaderBehavior
 

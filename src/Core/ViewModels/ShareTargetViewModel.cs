@@ -9,7 +9,7 @@ using Windows.ApplicationModel.DataTransfer.ShareTarget;
 
 #endregion
 
-namespace Lunox.ViewModels
+namespace Lunox.Core.ViewModels
 {
     #region ShareTargetViewModel
 

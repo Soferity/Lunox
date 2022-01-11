@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 #endregion
 
-namespace Lunox.Activation
+namespace Lunox.Core.Activation
 {
     #region ActivationHandler
 

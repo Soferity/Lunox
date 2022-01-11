@@ -1,6 +1,6 @@
 ﻿#region Imports
 
-using Lunox.Helpers;
+using Lunox.Core.Helpers;
 using System;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.DataTransfer;
@@ -8,7 +8,7 @@ using Windows.ApplicationModel.DataTransfer.ShareTarget;
 
 #endregion
 
-namespace Lunox.ViewModels
+namespace Lunox.Core.ViewModels
 {
     #region SharedDataWebLinkViewModel
 

@@ -6,7 +6,7 @@ using Windows.UI.Notifications;
 
 #endregion
 
-namespace Lunox.Services
+namespace Lunox.Core.Services
 {
     #region ToastNotificationsService
 

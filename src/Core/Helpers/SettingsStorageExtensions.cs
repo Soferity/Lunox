@@ -1,6 +1,7 @@
 ﻿#region Imports
 
 using Lunox.Library.Helper;
+using Lunox.Library.Value;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ using Windows.Storage.Streams;
 
 #endregion
 
-namespace Lunox.Helpers
+namespace Lunox.Core.Helpers
 {
     #region SettingsStorageExtensions
 
@@ -24,7 +25,7 @@ namespace Lunox.Helpers
         /// <summary>
         /// 
         /// </summary>
-        private const string FileExtension = ".json";
+        private static readonly string FileExtension = Default.StorageExtension;
 
         #endregion
 
@@ -70,7 +71,7 @@ namespace Lunox.Helpers
                 return default;
             }
 
-            StorageFile file = await folder.GetFileAsync($"{name}.json");
+            StorageFile file = await folder.GetFileAsync($"{name}{FileExtension}");
             string fileContent = await FileIO.ReadTextAsync(file);
 
             return await Json.ToObjectAsync<T>(fileContent);

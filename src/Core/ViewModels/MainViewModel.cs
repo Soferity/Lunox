@@ -4,7 +4,7 @@ using Microsoft.Toolkit.Mvvm.ComponentModel;
 
 #endregion
 
-namespace Lunox.ViewModels
+namespace Lunox.Core.ViewModels
 {
     #region MainViewModel
 

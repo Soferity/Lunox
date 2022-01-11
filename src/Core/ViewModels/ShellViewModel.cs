@@ -1,8 +1,8 @@
 ﻿#region Imports
 
-using Lunox.Helpers;
-using Lunox.Services;
-using Lunox.Views;
+using Lunox.Core.Helpers;
+using Lunox.Core.Services;
+using Lunox.Core.Views;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
 using System;
@@ -18,7 +18,7 @@ using WUXC = Windows.UI.Xaml.Controls;
 
 #endregion
 
-namespace Lunox.ViewModels
+namespace Lunox.Core.ViewModels
 {
     #region ShellViewModel
 

@@ -1,12 +1,12 @@
 ﻿using Lunox.Library.Helper;
-using Lunox.Services;
+using Lunox.Core.Services;
 using Windows.UI.Xaml.Controls;
 using Windows.System.UserProfile;
 using System;
 
 // Boş Sayfa öğe şablonu https://go.microsoft.com/fwlink/?LinkId=234238 adresinde açıklanmaktadır
 
-namespace Lunox.Views
+namespace Lunox.Core.Views
 {
     /// <summary>
     /// Kendi başına kullanılabilecek ya da bir Çerçeve içine gezinebilecek boş bir sayfa.

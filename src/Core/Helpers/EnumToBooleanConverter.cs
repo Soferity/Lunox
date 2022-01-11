@@ -5,7 +5,7 @@ using Windows.UI.Xaml.Data;
 
 #endregion
 
-namespace Lunox.Helpers
+namespace Lunox.Core.Helpers
 {
     #region EnumToBooleanConverter
 

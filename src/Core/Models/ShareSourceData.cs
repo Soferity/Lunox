@@ -8,7 +8,7 @@ using Windows.Storage;
 
 #endregion
 
-namespace Lunox.Models
+namespace Lunox.Core.Models
 {
     #region ShareSourceData
 

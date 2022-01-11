@@ -1,6 +1,6 @@
 ﻿#region Imports
 
-using Lunox.Activation;
+using Lunox.Core.Activation;
 using System;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Activation;
@@ -8,7 +8,7 @@ using Windows.UI.Notifications;
 
 #endregion
 
-namespace Lunox.Services
+namespace Lunox.Core.Services
 {
     #region ToastNotificationsService
 

@@ -2,7 +2,7 @@
 
 using Lunox.Language.Enum;
 using Lunox.Library.Enum;
-using Lunox.Views;
+using Lunox.Core.Views;
 using Microsoft.Services.Store.Engagement;
 using System;
 using System.Collections.Generic;
@@ -21,6 +21,8 @@ namespace Lunox.Library.Value
     public static class Default
     {
         #region Variables
+
+        public static string StorageExtension => ".json";
 
         /// <summary>
         /// 

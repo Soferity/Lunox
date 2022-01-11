@@ -1,6 +1,6 @@
 ﻿#region Imports
 
-using Lunox.Activation;
+using Lunox.Core.Activation;
 using Lunox.Library.Helper;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using Windows.UI.Xaml.Controls;
 
 #endregion
 
-namespace Lunox.Services
+namespace Lunox.Core.Services
 {
     #region ActivationService
 

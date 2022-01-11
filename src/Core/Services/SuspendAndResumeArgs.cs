@@ -4,7 +4,7 @@ using System;
 
 #endregion
 
-namespace Lunox.Services
+namespace Lunox.Core.Services
 {
     #region SuspendAndResumeArgs
     /// <summary>

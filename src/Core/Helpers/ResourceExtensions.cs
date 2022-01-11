@@ -4,7 +4,7 @@ using Windows.ApplicationModel.Resources;
 
 #endregion
 
-namespace Lunox.Helpers
+namespace Lunox.Core.Helpers
 {
     #region ResourceExtensions
 

@@ -8,7 +8,7 @@ using Windows.UI.Xaml.Navigation;
 
 #endregion
 
-namespace Lunox.Services
+namespace Lunox.Core.Services
 {
     #region NavigationService
 

@@ -10,7 +10,7 @@ using Windows.Storage.Streams;
 
 #endregion
 
-namespace Lunox.Helpers
+namespace Lunox.Core.Helpers
 {
     #region ShareOperationExtensions
 

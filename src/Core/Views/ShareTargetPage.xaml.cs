@@ -1,13 +1,13 @@
 ﻿#region Imports
 
-using Lunox.ViewModels;
+using Lunox.Core.ViewModels;
 using Windows.ApplicationModel.DataTransfer.ShareTarget;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
 #endregion
 
-namespace Lunox.Views
+namespace Lunox.Core.Views
 {
     #region ShareTargetPage
 

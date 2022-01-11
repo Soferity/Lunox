@@ -1,6 +1,6 @@
 ﻿#region Imports
 
-using Lunox.Views;
+using Lunox.Core.Views;
 using Microsoft.Toolkit.Uwp.Helpers;
 using System;
 using System.Threading.Tasks;
@@ -9,7 +9,7 @@ using Windows.UI.Core;
 
 #endregion
 
-namespace Lunox.Services
+namespace Lunox.Core.Services
 {
     #region WhatsNewDisplayService
 

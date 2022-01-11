@@ -1,6 +1,6 @@
 ﻿#region Imports
 
-using Lunox.Helpers;
+using Lunox.Core.Helpers;
 using Lunox.Library.Value;
 using System;
 using System.Threading.Tasks;
@@ -11,7 +11,7 @@ using Windows.UI.Xaml;
 
 #endregion
 
-namespace Lunox.Services
+namespace Lunox.Core.Services
 {
     #region ThemeSelectorService
 

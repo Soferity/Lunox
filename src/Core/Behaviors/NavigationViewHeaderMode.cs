@@ -1,4 +1,4 @@
-﻿namespace Lunox.Behaviors
+﻿namespace Lunox.Core.Behaviors
 {
     #region NavigationViewHeaderMode
 

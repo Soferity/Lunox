@@ -6,7 +6,7 @@ using System.Linq;
 
 #endregion
 
-namespace Lunox.Activation
+namespace Lunox.Core.Activation
 {
     #region SchemeActivationConfig
 

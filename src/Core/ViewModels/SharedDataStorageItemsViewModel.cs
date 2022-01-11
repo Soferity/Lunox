@@ -1,6 +1,6 @@
 ﻿#region Imports
 
-using Lunox.Helpers;
+using Lunox.Core.Helpers;
 using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -12,7 +12,7 @@ using Windows.UI.Xaml.Media.Imaging;
 
 #endregion
 
-namespace Lunox.ViewModels
+namespace Lunox.Core.ViewModels
 {
     #region SharedDataStorageItemsViewModel
 

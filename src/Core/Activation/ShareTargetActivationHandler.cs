@@ -1,6 +1,6 @@
 ﻿#region Imports
 
-using Lunox.Views;
+using Lunox.Core.Views;
 using System;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Activation;
@@ -9,7 +9,7 @@ using Windows.UI.Xaml.Controls;
 
 #endregion
 
-namespace Lunox.Activation
+namespace Lunox.Core.Activation
 {
     #region ShareTargetActivationHandler
 

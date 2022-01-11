@@ -1,13 +1,13 @@
 ﻿#region Imports
 
-using Lunox.ViewModels;
+using Lunox.Core.ViewModels;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
 #endregion
 
-namespace Lunox.TemplateSelectors
+namespace Lunox.Core.TemplateSelectors
 {
     #region SharedContentTemplateSelector
 

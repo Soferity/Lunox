@@ -7,7 +7,7 @@ using System.Collections.ObjectModel;
 
 #endregion
 
-namespace Lunox.ViewModels
+namespace Lunox.Core.ViewModels
 {
     #region SchemeActivationSampleViewModel
 

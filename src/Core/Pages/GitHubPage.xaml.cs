@@ -8,7 +8,7 @@ using WUXC = Windows.UI.Xaml.Controls;
 
 #endregion
 
-namespace Lunox.Pages
+namespace Lunox.Core.Pages
 {
     #region GitHubPagePages
 

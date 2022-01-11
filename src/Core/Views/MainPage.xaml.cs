@@ -10,7 +10,7 @@ using Windows.UI.Xaml.Navigation;
 
 #endregion
 
-namespace Lunox.Views
+namespace Lunox.Core.Views
 {
     #region MainPageViews
 

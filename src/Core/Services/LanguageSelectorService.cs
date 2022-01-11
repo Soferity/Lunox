@@ -1,6 +1,6 @@
 ﻿#region Imports
 
-using Lunox.Helpers;
+using Lunox.Core.Helpers;
 using Lunox.Language.Enum;
 using Lunox.Library.Value;
 using System;
@@ -15,7 +15,7 @@ using Windows.UI.Xaml;
 
 #endregion
 
-namespace Lunox.Services
+namespace Lunox.Core.Services
 {
     #region LanguageSelectorService
 

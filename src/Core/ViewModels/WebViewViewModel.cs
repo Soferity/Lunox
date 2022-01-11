@@ -9,7 +9,7 @@ using Windows.UI.Xaml.Controls;
 
 #endregion
 
-namespace Lunox.ViewModels
+namespace Lunox.Core.ViewModels
 {
     #region WebViewViewModel
 

@@ -5,7 +5,7 @@ using Windows.UI.Xaml.Controls;
 
 #endregion
 
-namespace Lunox.Views
+namespace Lunox.Core.Views
 {
     #region FirstRunDialog
 

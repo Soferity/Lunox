@@ -1,7 +1,7 @@
 ﻿#region Imports
 
-using Lunox.Activation;
-using Lunox.Helpers;
+using Lunox.Core.Activation;
+using Lunox.Core.Helpers;
 using System;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Activation;
@@ -10,7 +10,7 @@ using Windows.UI.Xaml.Controls;
 
 #endregion
 
-namespace Lunox.Services
+namespace Lunox.Core.Services
 {
     #region SuspendAndResumeService
 

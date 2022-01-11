@@ -2,14 +2,14 @@
 
 using Lunox.Library.Enum;
 using Lunox.Library.Value;
-using Lunox.Services;
-using Lunox.ViewModels;
+using Lunox.Core.Services;
+using Lunox.Core.ViewModels;
 using MUXC = Microsoft.UI.Xaml.Controls;
 using WUXC = Windows.UI.Xaml.Controls;
 
 #endregion
 
-namespace Lunox.Views
+namespace Lunox.Core.Views
 {
     #region ShellPage
 

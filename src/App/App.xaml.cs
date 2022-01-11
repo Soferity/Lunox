@@ -2,7 +2,7 @@
 
 using Lunox.Library.Helper;
 using Lunox.Library.Value;
-using Lunox.Services;
+using Lunox.Core.Services;
 using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
