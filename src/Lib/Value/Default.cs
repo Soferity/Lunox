@@ -1,8 +1,8 @@
 ﻿#region Imports
 
+using Lunox.Core.Views;
 using Lunox.Language.Enum;
 using Lunox.Library.Enum;
-using Lunox.Core.Views;
 using Microsoft.Services.Store.Engagement;
 using System;
 using System.Collections.Generic;

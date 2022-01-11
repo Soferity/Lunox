@@ -1,8 +1,6 @@
-﻿using Lunox.Library.Helper;
-using Lunox.Core.Services;
+﻿using Lunox.Core.Services;
+using Lunox.Library.Helper;
 using Windows.UI.Xaml.Controls;
-using Windows.System.UserProfile;
-using System;
 
 // Boş Sayfa öğe şablonu https://go.microsoft.com/fwlink/?LinkId=234238 adresinde açıklanmaktadır
 

@@ -63,7 +63,7 @@ namespace Lunox.Core.Services
             {
                 GlanceClass = glanceName;
             }
-            
+
             if (Type.GetType(GlanceClass) == null)
             {
                 GlanceClass = Default.DefaultGlanceClass;

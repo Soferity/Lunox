@@ -1,7 +1,7 @@
 ﻿#region Imports
 
-using Lunox.Library.Helper;
 using Lunox.Core.Services;
+using Lunox.Library.Helper;
 using System;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Activation;
