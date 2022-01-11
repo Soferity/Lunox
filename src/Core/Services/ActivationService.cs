@@ -113,7 +113,9 @@ namespace Lunox.Core.Services
         {
             await ThemeSelectorService.InitializeAsync().ConfigureAwait(false);
             await GlanceSelectorService.InitializeAsync().ConfigureAwait(false);
+            await BrowserSelectorService.InitializeAsync().ConfigureAwait(false);
             await LanguageSelectorService.InitializeAsync().ConfigureAwait(false);
+            await NavigationSelectorService.InitializeAsync().ConfigureAwait(false);
         }
 
         /// <summary>

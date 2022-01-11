@@ -9,6 +9,7 @@
     <Import_RootNamespace>Lunox.Library</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Enum\BrowserType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enum\EventType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enum\AudioType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enum\DocumentType.cs" />

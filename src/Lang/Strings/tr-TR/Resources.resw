@@ -185,7 +185,7 @@
     <comment>Choose theme text for Settings</comment>
   </data>
   <data name="Settings_Theme_Dark.Content" xml:space="preserve">
-    <value>Dark</value>
+    <value>Karanlık</value>
     <comment>Dark theme text for Settings</comment>
   </data>
   <data name="Settings_Theme_Default.Content" xml:space="preserve">
@@ -193,7 +193,7 @@
     <comment>Windows default theme text for Settings</comment>
   </data>
   <data name="Settings_Theme_Light.Content" xml:space="preserve">
-    <value>Light</value>
+    <value>Aydınlık</value>
     <comment>Light theme text for Settings</comment>
   </data>
   <data name="Settings_About.Text" xml:space="preserve">
@@ -300,5 +300,32 @@ Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Ma
   </data>
   <data name="Settings_Language_Polish.Content" xml:space="preserve">
     <value>Lehçe</value>
+  </data>
+  <data name="Settings_WebView.Text" xml:space="preserve">
+    <value>Choose WebView</value>
+  </data>
+  <data name="Settings_WebView_New.Content" xml:space="preserve">
+    <value>WebView2</value>
+  </data>
+  <data name="Settings_WebView_Old.Content" xml:space="preserve">
+    <value>WebView</value>
+  </data>
+  <data name="Settings_Navigation.Text" xml:space="preserve">
+    <value>Choose Navigation</value>
+  </data>
+  <data name="Settings_Navigation_Auto.Content" xml:space="preserve">
+    <value>Otomatik</value>
+  </data>
+  <data name="Settings_Navigation_Left.Content" xml:space="preserve">
+    <value>Sol</value>
+  </data>
+  <data name="Settings_Navigation_LeftCompact.Content" xml:space="preserve">
+    <value>Sol Kompakt</value>
+  </data>
+  <data name="Settings_Navigation_LeftMinimal.Content" xml:space="preserve">
+    <value>Sol Küçücük</value>
+  </data>
+  <data name="Settings_Navigation_Top.Content" xml:space="preserve">
+    <value>Yukarı</value>
   </data>
 </root>

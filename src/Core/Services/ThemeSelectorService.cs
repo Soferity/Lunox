@@ -82,7 +82,7 @@ namespace Lunox.Core.Services
         /// <returns></returns>
         private static async Task<ElementTheme> LoadThemeFromSettingsAsync()
         {
-            ElementTheme cacheTheme = ElementTheme.Default;
+            ElementTheme cacheTheme = Default.DefaultTheme;
             string themeName = await ApplicationData.Current.LocalSettings.ReadAsync<string>(SettingsKey);
 
             if (!string.IsNullOrEmpty(themeName))

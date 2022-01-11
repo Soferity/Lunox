@@ -8,6 +8,7 @@ using Lunox.Library.Value;
 using Microsoft.Services.Store.Engagement;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
+using Microsoft.UI.Xaml.Controls;
 using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -41,6 +42,16 @@ namespace Lunox.Core.ViewModels
         /// <summary>
         /// 
         /// </summary>
+        private BrowserType _browserType = BrowserSelectorService.Browser;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private NavigationViewPaneDisplayMode _navigationType = NavigationSelectorService.Navigation;
+
+        /// <summary>
+        /// 
+        /// </summary>
         public ElementTheme ElementTheme
         {
             get => _elementTheme;
@@ -56,6 +67,26 @@ namespace Lunox.Core.ViewModels
             get => _languageType;
 
             set => SetProperty(ref _languageType, value);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public BrowserType BrowserType
+        {
+            get => _browserType;
+
+            set => SetProperty(ref _browserType, value);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public NavigationViewPaneDisplayMode NavigationType
+        {
+            get => _navigationType;
+
+            set => SetProperty(ref _navigationType, value);
         }
 
         /// <summary>
@@ -130,6 +161,66 @@ namespace Lunox.Core.ViewModels
                 }
 
                 return _switchLanguageCommand;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private ICommand _switchBrowserCommand;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public ICommand SwitchBrowserCommand
+        {
+            get
+            {
+                if (_switchBrowserCommand == null)
+                {
+                    _switchBrowserCommand = new RelayCommand<BrowserType>(
+                        async (param) =>
+                        {
+                            if (BrowserType != param)
+                            {
+                                AppCenterService.TrackEvent(Default.Events[EventType.Browser], $"{BrowserType}", $"{param}");
+                                BrowserType = param;
+                                await BrowserSelectorService.SetBrowserAsync(param);
+                            }
+                        });
+                }
+
+                return _switchBrowserCommand;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private ICommand _switchNavigationCommand;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public ICommand SwitchNavigationCommand
+        {
+            get
+            {
+                if (_switchNavigationCommand == null)
+                {
+                    _switchNavigationCommand = new RelayCommand<NavigationViewPaneDisplayMode>(
+                        async (param) =>
+                        {
+                            if (NavigationType != param)
+                            {
+                                AppCenterService.TrackEvent(Default.Events[EventType.Navigation], $"{NavigationType}", $"{param}");
+                                NavigationType = param;
+                                await NavigationSelectorService.SetNavigationAsync(param);
+                            }
+                        });
+                }
+
+                return _switchNavigationCommand;
             }
         }
 

@@ -4,6 +4,7 @@ using Lunox.Core.Views;
 using Lunox.Language.Enum;
 using Lunox.Library.Enum;
 using Microsoft.Services.Store.Engagement;
+using Microsoft.UI.Xaml.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,7 +49,27 @@ namespace Lunox.Library.Value
         /// <summary>
         /// 
         /// </summary>
-        public static IReadOnlyList<string> Languages = ApplicationLanguages.ManifestLanguages;
+        public static IReadOnlyList<string> DefaultLanguages = ApplicationLanguages.ManifestLanguages;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static string BrowserKey => "AppRequestedBrowser";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static BrowserType DefaultBrowser => BrowserType.WebView;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static string NavigationKey => "AppRequestedNavigation";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static NavigationViewPaneDisplayMode DefaultNavigation => NavigationViewPaneDisplayMode.Auto;
 
         /// <summary>
         /// 
@@ -83,18 +104,20 @@ namespace Lunox.Library.Value
             { EventType.Page, "Page-" },
             { EventType.Theme, "Switch-Theme" },
             { EventType.Glance, "Switch-Glance" },
-            { EventType.Language, "Switch-Language" }
+            { EventType.Browser, "Switch-Browser" },
+            { EventType.Language, "Switch-Language" },
+            { EventType.Navigation, "Switch-Navigation" }
         };
 
         /// <summary>
         /// 
         /// </summary>
-        public static Visibility FeedbackLinkVisibility => StoreServicesFeedbackLauncher.IsSupported() ? Visibility.Visible : Visibility.Collapsed;
+        public static Visibility FeedbackLinkVisibility => StoreServicesFeedbackLauncher.IsSupported() ? Visibility.Collapsed : Visibility.Collapsed;
 
         /// <summary>
         /// 
         /// </summary>
-        public static Visibility PrivacyLinkVisibility => Visibility.Visible;
+        public static Visibility PrivacyLinkVisibility => Visibility.Collapsed;
 
         /// <summary>
         /// 

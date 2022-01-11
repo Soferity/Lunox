@@ -6,8 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
-    mc:Ignorable="d"
-    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
+    mc:Ignorable="d">
     <Page.Background>
         <ImageBrush ImageSource="ms-appx:///Assets/Pages/NotFound/Back.jpg" Stretch="UniformToFill" Opacity="0.075"/>
     </Page.Background>

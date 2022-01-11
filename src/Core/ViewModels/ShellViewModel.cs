@@ -3,6 +3,7 @@
 using Lunox.Core.Helpers;
 using Lunox.Core.Services;
 using Lunox.Core.Views;
+using Lunox.Library.Value;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
 using System;
@@ -115,9 +116,11 @@ namespace Lunox.Core.ViewModels
             _navigationView = navigationView;
             _keyboardAccelerators = keyboardAccelerators;
             NavigationService.Frame = frame;
+            NavigationService.Navigation = _navigationView;
             NavigationService.NavigationFailed += Frame_NavigationFailed;
             NavigationService.Navigated += Frame_Navigated;
             _navigationView.BackRequested += OnBackRequested;
+            NavigationService.Initialize();
         }
 
         /// <summary>

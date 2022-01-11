@@ -117,7 +117,80 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PageTitle.Text" xml:space="preserve">
-    <value>Ayarlar Sayfası</value>
+  <data name="About.Text" xml:space="preserve">
+    <value>Uygulama Hakkında</value>
+  </data>
+  <data name="About_Description.Text" xml:space="preserve">
+    <value>Best with fast and convenient file conversions.
+Copyright © 2022 Soferity LLC</value>
+  </data>
+  <data name="About_FeedbackHub.Content" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="About_PrivacyTerms.Content" xml:space="preserve">
+    <value>Privacy Statement</value>
+  </data>
+  <data name="Language.Text" xml:space="preserve">
+    <value>Uygulama Arayüzü</value>
+  </data>
+  <data name="Language_English.Content" xml:space="preserve">
+    <value>İngilizce</value>
+  </data>
+  <data name="Language_French.Content" xml:space="preserve">
+    <value>Fransızca</value>
+  </data>
+  <data name="Language_German.Content" xml:space="preserve">
+    <value>Almanca</value>
+  </data>
+  <data name="Language_Polish.Content" xml:space="preserve">
+    <value>Lehçe</value>
+  </data>
+  <data name="Language_Spanish.Content" xml:space="preserve">
+    <value>İspanyolca</value>
+  </data>
+  <data name="Language_Turkish.Content" xml:space="preserve">
+    <value>Türkçe</value>
+  </data>
+  <data name="Navigation.Text" xml:space="preserve">
+    <value>Uygulama Çubuğu</value>
+  </data>
+  <data name="Navigation_Auto.Content" xml:space="preserve">
+    <value>Otomatik</value>
+  </data>
+  <data name="Navigation_Left.Content" xml:space="preserve">
+    <value>Sol</value>
+  </data>
+  <data name="Navigation_LeftCompact.Content" xml:space="preserve">
+    <value>Sol Kompakt</value>
+  </data>
+  <data name="Navigation_LeftMinimal.Content" xml:space="preserve">
+    <value>Sol Küçücük</value>
+  </data>
+  <data name="Navigation_Top.Content" xml:space="preserve">
+    <value>Yukarı</value>
+  </data>
+  <data name="Personalization.Text" xml:space="preserve">
+    <value>Kişiselleştirme</value>
+  </data>
+  <data name="Theme.Text" xml:space="preserve">
+    <value>Uygulama Teması</value>
+  </data>
+  <data name="Theme_Dark.Content" xml:space="preserve">
+    <value>Karanlık</value>
+  </data>
+  <data name="Theme_Default.Content" xml:space="preserve">
+    <value>Varsayılan</value>
+  </data>
+  <data name="Theme_Light.Content" xml:space="preserve">
+    <value>Aydınlık</value>
+  </data>
+  <data name="WebView.Text" xml:space="preserve">
+    <value>Uygulama Tarayıcısı</value>
+  </data>
+  <data name="WebView_New.Content" xml:space="preserve">
+    <value>Gelişmiş</value>
+  </data>
+  <data name="WebView_Old.Content" xml:space="preserve">
+    <value>Varsayılan</value>
   </data>
 </root>

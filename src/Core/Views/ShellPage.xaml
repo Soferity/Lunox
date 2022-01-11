@@ -10,6 +10,7 @@
     xmlns:views="using:Lunox.Core.Views"
     xmlns:ic="using:Microsoft.Xaml.Interactions.Core"
     xmlns:i="using:Microsoft.Xaml.Interactivity"
+    Style="{StaticResource PageStyle}"
     mc:Ignorable="d">
 
     <i:Interaction.Behaviors>
@@ -24,7 +25,7 @@
         IsBackEnabled="{x:Bind ViewModel.IsBackEnabled, Mode=OneWay}"
         SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
         IsSettingsVisible="True"
-        Background="{ThemeResource SystemControlBackgroundAltHighBrush}" SelectionChanged="navigationView_SelectionChanged">
+        SelectionChanged="navigationView_SelectionChanged">
         <muxc:NavigationView.MenuItems>
             <!--
             TODO WTS: Change the symbols for each item as appropriate for your app

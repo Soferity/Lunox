@@ -23,6 +23,14 @@
         /// 
         /// </summary>
         Glance,
+        /// <summary>
+        /// 
+        /// </summary>
+        Browser,
+        /// <summary>
+        /// 
+        /// </summary>
+        Navigation
     }
 
     #endregion

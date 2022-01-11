@@ -2,6 +2,7 @@
 
 using Lunox.Core.Helpers;
 using Lunox.Language.Enum;
+using Lunox.Library.Helper;
 using Lunox.Library.Value;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ using Windows.Globalization;
 using Windows.Storage;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Navigation;
 
 #endregion
 
@@ -43,7 +45,7 @@ namespace Lunox.Core.Services
         /// <summary>
         /// 
         /// </summary>
-        public static IReadOnlyList<string> Languages = Default.Languages;
+        public static IReadOnlyList<string> Languages = Default.DefaultLanguages;
 
         /// <summary>
         /// 
@@ -91,7 +93,25 @@ namespace Lunox.Core.Services
 
             ResourceContext.GetForCurrentView().Reset();
             ResourceContext.GetForViewIndependentUse().Reset();
-            //NavigationService.Navigate(typeof(SettingsPage), DateTime.Now.Ticks);
+
+            NavigationService.Display = NavigationSelectorService.Navigation;
+
+            string Text = string.Empty;
+
+            if (NavigationService.Navigation.MenuItems.Count > 0)
+            {
+                foreach (IList<Microsoft.UI.Xaml.Controls.NavigationViewItem> Item in NavigationService.Navigation.MenuItems)
+                {
+                    Text += Item.ToString();
+                }
+            }
+
+            if (NavigationService.Frame.SourcePageType != null)
+            {
+                NavigationService.Frame.NavigateToType(NavigationService.Frame.SourcePageType, null, new FrameNavigationOptions() { IsNavigationStackEnabled = false });
+            }
+
+            Dialog.SendDialog(Text);
         }
 
         /// <summary>
@@ -100,7 +120,7 @@ namespace Lunox.Core.Services
         /// <returns></returns>
         private static async Task<LanguageType> LoadLanguageFromSettingsAsync()
         {
-            LanguageType cacheLanguage = LanguageType.en_GB;
+            LanguageType cacheLanguage = Default.DefaultLanguage;
             string languageName = await ApplicationData.Current.LocalSettings.ReadAsync<string>(SettingsKey);
 
             if (!string.IsNullOrEmpty(languageName))

@@ -2,9 +2,12 @@
 
 using System;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
+using WUXC = Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
+using MUXC = Microsoft.UI.Xaml.Controls;
+using Lunox.Library.Value;
+using Lunox.Core.ViewModels;
 
 #endregion
 
@@ -32,7 +35,13 @@ namespace Lunox.Core.Services
         /// <summary>
         /// 
         /// </summary>
-        private static Frame _frame;
+        private static WUXC.Frame _frame;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private static MUXC.NavigationView _navigation;
+
         /// <summary>
         /// 
         /// </summary>
@@ -45,13 +54,13 @@ namespace Lunox.Core.Services
         /// <summary>
         /// 
         /// </summary>
-        public static Frame Frame
+        public static WUXC.Frame Frame
         {
             get
             {
                 if (_frame == null)
                 {
-                    _frame = Window.Current.Content as Frame;
+                    _frame = Window.Current.Content as WUXC.Frame;
                     RegisterFrameEvents();
                 }
 
@@ -69,12 +78,30 @@ namespace Lunox.Core.Services
         /// <summary>
         /// 
         /// </summary>
+        public static MUXC.NavigationView Navigation
+        {
+            get => _navigation;
+            set => _navigation = value;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static bool CanGoBack => Frame.CanGoBack;
 
         /// <summary>
         /// 
         /// </summary>
         public static bool CanGoForward => Frame.CanGoForward;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static MUXC.NavigationViewPaneDisplayMode Display
+        {
+            get => Navigation.PaneDisplayMode;
+            set => Navigation.PaneDisplayMode = value;
+        }
 
         /// <summary>
         /// 
@@ -109,7 +136,7 @@ namespace Lunox.Core.Services
         /// <exception cref="ArgumentException"></exception>
         public static bool Navigate(Type pageType, object parameter = null, NavigationTransitionInfo infoOverride = null)
         {
-            if (pageType == null || !pageType.IsSubclassOf(typeof(Page)))
+            if (pageType == null || !pageType.IsSubclassOf(typeof(WUXC.Page)))
             {
                 throw new ArgumentException($"Invalid pageType '{pageType}', please provide a valid pageType.", nameof(pageType));
             }
@@ -138,9 +165,17 @@ namespace Lunox.Core.Services
         /// <param name="parameter"></param>
         /// <param name="infoOverride"></param>
         /// <returns></returns>
-        public static bool Navigate<T>(object parameter = null, NavigationTransitionInfo infoOverride = null) where T : Page
+        public static bool Navigate<T>(object parameter = null, NavigationTransitionInfo infoOverride = null) where T : WUXC.Page
         {
             return Navigate(typeof(T), parameter, infoOverride);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static void Initialize()
+        {
+            Display = NavigationSelectorService.Navigation;
         }
 
         /// <summary>
