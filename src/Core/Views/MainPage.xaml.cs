@@ -33,7 +33,7 @@ namespace Lunox.Core.Views
         /// <summary>
         /// 
         /// </summary>
-        private readonly string PagePrefix = "Lunox.Pages.";
+        private readonly string PagePrefix = "Lunox.Core.Pages.";
         /// <summary>
         /// 
         /// </summary>

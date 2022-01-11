@@ -6,6 +6,7 @@ using Lunox.Library.Enum;
 using Microsoft.Services.Store.Engagement;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Windows.Globalization;
 using Windows.UI.Xaml;
 
@@ -62,12 +63,12 @@ namespace Lunox.Library.Value
         /// <summary>
         /// 
         /// </summary>
-        public static string DefaultGlanceClass => typeof(MainPage).ToString();
+        public static string DefaultGlanceClass => DefaultGlance.ToString();
 
         /// <summary>
         /// 
         /// </summary>
-        public static string DefaultGlancePrefix => "Lunox.Views.";
+        public static string DefaultGlancePrefix => string.Join(".", DefaultGlanceClass.Split('.').SkipLast(1)) + ".";
 
         /// <summary>
         /// 
