@@ -1,0 +1,106 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Lunox.Core.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
+    xmlns:iconPacks="using:MahApps.Metro.IconPacks"
+    x:Class="Lunox.Core.Views.MainPage"
+    xmlns:behaviors="using:Lunox.Core.Behaviors"
+    mc:Ignorable="d"
+    Loaded="MainPage_Loaded"
+    behaviors:NavigationViewHeaderBehavior.HeaderMode="Never"
+>
+
+    <Grid>
+        <Grid.BackgroundTransition>
+            <BrushTransition />
+        </Grid.BackgroundTransition>
+        
+        <muxc:NavigationView
+                         x:Name="NavigationView"
+                         IsSettingsVisible="True"
+                         IsBackButtonVisible="Collapsed"
+                         IsBackEnabled="True"
+                         IsTabStop="True"
+                         IsPaneOpen="True"
+                         IsPaneToggleButtonVisible="True"
+                         SelectionChanged="NavigationView_SelectionChanged"
+                         Header="Welcome"
+                         AlwaysShowHeader="False"
+                         PaneTitle=""
+                         PaneDisplayMode="Left"
+                         ExpandedModeThresholdWidth="500"
+                         CompactModeThresholdWidth="500"
+                         SelectionFollowsFocus="Disabled">
+
+            <muxc:NavigationView.MenuItems>
+
+                <muxc:NavigationViewItem Content="Welcome" Tag="Welcome">
+                    <muxc:NavigationViewItem.Icon>
+                        <iconPacks:PathIconFontAwesome Kind="CocktailSolid" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItemHeader Content="Actions"/>
+
+                <muxc:NavigationViewItem Content="Menu Item2" Tag="SamplePage2" SelectsOnInvoked="True">
+                    <muxc:NavigationViewItem.Icon>
+                        <SymbolIcon Symbol="Save" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem Content="Menu Item3" Tag="SamplePage3">
+                    <muxc:NavigationViewItem.Icon>
+                        <SymbolIcon Symbol="Refresh" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem Content="Document options" Icon="Page2" ToolTipService.ToolTip="Document options" SelectsOnInvoked="False">
+                    <muxc:NavigationViewItem.MenuItems>
+                        <muxc:NavigationViewItem Content="Create new" Icon="NewFolder" ToolTipService.ToolTip="Create new" Tag="SamplePage5"/>
+                        <muxc:NavigationViewItem Content="Upload file" Icon="OpenLocal" ToolTipService.ToolTip="Upload file" Tag="SamplePage6"/>
+                    </muxc:NavigationViewItem.MenuItems>
+                </muxc:NavigationViewItem>
+
+            </muxc:NavigationView.MenuItems>
+
+            <muxc:NavigationView.AutoSuggestBox>
+                <AutoSuggestBox QueryIcon="Find" AutomationProperties.Name="Search" />
+            </muxc:NavigationView.AutoSuggestBox>
+
+            <muxc:NavigationView.FooterMenuItems>
+
+                <muxc:NavigationViewItem Content="GitHub" Tag="GitHub">
+                    <muxc:NavigationViewItem.Icon>
+                        <iconPacks:PathIconFontAwesome Kind="GithubBrands" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem Content="Discord" Tag="Discord">
+                    <muxc:NavigationViewItem.Icon>
+                        <iconPacks:PathIconFontAwesome Kind="DiscordBrands" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem Content="Help" Tag="Help">
+                    <muxc:NavigationViewItem.Icon>
+                        <iconPacks:PathIconFontAwesome Kind="QuestionSolid" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+            </muxc:NavigationView.FooterMenuItems>
+
+            <Frame x:Name="ContentFrame">
+                <Frame.ContentTransitions>
+                    <TransitionCollection>
+                        <NavigationThemeTransition />
+                    </TransitionCollection>
+                </Frame.ContentTransitions>
+            </Frame>
+
+        </muxc:NavigationView>
+    </Grid>
+</Page>
