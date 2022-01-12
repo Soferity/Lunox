@@ -59,6 +59,11 @@ namespace Lunox.Core.ViewModels
         /// <summary>
         /// 
         /// </summary>
+        private WUXC.AutoSuggestBox _suggestBox;
+
+        /// <summary>
+        /// 
+        /// </summary>
         private MUXC.NavigationViewItem _selected;
 
         /// <summary>
@@ -107,6 +112,55 @@ namespace Lunox.Core.ViewModels
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="Mode"></param>
+        /// <returns></returns>
+        private List<MUXC.NavigationViewItem> Navigation_Item(bool Mode = true)
+        {
+            List<MUXC.NavigationViewItem> Items = new();
+
+            if (_navigationView.MenuItems.Count > 0)
+            {
+                foreach (MUXC.NavigationViewItem Item in _navigationView.MenuItems.OfType<MUXC.NavigationViewItem>().Concat(_navigationView.FooterMenuItems.OfType<MUXC.NavigationViewItem>()))
+                {
+                    if (Mode && Item.MenuItems.Count > 0)
+                    {
+                        foreach (MUXC.NavigationViewItem Menu in Item.MenuItems.OfType<MUXC.NavigationViewItem>())
+                        {
+                            Items.Add(Menu);
+                        }
+                    }
+
+                    Items.Add(Item);
+                }
+            }
+
+            return Items;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private List<string> Navigation_Item_Content
+        {
+            get
+            {
+                List<string> Items = new();
+
+                if (_navigationView.MenuItems.Count > 0)
+                {
+                    foreach (MUXC.NavigationViewItem Item in Navigation_Item(true))
+                    {
+                        Items.Add(Item.Content.ToString());
+                    }
+                }
+
+                return Items;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public ICommand LoadedCommand => _loadedCommand ?? (_loadedCommand = new RelayCommand(OnLoaded));
 
         /// <summary>
@@ -127,15 +181,18 @@ namespace Lunox.Core.ViewModels
         /// <param name="frame"></param>
         /// <param name="navigationView"></param>
         /// <param name="keyboardAccelerators"></param>
-        public void Initialize(WUXC.Frame frame, MUXC.NavigationView navigationView, IList<KeyboardAccelerator> keyboardAccelerators)
+        public void Initialize(WUXC.Frame frame, MUXC.NavigationView navigationView, WUXC.AutoSuggestBox suggestBox, IList<KeyboardAccelerator> keyboardAccelerators)
         {
             _navigationView = navigationView;
+            _suggestBox = suggestBox;
             _keyboardAccelerators = keyboardAccelerators;
             NavigationService.Frame = frame;
             NavigationService.Navigation = _navigationView;
             NavigationService.NavigationFailed += Frame_NavigationFailed;
             NavigationService.Navigated += Frame_Navigated;
             _navigationView.BackRequested += OnBackRequested;
+            _suggestBox.TextChanged += TextChanged;
+            _suggestBox.SuggestionChosen += SuggestionChosen;
             NavigationService.Initialize();
         }
 
@@ -170,6 +227,11 @@ namespace Lunox.Core.ViewModels
                 {
                     NavigationService.Navigate(pageType, null); //args.RecommendedNavigationTransitionInfo
                 }
+                else
+                {
+                    Selected = selectedItem;
+                    NavigationService.Navigate(Default.NotFoundPage, null); //args.RecommendedNavigationTransitionInfo
+                }
             }
         }
 
@@ -181,6 +243,86 @@ namespace Lunox.Core.ViewModels
         private void OnBackRequested(MUXC.NavigationView sender, MUXC.NavigationViewBackRequestedEventArgs args)
         {
             NavigationService.GoBack();
+        }
+
+        /// <summary>
+        /// Handle text change and present suitable items
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void TextChanged(WUXC.AutoSuggestBox sender, WUXC.AutoSuggestBoxTextChangedEventArgs args)
+        {
+            // Since selecting an item will also change the text,
+            // only listen to changes caused by user entering text.
+            if (args.Reason == WUXC.AutoSuggestionBoxTextChangeReason.UserInput)
+            {
+                var suitableItems = new List<string>();
+
+                if (string.IsNullOrEmpty(sender.Text))
+                {
+                    sender.ItemsSource = suitableItems;
+                }
+                else
+                {
+                    var splitText = sender.Text.ToLowerInvariant().Split(" ");
+
+                    foreach (string Item in Navigation_Item_Content)
+                    {
+                        bool found = splitText.All((Key) =>
+                        {
+                            return Item.ToLowerInvariant().Contains(Key);
+                        });
+
+                        if (found)
+                        {
+                            suitableItems.Add(Item.ToString());
+                        }
+                    }
+
+                    if (suitableItems.Count == 0)
+                    {
+                        suitableItems.Add("No results found");
+                    }
+
+                    sender.ItemsSource = suitableItems;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Handle user selecting an item, in our case just output the selected item.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void SuggestionChosen(WUXC.AutoSuggestBox sender, WUXC.AutoSuggestBoxSuggestionChosenEventArgs args)
+        {
+            _suggestBox.Text = string.Empty;
+
+            foreach (MUXC.NavigationViewItem Item in Navigation_Item(true))
+            {
+                if (Item.Content.ToString() == args.SelectedItem.ToString())
+                {
+                    Type Page = NavHelper.GetNavigateTo(Item);
+
+                    if (Page == null)
+                    {
+                        Page = Default.NotFoundPage;
+
+                        Selected = Item;
+                        Item.IsSelected = true;
+                        Item.IsChildSelected = true;
+                        Item.SelectsOnInvoked = true;
+                        NavigationService.Navigation.SelectedItem = Item;
+                    }
+
+                    NavigationService.Navigate(Page, null);
+
+                    //NavHelper.SetNavigateTo(Item, Default.NotFoundPage);
+                    //NavigationService.Navigate(Item.GetValue(NavHelper.NavigateToProperty) as Type, null);
+                    
+                    break;
+                }
+            }
         }
 
         /// <summary>
@@ -208,19 +350,10 @@ namespace Lunox.Core.ViewModels
                 return;
             }
 
-            MUXC.NavigationViewItem selectedItem = GetSelectedItem(_navigationView.MenuItems, e.SourcePageType);
+            MUXC.NavigationViewItem selectedItem = GetSelectedItem(_navigationView.MenuItems.Concat(_navigationView.FooterMenuItems), e.SourcePageType);
             if (selectedItem != null)
             {
                 Selected = selectedItem;
-            }
-            else
-            {
-                selectedItem = GetSelectedItem(_navigationView.FooterMenuItems, e.SourcePageType);
-
-                if (selectedItem != null)
-                {
-                    Selected = selectedItem;
-                }
             }
         }
 

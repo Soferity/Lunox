@@ -105,6 +105,11 @@ namespace Lunox.Library.Value
         /// <summary>
         /// 
         /// </summary>
+        public static Type NotFoundPage => typeof(NotFoundPage);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static Dictionary<EventType, string> Events => new()
         {
             { EventType.Page, "Page-" },

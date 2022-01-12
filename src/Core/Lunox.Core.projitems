@@ -53,6 +53,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\ToastNotificationsService.Samples.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\WhatsNewDisplayService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TemplateSelectors\SharedContentTemplateSelector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\NotFoundViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\GlanceViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SchemeActivationSampleViewModel.cs" />
@@ -71,6 +72,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\NotFoundPage.xaml.cs">
+      <DependentUpon>NotFoundPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\SchemeActivationSamplePage.xaml.cs">
       <DependentUpon>SchemeActivationSamplePage.xaml</DependentUpon>
@@ -140,6 +144,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\NotFoundPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

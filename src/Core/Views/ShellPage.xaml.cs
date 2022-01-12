@@ -28,7 +28,7 @@ namespace Lunox.Core.Views
         {
             InitializeComponent();
             DataContext = ViewModel;
-            ViewModel.Initialize(shellFrame, navigationView, KeyboardAccelerators);
+            ViewModel.Initialize(shellFrame, navigationView, suggestBox, KeyboardAccelerators);
         }
 
         #endregion
