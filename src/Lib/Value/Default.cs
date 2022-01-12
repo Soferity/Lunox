@@ -100,7 +100,7 @@ namespace Lunox.Library.Value
         /// <summary>
         /// 
         /// </summary>
-        public static NavigationTransitionInfo ShellTransition =>  new DrillInNavigationTransitionInfo();
+        public static NavigationTransitionInfo ShellTransition => new DrillInNavigationTransitionInfo();
 
         /// <summary>
         /// 

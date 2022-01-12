@@ -1,13 +1,12 @@
 ﻿#region Imports
 
+using Lunox.Library.Value;
 using System;
 using Windows.UI.Xaml;
-using WUXC = Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using MUXC = Microsoft.UI.Xaml.Controls;
-using Lunox.Library.Value;
-using Lunox.Core.ViewModels;
+using WUXC = Windows.UI.Xaml.Controls;
 
 #endregion
 

@@ -3,7 +3,6 @@
 using Lunox.Core.Helpers;
 using Lunox.Core.Services;
 using Lunox.Core.Views;
-using Lunox.Library.Value;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
 using System;

@@ -1,17 +1,11 @@
 ﻿#region Imports
 
-using Lunox.Core.Behaviors;
 using Lunox.Core.Helpers;
 using Lunox.Library.Value;
 using Microsoft.UI.Xaml.Controls;
 using System;
 using System.Threading.Tasks;
-using Windows.ApplicationModel.Core;
-using Windows.ApplicationModel.Resources.Core;
-using Windows.Globalization;
 using Windows.Storage;
-using Windows.UI.Core;
-using Windows.UI.Xaml;
 
 #endregion
 
