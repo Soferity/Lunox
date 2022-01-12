@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Windows.Globalization;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Media.Animation;
 
 #endregion
 
@@ -95,6 +96,11 @@ namespace Lunox.Library.Value
         /// 
         /// </summary>
         public static UIElement DefaultShell => new ShellPage();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static NavigationTransitionInfo ShellTransition =>  new DrillInNavigationTransitionInfo();
 
         /// <summary>
         /// 

@@ -144,6 +144,11 @@ namespace Lunox.Core.Services
             // Don't open the same page multiple times
             if (Frame.Content?.GetType() != pageType || (parameter != null && !parameter.Equals(_lastParamUsed)))
             {
+                if (infoOverride == null)
+                {
+                    infoOverride = Default.ShellTransition;
+                }
+
                 bool navigationResult = Frame.Navigate(pageType, parameter, infoOverride);
                 if (navigationResult)
                 {
@@ -167,6 +172,11 @@ namespace Lunox.Core.Services
         /// <returns></returns>
         public static bool Navigate<T>(object parameter = null, NavigationTransitionInfo infoOverride = null) where T : WUXC.Page
         {
+            if (infoOverride == null)
+            {
+                infoOverride = Default.ShellTransition;
+            }
+
             return Navigate(typeof(T), parameter, infoOverride);
         }
 

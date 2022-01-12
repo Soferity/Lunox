@@ -143,7 +143,7 @@ namespace Lunox.Core.ViewModels
         {
             if (args.IsSettingsInvoked)
             {
-                NavigationService.Navigate(typeof(SettingsPage), null, args.RecommendedNavigationTransitionInfo);
+                NavigationService.Navigate(typeof(SettingsPage), null); //args.RecommendedNavigationTransitionInfo
             }
             else
             {
@@ -152,7 +152,7 @@ namespace Lunox.Core.ViewModels
 
                 if (pageType != null)
                 {
-                    NavigationService.Navigate(pageType, null, args.RecommendedNavigationTransitionInfo);
+                    NavigationService.Navigate(pageType, null); //args.RecommendedNavigationTransitionInfo
                 }
             }
         }

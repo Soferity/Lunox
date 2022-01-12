@@ -1,6 +1,10 @@
 ﻿using Lunox.Core.Services;
 using Lunox.Library.Helper;
+using System.Collections.Generic;
 using Windows.UI.Xaml.Controls;
+using System.Linq;
+using System;
+using MUXC = Microsoft.UI.Xaml.Controls;
 
 // Boş Sayfa öğe şablonu https://go.microsoft.com/fwlink/?LinkId=234238 adresinde açıklanmaktadır
 

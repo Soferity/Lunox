@@ -7,6 +7,7 @@ using Lunox.Library.Value;
 using Microsoft.UI.Xaml.Controls;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Core;
 using Windows.ApplicationModel.Resources.Core;
@@ -105,34 +106,28 @@ namespace Lunox.Core.Services
         {
             if (NavigationService.Navigation != null)
             {
-                foreach (object Item in NavigationService.Navigation.MenuItems)
+                foreach (NavigationViewItem Item in NavigationService.Navigation.MenuItems.OfType<NavigationViewItem>().Concat(NavigationService.Navigation.FooterMenuItems.OfType<NavigationViewItem>()))
                 {
-                    try
+                    if (Item.MenuItems.Count > 0)
                     {
-                        SetNavigationContent((NavigationViewItem)Item);
-                    }
-                    catch
-                    {
-                        try
+                        foreach (NavigationViewItem Menu in Item.MenuItems.OfType<NavigationViewItem>())
                         {
-                            SetNavigationContent((NavigationViewItemHeader)Item);
-                        }
-                        catch
-                        {
-                            //
+                            SetNavigationContent(Menu);
                         }
                     }
+
+                    SetNavigationContent(Item);
                 }
 
-                foreach (object Item in NavigationService.Navigation.FooterMenuItems)
+                foreach (NavigationViewItemHeader Item in NavigationService.Navigation.MenuItems.OfType<NavigationViewItemHeader>())
                 {
-                    SetNavigationContent((NavigationViewItem)Item);
+                    SetNavigationContent(Item);
                 }
             }
 
             if (NavigationService.Frame.SourcePageType != null)
             {
-                NavigationService.Frame.NavigateToType(NavigationService.Frame.SourcePageType, null, new FrameNavigationOptions() { IsNavigationStackEnabled = false });
+                NavigationService.Frame.NavigateToType(NavigationService.Frame.SourcePageType, null, new FrameNavigationOptions() { IsNavigationStackEnabled = false, TransitionInfoOverride = Default.ShellTransition });
             }
 
             NavigationService.Display = NavigationSelectorService.Navigation;
