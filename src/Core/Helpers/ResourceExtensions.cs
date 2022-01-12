@@ -49,9 +49,29 @@ namespace Lunox.Core.Helpers
         /// </summary>
         /// <param name="resourceKey"></param>
         /// <returns></returns>
+        public static string GetLocalizedCustom(this object resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.Custom");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
         public static string GetLocalizedContent(this object resourceKey)
         {
             return GetLocalized($"{resourceKey}.Content");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
+        public static string GetLocalizedPlaceholderText(this object resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.PlaceholderText");
         }
 
         /// <summary>
@@ -69,9 +89,29 @@ namespace Lunox.Core.Helpers
         /// </summary>
         /// <param name="resourceKey"></param>
         /// <returns></returns>
+        public static string GetLocalizedCustom(this string resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.Custom");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
         public static string GetLocalizedContent(this string resourceKey)
         {
             return GetLocalized($"{resourceKey}.Content");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
+        public static string GetLocalizedPlaceholderText(this string resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.PlaceholderText");
         }
 
         /// <summary>

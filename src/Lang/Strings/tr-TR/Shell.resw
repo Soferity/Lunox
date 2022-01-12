@@ -132,6 +132,12 @@
   <data name="Settings.Content" xml:space="preserve">
     <value>Ayarlar</value>
   </data>
+  <data name="Suggest.Custom" xml:space="preserve">
+    <value>Sayfa bulunamadı</value>
+  </data>
+  <data name="Suggest.PlaceholderText" xml:space="preserve">
+    <value>Sayfa Bul</value>
+  </data>
   <data name="Test.Content" xml:space="preserve">
     <value>Deneme</value>
   </data>

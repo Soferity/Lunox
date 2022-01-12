@@ -75,7 +75,7 @@
             </muxc:NavigationView.MenuItems>
 
             <muxc:NavigationView.AutoSuggestBox>
-                <AutoSuggestBox x:Uid="\Shell\Suggest" x:Name="suggestBox" QueryIcon="Find" Tag="Suggest" PlaceholderText="Find Page" />
+                <AutoSuggestBox x:Uid="\Shell\Suggest" x:Name="suggestBox" QueryIcon="Find" Tag="Suggest" />
             </muxc:NavigationView.AutoSuggestBox>
 
             <muxc:NavigationView.FooterMenuItems>

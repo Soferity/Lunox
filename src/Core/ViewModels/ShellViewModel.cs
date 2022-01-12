@@ -9,6 +9,7 @@ using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -267,13 +268,13 @@ namespace Lunox.Core.ViewModels
                 }
                 else
                 {
-                    var splitText = sender.Text.ToLowerInvariant().Split(" ");
+                    var splitText = TextLower(sender.Text).Split(" ");
 
                     foreach (string Item in Navigation_Item_Content)
                     {
                         bool found = splitText.All((Key) =>
                         {
-                            return Item.ToLowerInvariant().Contains(Key);
+                            return TextLower(Item).Contains(Key);
                         });
 
                         if (found)
@@ -284,12 +285,22 @@ namespace Lunox.Core.ViewModels
 
                     if (suitableItems.Count == 0)
                     {
-                        suitableItems.Add("No results found");
+                        suitableItems.Add(ResourceExtensions.GetLocalizedCustom($"Shell|{sender.Tag}"));
                     }
 
                     sender.ItemsSource = suitableItems;
                 }
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Text"></param>
+        /// <returns></returns>
+        private string TextLower(string Text)
+        {
+            return Text.ToLower(new CultureInfo(LanguageSelectorService.Language.ToString().Replace("_", "-")));
         }
 
         /// <summary>
@@ -315,7 +326,6 @@ namespace Lunox.Core.ViewModels
                         Item.IsSelected = true;
                         Item.IsChildSelected = true;
                         Item.SelectsOnInvoked = true;
-                        NavigationService.Navigation.SelectedItem = Item;
                     }
 
                     NavigationService.Navigate(Page, null);

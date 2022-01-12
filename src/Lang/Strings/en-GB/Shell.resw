@@ -132,6 +132,12 @@
   <data name="Settings.Content" xml:space="preserve">
     <value>Settings</value>
   </data>
+  <data name="Suggest.Custom" xml:space="preserve">
+    <value>Page not found</value>
+  </data>
+  <data name="Suggest.PlaceholderText" xml:space="preserve">
+    <value>Find Page</value>
+  </data>
   <data name="Test.Content" xml:space="preserve">
     <value>Try</value>
   </data>

@@ -3,7 +3,7 @@
 using Lunox.Core.Helpers;
 using Lunox.Language.Enum;
 using Lunox.Library.Value;
-using Microsoft.UI.Xaml.Controls;
+using MUXC = Microsoft.UI.Xaml.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +14,7 @@ using Windows.Globalization;
 using Windows.Storage;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
+using WUXC = Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
 #endregion
@@ -105,11 +106,11 @@ namespace Lunox.Core.Services
         {
             if (NavigationService.Navigation != null)
             {
-                foreach (NavigationViewItem Item in NavigationService.Navigation.MenuItems.OfType<NavigationViewItem>().Concat(NavigationService.Navigation.FooterMenuItems.OfType<NavigationViewItem>()))
+                foreach (MUXC.NavigationViewItem Item in NavigationService.Navigation.MenuItems.OfType<MUXC.NavigationViewItem>().Concat(NavigationService.Navigation.FooterMenuItems.OfType<MUXC.NavigationViewItem>()))
                 {
                     if (Item.MenuItems.Count > 0)
                     {
-                        foreach (NavigationViewItem Menu in Item.MenuItems.OfType<NavigationViewItem>())
+                        foreach (MUXC.NavigationViewItem Menu in Item.MenuItems.OfType<MUXC.NavigationViewItem>())
                         {
                             SetNavigationContent(Menu);
                         }
@@ -118,10 +119,12 @@ namespace Lunox.Core.Services
                     SetNavigationContent(Item);
                 }
 
-                foreach (NavigationViewItemHeader Item in NavigationService.Navigation.MenuItems.OfType<NavigationViewItemHeader>())
+                foreach (MUXC.NavigationViewItemHeader Item in NavigationService.Navigation.MenuItems.OfType<MUXC.NavigationViewItemHeader>())
                 {
                     SetNavigationContent(Item);
                 }
+
+                SetNavigationContent(NavigationService.Navigation.AutoSuggestBox);
             }
 
             if (NavigationService.Frame.SourcePageType != null)
@@ -129,14 +132,14 @@ namespace Lunox.Core.Services
                 NavigationService.Frame.NavigateToType(NavigationService.Frame.SourcePageType, null, new FrameNavigationOptions() { IsNavigationStackEnabled = false, TransitionInfoOverride = Default.ShellTransition });
             }
 
-            NavigationService.Display = NavigationSelectorService.Navigation;
+            //NavigationService.Display = NavigationSelectorService.Navigation;
         }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="Item"></param>
-        private static void SetNavigationContent(NavigationViewItem Item)
+        private static void SetNavigationContent(MUXC.NavigationViewItem Item)
         {
             Item.Content = ResourceExtensions.GetLocalizedContent($"Shell|{Item.Tag}");
         }
@@ -145,9 +148,18 @@ namespace Lunox.Core.Services
         /// 
         /// </summary>
         /// <param name="Item"></param>
-        private static void SetNavigationContent(NavigationViewItemHeader Item)
+        private static void SetNavigationContent(MUXC.NavigationViewItemHeader Item)
         {
             Item.Content = ResourceExtensions.GetLocalizedContent($"Shell|{Item.Tag}");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Item"></param>
+        private static void SetNavigationContent(WUXC.AutoSuggestBox Suggest)
+        {
+            Suggest.PlaceholderText = ResourceExtensions.GetLocalizedPlaceholderText($"Shell|{Suggest.Tag}");
         }
 
         /// <summary>
