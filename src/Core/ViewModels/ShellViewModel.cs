@@ -93,11 +93,11 @@ namespace Lunox.Core.ViewModels
             get => _selected;
             set
             {
-                if (_selected != value)
+                if (_selected != value && value.MenuItems.Count == 0)
                 {
                     if (value.Tag == null)
                     {
-                        AppCenterService.TrackEvent($"{Default.Events[EventType.Page]}{value.Content}");
+                        AppCenterService.TrackEvent($"{Default.Events[EventType.Page]}Unknown", "Content", $"{value.Content}");
                     }
                     else
                     {
@@ -150,7 +150,10 @@ namespace Lunox.Core.ViewModels
                 {
                     foreach (MUXC.NavigationViewItem Item in Navigation_Item(true))
                     {
-                        Items.Add(Item.Content.ToString());
+                        if (Item.MenuItems.Count == 0)
+                        {
+                            Items.Add(Item.Content.ToString());
+                        }
                     }
                 }
 
@@ -227,7 +230,7 @@ namespace Lunox.Core.ViewModels
                 {
                     NavigationService.Navigate(pageType, null); //args.RecommendedNavigationTransitionInfo
                 }
-                else
+                else if (selectedItem.MenuItems.Count == 0)
                 {
                     Selected = selectedItem;
                     NavigationService.Navigate(Default.NotFoundPage, null); //args.RecommendedNavigationTransitionInfo
