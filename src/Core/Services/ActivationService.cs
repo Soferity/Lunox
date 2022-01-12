@@ -7,6 +7,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.Core;
+using Windows.UI;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -100,9 +103,23 @@ namespace Lunox.Core.Services
                 // Ensure the current window is active
                 Window.Current.Activate();
 
+                // Extend acrylic
+                //ExtendAcrylicIntoTitleBar();
+
                 // Tasks after activation
                 await StartupAsync();
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void ExtendAcrylicIntoTitleBar()
+        {
+            CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
+            ApplicationViewTitleBar TitleBar = ApplicationView.GetForCurrentView().TitleBar;
+            TitleBar.ButtonBackgroundColor = Colors.Transparent;
+            TitleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
         }
 
         /// <summary>

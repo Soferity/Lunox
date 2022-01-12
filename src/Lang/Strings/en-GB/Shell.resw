@@ -117,80 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About.Text" xml:space="preserve">
-    <value>Uygulama Hakkında</value>
+  <data name="Discord.Content" xml:space="preserve">
+    <value>Discord</value>
   </data>
-  <data name="About_Description.Text" xml:space="preserve">
-    <value>Best with fast and convenient file conversions.
-Copyright © 2022 Soferity LLC</value>
+  <data name="GitHub.Content" xml:space="preserve">
+    <value>GitHub</value>
   </data>
-  <data name="About_FeedbackHub.Content" xml:space="preserve">
-    <value>Feedback</value>
+  <data name="Glance.Content" xml:space="preserve">
+    <value>Glance</value>
   </data>
-  <data name="About_PrivacyTerms.Content" xml:space="preserve">
-    <value>Privacy Statement</value>
+  <data name="Help.Content" xml:space="preserve">
+    <value>Help</value>
   </data>
-  <data name="Language.Text" xml:space="preserve">
-    <value>Uygulama Arayüzü</value>
+  <data name="Settings.Content" xml:space="preserve">
+    <value>Settings</value>
   </data>
-  <data name="Language_English.Content" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="Language_French.Content" xml:space="preserve">
-    <value>French</value>
-  </data>
-  <data name="Language_German.Content" xml:space="preserve">
-    <value>German</value>
-  </data>
-  <data name="Language_Polish.Content" xml:space="preserve">
-    <value>Polish</value>
-  </data>
-  <data name="Language_Spanish.Content" xml:space="preserve">
-    <value>Spanish</value>
-  </data>
-  <data name="Language_Turkish.Content" xml:space="preserve">
-    <value>Turkish</value>
-  </data>
-  <data name="Navigation.Text" xml:space="preserve">
-    <value>Uygulama Çubuğu</value>
-  </data>
-  <data name="Navigation_Auto.Content" xml:space="preserve">
-    <value>Auto</value>
-  </data>
-  <data name="Navigation_Left.Content" xml:space="preserve">
-    <value>Left</value>
-  </data>
-  <data name="Navigation_LeftCompact.Content" xml:space="preserve">
-    <value>Left Compact</value>
-  </data>
-  <data name="Navigation_LeftMinimal.Content" xml:space="preserve">
-    <value>Left Minimal</value>
-  </data>
-  <data name="Navigation_Top.Content" xml:space="preserve">
-    <value>Top</value>
-  </data>
-  <data name="Personalization.Text" xml:space="preserve">
-    <value>Personalization</value>
-  </data>
-  <data name="Theme.Text" xml:space="preserve">
-    <value>Uygulama Teması</value>
-  </data>
-  <data name="Theme_Dark.Content" xml:space="preserve">
-    <value>Dark</value>
-  </data>
-  <data name="Theme_Default.Content" xml:space="preserve">
-    <value>Default</value>
-  </data>
-  <data name="Theme_Light.Content" xml:space="preserve">
-    <value>Light</value>
-  </data>
-  <data name="WebView.Text" xml:space="preserve">
-    <value>Uygulama Tarayıcısı</value>
-  </data>
-  <data name="WebView_New.Content" xml:space="preserve">
-    <value>Advanced</value>
-  </data>
-  <data name="WebView_Old.Content" xml:space="preserve">
-    <value>Default</value>
+  <data name="Test.Content" xml:space="preserve">
+    <value>Try</value>
   </data>
 </root>

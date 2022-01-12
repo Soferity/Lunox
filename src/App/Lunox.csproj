@@ -207,7 +207,9 @@
     <Content Include="Assets\App\WideTile.scale-150.png" />
     <Content Include="Assets\App\WideTile.scale-200.png" />
     <Content Include="Assets\App\WideTile.scale-400.png" />
+    <Content Include="Assets\Core\Views\Glance\Back.jpg" />
     <Content Include="Assets\Core\Views\Settings\Back.jpg" />
+    <Content Include="Assets\Core\Views\Shell\Back.jpg" />
     <Content Include="Assets\Pages\Discord\Back.gif" />
     <Content Include="Assets\Pages\GitHub\Back.gif" />
     <Content Include="Assets\Pages\NotFound\404.png" />

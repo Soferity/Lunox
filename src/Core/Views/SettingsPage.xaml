@@ -13,9 +13,11 @@
     mc:Ignorable="d"
     behaviors:NavigationViewHeaderBehavior.HeaderMode="Never"
 >
+    
     <Page.Background>
         <ImageBrush ImageSource="ms-appx:///Assets/Core/Views/Settings/Back.jpg" Stretch="UniformToFill" Opacity="0.075"/>
     </Page.Background>
+    
     <Page.Resources>
         <helper:EnumToBooleanConverter x:Key="EnumToBooleanThemeConverter" EnumType="ElementTheme" />
         <helper:EnumToBooleanConverter x:Key="EnumToBooleanLanguageConverter" EnumType="lang:LanguageType" />

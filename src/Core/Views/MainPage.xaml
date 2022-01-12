@@ -8,9 +8,11 @@
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     xmlns:iconPacks="using:MahApps.Metro.IconPacks"
     x:Class="Lunox.Core.Views.MainPage"
+    xmlns:behaviors="using:Lunox.Core.Behaviors"
     mc:Ignorable="d"
     Loaded="MainPage_Loaded"
-    muxc:BackdropMaterial.ApplyToRootOrPageBackground="True">
+    behaviors:NavigationViewHeaderBehavior.HeaderMode="Never"
+>
 
     <Grid>
         <Grid.BackgroundTransition>

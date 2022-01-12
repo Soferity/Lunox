@@ -80,7 +80,7 @@ namespace Lunox.Library.Value
         /// <summary>
         /// 
         /// </summary>
-        public static Type DefaultGlance => typeof(MainPage);
+        public static Type DefaultGlance => typeof(GlancePage);
 
         /// <summary>
         /// 

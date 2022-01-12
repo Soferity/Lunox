@@ -13,8 +13,9 @@
     xmlns:ic="using:Microsoft.Xaml.Interactions.Core"
     xmlns:i="using:Microsoft.Xaml.Interactivity"
     Style="{StaticResource PageStyle}"
-    mc:Ignorable="d">
-
+    mc:Ignorable="d"
+>
+    
     <i:Interaction.Behaviors>
         <ic:EventTriggerBehavior EventName="Loaded">
             <ic:InvokeCommandAction Command="{x:Bind ViewModel.LoadedCommand}" />
@@ -31,18 +32,21 @@
             IsBackButtonVisible="Visible"
             IsBackEnabled="{x:Bind ViewModel.IsBackEnabled, Mode=OneWay}"
             SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
-            IsSettingsVisible="False"
-            SelectionChanged="navigationView_SelectionChanged">
+            IsSettingsVisible="False">
+
+            <muxc:NavigationView.Background>
+                <ImageBrush ImageSource="ms-appx:///Assets/Core/Views/Shell/Back.jpg" Stretch="UniformToFill" Opacity="0.075"/>
+            </muxc:NavigationView.Background>
 
             <muxc:NavigationView.MenuItems>
 
-                <muxc:NavigationViewItem x:Uid="\Shell\Glance" Tag="Glance">
+                <muxc:NavigationViewItem x:Uid="\Shell\Glance" Tag="Glance"  helpers:NavHelper.NavigateTo="views:GlancePage">
                     <muxc:NavigationViewItem.Icon>
                         <iconPacks:PathIconFontAwesome Kind="CocktailSolid" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
-                <muxc:NavigationViewItemHeader Content="Actions" Tag="Actions"/>
+                <muxc:NavigationViewItemHeader Content="Actions" Tag="Actions" />
 
                 <muxc:NavigationViewItem Content="Menu Item2" Tag="SamplePage2">
                     <muxc:NavigationViewItem.Icon>
@@ -56,17 +60,17 @@
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
-                <muxc:NavigationViewItem Content="Document options" Tag="Document" Icon="Page2" ToolTipService.ToolTip="Document options" SelectsOnInvoked="False">
+                <muxc:NavigationViewItem Content="Document options" Tag="Document" Icon="Library" ToolTipService.ToolTip="Document options" SelectsOnInvoked="False">
                     <muxc:NavigationViewItem.MenuItems>
                         <muxc:NavigationViewItem Content="Create new" Tag="SamplePage5" Icon="NewFolder" ToolTipService.ToolTip="Create new"/>
                         <muxc:NavigationViewItem Content="Upload file" Tag="SamplePage6" Icon="OpenLocal" ToolTipService.ToolTip="Upload file"/>
                     </muxc:NavigationViewItem.MenuItems>
                 </muxc:NavigationViewItem>
 
-                <muxc:NavigationViewItem x:Uid="Shell_Main" Tag="Main" Icon="Document" helpers:NavHelper.NavigateTo="views:MainPage" />
-                <muxc:NavigationViewItem x:Uid="Shell_WebView" Tag="WebView" Icon="Document" helpers:NavHelper.NavigateTo="views:WebViewPage" />
-                <muxc:NavigationViewItem x:Uid="Shell_SchemeActivationSample" Tag="SchemeActivation" Icon="Document" helpers:NavHelper.NavigateTo="views:SchemeActivationSamplePage" />
-                <muxc:NavigationViewItem x:Uid="\Shell\Test" Tag="Test" Icon="Audio" helpers:NavHelper.NavigateTo="views:TestPage" />
+                <muxc:NavigationViewItem x:Uid="Shell_Main" Tag="Main" Icon="Home" helpers:NavHelper.NavigateTo="views:MainPage" />
+                <muxc:NavigationViewItem x:Uid="Shell_WebView" Tag="WebView" Icon="World" helpers:NavHelper.NavigateTo="views:WebViewPage" />
+                <muxc:NavigationViewItem x:Uid="Shell_SchemeActivationSample" Tag="SchemeActivation" Icon="Flag" helpers:NavHelper.NavigateTo="views:SchemeActivationSamplePage" />
+                <muxc:NavigationViewItem x:Uid="\Shell\Test" Tag="Test" Icon="Target" helpers:NavHelper.NavigateTo="views:TestPage" />
 
             </muxc:NavigationView.MenuItems>
 
@@ -116,9 +120,9 @@
                         <DataTemplate>
                             <Grid>
                                 <TextBlock
-                                Text="{Binding}"
-                                Style="{ThemeResource TitleTextBlockStyle}"
-                                Margin="{StaticResource SmallLeftRightMargin}" />
+                                    Text="{Binding}"
+                                    Style="{ThemeResource TitleTextBlockStyle}"
+                                    Margin="{StaticResource SmallLeftRightMargin}" />
                             </Grid>
                         </DataTemplate>
                     </behaviors:NavigationViewHeaderBehavior.DefaultHeaderTemplate>
@@ -128,7 +132,7 @@
                 </ic:EventTriggerBehavior>
             </i:Interaction.Behaviors>
 
-            <Frame x:Name="shellFrame" />
+            <Frame x:Name="shellFrame" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" />
         </muxc:NavigationView>
     </Grid>
 </Page>

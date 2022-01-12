@@ -3,6 +3,8 @@
 using Lunox.Core.Helpers;
 using Lunox.Core.Services;
 using Lunox.Core.Views;
+using Lunox.Library.Enum;
+using Lunox.Library.Value;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
 using System;
@@ -84,7 +86,22 @@ namespace Lunox.Core.ViewModels
         public MUXC.NavigationViewItem Selected
         {
             get => _selected;
-            set => SetProperty(ref _selected, value);
+            set
+            {
+                if (_selected != value)
+                {
+                    if (value.Tag == null)
+                    {
+                        AppCenterService.TrackEvent($"{Default.Events[EventType.Page]}{value.Content}");
+                    }
+                    else
+                    {
+                        AppCenterService.TrackEvent($"{Default.Events[EventType.Page]}{value.Tag}");
+                    }
+                }
+
+                SetProperty(ref _selected, value);
+            }
         }
 
         /// <summary>
