@@ -10,7 +10,7 @@
 >
 
     <Page.Background>
-        <ImageBrush ImageSource="ms-appx:///Assets/Pages/NotFound/Back.jpg" Stretch="UniformToFill" Opacity="0.075"/>
+        <ImageBrush ImageSource="ms-appx:///Assets/Core/Views/NotFound/Back.jpg" Stretch="UniformToFill" Opacity="0.075"/>
     </Page.Background>
 
     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">

@@ -15,7 +15,7 @@
     Style="{StaticResource PageStyle}"
     mc:Ignorable="d"
 >
-    
+
     <i:Interaction.Behaviors>
         <ic:EventTriggerBehavior EventName="Loaded">
             <ic:InvokeCommandAction Command="{x:Bind ViewModel.LoadedCommand}" />
@@ -30,6 +30,7 @@
         <muxc:NavigationView
             x:Name="navigationView"
             IsBackButtonVisible="Visible"
+            PaneDisplayMode="{x:Bind ViewModel.NavigationType, Mode=OneWay}"
             IsBackEnabled="{x:Bind ViewModel.IsBackEnabled, Mode=OneWay}"
             SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
             IsSettingsVisible="False">
@@ -80,13 +81,13 @@
 
             <muxc:NavigationView.FooterMenuItems>
 
-                <muxc:NavigationViewItem x:Uid="\Shell\GitHub" Tag="GitHub">
+                <muxc:NavigationViewItem x:Uid="\Shell\GitHub" Tag="GitHub" helpers:NavHelper.NavigateTo="views:GitHubPage">
                     <muxc:NavigationViewItem.Icon>
                         <iconPacks:PathIconFontAwesome Kind="GithubBrands" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
-                <muxc:NavigationViewItem x:Uid="\Shell\Discord" Tag="Discord">
+                <muxc:NavigationViewItem x:Uid="\Shell\Discord" Tag="Discord" helpers:NavHelper.NavigateTo="views:DiscordPage">
                     <muxc:NavigationViewItem.Icon>
                         <iconPacks:PathIconFontAwesome Kind="DiscordBrands" />
                     </muxc:NavigationViewItem.Icon>

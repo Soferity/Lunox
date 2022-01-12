@@ -53,6 +53,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\ToastNotificationsService.Samples.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\WhatsNewDisplayService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TemplateSelectors\SharedContentTemplateSelector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\GitHubViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\NotFoundViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\GlanceViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainViewModel.cs" />
@@ -63,9 +64,16 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SharedDataWebLinkViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ShareTargetViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ShellViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DiscordViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\WebViewViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DiscordPage.xaml.cs">
+      <DependentUpon>DiscordPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\FirstRunDialog.xaml.cs">
       <DependentUpon>FirstRunDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\GitHubPage.xaml.cs">
+      <DependentUpon>GitHubPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\GlancePage.xaml.cs">
       <DependentUpon>GlancePage.xaml</DependentUpon>
@@ -135,7 +143,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\DiscordPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Views\FirstRunDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\GitHubPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

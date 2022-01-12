@@ -89,6 +89,14 @@ namespace Lunox.Core.ViewModels
         /// <summary>
         /// 
         /// </summary>
+        public MUXC.NavigationViewPaneDisplayMode NavigationType
+        {
+            get => NavigationSelectorService.Navigation;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public MUXC.NavigationViewItem Selected
         {
             get => _selected;

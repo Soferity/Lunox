@@ -14,9 +14,9 @@
 
     <Grid>
         <WebView x:Name="WebViewOld" Width="0" Height="0" Opacity="0" NavigationCompleted="WebViewOld_NavigationCompleted">
-        <WebView.OpacityTransition>
-            <ScalarTransition />
-        </WebView.OpacityTransition>
+            <WebView.OpacityTransition>
+                <ScalarTransition />
+            </WebView.OpacityTransition>
         </WebView>
         
         <muxc:WebView2 x:Name="WebViewNew" Width="0" Height="0" Opacity="0" NavigationCompleted="WebViewNew_NavigationCompleted">

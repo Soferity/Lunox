@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="Lunox.Core.Views.GitHubPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:media="using:Microsoft.UI.Xaml.Media"
+    xmlns:i="using:Microsoft.Xaml.Interactivity"
+    xmlns:ic="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:behaviors="using:Lunox.Core.Behaviors"
+    mc:Ignorable="d"
+    behaviors:NavigationViewHeaderBehavior.HeaderMode="Never"
+>
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <media:AcrylicBrush x:Key="CustomAcrylicBackgroundBrush" BackgroundSource="Backdrop"
+                        TintOpacity="0" TintColor="#FF000000" FallbackColor="#FF008000" />
+
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    
+    <Page.Background>
+        <ImageBrush ImageSource="ms-appx:///Assets/Core/Views/GitHub/Back.gif" Stretch="UniformToFill"/>
+    </Page.Background>
+
+    <Grid>
+        <WebView x:Name="WebViewOld" Width="0" Height="0" Opacity="0">
+            <!--Source="{x:Bind ViewModel.OldSource, Mode=OneWay}"-->
+            <WebView.OpacityTransition>
+                <ScalarTransition />
+            </WebView.OpacityTransition>
+            <i:Interaction.Behaviors>
+                <ic:EventTriggerBehavior EventName="NavigationCompleted">
+                    <ic:InvokeCommandAction Command="{x:Bind ViewModel.OldNavCompletedCommand}" />
+                </ic:EventTriggerBehavior>
+                <ic:EventTriggerBehavior EventName="NavigationFailed">
+                    <ic:InvokeCommandAction Command="{x:Bind ViewModel.OldNavFailedCommand}" />
+                </ic:EventTriggerBehavior>
+            </i:Interaction.Behaviors>
+        </WebView>
+
+        <muxc:WebView2 x:Name="WebViewNew" Width="0" Height="0" Opacity="0">
+            <!--Source="{x:Bind ViewModel.NewSource, Mode=OneWay}"-->
+            <muxc:WebView2.OpacityTransition>
+                <ScalarTransition />
+            </muxc:WebView2.OpacityTransition>
+            <i:Interaction.Behaviors>
+                <ic:EventTriggerBehavior EventName="NavigationCompleted">
+                    <ic:InvokeCommandAction Command="{x:Bind ViewModel.NewNavCompletedCommand}" />
+                </ic:EventTriggerBehavior>
+            </i:Interaction.Behaviors>
+        </muxc:WebView2>
+
+        <StackPanel Visibility="{x:Bind ViewModel.IsLoadingVisibility, Mode=OneWay}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <muxc:ProgressRing IsActive="{x:Bind ViewModel.IsLoading, Mode=OneWay}" Width="150" Height="150" IsIndeterminate="True" />
+        </StackPanel>
+
+        <StackPanel Visibility="{x:Bind ViewModel.FailedMesageVisibility, Mode=OneWay}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    CornerRadius="15"
+                    Background="{ThemeResource CustomAcrylicBackgroundBrush}">
+            <TextBlock HorizontalAlignment="Center" x:Uid="WebView_FailedMessage" TextWrapping="WrapWholeWords" Margin="{StaticResource SmallLeftTopRightMargin}" />
+            <Button Command="{x:Bind ViewModel.RetryCommand}" x:Uid="WebView_Retry" HorizontalAlignment="Center" Margin="{StaticResource SmallLeftTopRightBottomMargin}" />
+        </StackPanel>
+    </Grid>
+</Page>

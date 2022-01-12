@@ -1,5 +1,6 @@
 ﻿#region Imports
 
+using Lunox.Core.Services;
 using Lunox.Core.Views;
 using Lunox.Language.Enum;
 using Lunox.Library.Enum;
@@ -134,6 +135,16 @@ namespace Lunox.Library.Value
         /// 
         /// </summary>
         public static Uri PrivacyTerms => new("https://github.com/Soferity/Lunox/blob/develop/CODE_OF_CONDUCT.md");
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Uri GitHub => new("https://github.com/Taiizor/ReaLTaiizor");
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Uri Discord => new($"https://discord3.com/widget?id=587709969852268564&theme={ThemeSelectorService.Theme.ToString().ToLowerInvariant()}");
 
         #endregion
     }

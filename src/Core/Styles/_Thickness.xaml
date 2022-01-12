@@ -20,6 +20,8 @@
     <Thickness x:Key="SmallLeftTopMargin">12, 12, 0, 0</Thickness>
     <Thickness x:Key="SmallLeftRightMargin">12, 0, 12, 0</Thickness>
     <Thickness x:Key="SmallLeftTopRightBottomMargin">12, 12, 12, 12</Thickness>
+    <Thickness x:Key="SmallLeftTopRightMargin">12, 12, 12, 0</Thickness>
+    <Thickness x:Key="SmallLeftRightBottomMargin">12, 0, 12, 12</Thickness>
     <Thickness x:Key="SmallTopMargin">0, 12, 0, 0</Thickness>
     <Thickness x:Key="SmallTopRightBottomMargin">0, 12, 12, 12</Thickness>
     <Thickness x:Key="SmallTopBottomMargin">0, 12, 0, 12</Thickness>
