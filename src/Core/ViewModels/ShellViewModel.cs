@@ -185,7 +185,8 @@ namespace Lunox.Core.ViewModels
         private void Frame_Navigated(object sender, NavigationEventArgs e)
         {
             IsBackEnabled = NavigationService.CanGoBack;
-            if (e.SourcePageType == typeof(SettingsPage))
+
+            if (_navigationView.IsSettingsVisible && e.SourcePageType == typeof(SettingsPage))
             {
                 Selected = _navigationView.SettingsItem as MUXC.NavigationViewItem;
                 return;
@@ -195,6 +196,15 @@ namespace Lunox.Core.ViewModels
             if (selectedItem != null)
             {
                 Selected = selectedItem;
+            }
+            else
+            {
+                selectedItem = GetSelectedItem(_navigationView.FooterMenuItems, e.SourcePageType);
+
+                if (selectedItem != null)
+                {
+                    Selected = selectedItem;
+                }
             }
         }
 

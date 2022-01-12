@@ -4,6 +4,7 @@ using Lunox.Core.Helpers;
 using Lunox.Language.Enum;
 using Lunox.Library.Helper;
 using Lunox.Library.Value;
+using Microsoft.UI.Xaml.Controls;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -91,18 +92,41 @@ namespace Lunox.Core.Services
                 });
             }
 
+            SetNavigationLanguage();
+
             ResourceContext.GetForCurrentView().Reset();
             ResourceContext.GetForViewIndependentUse().Reset();
+        }
 
-            NavigationService.Display = NavigationSelectorService.Navigation;
-
-            string Text = string.Empty;
-
-            if (NavigationService.Navigation.MenuItems.Count > 0)
+        /// <summary>
+        /// 
+        /// </summary>
+        private static void SetNavigationLanguage()
+        {
+            if (NavigationService.Navigation != null)
             {
-                foreach (IList<Microsoft.UI.Xaml.Controls.NavigationViewItem> Item in NavigationService.Navigation.MenuItems)
+                foreach (object Item in NavigationService.Navigation.MenuItems)
                 {
-                    Text += Item.ToString();
+                    try
+                    {
+                        SetNavigationContent((NavigationViewItem)Item);
+                    }
+                    catch
+                    {
+                        try
+                        {
+                            SetNavigationContent((NavigationViewItemHeader)Item);
+                        }
+                        catch
+                        {
+                            //
+                        }
+                    }
+                }
+
+                foreach (object Item in NavigationService.Navigation.FooterMenuItems)
+                {
+                    SetNavigationContent((NavigationViewItem)Item);
                 }
             }
 
@@ -111,7 +135,25 @@ namespace Lunox.Core.Services
                 NavigationService.Frame.NavigateToType(NavigationService.Frame.SourcePageType, null, new FrameNavigationOptions() { IsNavigationStackEnabled = false });
             }
 
-            Dialog.SendDialog(Text);
+            NavigationService.Display = NavigationSelectorService.Navigation;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Item"></param>
+        private static void SetNavigationContent(NavigationViewItem Item)
+        {
+            Item.Content = ResourceExtensions.GetLocalizedContent($"Shell|{Item.Tag}");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Item"></param>
+        private static void SetNavigationContent(NavigationViewItemHeader Item)
+        {
+            Item.Content = ResourceExtensions.GetLocalizedContent($"Shell|{Item.Tag}");
         }
 
         /// <summary>

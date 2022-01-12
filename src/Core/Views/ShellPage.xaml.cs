@@ -44,7 +44,11 @@ namespace Lunox.Core.Views
         {
             MUXC.NavigationViewItem SelectedItem = (MUXC.NavigationViewItem)args.SelectedItem;
 
-            if (SelectedItem.Tag == null)
+            if (SelectedItem == null)
+            {
+                AppCenterService.TrackEvent($"{Default.Events[EventType.Page]}Unknown");
+            }
+            else if (SelectedItem.Tag == null)
             {
                 AppCenterService.TrackEvent($"{Default.Events[EventType.Page]}{SelectedItem.Content}");
             }

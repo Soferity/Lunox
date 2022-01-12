@@ -6,6 +6,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:behaviors="using:Lunox.Core.Behaviors"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
+    xmlns:iconPacks="using:MahApps.Metro.IconPacks"
     xmlns:helpers="using:Lunox.Core.Helpers"
     xmlns:views="using:Lunox.Core.Views"
     xmlns:ic="using:Microsoft.Xaml.Interactions.Core"
@@ -19,45 +21,120 @@
         </ic:EventTriggerBehavior>
     </i:Interaction.Behaviors>
 
-    <muxc:NavigationView
-        x:Name="navigationView"
-        IsBackButtonVisible="Visible"
-        IsBackEnabled="{x:Bind ViewModel.IsBackEnabled, Mode=OneWay}"
-        SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
-        IsSettingsVisible="True"
-        SelectionChanged="navigationView_SelectionChanged">
-        <muxc:NavigationView.MenuItems>
-            <!--
-            TODO WTS: Change the symbols for each item as appropriate for your app
-            More on Segoe UI Symbol icons: https://docs.microsoft.com/windows/uwp/style/segoe-ui-symbol-font
-            Or to use an IconElement instead of a Symbol see https://github.com/Microsoft/WindowsTemplateStudio/blob/release/docs/UWP/projectTypes/navigationpane.md
-            Edit String/en-US/Resources.resw: Add a menu item title for each page
-            -->
-            <muxc:NavigationViewItem x:Uid="Shell_Main" Tag="Main" Icon="Document" helpers:NavHelper.NavigateTo="views:MainPage" />
-            <muxc:NavigationViewItem x:Uid="Shell_WebView" Tag="WebView" Icon="Document" helpers:NavHelper.NavigateTo="views:WebViewPage" />
-            <muxc:NavigationViewItem x:Uid="Shell_SchemeActivationSample" Tag="SchemeActivation" Icon="Document" helpers:NavHelper.NavigateTo="views:SchemeActivationSamplePage" />
-            <muxc:NavigationViewItem x:Uid="Shell_Test" Tag="Test" Icon="Audio" helpers:NavHelper.NavigateTo="views:TestPage" />
-        </muxc:NavigationView.MenuItems>
-        <i:Interaction.Behaviors>
-            <behaviors:NavigationViewHeaderBehavior
-                DefaultHeader="{x:Bind ViewModel.Selected.Content, Mode=OneWay}">
-                <behaviors:NavigationViewHeaderBehavior.DefaultHeaderTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <TextBlock
+    <Grid>
+        <Grid.BackgroundTransition>
+            <BrushTransition />
+        </Grid.BackgroundTransition>
+        
+        <muxc:NavigationView
+            x:Name="navigationView"
+            IsBackButtonVisible="Visible"
+            IsBackEnabled="{x:Bind ViewModel.IsBackEnabled, Mode=OneWay}"
+            SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
+            IsSettingsVisible="False"
+            SelectionChanged="navigationView_SelectionChanged">
+
+            <muxc:NavigationView.MenuItems>
+
+                <muxc:NavigationViewItem Content="Welcome" Tag="Welcome">
+                    <muxc:NavigationViewItem.Icon>
+                        <iconPacks:PathIconFontAwesome Kind="CocktailSolid" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItemHeader Content="Actions" Tag="Actions"/>
+
+                <muxc:NavigationViewItem Content="Menu Item2" Tag="SamplePage2" SelectsOnInvoked="True">
+                    <muxc:NavigationViewItem.Icon>
+                        <SymbolIcon Symbol="Save" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem Content="Menu Item3" Tag="SamplePage3">
+                    <muxc:NavigationViewItem.Icon>
+                        <SymbolIcon Symbol="Refresh" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem Content="Document options" Tag="Document" Icon="Page2" ToolTipService.ToolTip="Document options" SelectsOnInvoked="False">
+                    <muxc:NavigationViewItem.MenuItems>
+                        <muxc:NavigationViewItem Content="Create new" Tag="SamplePage5" Icon="NewFolder" ToolTipService.ToolTip="Create new"/>
+                        <muxc:NavigationViewItem Content="Upload file" Tag="SamplePage6" Icon="OpenLocal" ToolTipService.ToolTip="Upload file"/>
+                    </muxc:NavigationViewItem.MenuItems>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem x:Uid="Shell_Main" Tag="Main" Icon="Document" helpers:NavHelper.NavigateTo="views:MainPage" />
+                <muxc:NavigationViewItem x:Uid="Shell_WebView" Tag="WebView" Icon="Document" helpers:NavHelper.NavigateTo="views:WebViewPage" />
+                <muxc:NavigationViewItem x:Uid="Shell_SchemeActivationSample" Tag="SchemeActivation" Icon="Document" helpers:NavHelper.NavigateTo="views:SchemeActivationSamplePage" />
+                <muxc:NavigationViewItem x:Uid="\Shell\Test" Tag="Test" Icon="Audio" helpers:NavHelper.NavigateTo="views:TestPage" />
+
+            </muxc:NavigationView.MenuItems>
+
+            <muxc:NavigationView.AutoSuggestBox>
+                <AutoSuggestBox QueryIcon="Find" Tag="Find" AutomationProperties.Name="Search" />
+            </muxc:NavigationView.AutoSuggestBox>
+
+            <muxc:NavigationView.FooterMenuItems>
+
+                <muxc:NavigationViewItem Content="GitHub" Tag="GitHub">
+                    <muxc:NavigationViewItem.Icon>
+                        <iconPacks:PathIconFontAwesome Kind="GithubBrands" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem Content="Discord" Tag="Discord">
+                    <muxc:NavigationViewItem.Icon>
+                        <iconPacks:PathIconFontAwesome Kind="DiscordBrands" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem Content="Help" Tag="Help">
+                    <muxc:NavigationViewItem.Icon>
+                        <iconPacks:PathIconFontAwesome Kind="QuestionSolid" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem x:Uid="\Shell\Settings" Tag="Settings" helpers:NavHelper.NavigateTo="views:SettingsPage">
+                    <muxc:NavigationViewItem.Icon>
+                        <muxc:AnimatedIcon>
+                            <muxc:AnimatedIcon.Source>
+                                <animatedvisuals:AnimatedSettingsVisualSource/>
+                            </muxc:AnimatedIcon.Source>
+                            <muxc:AnimatedIcon.FallbackIconSource>
+                                <muxc:FontIconSource FontFamily="Segoe MDL2 Assets" Glyph="&#xE713;"/>
+                            </muxc:AnimatedIcon.FallbackIconSource>
+                        </muxc:AnimatedIcon>
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+            </muxc:NavigationView.FooterMenuItems>
+
+            <i:Interaction.Behaviors>
+                <behaviors:NavigationViewHeaderBehavior
+                    DefaultHeader="{x:Bind ViewModel.Selected.Content, Mode=OneWay}">
+                    <behaviors:NavigationViewHeaderBehavior.DefaultHeaderTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <TextBlock
                                 Text="{Binding}"
                                 Style="{ThemeResource TitleTextBlockStyle}"
                                 Margin="{StaticResource SmallLeftRightMargin}" />
-                        </Grid>
-                    </DataTemplate>
-                </behaviors:NavigationViewHeaderBehavior.DefaultHeaderTemplate>
-            </behaviors:NavigationViewHeaderBehavior>
-            <ic:EventTriggerBehavior EventName="ItemInvoked">
-                <ic:InvokeCommandAction Command="{x:Bind ViewModel.ItemInvokedCommand}" />
-            </ic:EventTriggerBehavior>
-        </i:Interaction.Behaviors>
-        <Grid>
-            <Frame x:Name="shellFrame" />
-        </Grid>
-    </muxc:NavigationView>
+                            </Grid>
+                        </DataTemplate>
+                    </behaviors:NavigationViewHeaderBehavior.DefaultHeaderTemplate>
+                </behaviors:NavigationViewHeaderBehavior>
+                <ic:EventTriggerBehavior EventName="ItemInvoked">
+                    <ic:InvokeCommandAction Command="{x:Bind ViewModel.ItemInvokedCommand}" />
+                </ic:EventTriggerBehavior>
+            </i:Interaction.Behaviors>
+
+            <Frame x:Name="shellFrame">
+                <Frame.ContentTransitions>
+                    <TransitionCollection>
+                        <NavigationThemeTransition />
+                    </TransitionCollection>
+                </Frame.ContentTransitions>
+            </Frame>
+        </muxc:NavigationView>
+    </Grid>
 </Page>

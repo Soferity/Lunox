@@ -29,6 +29,56 @@ namespace Lunox.Core.Helpers
         /// </summary>
         /// <param name="resourceKey"></param>
         /// <returns></returns>
+        public static string GetLocalized(this object resourceKey)
+        {
+            return GetLocalized($"{resourceKey}");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
+        public static string GetLocalizedText(this object resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.Text");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
+        public static string GetLocalizedContent(this object resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.Content");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
+        public static string GetLocalizedText(this string resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.Text");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
+        public static string GetLocalizedContent(this string resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.Content");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
         public static string GetLocalized(this string resourceKey)
         {
             string Key = resourceKey.Replace('.', '/');
