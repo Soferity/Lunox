@@ -237,6 +237,21 @@
   <data name="ImageTIFF.Content" xml:space="preserve">
     <value>TIFF Conversion</value>
   </data>
+  <data name="Json.Content" xml:space="preserve">
+    <value>Json Processing</value>
+  </data>
+  <data name="JsonDeserialize.Content" xml:space="preserve">
+    <value>Deserialize</value>
+  </data>
+  <data name="JsonMinify.Content" xml:space="preserve">
+    <value>Minify</value>
+  </data>
+  <data name="JsonSerialize.Content" xml:space="preserve">
+    <value>Serialize</value>
+  </data>
+  <data name="JsonValidate.Content" xml:space="preserve">
+    <value>Validate</value>
+  </data>
   <data name="Matrix.Content" xml:space="preserve">
     <value>QR Code</value>
   </data>

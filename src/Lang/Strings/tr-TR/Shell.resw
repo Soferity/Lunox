@@ -237,6 +237,21 @@
   <data name="ImageTIFF.Content" xml:space="preserve">
     <value>TIFF Dönüştürme</value>
   </data>
+  <data name="Json.Content" xml:space="preserve">
+    <value>Json İşleme</value>
+  </data>
+  <data name="JsonDeserialize.Content" xml:space="preserve">
+    <value>Seri Durumdan Çıkartma</value>
+  </data>
+  <data name="JsonMinify.Content" xml:space="preserve">
+    <value>Küçültme</value>
+  </data>
+  <data name="JsonSerialize.Content" xml:space="preserve">
+    <value>Seri Hâle Getirme</value>
+  </data>
+  <data name="JsonValidate.Content" xml:space="preserve">
+    <value>Doğrulama</value>
+  </data>
   <data name="Matrix.Content" xml:space="preserve">
     <value>QR Kodu</value>
   </data>

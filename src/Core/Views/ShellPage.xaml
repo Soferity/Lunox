@@ -350,7 +350,36 @@
                         </muxc:NavigationViewItem>
                     </muxc:NavigationViewItem.MenuItems>
                 </muxc:NavigationViewItem>
-                
+
+                <muxc:NavigationViewItem Tag="Json" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
+                    <muxc:NavigationViewItem.Icon>
+                        <iconPacks:PathIconFontisto Kind="Json" />
+                    </muxc:NavigationViewItem.Icon>
+
+                    <muxc:NavigationViewItem.MenuItems>
+                        <muxc:NavigationViewItem Tag="JsonMinify">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconMaterial Kind="CodeJson" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="JsonValidate">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFileIcons Kind="Jsonld" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="JsonSerialize">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="CodeSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="JsonDeserialize">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFileIcons Kind="Json5" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                    </muxc:NavigationViewItem.MenuItems>
+                </muxc:NavigationViewItem>
+
             </muxc:NavigationView.MenuItems>
 
             <muxc:NavigationView.AutoSuggestBox>
