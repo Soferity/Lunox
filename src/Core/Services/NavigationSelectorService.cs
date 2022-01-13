@@ -2,10 +2,13 @@
 
 using Lunox.Core.Helpers;
 using Lunox.Library.Value;
-using Microsoft.UI.Xaml.Controls;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Windows.Storage;
+using Windows.UI.Xaml.Navigation;
+using MUXC = Microsoft.UI.Xaml.Controls;
+using WUXC = Windows.UI.Xaml.Controls;
 
 #endregion
 
@@ -32,7 +35,7 @@ namespace Lunox.Core.Services
         /// <summary>
         /// 
         /// </summary>
-        public static NavigationViewPaneDisplayMode Navigation { get; set; } = Default.DefaultNavigation;
+        public static MUXC.NavigationViewPaneDisplayMode Navigation { get; set; } = Default.DefaultNavigation;
 
         /// <summary>
         /// 
@@ -48,7 +51,7 @@ namespace Lunox.Core.Services
         /// </summary>
         /// <param name="navigation"></param>
         /// <returns></returns>
-        public static async Task SetNavigationAsync(NavigationViewPaneDisplayMode navigation)
+        public static async Task SetNavigationAsync(MUXC.NavigationViewPaneDisplayMode navigation)
         {
             Navigation = navigation;
 
@@ -68,10 +71,75 @@ namespace Lunox.Core.Services
         /// <summary>
         /// 
         /// </summary>
-        /// <returns></returns>
-        private static async Task<NavigationViewPaneDisplayMode> LoadNavigationFromSettingsAsync()
+        public static Task SetNavigationLanguage()
         {
-            NavigationViewPaneDisplayMode cacheNavigation = Default.DefaultNavigation;
+            if (NavigationService.Navigation != null)
+            {
+                foreach (MUXC.NavigationViewItem Item in NavigationService.Navigation.MenuItems.OfType<MUXC.NavigationViewItem>().Concat(NavigationService.Navigation.FooterMenuItems.OfType<MUXC.NavigationViewItem>()))
+                {
+                    if (Item.MenuItems.Count > 0)
+                    {
+                        foreach (MUXC.NavigationViewItem Menu in Item.MenuItems.OfType<MUXC.NavigationViewItem>())
+                        {
+                            SetNavigationContent(Menu);
+                        }
+                    }
+
+                    SetNavigationContent(Item);
+                }
+
+                foreach (MUXC.NavigationViewItemHeader Item in NavigationService.Navigation.MenuItems.OfType<MUXC.NavigationViewItemHeader>())
+                {
+                    SetNavigationContent(Item);
+                }
+
+                SetNavigationContent(NavigationService.Navigation.AutoSuggestBox);
+            }
+
+            if (NavigationService.Frame.SourcePageType != null)
+            {
+                NavigationService.Frame.NavigateToType(NavigationService.Frame.SourcePageType, null, new FrameNavigationOptions() { IsNavigationStackEnabled = false, TransitionInfoOverride = Default.ShellTransition });
+            }
+
+            //NavigationService.Display = NavigationSelectorService.Navigation;
+
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Item"></param>
+        private static void SetNavigationContent(MUXC.NavigationViewItem Item)
+        {
+            Item.Content = ResourceExtensions.GetLocalizedContent($"Shell|{Item.Tag}");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Item"></param>
+        private static void SetNavigationContent(MUXC.NavigationViewItemHeader Item)
+        {
+            Item.Content = ResourceExtensions.GetLocalizedContent($"Shell|{Item.Tag}");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Item"></param>
+        private static void SetNavigationContent(WUXC.AutoSuggestBox Suggest)
+        {
+            Suggest.PlaceholderText = ResourceExtensions.GetLocalizedPlaceholderText($"Shell|{Suggest.Tag}");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        private static async Task<MUXC.NavigationViewPaneDisplayMode> LoadNavigationFromSettingsAsync()
+        {
+            MUXC.NavigationViewPaneDisplayMode cacheNavigation = Default.DefaultNavigation;
             string navigationName = await ApplicationData.Current.LocalSettings.ReadAsync<string>(SettingsKey);
 
             if (!string.IsNullOrEmpty(navigationName))
@@ -87,7 +155,7 @@ namespace Lunox.Core.Services
         /// </summary>
         /// <param name="navigation"></param>
         /// <returns></returns>
-        private static async Task SaveNavigationInSettingsAsync(NavigationViewPaneDisplayMode navigation)
+        private static async Task SaveNavigationInSettingsAsync(MUXC.NavigationViewPaneDisplayMode navigation)
         {
             await ApplicationData.Current.LocalSettings.SaveAsync(SettingsKey, navigation.ToString());
         }

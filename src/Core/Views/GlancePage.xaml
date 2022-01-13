@@ -1,41 +1,81 @@
 ﻿<Page
-    x:Class="Lunox.Core.Views.GlancePage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
-    mc:Ignorable="d"
-    xmlns:behaviors="using:Lunox.Core.Behaviors"
-    behaviors:NavigationViewHeaderBehavior.HeaderMode="Never"
+	x:Class="Lunox.Core.Views.GlancePage"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+	xmlns:common="using:Lunox.Core.Commons"
+	mc:Ignorable="d"
+	xmlns:behaviors="using:Lunox.Core.Behaviors"
+	xmlns:local="using:Lunox.Core.Views"
+	behaviors:NavigationViewHeaderBehavior.HeaderMode="Never"
 >
-    <Page.Background>
-        <ImageBrush ImageSource="ms-appx:///Assets/Core/Views/Glance/Back.jpg" Stretch="UniformToFill" Opacity="0.075"/>
-    </Page.Background>
 
-    <StackPanel Margin="{StaticResource MediumLeftRightMargin}" Orientation="Horizontal">
-        <FlipView MaxWidth="400" Height="270" BorderBrush="DodgerBlue" BorderThickness="1">
-            <Image Source="ms-appx:///Assets/Core/Views/Glance/1.jpg" AutomationProperties.Name="Cliff"/>
-            <Image Source="ms-appx:///Assets/Core/Views/Glance/2.jpg" AutomationProperties.Name="Grapes"/>
-            <Image Source="ms-appx:///Assets/Core/Views/Glance/3.jpg" AutomationProperties.Name="Rainier"/>
-            <Image Source="ms-appx:///Assets/Core/Views/Glance/4.jpg" AutomationProperties.Name="Sunset"/>
-            <Image Source="ms-appx:///Assets/Core/Views/Glance/5.jpg" AutomationProperties.Name="Valley"/>
-        </FlipView>
-        <muxc:Expander
-            IsExpanded="False"
-            ExpandDirection="Down"
-            VerticalAlignment="Center"
-            Header="This text is in the header"
-            Content="This is in the content" />
-        <muxc:Expander>
-            <muxc:Expander.Header>
-                <TextBlock Text="This text is in the header"/>
-            </muxc:Expander.Header>
-            <muxc:Expander.Content>
-                <Grid>
-                    <TextBlock Text="This is in the content"/>
-                </Grid>
-            </muxc:Expander.Content>
-        </muxc:Expander>
-    </StackPanel>
+	<Page.Resources>
+		<common:ActivityFeedLayout x:Key="MyFeedLayout" ColumnSpacing="12" RowSpacing="12" MinItemSize="80, 108"/>
+
+		<local:MyDataTemplateSelector x:Key="MyDataTemplateSelector"
+							Normal="{StaticResource NormalItemTemplate}"
+							Accent="{StaticResource AccentItemTemplate}"/>
+
+		<DataTemplate x:Key="NormalItemTemplate" x:DataType="x:Int32">
+			<Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+		Background="{ThemeResource SystemChromeLowColor}">
+				<TextBlock Text="{x:Bind}" />
+			</Button>
+		</DataTemplate>
+
+		<DataTemplate x:Key="AccentItemTemplate" x:DataType="x:Int32">
+			<Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+		Background="{ThemeResource SystemAccentColor}">
+				<TextBlock Text="{x:Bind}" />
+			</Button>
+		</DataTemplate>
+
+	</Page.Resources>
+	
+	<Page.Background>
+		<ImageBrush ImageSource="ms-appx:///Assets/Core/Views/Glance/Back.jpg" Stretch="UniformToFill" Opacity="0.075"/>
+	</Page.Background>
+
+	<StackPanel Margin="{StaticResource MediumLeftRightMargin}" Orientation="Horizontal">
+		<ScrollViewer x:Name="scrollViewer"
+			Height="400"
+			IsVerticalScrollChainingEnabled="False"
+			Padding="0,0,16,0">
+
+			<muxc:ItemsRepeater x:Name="repeater2" 
+				Margin="0,0,12,0"
+				HorizontalAlignment="Stretch"
+				Layout="{StaticResource MyFeedLayout}"
+				ItemTemplate="{StaticResource MyDataTemplateSelector}"/>
+		</ScrollViewer>
+		<FlipView MaxWidth="400" Height="270" BorderBrush="DodgerBlue" BorderThickness="1">
+			<Image Source="ms-appx:///Assets/Core/Views/Glance/1.jpg" AutomationProperties.Name="Cliff"/>
+			<Image Source="ms-appx:///Assets/Core/Views/Glance/2.jpg" AutomationProperties.Name="Grapes"/>
+			<Image Source="ms-appx:///Assets/Core/Views/Glance/3.jpg" AutomationProperties.Name="Rainier"/>
+			<Image Source="ms-appx:///Assets/Core/Views/Glance/4.jpg" AutomationProperties.Name="Sunset"/>
+			<Image Source="ms-appx:///Assets/Core/Views/Glance/5.jpg" AutomationProperties.Name="Valley"/>
+		</FlipView>
+		
+		<muxc:Expander
+			IsExpanded="False"
+			ExpandDirection="Down"
+			VerticalAlignment="Center"
+			Header="This text is in the header"
+			Content="This is in the content" />
+		
+		<muxc:Expander>
+			<muxc:Expander.Header>
+				<TextBlock Text="This text is in the header"/>
+			</muxc:Expander.Header>
+			<muxc:Expander.Content>
+				<Grid>
+					<TextBlock Text="This is in the content"/>
+				</Grid>
+			</muxc:Expander.Content>
+		</muxc:Expander>
+	</StackPanel>
+	
 </Page>

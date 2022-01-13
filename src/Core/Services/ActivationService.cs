@@ -150,6 +150,8 @@ namespace Lunox.Core.Services
             //ApplicationLanguages.PrimaryLanguageOverride = LanguageSelectorService.Language.ToString().Replace("_", "-");
             await LanguageSelectorService.SetRequestedLanguageAsync();
 
+            await NavigationSelectorService.SetNavigationLanguage();
+
             _defaultNavItem = GlanceSelectorService.Glance;
         }
 
