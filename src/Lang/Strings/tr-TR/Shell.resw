@@ -186,4 +186,31 @@
   <data name="Transactions.Content" xml:space="preserve">
     <value>İşlemler</value>
   </data>
+  <data name="Video.Content" xml:space="preserve">
+    <value>Video Dönüştürme</value>
+  </data>
+  <data name="VideoAVI.Content" xml:space="preserve">
+    <value>AVI Dönüştürme</value>
+  </data>
+  <data name="VideoHEVC.Content" xml:space="preserve">
+    <value>HEVC Dönüştürme</value>
+  </data>
+  <data name="VideoMP4.Content" xml:space="preserve">
+    <value>MP4 Dönüştürme</value>
+  </data>
+  <data name="VideoMPEG.Content" xml:space="preserve">
+    <value>MPEG Dönüştürme</value>
+  </data>
+  <data name="VideoMPEG1.Content" xml:space="preserve">
+    <value>MPEG1 Dönüştürme</value>
+  </data>
+  <data name="VideoMPEG2.Content" xml:space="preserve">
+    <value>MPEG2 Dönüştürme</value>
+  </data>
+  <data name="VideoMPEG4.Content" xml:space="preserve">
+    <value>MPEG4 Dönüştürme</value>
+  </data>
+  <data name="VideoWMV.Content" xml:space="preserve">
+    <value>WMV Dönüştürme</value>
+  </data>
 </root>

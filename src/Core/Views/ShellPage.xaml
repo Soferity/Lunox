@@ -117,7 +117,7 @@
 
                 <muxc:NavigationViewItem Tag="Document" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
                     <muxc:NavigationViewItem.Icon>
-                        <iconPacks:PathIconUnicons Kind="FileCopyAlt" />
+                        <iconPacks:PathIconCodicons Kind="FileSymlinkFile" />
                     </muxc:NavigationViewItem.Icon>
 
                     <muxc:NavigationViewItem.MenuItems>
@@ -134,6 +134,55 @@
                         <muxc:NavigationViewItem Tag="DocumentDOCX">
                             <muxc:NavigationViewItem.Icon>
                                 <iconPacks:PathIconSimpleIcons Kind="MicrosoftWord" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                    </muxc:NavigationViewItem.MenuItems>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem Tag="Video" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
+                    <muxc:NavigationViewItem.Icon>
+                        <iconPacks:PathIconFileIcons Kind="Video" />
+                    </muxc:NavigationViewItem.Icon>
+
+                    <muxc:NavigationViewItem.MenuItems>
+                        <muxc:NavigationViewItem Tag="VideoMP4">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconMaterialDesign Kind="OndemandVideo" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="VideoAVI">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconMaterialDesign Kind="OndemandVideo" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="VideoHEVC">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconMaterialDesign Kind="OndemandVideo" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="VideoWMV">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconMaterialDesign Kind="OndemandVideo" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="VideoMPEG">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconMaterialDesign Kind="OndemandVideo" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="VideoMPEG1">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconMaterialDesign Kind="OndemandVideo" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="VideoMPEG2">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconMaterialDesign Kind="OndemandVideo" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="VideoMPEG4">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconMaterialDesign Kind="OndemandVideo" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                     </muxc:NavigationViewItem.MenuItems>
