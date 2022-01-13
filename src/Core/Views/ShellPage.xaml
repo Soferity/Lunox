@@ -45,6 +45,9 @@
                     <muxc:NavigationViewItem.Icon>
                         <iconPacks:PathIconFontAwesome Kind="CocktailSolid" />
                     </muxc:NavigationViewItem.Icon>
+                    <muxc:NavigationViewItem.InfoBadge>
+                        <muxc:InfoBadge Value="5" Opacity="0.8"/>
+                    </muxc:NavigationViewItem.InfoBadge>
                 </muxc:NavigationViewItem>
 
                 <muxc:NavigationViewItemHeader Tag="Actions" />

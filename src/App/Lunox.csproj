@@ -215,6 +215,7 @@
     <Content Include="Assets\Core\Views\Glance\4.jpg" />
     <Content Include="Assets\Core\Views\Glance\5.jpg" />
     <Content Include="Assets\Core\Views\Glance\Back.jpg" />
+    <Content Include="Assets\Core\Views\Glance\Logo.png" />
     <Content Include="Assets\Core\Views\NotFound\404.png" />
     <Content Include="Assets\Core\Views\NotFound\Back.jpg" />
     <Content Include="Assets\Core\Views\Settings\Back.jpg" />
