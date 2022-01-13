@@ -115,6 +115,30 @@
                     </muxc:NavigationViewItem.MenuItems>
                 </muxc:NavigationViewItem>
 
+                <muxc:NavigationViewItem Tag="Document" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
+                    <muxc:NavigationViewItem.Icon>
+                        <iconPacks:PathIconUnicons Kind="FileCopyAlt" />
+                    </muxc:NavigationViewItem.Icon>
+
+                    <muxc:NavigationViewItem.MenuItems>
+                        <muxc:NavigationViewItem Tag="DocumentPDF">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconCoolicons Kind="FilePdf" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="DocumentDOC">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconForkAwesome Kind="FileWordOutline" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="DocumentDOCX">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconSimpleIcons Kind="MicrosoftWord" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                    </muxc:NavigationViewItem.MenuItems>
+                </muxc:NavigationViewItem>
+
             </muxc:NavigationView.MenuItems>
 
             <muxc:NavigationView.AutoSuggestBox>

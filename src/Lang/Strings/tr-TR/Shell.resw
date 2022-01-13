@@ -123,6 +123,18 @@
   <data name="Discord.Content" xml:space="preserve">
     <value>Discord</value>
   </data>
+  <data name="Document.Content" xml:space="preserve">
+    <value>Döküman Dönüştürme</value>
+  </data>
+  <data name="DocumentDOC.Content" xml:space="preserve">
+    <value>DOC Dönüştürme</value>
+  </data>
+  <data name="DocumentDOCX.Content" xml:space="preserve">
+    <value>DOCX Dönüştürme</value>
+  </data>
+  <data name="DocumentPDF.Content" xml:space="preserve">
+    <value>PDF Dönüştürme</value>
+  </data>
   <data name="GitHub.Content" xml:space="preserve">
     <value>GitHub</value>
   </data>
