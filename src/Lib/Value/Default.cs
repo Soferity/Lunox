@@ -140,7 +140,7 @@ namespace Lunox.Library.Value
         /// 
         /// </summary>
         public static Uri GitHub => new("https://github.com/Taiizor/ReaLTaiizor");
-        
+
         /// <summary>
         /// 
         /// </summary>

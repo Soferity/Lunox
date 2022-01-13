@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     xmlns:behaviors="using:Lunox.Core.Behaviors"
     behaviors:NavigationViewHeaderBehavior.HeaderMode="Never"
@@ -12,12 +13,29 @@
         <ImageBrush ImageSource="ms-appx:///Assets/Core/Views/Glance/Back.jpg" Stretch="UniformToFill" Opacity="0.075"/>
     </Page.Background>
 
-    <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
-        <Grid>
-            <!--
-                The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
-                Place your content here.
-            -->
-        </Grid>
-    </Grid>
+    <StackPanel Margin="{StaticResource MediumLeftRightMargin}" Orientation="Horizontal">
+        <FlipView MaxWidth="400" Height="270" BorderBrush="DodgerBlue" BorderThickness="1">
+            <Image Source="ms-appx:///Assets/Core/Views/Glance/1.jpg" AutomationProperties.Name="Cliff"/>
+            <Image Source="ms-appx:///Assets/Core/Views/Glance/2.jpg" AutomationProperties.Name="Grapes"/>
+            <Image Source="ms-appx:///Assets/Core/Views/Glance/3.jpg" AutomationProperties.Name="Rainier"/>
+            <Image Source="ms-appx:///Assets/Core/Views/Glance/4.jpg" AutomationProperties.Name="Sunset"/>
+            <Image Source="ms-appx:///Assets/Core/Views/Glance/5.jpg" AutomationProperties.Name="Valley"/>
+        </FlipView>
+        <muxc:Expander
+            IsExpanded="False"
+            ExpandDirection="Down"
+            VerticalAlignment="Center"
+            Header="This text is in the header"
+            Content="This is in the content" />
+        <muxc:Expander>
+            <muxc:Expander.Header>
+                <TextBlock Text="This text is in the header"/>
+            </muxc:Expander.Header>
+            <muxc:Expander.Content>
+                <Grid>
+                    <TextBlock Text="This is in the content"/>
+                </Grid>
+            </muxc:Expander.Content>
+        </muxc:Expander>
+    </StackPanel>
 </Page>

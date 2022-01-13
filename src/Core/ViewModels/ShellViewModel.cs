@@ -89,10 +89,7 @@ namespace Lunox.Core.ViewModels
         /// <summary>
         /// 
         /// </summary>
-        public MUXC.NavigationViewPaneDisplayMode NavigationType
-        {
-            get => NavigationSelectorService.Navigation;
-        }
+        public MUXC.NavigationViewPaneDisplayMode NavigationType => NavigationSelectorService.Navigation;
 
         /// <summary>
         /// 
@@ -268,7 +265,7 @@ namespace Lunox.Core.ViewModels
             // only listen to changes caused by user entering text.
             if (args.Reason == WUXC.AutoSuggestionBoxTextChangeReason.UserInput)
             {
-                var suitableItems = new List<string>();
+                List<string> suitableItems = new List<string>();
 
                 if (string.IsNullOrEmpty(sender.Text))
                 {
@@ -276,7 +273,7 @@ namespace Lunox.Core.ViewModels
                 }
                 else
                 {
-                    var splitText = TextLower(sender.Text).Split(" ");
+                    string[] splitText = TextLower(sender.Text).Split(" ");
 
                     foreach (string Item in Navigation_Item_Content)
                     {
@@ -340,7 +337,7 @@ namespace Lunox.Core.ViewModels
 
                     //NavHelper.SetNavigateTo(Item, Default.NotFoundPage);
                     //NavigationService.Navigate(Item.GetValue(NavHelper.NavigateToProperty) as Type, null);
-                    
+
                     break;
                 }
             }
