@@ -17,7 +17,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Activation\ShareTargetActivationHandler.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\NavigationViewHeaderBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\NavigationViewHeaderMode.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Commons\ActivityFeedLayout.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\DataRequestExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\EnumToBooleanConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\NavHelper.cs" />

@@ -89,6 +89,8 @@ namespace Lunox.Core.Services
                 });
             }
 
+            await NavigationSelectorService.SetNavigationLanguage(true);
+
             ResourceContext.GetForCurrentView().Reset();
             ResourceContext.GetForViewIndependentUse().Reset();
         }

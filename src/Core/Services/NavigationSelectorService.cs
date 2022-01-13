@@ -71,7 +71,7 @@ namespace Lunox.Core.Services
         /// <summary>
         /// 
         /// </summary>
-        public static Task SetNavigationLanguage()
+        public static Task SetNavigationLanguage(bool Mode = false)
         {
             if (NavigationService.Navigation != null)
             {
@@ -96,14 +96,19 @@ namespace Lunox.Core.Services
                 SetNavigationContent(NavigationService.Navigation.AutoSuggestBox);
             }
 
-            if (NavigationService.Frame.SourcePageType != null)
-            {
-                NavigationService.Frame.NavigateToType(NavigationService.Frame.SourcePageType, null, new FrameNavigationOptions() { IsNavigationStackEnabled = false, TransitionInfoOverride = Default.ShellTransition });
-            }
+            SetFrameLanguage(Mode);
 
             //NavigationService.Display = NavigationSelectorService.Navigation;
 
             return Task.CompletedTask;
+        }
+
+        public static void SetFrameLanguage(bool Mode)
+        {
+            if (Mode && NavigationService.Frame.SourcePageType != null)
+            {
+                NavigationService.Frame.NavigateToType(NavigationService.Frame.SourcePageType, null, new FrameNavigationOptions() { IsNavigationStackEnabled = false, TransitionInfoOverride = Default.ShellTransition });
+            }
         }
 
         /// <summary>
