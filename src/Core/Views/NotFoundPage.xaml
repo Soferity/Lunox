@@ -14,7 +14,7 @@
     </Page.Background>
 
     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Image Source="ms-appx:///Assets/Pages/NotFound/404.png" Stretch="None"/>
+        <Image Source="ms-appx:///Assets/Core/Views/NotFound/404.png" Stretch="None"/>
     </Grid>
 
 </Page>
