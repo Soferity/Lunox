@@ -144,7 +144,7 @@ namespace Lunox.Library.Value
         /// <summary>
         /// 
         /// </summary>
-        public static Uri Discord => new($"https://discord3.com/widget?id=587709969852268564&theme={ThemeSelectorService.Theme.ToString().ToLowerInvariant()}");
+        public static Uri Discord => new($"https://discord.com/widget?id=587709969852268564&theme={ThemeSelectorService.Theme.ToString().ToLowerInvariant()}");
 
         #endregion
     }

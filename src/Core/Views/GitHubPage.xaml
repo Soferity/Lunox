@@ -68,8 +68,8 @@
                     VerticalAlignment="Center"
                     CornerRadius="15"
                     Background="{ThemeResource CustomAcrylicBackgroundBrush}">
-            <TextBlock HorizontalAlignment="Center" x:Uid="WebView_FailedMessage" TextWrapping="WrapWholeWords" Margin="{StaticResource SmallLeftTopRightMargin}" />
-            <Button Command="{x:Bind ViewModel.RetryCommand}" x:Uid="WebView_Retry" HorizontalAlignment="Center" Margin="{StaticResource SmallLeftTopRightBottomMargin}" />
+            <TextBlock x:Uid="/GitHub/Fail" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" Margin="{StaticResource SmallLeftTopRightMargin}" />
+            <Button x:Uid="/GitHub/Retry" Command="{x:Bind ViewModel.RetryCommand}" HorizontalAlignment="Center" Margin="{StaticResource SmallLeftTopRightBottomMargin}" />
         </StackPanel>
     </Grid>
 </Page>

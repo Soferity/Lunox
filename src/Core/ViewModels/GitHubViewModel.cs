@@ -208,7 +208,7 @@ namespace Lunox.Core.ViewModels
                     //_webViewNew.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
                 }
             }
-            else if (e.WebErrorStatus == CoreWebView2WebErrorStatus.RedirectFailed)
+            else
             {
                 // Use `e.WebErrorStatus` to vary the displayed message based on the error reason
                 IsShowingFailedMessage = true;
