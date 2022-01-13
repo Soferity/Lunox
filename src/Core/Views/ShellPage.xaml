@@ -117,7 +117,7 @@
 
                 <muxc:NavigationViewItem Tag="Document" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
                     <muxc:NavigationViewItem.Icon>
-                        <iconPacks:PathIconCodicons Kind="FileSymlinkFile" />
+                        <iconPacks:PathIconFontAwesome Kind="FileContractSolid" />
                     </muxc:NavigationViewItem.Icon>
 
                     <muxc:NavigationViewItem.MenuItems>
@@ -128,7 +128,7 @@
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="DocumentDOC">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconForkAwesome Kind="FileWordOutline" />
+                                <iconPacks:PathIconBoxIcons Kind="SolidFileDoc" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="DocumentDOCX">
@@ -141,7 +141,7 @@
 
                 <muxc:NavigationViewItem Tag="Video" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
                     <muxc:NavigationViewItem.Icon>
-                        <iconPacks:PathIconFileIcons Kind="Video" />
+                        <iconPacks:PathIconFontAwesome Kind="FilmSolid" />
                     </muxc:NavigationViewItem.Icon>
 
                     <muxc:NavigationViewItem.MenuItems>
@@ -183,6 +183,115 @@
                         <muxc:NavigationViewItem Tag="VideoMPEG4">
                             <muxc:NavigationViewItem.Icon>
                                 <iconPacks:PathIconMaterialDesign Kind="OndemandVideo" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                    </muxc:NavigationViewItem.MenuItems>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem Tag="Image" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
+                    <muxc:NavigationViewItem.Icon>
+                        <iconPacks:PathIconFontAwesome Kind="ImagesSolid" />
+                    </muxc:NavigationViewItem.Icon>
+
+                    <muxc:NavigationViewItem.MenuItems>
+                        <muxc:NavigationViewItem Tag="ImageJPG">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconBoxIcons Kind="SolidFileJpg" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImageJPEG">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImagePNG">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconBoxIcons Kind="SolidFilePng" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImageSVG">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImageBMP">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImageJXR">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImageTIF">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImageTIFF">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImageDNG">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImageGIF">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconBoxIcons Kind="SolidFileGif" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImageHEIC">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImageARW">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImageNEF">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImageCR2">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImageRW2">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImageSRW">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImageORF">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImagePJP">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImagePJPG">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="ImagePJPEG">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                     </muxc:NavigationViewItem.MenuItems>
