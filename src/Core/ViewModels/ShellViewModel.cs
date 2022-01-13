@@ -272,7 +272,7 @@ namespace Lunox.Core.ViewModels
             // only listen to changes caused by user entering text.
             if (args.Reason == WUXC.AutoSuggestionBoxTextChangeReason.UserInput)
             {
-                List<string> suitableItems = new List<string>();
+                List<string> suitableItems = new();
 
                 if (string.IsNullOrEmpty(sender.Text))
                 {
@@ -280,16 +280,22 @@ namespace Lunox.Core.ViewModels
                 }
                 else
                 {
-                    string[] splitText = TextLower(sender.Text).Split(" ");
+                    string[] splitTextBasic = TextLower(sender.Text).Split(" ");
+                    string[] splitTextAdvanced = TextLower(sender.Text, false).Split(" ");
 
                     foreach (string Item in Navigation_Item_Content)
                     {
-                        bool found = splitText.All((Key) =>
+                        bool foundBasic = splitTextBasic.All((Key) =>
                         {
                             return TextLower(Item).Contains(Key);
                         });
 
-                        if (found)
+                        bool foundAdvanced = splitTextAdvanced.All((Key) =>
+                        {
+                            return TextLower(Item, false).Contains(Key);
+                        });
+
+                        if (foundBasic || foundAdvanced)
                         {
                             suitableItems.Add(Item.ToString());
                         }
@@ -310,9 +316,16 @@ namespace Lunox.Core.ViewModels
         /// </summary>
         /// <param name="Text"></param>
         /// <returns></returns>
-        private string TextLower(string Text)
+        private string TextLower(string Text, bool Mode = true)
         {
-            return Text.ToLower(new CultureInfo(LanguageSelectorService.Language.ToString().Replace("_", "-")));
+            if (Mode)
+            {
+                return Text.ToLower(new CultureInfo(LanguageSelectorService.Language.ToString().Replace("_", "-")));
+            }
+            else
+            {
+                return Text.ToLowerInvariant();
+            }
         }
 
         /// <summary>

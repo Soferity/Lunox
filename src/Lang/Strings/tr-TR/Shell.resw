@@ -120,6 +120,36 @@
   <data name="Actions.Content" xml:space="preserve">
     <value>Aksiyonlar</value>
   </data>
+  <data name="Audio.Content" xml:space="preserve">
+    <value>Ses Dönüştürme</value>
+  </data>
+  <data name="AudioAAC.Content" xml:space="preserve">
+    <value>AAC Dönüştürme</value>
+  </data>
+  <data name="AudioAIFF.Content" xml:space="preserve">
+    <value>AIFF Dönüştürme</value>
+  </data>
+  <data name="AudioALAC.Content" xml:space="preserve">
+    <value>ALAC Dönüştürme</value>
+  </data>
+  <data name="AudioFLAC.Content" xml:space="preserve">
+    <value>FLAC Dönüştürme</value>
+  </data>
+  <data name="AudioM4A.Content" xml:space="preserve">
+    <value>M4A Dönüştürme</value>
+  </data>
+  <data name="AudioMP3.Content" xml:space="preserve">
+    <value>MP3 Dönüştürme</value>
+  </data>
+  <data name="AudioOGG.Content" xml:space="preserve">
+    <value>OGG Dönüştürme</value>
+  </data>
+  <data name="AudioWAV.Content" xml:space="preserve">
+    <value>WAV Dönüştürme</value>
+  </data>
+  <data name="AudioWMA.Content" xml:space="preserve">
+    <value>WMA Dönüştürme</value>
+  </data>
   <data name="Discord.Content" xml:space="preserve">
     <value>Discord</value>
   </data>
@@ -143,6 +173,69 @@
   </data>
   <data name="Help.Content" xml:space="preserve">
     <value>Yardım</value>
+  </data>
+  <data name="Image.Content" xml:space="preserve">
+    <value>Resim Dönüştürme</value>
+  </data>
+  <data name="ImageARW.Content" xml:space="preserve">
+    <value>ARW Dönüştürme</value>
+  </data>
+  <data name="ImageBMP.Content" xml:space="preserve">
+    <value>BMP Dönüştürme</value>
+  </data>
+  <data name="ImageCR2.Content" xml:space="preserve">
+    <value>CR2 Dönüştürme</value>
+  </data>
+  <data name="ImageDNG.Content" xml:space="preserve">
+    <value>DNG Dönüştürme</value>
+  </data>
+  <data name="ImageGIF.Content" xml:space="preserve">
+    <value>GIF Dönüştürme</value>
+  </data>
+  <data name="ImageHEIC.Content" xml:space="preserve">
+    <value>HEICC Dönüştürme</value>
+  </data>
+  <data name="ImageJPEG.Content" xml:space="preserve">
+    <value>JPEG Dönüştürme</value>
+  </data>
+  <data name="ImageJPG.Content" xml:space="preserve">
+    <value>JPG Dönüştürme</value>
+  </data>
+  <data name="ImageJXR.Content" xml:space="preserve">
+    <value>JXR Dönüştürme</value>
+  </data>
+  <data name="ImageNEF.Content" xml:space="preserve">
+    <value>NEF Dönüştürme</value>
+  </data>
+  <data name="ImageORF.Content" xml:space="preserve">
+    <value>ORF Dönüştürme</value>
+  </data>
+  <data name="ImagePJP.Content" xml:space="preserve">
+    <value>PJP Dönüştürme</value>
+  </data>
+  <data name="ImagePJPEG.Content" xml:space="preserve">
+    <value>PJPEG Dönüştürme</value>
+  </data>
+  <data name="ImagePJPG.Content" xml:space="preserve">
+    <value>PJPG Dönüştürme</value>
+  </data>
+  <data name="ImagePNG.Content" xml:space="preserve">
+    <value>PNG Dönüştürme</value>
+  </data>
+  <data name="ImageRW2.Content" xml:space="preserve">
+    <value>RW2 Dönüştürme</value>
+  </data>
+  <data name="ImageSRW.Content" xml:space="preserve">
+    <value>SRW Dönüştürme</value>
+  </data>
+  <data name="ImageSVG.Content" xml:space="preserve">
+    <value>SVG Dönüştürme</value>
+  </data>
+  <data name="ImageTIF.Content" xml:space="preserve">
+    <value>TIF Dönüştürme</value>
+  </data>
+  <data name="ImageTIFF.Content" xml:space="preserve">
+    <value>TIFF Dönüştürme</value>
   </data>
   <data name="Matrix.Content" xml:space="preserve">
     <value>QR Kodu</value>

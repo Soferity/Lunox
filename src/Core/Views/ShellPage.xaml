@@ -297,6 +297,60 @@
                     </muxc:NavigationViewItem.MenuItems>
                 </muxc:NavigationViewItem>
 
+                <muxc:NavigationViewItem Tag="Audio" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
+                    <muxc:NavigationViewItem.Icon>
+                        <iconPacks:PathIconFontAwesome Kind="MusicSolid" />
+                    </muxc:NavigationViewItem.Icon>
+
+                    <muxc:NavigationViewItem.MenuItems>
+                        <muxc:NavigationViewItem Tag="AudioMP3">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="AudioM4A">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="AudioAAC">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="AudioFLAC">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="AudioALAC">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="AudioAIFF">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="AudioWAV">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="AudioWMA">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="AudioOGG">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                    </muxc:NavigationViewItem.MenuItems>
+                </muxc:NavigationViewItem>
+                
             </muxc:NavigationView.MenuItems>
 
             <muxc:NavigationView.AutoSuggestBox>

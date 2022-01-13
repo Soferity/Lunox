@@ -120,6 +120,36 @@
   <data name="Actions.Content" xml:space="preserve">
     <value>Actions</value>
   </data>
+  <data name="Audio.Content" xml:space="preserve">
+    <value>Audio Conversion</value>
+  </data>
+  <data name="AudioAAC.Content" xml:space="preserve">
+    <value>AAC Conversion</value>
+  </data>
+  <data name="AudioAIFF.Content" xml:space="preserve">
+    <value>AIFF Conversion</value>
+  </data>
+  <data name="AudioALAC.Content" xml:space="preserve">
+    <value>ALAC Conversion</value>
+  </data>
+  <data name="AudioFLAC.Content" xml:space="preserve">
+    <value>FLAC Conversion</value>
+  </data>
+  <data name="AudioM4A.Content" xml:space="preserve">
+    <value>M4A Conversion</value>
+  </data>
+  <data name="AudioMP3.Content" xml:space="preserve">
+    <value>MP3 Conversion</value>
+  </data>
+  <data name="AudioOGG.Content" xml:space="preserve">
+    <value>OGG Conversion</value>
+  </data>
+  <data name="AudioWAV.Content" xml:space="preserve">
+    <value>WAV Conversion</value>
+  </data>
+  <data name="AudioWMA.Content" xml:space="preserve">
+    <value>WMA Conversion</value>
+  </data>
   <data name="Discord.Content" xml:space="preserve">
     <value>Discord</value>
   </data>
@@ -143,6 +173,69 @@
   </data>
   <data name="Help.Content" xml:space="preserve">
     <value>Help</value>
+  </data>
+  <data name="Image.Content" xml:space="preserve">
+    <value>Image Conversion</value>
+  </data>
+  <data name="ImageARW.Content" xml:space="preserve">
+    <value>ARW Conversion</value>
+  </data>
+  <data name="ImageBMP.Content" xml:space="preserve">
+    <value>BMP Conversion</value>
+  </data>
+  <data name="ImageCR2.Content" xml:space="preserve">
+    <value>CR2 Conversion</value>
+  </data>
+  <data name="ImageDNG.Content" xml:space="preserve">
+    <value>DNG Conversion</value>
+  </data>
+  <data name="ImageGIF.Content" xml:space="preserve">
+    <value>GIF Conversion</value>
+  </data>
+  <data name="ImageHEIC.Content" xml:space="preserve">
+    <value>HEICC Conversion</value>
+  </data>
+  <data name="ImageJPEG.Content" xml:space="preserve">
+    <value>JPEG Conversion</value>
+  </data>
+  <data name="ImageJPG.Content" xml:space="preserve">
+    <value>JPG Conversion</value>
+  </data>
+  <data name="ImageJXR.Content" xml:space="preserve">
+    <value>JXR Conversion</value>
+  </data>
+  <data name="ImageNEF.Content" xml:space="preserve">
+    <value>NEF Conversion</value>
+  </data>
+  <data name="ImageORF.Content" xml:space="preserve">
+    <value>ORF Conversion</value>
+  </data>
+  <data name="ImagePJP.Content" xml:space="preserve">
+    <value>PJP Conversion</value>
+  </data>
+  <data name="ImagePJPEG.Content" xml:space="preserve">
+    <value>PJPEG Conversion</value>
+  </data>
+  <data name="ImagePJPG.Content" xml:space="preserve">
+    <value>PJPG Conversion</value>
+  </data>
+  <data name="ImagePNG.Content" xml:space="preserve">
+    <value>PNG Conversion</value>
+  </data>
+  <data name="ImageRW2.Content" xml:space="preserve">
+    <value>RW2 Conversion</value>
+  </data>
+  <data name="ImageSRW.Content" xml:space="preserve">
+    <value>SRW Conversion</value>
+  </data>
+  <data name="ImageSVG.Content" xml:space="preserve">
+    <value>SVG Conversion</value>
+  </data>
+  <data name="ImageTIF.Content" xml:space="preserve">
+    <value>TIF Conversion</value>
+  </data>
+  <data name="ImageTIFF.Content" xml:space="preserve">
+    <value>TIFF Conversion</value>
   </data>
   <data name="Matrix.Content" xml:space="preserve">
     <value>QR Code</value>
