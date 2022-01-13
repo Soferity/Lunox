@@ -25,18 +25,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ShareOperationExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ShareSourceData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ShareSourceItem.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\DiscordPage.xaml.cs">
-      <DependentUpon>DiscordPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\GitHubPage.xaml.cs">
-      <DependentUpon>GitHubPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\NotFoundPage.xaml.cs">
-      <DependentUpon>NotFoundPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\SettingsPage.xaml.cs">
-      <DependentUpon>SettingsPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Services\ActivationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\FirstRunDisplayService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\AppCenterService.cs" />
@@ -56,7 +44,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\GitHubViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\NotFoundViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\GlanceViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SchemeActivationSampleViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SharedDataStorageItemsViewModel.cs" />
@@ -65,7 +52,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ShareTargetViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ShellViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DiscordViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\WebViewViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\DiscordPage.xaml.cs">
       <DependentUpon>DiscordPage.xaml</DependentUpon>
     </Compile>
@@ -77,9 +63,6 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\GlancePage.xaml.cs">
       <DependentUpon>GlancePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\NotFoundPage.xaml.cs">
       <DependentUpon>NotFoundPage.xaml</DependentUpon>
@@ -99,30 +82,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\WebViewPage.xaml.cs">
-      <DependentUpon>WebViewPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\WhatsNewDialog.xaml.cs">
       <DependentUpon>WhatsNewDialog.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="$(MSBuildThisFileDirectory)Pages\DiscordPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)Pages\GitHubPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)Pages\NotFoundPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)Pages\SettingsPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Styles\Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -159,10 +123,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Views\NotFoundPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -184,10 +144,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)Views\TestPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)Views\WebViewPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

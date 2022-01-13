@@ -41,13 +41,13 @@
 
             <muxc:NavigationView.MenuItems>
 
-                <muxc:NavigationViewItem x:Uid="\Shell\Glance" Tag="Glance"  helpers:NavHelper.NavigateTo="views:GlancePage">
+                <muxc:NavigationViewItem Tag="Glance" helpers:NavHelper.NavigateTo="views:GlancePage">
                     <muxc:NavigationViewItem.Icon>
                         <iconPacks:PathIconFontAwesome Kind="CocktailSolid" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
-                <muxc:NavigationViewItemHeader Content="Actions" Tag="Actions" />
+                <muxc:NavigationViewItemHeader Tag="Actions" />
 
                 <muxc:NavigationViewItem Content="Menu Item2" Tag="SamplePage2">
                     <muxc:NavigationViewItem.Icon>
@@ -68,38 +68,36 @@
                     </muxc:NavigationViewItem.MenuItems>
                 </muxc:NavigationViewItem>
 
-                <muxc:NavigationViewItem x:Uid="Shell_Main" Tag="Main" Icon="Home" helpers:NavHelper.NavigateTo="views:MainPage" />
-                <muxc:NavigationViewItem x:Uid="Shell_WebView" Tag="WebView" Icon="World" helpers:NavHelper.NavigateTo="views:WebViewPage" />
-                <muxc:NavigationViewItem x:Uid="Shell_SchemeActivationSample" Tag="SchemeActivation" Icon="Flag" helpers:NavHelper.NavigateTo="views:SchemeActivationSamplePage" />
-                <muxc:NavigationViewItem x:Uid="\Shell\Test" Tag="Test" Icon="Target" helpers:NavHelper.NavigateTo="views:TestPage" />
+                <muxc:NavigationViewItem Tag="SchemeActivation" Icon="Flag" helpers:NavHelper.NavigateTo="views:SchemeActivationSamplePage" />
+                <muxc:NavigationViewItem Tag="Test" Icon="Target" helpers:NavHelper.NavigateTo="views:TestPage" />
 
             </muxc:NavigationView.MenuItems>
 
             <muxc:NavigationView.AutoSuggestBox>
-                <AutoSuggestBox x:Uid="\Shell\Suggest" x:Name="suggestBox" QueryIcon="Find" Tag="Suggest" />
+                <AutoSuggestBox x:Name="suggestBox" Tag="Suggest" QueryIcon="Find" />
             </muxc:NavigationView.AutoSuggestBox>
 
             <muxc:NavigationView.FooterMenuItems>
 
-                <muxc:NavigationViewItem x:Uid="\Shell\GitHub" Tag="GitHub" helpers:NavHelper.NavigateTo="views:GitHubPage">
+                <muxc:NavigationViewItem Tag="GitHub" helpers:NavHelper.NavigateTo="views:GitHubPage">
                     <muxc:NavigationViewItem.Icon>
                         <iconPacks:PathIconFontAwesome Kind="GithubBrands" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
-                <muxc:NavigationViewItem x:Uid="\Shell\Discord" Tag="Discord" helpers:NavHelper.NavigateTo="views:DiscordPage">
+                <muxc:NavigationViewItem Tag="Discord" helpers:NavHelper.NavigateTo="views:DiscordPage">
                     <muxc:NavigationViewItem.Icon>
                         <iconPacks:PathIconFontAwesome Kind="DiscordBrands" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
-                <muxc:NavigationViewItem x:Uid="\Shell\Help" Tag="Help">
+                <muxc:NavigationViewItem Tag="Help">
                     <muxc:NavigationViewItem.Icon>
                         <iconPacks:PathIconFontAwesome Kind="QuestionSolid" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
-                <muxc:NavigationViewItem x:Uid="\Shell\Settings" Tag="Settings" helpers:NavHelper.NavigateTo="views:SettingsPage">
+                <muxc:NavigationViewItem Tag="Settings" helpers:NavHelper.NavigateTo="views:SettingsPage">
                     <muxc:NavigationViewItem.Icon>
                         <muxc:AnimatedIcon>
                             <muxc:AnimatedIcon.Source>
