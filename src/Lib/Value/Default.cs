@@ -76,6 +76,11 @@ namespace Lunox.Library.Value
         /// <summary>
         /// 
         /// </summary>
+        public static string NavigationSplit => "->";
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static string GlanceKey => "AppRequestedGlance";
 
         /// <summary>

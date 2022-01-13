@@ -132,8 +132,35 @@
   <data name="Help.Content" xml:space="preserve">
     <value>Help</value>
   </data>
+  <data name="Matrix.Content" xml:space="preserve">
+    <value>QR Code</value>
+  </data>
+  <data name="MatrixCreate.Content" xml:space="preserve">
+    <value>Kodu Oluştur</value>
+  </data>
+  <data name="MatrixRead.Content" xml:space="preserve">
+    <value>Kameradan Okut</value>
+  </data>
+  <data name="MatrixScan.Content" xml:space="preserve">
+    <value>Resimden Okut</value>
+  </data>
+  <data name="Recognition.Content" xml:space="preserve">
+    <value>Optical Character Recognition</value>
+  </data>
+  <data name="RecognitionRead.Content" xml:space="preserve">
+    <value>Resimden Tanıma</value>
+  </data>
+  <data name="RecognitionScan.Content" xml:space="preserve">
+    <value>Kameradan Tanıma</value>
+  </data>
+  <data name="SchemeActivation.Content" xml:space="preserve">
+    <value>Scheme Activation</value>
+  </data>
   <data name="Settings.Content" xml:space="preserve">
     <value>Settings</value>
+  </data>
+  <data name="Shortcuts.Content" xml:space="preserve">
+    <value>Shortcuts</value>
   </data>
   <data name="Suggest.Custom" xml:space="preserve">
     <value>Page not found</value>
@@ -142,6 +169,9 @@
     <value>Find Page</value>
   </data>
   <data name="Test.Content" xml:space="preserve">
-    <value>Try</value>
+    <value>Test</value>
+  </data>
+  <data name="Transactions.Content" xml:space="preserve">
+    <value>Transactions</value>
   </data>
 </root>

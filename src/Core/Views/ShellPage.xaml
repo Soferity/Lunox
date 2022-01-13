@@ -45,34 +45,75 @@
                     <muxc:NavigationViewItem.Icon>
                         <iconPacks:PathIconFontAwesome Kind="CocktailSolid" />
                     </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItemHeader Tag="Shortcuts" />
+
+                <muxc:NavigationViewItem Tag="Transactions">
+                    <muxc:NavigationViewItem.Icon>
+                        <iconPacks:PathIconMaterial Kind="CogTransfer" />
+                    </muxc:NavigationViewItem.Icon>
                     <muxc:NavigationViewItem.InfoBadge>
                         <muxc:InfoBadge Value="5" Opacity="0.8"/>
                     </muxc:NavigationViewItem.InfoBadge>
                 </muxc:NavigationViewItem>
 
+                <muxc:NavigationViewItem Tag="Test" helpers:NavHelper.NavigateTo="views:TestPage">
+                    <muxc:NavigationViewItem.Icon>
+                        <iconPacks:PathIconFontAwesome Kind="FlaskSolid" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem Tag="SchemeActivation" helpers:NavHelper.NavigateTo="views:SchemeActivationSamplePage">
+                    <muxc:NavigationViewItem.Icon>
+                        <iconPacks:PathIconFontAwesome Kind="BiohazardSolid" />
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
+                
                 <muxc:NavigationViewItemHeader Tag="Actions" />
 
-                <muxc:NavigationViewItem Content="Menu Item2" Tag="SamplePage2">
+                <muxc:NavigationViewItem Tag="Matrix" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
                     <muxc:NavigationViewItem.Icon>
-                        <SymbolIcon Symbol="Save" />
+                        <iconPacks:PathIconForkAwesome Kind="Qrcode" />
                     </muxc:NavigationViewItem.Icon>
-                </muxc:NavigationViewItem>
 
-                <muxc:NavigationViewItem Content="Menu Item3" Tag="SamplePage3">
-                    <muxc:NavigationViewItem.Icon>
-                        <SymbolIcon Symbol="Refresh" />
-                    </muxc:NavigationViewItem.Icon>
-                </muxc:NavigationViewItem>
-
-                <muxc:NavigationViewItem Content="Document options" Tag="Document" Icon="Library" ToolTipService.ToolTip="Document options" SelectsOnInvoked="False">
                     <muxc:NavigationViewItem.MenuItems>
-                        <muxc:NavigationViewItem Content="Create new" Tag="SamplePage5" Icon="NewFolder" ToolTipService.ToolTip="Create new"/>
-                        <muxc:NavigationViewItem Content="Upload file" Tag="SamplePage6" Icon="OpenLocal" ToolTipService.ToolTip="Upload file"/>
+                        <muxc:NavigationViewItem Tag="MatrixCreate">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconMaterial Kind="QrcodePlus" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="MatrixRead">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconUnicons Kind="QrcodeScan" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="MatrixScan">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconBoxIcons Kind="RegularQrScan" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
                     </muxc:NavigationViewItem.MenuItems>
                 </muxc:NavigationViewItem>
 
-                <muxc:NavigationViewItem Tag="SchemeActivation" Icon="Flag" helpers:NavHelper.NavigateTo="views:SchemeActivationSamplePage" />
-                <muxc:NavigationViewItem Tag="Test" Icon="Target" helpers:NavHelper.NavigateTo="views:TestPage" />
+                <muxc:NavigationViewItem Tag="Recognition" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
+                    <muxc:NavigationViewItem.Icon>
+                        <iconPacks:PathIconMaterial Kind="Ocr" />
+                    </muxc:NavigationViewItem.Icon>
+
+                    <muxc:NavigationViewItem.MenuItems>
+                        <muxc:NavigationViewItem Tag="RecognitionRead">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconMaterial Kind="ScriptTextPlay" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="RecognitionScan">
+                            <muxc:NavigationViewItem.Icon>
+                                <iconPacks:PathIconUnicons Kind="CameraChange" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                    </muxc:NavigationViewItem.MenuItems>
+                </muxc:NavigationViewItem>
 
             </muxc:NavigationView.MenuItems>
 
@@ -104,7 +145,7 @@
                     <muxc:NavigationViewItem.Icon>
                         <muxc:AnimatedIcon>
                             <muxc:AnimatedIcon.Source>
-                                <animatedvisuals:AnimatedSettingsVisualSource/>
+                                <animatedvisuals:AnimatedSettingsVisualSource />
                             </muxc:AnimatedIcon.Source>
                             <muxc:AnimatedIcon.FallbackIconSource>
                                 <muxc:FontIconSource FontFamily="Segoe MDL2 Assets" Glyph="&#xE713;"/>

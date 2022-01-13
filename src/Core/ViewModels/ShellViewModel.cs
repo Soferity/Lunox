@@ -154,9 +154,16 @@ namespace Lunox.Core.ViewModels
 
                 if (_navigationView.MenuItems.Count > 0)
                 {
-                    foreach (MUXC.NavigationViewItem Item in Navigation_Item(true))
+                    foreach (MUXC.NavigationViewItem Item in Navigation_Item(false))
                     {
-                        if (Item.MenuItems.Count == 0)
+                        if (Item.MenuItems.Count > 0)
+                        {
+                            foreach (MUXC.NavigationViewItem Menu in Item.MenuItems.OfType<MUXC.NavigationViewItem>())
+                            {
+                                Items.Add(string.Concat(Item.Content, Default.NavigationSplit, Menu.Content));
+                            }
+                        }
+                        else
                         {
                             Items.Add(Item.Content.ToString());
                         }
@@ -316,10 +323,16 @@ namespace Lunox.Core.ViewModels
         private void SuggestionChosen(WUXC.AutoSuggestBox sender, WUXC.AutoSuggestBoxSuggestionChosenEventArgs args)
         {
             _suggestBox.Text = string.Empty;
+            string selectedName = args.SelectedItem.ToString();
+
+            if (selectedName.Contains(Default.NavigationSplit))
+            {
+                selectedName = selectedName.Split(Default.NavigationSplit)[1];
+            }
 
             foreach (MUXC.NavigationViewItem Item in Navigation_Item(true))
             {
-                if (Item.Content.ToString() == args.SelectedItem.ToString())
+                if (Item.Content.ToString() == selectedName)
                 {
                     Type Page = NavHelper.GetNavigateTo(Item);
 
