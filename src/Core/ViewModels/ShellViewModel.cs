@@ -196,6 +196,7 @@ namespace Lunox.Core.ViewModels
         /// </summary>
         /// <param name="frame"></param>
         /// <param name="navigationView"></param>
+        /// <param name="suggestBox"></param>
         /// <param name="keyboardAccelerators"></param>
         public void Initialize(WUXC.Frame frame, MUXC.NavigationView navigationView, WUXC.AutoSuggestBox suggestBox, IList<KeyboardAccelerator> keyboardAccelerators)
         {
@@ -315,6 +316,7 @@ namespace Lunox.Core.ViewModels
         /// 
         /// </summary>
         /// <param name="Text"></param>
+        /// <param name="Mode"></param>
         /// <returns></returns>
         private string TextLower(string Text, bool Mode = true)
         {

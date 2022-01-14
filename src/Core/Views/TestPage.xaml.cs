@@ -30,7 +30,12 @@ namespace Lunox.Core.Views
             await GlanceSelectorService.SetGlanceAsync(Glance.Text + "Page");
         }
 
-        private async void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             string Text = string.Empty;
 

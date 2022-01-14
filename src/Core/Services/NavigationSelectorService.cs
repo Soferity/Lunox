@@ -103,6 +103,10 @@ namespace Lunox.Core.Services
             return Task.CompletedTask;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Mode"></param>
         public static void SetFrameLanguage(bool Mode)
         {
             if (Mode && NavigationService.Frame.SourcePageType != null)
@@ -132,7 +136,7 @@ namespace Lunox.Core.Services
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="Item"></param>
+        /// <param name="Suggest"></param>
         private static void SetNavigationContent(WUXC.AutoSuggestBox Suggest)
         {
             Suggest.PlaceholderText = ResourceExtensions.GetLocalizedPlaceholderText($"Shell|{Suggest.Tag}");

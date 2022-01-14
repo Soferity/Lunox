@@ -26,6 +26,9 @@ namespace Lunox.Library.Value
     {
         #region Variables
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static string StorageExtension => ".json";
 
         /// <summary>
