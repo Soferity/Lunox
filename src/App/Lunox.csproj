@@ -152,74 +152,6 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\App\AppLogo.altform-lightunplated_targetsize-16.png" />
-    <Content Include="Assets\App\AppLogo.altform-lightunplated_targetsize-24.png" />
-    <Content Include="Assets\App\AppLogo.altform-lightunplated_targetsize-256.png" />
-    <Content Include="Assets\App\AppLogo.altform-lightunplated_targetsize-32.png" />
-    <Content Include="Assets\App\AppLogo.altform-lightunplated_targetsize-48.png" />
-    <Content Include="Assets\App\AppLogo.altform-unplated_targetsize-16.png" />
-    <Content Include="Assets\App\AppLogo.altform-unplated_targetsize-24.png" />
-    <Content Include="Assets\App\AppLogo.altform-unplated_targetsize-256.png" />
-    <Content Include="Assets\App\AppLogo.altform-unplated_targetsize-32.png" />
-    <Content Include="Assets\App\AppLogo.altform-unplated_targetsize-48.png" />
-    <Content Include="Assets\App\AppLogo.scale-100.png" />
-    <Content Include="Assets\App\AppLogo.scale-125.png" />
-    <Content Include="Assets\App\AppLogo.scale-150.png" />
-    <Content Include="Assets\App\AppLogo.scale-200.png" />
-    <Content Include="Assets\App\AppLogo.scale-400.png" />
-    <Content Include="Assets\App\AppLogo.targetsize-16.png" />
-    <Content Include="Assets\App\AppLogo.targetsize-24.png" />
-    <Content Include="Assets\App\AppLogo.targetsize-256.png" />
-    <Content Include="Assets\App\AppLogo.targetsize-32.png" />
-    <Content Include="Assets\App\AppLogo.targetsize-48.png" />
-    <Content Include="Assets\App\BadgeLogo.scale-100.png" />
-    <Content Include="Assets\App\BadgeLogo.scale-125.png" />
-    <Content Include="Assets\App\BadgeLogo.scale-150.png" />
-    <Content Include="Assets\App\BadgeLogo.scale-200.png" />
-    <Content Include="Assets\App\BadgeLogo.scale-400.png" />
-    <Content Include="Assets\App\LargeTile.scale-100.png" />
-    <Content Include="Assets\App\LargeTile.scale-125.png" />
-    <Content Include="Assets\App\LargeTile.scale-150.png" />
-    <Content Include="Assets\App\LargeTile.scale-200.png" />
-    <Content Include="Assets\App\LargeTile.scale-400.png" />
-    <Content Include="Assets\App\MediumTile.scale-100.png" />
-    <Content Include="Assets\App\MediumTile.scale-125.png" />
-    <Content Include="Assets\App\MediumTile.scale-150.png" />
-    <Content Include="Assets\App\MediumTile.scale-200.png" />
-    <Content Include="Assets\App\MediumTile.scale-400.png" />
-    <Content Include="Assets\App\SmallTile.scale-100.png" />
-    <Content Include="Assets\App\SmallTile.scale-125.png" />
-    <Content Include="Assets\App\SmallTile.scale-150.png" />
-    <Content Include="Assets\App\SmallTile.scale-200.png" />
-    <Content Include="Assets\App\SmallTile.scale-400.png" />
-    <Content Include="Assets\App\SplashScreen.scale-100.png" />
-    <Content Include="Assets\App\SplashScreen.scale-125.png" />
-    <Content Include="Assets\App\SplashScreen.scale-150.png" />
-    <Content Include="Assets\App\SplashScreen.scale-200.png" />
-    <Content Include="Assets\App\SplashScreen.scale-400.png" />
-    <Content Include="Assets\App\StoreLogo.scale-100.png" />
-    <Content Include="Assets\App\StoreLogo.scale-125.png" />
-    <Content Include="Assets\App\StoreLogo.scale-150.png" />
-    <Content Include="Assets\App\StoreLogo.scale-200.png" />
-    <Content Include="Assets\App\StoreLogo.scale-400.png" />
-    <Content Include="Assets\App\WideTile.scale-100.png" />
-    <Content Include="Assets\App\WideTile.scale-125.png" />
-    <Content Include="Assets\App\WideTile.scale-150.png" />
-    <Content Include="Assets\App\WideTile.scale-200.png" />
-    <Content Include="Assets\App\WideTile.scale-400.png" />
-    <Content Include="Assets\Core\Views\Discord\Back.gif" />
-    <Content Include="Assets\Core\Views\GitHub\Back.gif" />
-    <Content Include="Assets\Core\Views\Glance\1.jpg" />
-    <Content Include="Assets\Core\Views\Glance\2.jpg" />
-    <Content Include="Assets\Core\Views\Glance\3.jpg" />
-    <Content Include="Assets\Core\Views\Glance\4.jpg" />
-    <Content Include="Assets\Core\Views\Glance\5.jpg" />
-    <Content Include="Assets\Core\Views\Glance\Back.jpg" />
-    <Content Include="Assets\Core\Views\Glance\Logo.png" />
-    <Content Include="Assets\Core\Views\NotFound\404.png" />
-    <Content Include="Assets\Core\Views\NotFound\Back.jpg" />
-    <Content Include="Assets\Core\Views\Settings\Back.jpg" />
-    <Content Include="Assets\Core\Views\Shell\Back.jpg" />
     <None Include="Package.StoreAssociation.xml" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
@@ -275,6 +207,7 @@
   <Import Project="..\Lang\Lunox.Language.projitems" Label="Shared" />
   <Import Project="..\Core\Lunox.Core.projitems" Label="Shared" />
   <Import Project="..\Lib\Lunox.Library.projitems" Label="Shared" />
+  <Import Project="..\Resource\Lunox.Resource.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

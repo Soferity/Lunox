@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>ee6a607d-75b7-4541-9460-dae16b25a7b2</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Lunox.Resource</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.altform-lightunplated_targetsize-16.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.altform-lightunplated_targetsize-24.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.altform-lightunplated_targetsize-256.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.altform-lightunplated_targetsize-32.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.altform-lightunplated_targetsize-48.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.altform-unplated_targetsize-16.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.altform-unplated_targetsize-24.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.altform-unplated_targetsize-256.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.altform-unplated_targetsize-32.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.altform-unplated_targetsize-48.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.scale-100.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.scale-125.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.scale-150.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.scale-200.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.scale-400.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.targetsize-16.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.targetsize-24.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.targetsize-256.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.targetsize-32.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\AppLogo.targetsize-48.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\BadgeLogo.scale-100.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\BadgeLogo.scale-125.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\BadgeLogo.scale-150.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\BadgeLogo.scale-200.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\BadgeLogo.scale-400.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\LargeTile.scale-100.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\LargeTile.scale-125.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\LargeTile.scale-150.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\LargeTile.scale-200.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\LargeTile.scale-400.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\MediumTile.scale-100.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\MediumTile.scale-125.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\MediumTile.scale-150.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\MediumTile.scale-200.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\MediumTile.scale-400.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\SmallTile.scale-100.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\SmallTile.scale-125.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\SmallTile.scale-150.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\SmallTile.scale-200.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\SmallTile.scale-400.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\SplashScreen.scale-100.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\SplashScreen.scale-125.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\SplashScreen.scale-150.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\SplashScreen.scale-200.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\SplashScreen.scale-400.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\StoreLogo.scale-100.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\StoreLogo.scale-125.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\StoreLogo.scale-150.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\StoreLogo.scale-200.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\StoreLogo.scale-400.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\WideTile.scale-100.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\WideTile.scale-125.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\WideTile.scale-150.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\WideTile.scale-200.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\App\WideTile.scale-400.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\Discord\Back.gif" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\GitHub\Back.gif" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\Glance\1.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\Glance\2.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\Glance\3.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\Glance\4.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\Glance\5.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\Glance\Back.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\Glance\Logo.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\NotFound\404.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\NotFound\Back.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\Settings\Back.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\Shell\Back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Styles\Icons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Styles\Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Styles\TextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Styles\_Colors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Styles\_FontSizes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Styles\_Thickness.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+</Project>

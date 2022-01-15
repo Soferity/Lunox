@@ -37,6 +37,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{8DA675
 		Config\Settings.XamlStyler = Config\Settings.XamlStyler
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resource", "Resource", "{33782A4E-CD9C-4B5D-9154-F7237C340382}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Lunox.Resource", "Resource\Lunox.Resource.shproj", "{EE6A607D-75B7-4541-9460-DAE16B25A7B2}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Lang\Lunox.Language.projitems*{23ef746e-3e58-4240-8e0d-01dfd89c5950}*SharedItemsImports = 13
@@ -44,7 +48,9 @@ Global
 		Core\Lunox.Core.projitems*{b3ea3273-6107-4156-9af7-261d53dd569c}*SharedItemsImports = 4
 		Lang\Lunox.Language.projitems*{b3ea3273-6107-4156-9af7-261d53dd569c}*SharedItemsImports = 4
 		Lib\Lunox.Library.projitems*{b3ea3273-6107-4156-9af7-261d53dd569c}*SharedItemsImports = 4
+		Resource\Lunox.Resource.projitems*{b3ea3273-6107-4156-9af7-261d53dd569c}*SharedItemsImports = 4
 		Lib\Lunox.Library.projitems*{c0be0e62-c802-48c6-a583-6e2d7c359252}*SharedItemsImports = 13
+		Resource\Lunox.Resource.projitems*{ee6a607d-75b7-4541-9460-dae16b25a7b2}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -209,6 +215,7 @@ Global
 		{24725AE7-605A-4EC0-93C5-281E252F22F9} = {61CCEB81-6549-4DDB-8F54-705876975A13}
 		{A35A0E69-7DF5-4C4F-B1FF-72960C75C951} = {61CCEB81-6549-4DDB-8F54-705876975A13}
 		{367D61B2-825E-41B6-B1EB-BB4CE4C744DF} = {61CCEB81-6549-4DDB-8F54-705876975A13}
+		{EE6A607D-75B7-4541-9460-DAE16B25A7B2} = {33782A4E-CD9C-4B5D-9154-F7237C340382}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {766B9ABE-4F55-4D6E-A401-C379CDA6F346}
