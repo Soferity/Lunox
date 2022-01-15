@@ -79,7 +79,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\Shell\Back.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="$(MSBuildThisFileDirectory)Styles\Icons.xaml">
+    <Page Include="$(MSBuildThisFileDirectory)Icons\Shell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -103,5 +103,8 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Icons\" />
   </ItemGroup>
 </Project>
