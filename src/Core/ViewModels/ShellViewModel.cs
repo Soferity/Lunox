@@ -281,6 +281,8 @@ namespace Lunox.Core.ViewModels
                 }
                 else
                 {
+                    AppCenterService.TrackEvent(Default.Events[EventType.Search], "Wanted", sender.Text);
+
                     string[] splitTextBasic = TextLower(sender.Text).Split(" ");
                     string[] splitTextAdvanced = TextLower(sender.Text, false).Split(" ");
 

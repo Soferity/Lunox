@@ -18,7 +18,7 @@
         /// <summary>
         /// 
         /// </summary>
-        Language,
+        Search,
         /// <summary>
         /// 
         /// </summary>
@@ -27,6 +27,10 @@
         /// 
         /// </summary>
         Browser,
+        /// <summary>
+        /// 
+        /// </summary>
+        Language,
         /// <summary>
         /// 
         /// </summary>

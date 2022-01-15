@@ -123,6 +123,7 @@ namespace Lunox.Library.Value
         {
             { EventType.Page, "Page-" },
             { EventType.Theme, "Switch-Theme" },
+            { EventType.Search, "Search-Page" },
             { EventType.Glance, "Switch-Glance" },
             { EventType.Browser, "Switch-Browser" },
             { EventType.Language, "Switch-Language" },
