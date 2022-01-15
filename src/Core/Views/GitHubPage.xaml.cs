@@ -1,7 +1,9 @@
 ﻿#region Imports
 
 using Lunox.Core.ViewModels;
-using Windows.UI.Xaml.Controls;
+using Microsoft.Web.WebView2.Core;
+using MUXC = Microsoft.UI.Xaml.Controls;
+using WUXC = Windows.UI.Xaml.Controls;
 
 #endregion
 
@@ -12,7 +14,7 @@ namespace Lunox.Core.Views
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class GitHubPage : Page
+    public sealed partial class GitHubPage : WUXC.Page
     {
         #region Functions
 
@@ -20,8 +22,6 @@ namespace Lunox.Core.Views
         /// 
         /// </summary>
         public GitHubViewModel ViewModel { get; } = new GitHubViewModel();
-
-        #region Main
 
         /// <summary>
         /// 
@@ -32,7 +32,15 @@ namespace Lunox.Core.Views
             ViewModel.Initialize(WebViewOld, WebViewNew);
         }
 
-        #endregion
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void WebViewNew_NavigationCompleted(MUXC.WebView2 sender, CoreWebView2NavigationCompletedEventArgs args)
+        {
+            ViewModel.NewNavCompletedCommand.Execute(args);
+        }
 
         #endregion
     }

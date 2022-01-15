@@ -45,16 +45,16 @@
             </i:Interaction.Behaviors>
         </WebView>
 
-        <muxc:WebView2 x:Name="WebViewNew" Width="0" Height="0" Opacity="0">
+        <muxc:WebView2 x:Name="WebViewNew" Width="0" Height="0" Opacity="0" NavigationCompleted="WebViewNew_NavigationCompleted">
             <!--Source="{x:Bind ViewModel.NewSource, Mode=OneWay}"-->
             <muxc:WebView2.OpacityTransition>
                 <ScalarTransition />
             </muxc:WebView2.OpacityTransition>
-            <i:Interaction.Behaviors>
+            <!--<i:Interaction.Behaviors>
                 <ic:EventTriggerBehavior EventName="NavigationCompleted">
                     <ic:InvokeCommandAction Command="{x:Bind ViewModel.NewNavCompletedCommand}" />
                 </ic:EventTriggerBehavior>
-            </i:Interaction.Behaviors>
+            </i:Interaction.Behaviors>-->
         </muxc:WebView2>
 
         <StackPanel Visibility="{x:Bind ViewModel.IsLoadingVisibility, Mode=OneWay}"
