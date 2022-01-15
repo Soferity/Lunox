@@ -7,7 +7,6 @@
     xmlns:behaviors="using:Lunox.Core.Behaviors"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
-    xmlns:iconPacks="using:MahApps.Metro.IconPacks"
     xmlns:helpers="using:Lunox.Core.Helpers"
     xmlns:views="using:Lunox.Core.Views"
     xmlns:ic="using:Microsoft.Xaml.Interactions.Core"
@@ -43,7 +42,7 @@
 
                 <muxc:NavigationViewItem Tag="Glance" helpers:NavHelper.NavigateTo="views:GlancePage">
                     <muxc:NavigationViewItem.Icon>
-                        <iconPacks:PathIconFontAwesome Kind="CocktailSolid" />
+                        <PathIcon Data="{StaticResource CocktailSolid}" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
@@ -51,7 +50,7 @@
 
                 <muxc:NavigationViewItem Tag="Transactions">
                     <muxc:NavigationViewItem.Icon>
-                        <iconPacks:PathIconMaterial Kind="CogTransfer" />
+                        <PathIcon Data="{StaticResource CogTransfer}" />
                     </muxc:NavigationViewItem.Icon>
                     <muxc:NavigationViewItem.InfoBadge>
                         <muxc:InfoBadge Value="5" Opacity="0.8"/>
@@ -60,13 +59,13 @@
 
                 <muxc:NavigationViewItem Tag="Test" helpers:NavHelper.NavigateTo="views:TestPage">
                     <muxc:NavigationViewItem.Icon>
-                        <iconPacks:PathIconFontAwesome Kind="FlaskSolid" />
+                        <PathIcon Data="{StaticResource FlaskSolid}" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
                 <muxc:NavigationViewItem Tag="SchemeActivation" helpers:NavHelper.NavigateTo="views:SchemeActivationSamplePage">
                     <muxc:NavigationViewItem.Icon>
-                        <iconPacks:PathIconFontAwesome Kind="BiohazardSolid" />
+                        <PathIcon Data="{StaticResource BiohazardSolid}" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
                 
@@ -74,23 +73,23 @@
 
                 <muxc:NavigationViewItem Tag="Matrix" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
                     <muxc:NavigationViewItem.Icon>
-                        <iconPacks:PathIconForkAwesome Kind="Qrcode" />
+                        <PathIcon Data="{StaticResource Qrcode}" />
                     </muxc:NavigationViewItem.Icon>
 
                     <muxc:NavigationViewItem.MenuItems>
                         <muxc:NavigationViewItem Tag="MatrixCreate">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconMaterial Kind="QrcodePlus" />
+                                <PathIcon Data="{StaticResource QrcodePlus}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="MatrixRead">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconUnicons Kind="QrcodeScan" />
+                                <PathIcon Data="{StaticResource QrcodeScan}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="MatrixScan">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconBoxIcons Kind="RegularQrScan" />
+                                <PathIcon Data="{StaticResource RegularQrScan}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                     </muxc:NavigationViewItem.MenuItems>
@@ -98,18 +97,18 @@
 
                 <muxc:NavigationViewItem Tag="Recognition" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
                     <muxc:NavigationViewItem.Icon>
-                        <iconPacks:PathIconMaterial Kind="Ocr" />
+                        <PathIcon Data="{StaticResource Ocr}" />
                     </muxc:NavigationViewItem.Icon>
 
                     <muxc:NavigationViewItem.MenuItems>
                         <muxc:NavigationViewItem Tag="RecognitionRead">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconMaterial Kind="ScriptTextPlay" />
+                                <PathIcon Data="{StaticResource ScriptTextPlay}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="RecognitionScan">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconUnicons Kind="CameraChange" />
+                                <PathIcon Data="{StaticResource CameraChange}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                     </muxc:NavigationViewItem.MenuItems>
@@ -117,23 +116,23 @@
 
                 <muxc:NavigationViewItem Tag="Document" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
                     <muxc:NavigationViewItem.Icon>
-                        <iconPacks:PathIconFontAwesome Kind="FileContractSolid" />
+                        <PathIcon Data="{StaticResource FileContractSolid}" />
                     </muxc:NavigationViewItem.Icon>
 
                     <muxc:NavigationViewItem.MenuItems>
                         <muxc:NavigationViewItem Tag="DocumentPDF">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconCoolicons Kind="FilePdf" />
+                                <PathIcon Data="{StaticResource FilePdf}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="DocumentDOC">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconBoxIcons Kind="SolidFileDoc" />
+                                <PathIcon Data="{StaticResource SolidFileDoc}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="DocumentDOCX">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconSimpleIcons Kind="MicrosoftWord" />
+                                <PathIcon Data="{StaticResource MicrosoftWord}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                     </muxc:NavigationViewItem.MenuItems>
@@ -141,48 +140,48 @@
 
                 <muxc:NavigationViewItem Tag="Video" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
                     <muxc:NavigationViewItem.Icon>
-                        <iconPacks:PathIconFontAwesome Kind="FilmSolid" />
+                        <PathIcon Data="{StaticResource FilmSolid}" />
                     </muxc:NavigationViewItem.Icon>
 
                     <muxc:NavigationViewItem.MenuItems>
                         <muxc:NavigationViewItem Tag="VideoMP4">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconMaterialDesign Kind="OndemandVideo" />
+                                <PathIcon Data="{StaticResource OndemandVideo}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="VideoAVI">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconMaterialDesign Kind="OndemandVideo" />
+                                <PathIcon Data="{StaticResource OndemandVideo}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="VideoHEVC">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconMaterialDesign Kind="OndemandVideo" />
+                                <PathIcon Data="{StaticResource OndemandVideo}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="VideoWMV">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconMaterialDesign Kind="OndemandVideo" />
+                                <PathIcon Data="{StaticResource OndemandVideo}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="VideoMPEG">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconMaterialDesign Kind="OndemandVideo" />
+                                <PathIcon Data="{StaticResource OndemandVideo}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="VideoMPEG1">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconMaterialDesign Kind="OndemandVideo" />
+                                <PathIcon Data="{StaticResource OndemandVideo}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="VideoMPEG2">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconMaterialDesign Kind="OndemandVideo" />
+                                <PathIcon Data="{StaticResource OndemandVideo}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="VideoMPEG4">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconMaterialDesign Kind="OndemandVideo" />
+                                <PathIcon Data="{StaticResource OndemandVideo}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                     </muxc:NavigationViewItem.MenuItems>
@@ -190,108 +189,108 @@
 
                 <muxc:NavigationViewItem Tag="Image" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
                     <muxc:NavigationViewItem.Icon>
-                        <iconPacks:PathIconFontAwesome Kind="ImagesSolid" />
+                        <PathIcon Data="{StaticResource ImagesSolid}" />
                     </muxc:NavigationViewItem.Icon>
 
                     <muxc:NavigationViewItem.MenuItems>
                         <muxc:NavigationViewItem Tag="ImageJPG">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconBoxIcons Kind="SolidFileJpg" />
+                                <PathIcon Data="{StaticResource SolidFileJpg}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImageJPEG">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                                <PathIcon Data="{StaticResource ImageSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImagePNG">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconBoxIcons Kind="SolidFilePng" />
+                                <PathIcon Data="{StaticResource SolidFilePng}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImageSVG">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                                <PathIcon Data="{StaticResource ImageSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImageBMP">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                                <PathIcon Data="{StaticResource ImageSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImageJXR">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                                <PathIcon Data="{StaticResource ImageSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImageTIF">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                                <PathIcon Data="{StaticResource ImageSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImageTIFF">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                                <PathIcon Data="{StaticResource ImageSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImageDNG">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                                <PathIcon Data="{StaticResource ImageSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImageGIF">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconBoxIcons Kind="SolidFileGif" />
+                                <PathIcon Data="{StaticResource SolidFileGif}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImageHEIC">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                                <PathIcon Data="{StaticResource ImageSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImageARW">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                                <PathIcon Data="{StaticResource ImageSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImageNEF">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                                <PathIcon Data="{StaticResource ImageSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImageCR2">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                                <PathIcon Data="{StaticResource ImageSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImageRW2">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                                <PathIcon Data="{StaticResource ImageSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImageSRW">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                                <PathIcon Data="{StaticResource ImageSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImageORF">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                                <PathIcon Data="{StaticResource ImageSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImagePJP">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                                <PathIcon Data="{StaticResource ImageSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImagePJPG">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                                <PathIcon Data="{StaticResource ImageSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="ImagePJPEG">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="ImageSolid" />
+                                <PathIcon Data="{StaticResource ImageSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                     </muxc:NavigationViewItem.MenuItems>
@@ -299,53 +298,53 @@
 
                 <muxc:NavigationViewItem Tag="Audio" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
                     <muxc:NavigationViewItem.Icon>
-                        <iconPacks:PathIconFontAwesome Kind="MusicSolid" />
+                        <PathIcon Data="{StaticResource MusicSolid}" />
                     </muxc:NavigationViewItem.Icon>
 
                     <muxc:NavigationViewItem.MenuItems>
                         <muxc:NavigationViewItem Tag="AudioMP3">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                                <PathIcon Data="{StaticResource VolumeDownSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="AudioM4A">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                                <PathIcon Data="{StaticResource VolumeDownSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="AudioAAC">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                                <PathIcon Data="{StaticResource VolumeDownSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="AudioFLAC">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                                <PathIcon Data="{StaticResource VolumeDownSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="AudioALAC">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                                <PathIcon Data="{StaticResource VolumeDownSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="AudioAIFF">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                                <PathIcon Data="{StaticResource VolumeDownSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="AudioWAV">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                                <PathIcon Data="{StaticResource VolumeDownSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="AudioWMA">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                                <PathIcon Data="{StaticResource VolumeDownSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="AudioOGG">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="VolumeDownSolid" />
+                                <PathIcon Data="{StaticResource VolumeDownSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                     </muxc:NavigationViewItem.MenuItems>
@@ -353,28 +352,28 @@
 
                 <muxc:NavigationViewItem Tag="Json" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
                     <muxc:NavigationViewItem.Icon>
-                        <iconPacks:PathIconFontisto Kind="Json" />
+                        <PathIcon Data="{StaticResource Json}" />
                     </muxc:NavigationViewItem.Icon>
 
                     <muxc:NavigationViewItem.MenuItems>
                         <muxc:NavigationViewItem Tag="JsonMinify">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconMaterial Kind="CodeJson" />
+                                <PathIcon Data="{StaticResource CodeJson}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="JsonValidate">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFileIcons Kind="Jsonld" />
+                                <PathIcon Data="{StaticResource Jsonld}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="JsonSerialize">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFontAwesome Kind="CodeSolid" />
+                                <PathIcon Data="{StaticResource CodeSolid}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="JsonDeserialize">
                             <muxc:NavigationViewItem.Icon>
-                                <iconPacks:PathIconFileIcons Kind="Json5" />
+                                <PathIcon Data="{StaticResource Json5}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                     </muxc:NavigationViewItem.MenuItems>
@@ -390,19 +389,19 @@
 
                 <muxc:NavigationViewItem Tag="GitHub" helpers:NavHelper.NavigateTo="views:GitHubPage">
                     <muxc:NavigationViewItem.Icon>
-                        <iconPacks:PathIconFontAwesome Kind="GithubBrands" />
+                        <PathIcon Data="{StaticResource GithubBrands}" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
                 <muxc:NavigationViewItem Tag="Discord" helpers:NavHelper.NavigateTo="views:DiscordPage">
                     <muxc:NavigationViewItem.Icon>
-                        <iconPacks:PathIconFontAwesome Kind="DiscordBrands" />
+                        <PathIcon Data="{StaticResource DiscordBrands}" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
                 <muxc:NavigationViewItem Tag="Help">
                     <muxc:NavigationViewItem.Icon>
-                        <iconPacks:PathIconFontAwesome Kind="QuestionSolid" />
+                        <PathIcon Data="{StaticResource QuestionSolid}" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 

@@ -12,6 +12,8 @@
 
                 <ResourceDictionary Source="/Styles/TextBlock.xaml" />
                 <ResourceDictionary Source="/Styles/Page.xaml"/>
+                
+                <ResourceDictionary Source="/Styles/Icons.xaml"/>
             </muxc:XamlControlsResources.MergedDictionaries>
         </muxc:XamlControlsResources>
     </Application.Resources>
