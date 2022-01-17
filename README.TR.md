@@ -3,7 +3,7 @@
 </div>
 
 <p align="center">
-  <span><b>Lunox</b>, a customizable, modern and windows File Converter.</span>
+  <span><b>Lunox</b> is a customizable, modern and advanced Universal Utility Toolkit.</span>
 </p>
 
 <h4 align="center">
@@ -54,11 +54,12 @@
 
 </details>
 
-Lunox is a bla bla bla. Some Lunox's features in summary are:
+Lunox allows you to easily perform unit conversions, file conversions, OCR operations, QR operations, HTML-CSS-JS-JSON operations and many other leading operations with the various infrastructure it offers. Some Lunox's features in summary are:
 
 -   It looks modern
--   Easy to use
+-   Wide variety
 -   Customizable
+-   Easy to use
 -   Most importantly, It's an Open Source Software (OSS)!
 
 Lunox is currently under heavy development. You can give your suggestions and feedback on our [Discussions](https://github.com/Soferity/Lunox/discussions/) page. If you feel comfortable in writing code using C# (.NET), we highly encourage you to [contribute to this project](https://github.com/Soferity/Lunox/graphs/contributors).
@@ -83,6 +84,8 @@ All the distribution methods mentioned above are supported, however installing t
 <a href='https://www.microsoft.com/store/apps/9PC06S6LW868'>
 	<img src='.images/Badges/English_get it from MS_864X312.png' alt='Microsoft Store' width='160'/>
 </a>
+
+<p></p>
 
 **GitHub**
 
