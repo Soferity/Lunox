@@ -57,7 +57,17 @@
 
 ---
 
-### MSIX Install Instructions
+## Installation
+
+Lunox is available for you to install via [Microsoft Store](https://www.microsoft.com/store/apps/9PC06S6LW868), [GitHub](https://github.com/Soferity/Lunox/releases/latest).
+
+All the distribution methods mentioned above are supported, however installing the app from the **Microsoft Store** is **recommended** as it is easier to install and will automatically remain up to date.
+
+**Microsoft Store**
+
+<a href='https://www.microsoft.com/store/apps/9PC06S6LW868?ocid=badge'><img src='.images/Badges/English_get it from MS_864X312.png' alt='Microsoft Store' width='160'/></a>
+
+**GitHub**
 
 **If Windows Prompts about Untrusted Application**
 
@@ -70,3 +80,5 @@
 * Select Place all certificates in Following store and click browse select Trusted People and click OK and Next
 * Click Finish
 * Confirmation windows will appear After that Try Installing the MSIXBUNDLE
+
+---
