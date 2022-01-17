@@ -40,6 +40,23 @@
 
 </div>
 
+---
+
+# What is Lunox?
+
+![Demo](.screenshots/Lunox.png)
+
+<details>
+
+<summary>
+View More Screenshots
+</summary>
+
+![Demo](.screenshots/Settings.png)
+![Demo](.screenshots/404.png)
+
+</details>
+
 ### MSIX Install Instructions 
 **If Windows Prompts about Untrusted Application**
 * Simply right click the MSIX and click Properties
