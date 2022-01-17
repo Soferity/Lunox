@@ -1,27 +1,100 @@
-![Logo](https://raw.githubusercontent.com/Soferity/Lunox/develop/.images/Logo.png)
+<div align="center">
+  <img height=150 src=".images/Logo.png" />
+</div>
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+<p align="center">
+  <span><b>Lunox</b>, a customizable, modern and Windows File Converter.</span>
+</p>
+<h4 align="center">
+  <span><a href="https://soferity.com/support">Supports</a></span>
+  •
+  <span><a href="https://github.com/Soferity/Lunox/discussions">Discussions</a></span>
+  •
+  <span><a href="https://soferity.com/documentation">Documentation</a></span>
+  •
+  <span><a href="https://discord.gg/nxG977byXb">Discord</a></span>
+</h4>
 
-![Dot-Net-Framework-Version](https://img.shields.io/badge/.NET%20Framework-%3E%3D4.5.2-blue)
-![Dot-Net-Standard-Version](https://img.shields.io/badge/.NET%20Standard-%3E%3D2.0-blue)
-![Dot-Net-Core-Version](https://img.shields.io/badge/.NET%20Core-%3E%3D3.0-blue)
-![Dot-Net-Version](https://img.shields.io/badge/.NET-%3E%3D5.0-blue)
-![C-Sharp-Version](https://img.shields.io/badge/C%23-10.0-blue.svg)
-![IDE-Version](https://img.shields.io/badge/IDE-VS2022-blue.svg)
-[![NuGet-Version](https://img.shields.io/nuget/v/Lunox.svg)](https://www.nuget.org/packages/Lunox)
-[![FuGet-Version](https://www.fuget.org/packages/Lunox/badge.svg)](https://www.fuget.org/packages/Lunox)
-[![NuGet](https://img.shields.io/nuget/dt/Lunox)](https://www.nuget.org/api/v2/package/Lunox)
+<div align="center">
 
-## Contributors ✨
+  [![License](https://img.shields.io/github/license/Soferity/Lunox.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/blob/develop/LICENSE)
+  [![Download Counts](https://img.shields.io/github/downloads/Soferity/Lunox/total.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/releases)
+  [![Stars Count](https://img.shields.io/github/stars/Soferity/Lunox.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/stargazers)
+  [![Forks Count](https://img.shields.io/github/forks/Soferity/Lunox.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/network/members)
+  [![Watchers Count](https://img.shields.io/github/watchers/Soferity/Lunox.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/watchers)
+  [![Issues Count](https://img.shields.io/github/issues/Soferity/Lunox.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/issues)
+  [![Pull Request Count](https://img.shields.io/github/issues-pr/Soferity/Lunox.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/pulls)
+  [![Follow](https://img.shields.io/github/followers/Taiizor.svg?style=for-the-badge&label=Follow&maxAge=2592000)](https://github.com/Taiizor)
+  [![Discord Server](https://img.shields.io/discord/932386235538878534?style=for-the-badge)](https://discord.gg/nxG977byXb)
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+  [![Windows Support](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/store/apps/9PC06S6LW868)
+  [![Xbox Support](https://img.shields.io/badge/Xbox-107C10?style=for-the-badge&logo=xbox&logoColor=white)](https://www.microsoft.com/store/apps/9PC06S6LW868)
 
-<table>
-  <tr>
-    <td align="center"><a href="https://www.taiizor.com"><img src="https://avatars.githubusercontent.com/u/41683699?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Taiizor</b></sub></a><br /><a href="#infra-Taiizor" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/Soferity/Lunox/commits?author=Taiizor" title="Tests">⚠️</a> <a href="https://github.com/Soferity/Lunox/commits?author=Taiizor" title="Code">💻</a></td>
-  </tr>
-</table>
+  <!--
+  [![Windows Support](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Soferity/Lunox/releases)
+  [![Xbox Support](https://img.shields.io/badge/Xbox-107C10?style=for-the-badge&logo=xbox&logoColor=white)](https://github.com/Soferity/Lunox/releases)
+  [![Ubuntu Support](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://github.com/Soferity/Lunox/releases)
+  [![Arch Linux Support](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)](https://github.com/Soferity/Lunox/releases)
+  [![MacOS Support](https://img.shields.io/badge/MACOS-adb8c5?style=for-the-badge&logo=macos&logoColor=white)](https://github.com/Soferity/Lunox/releases)
+  -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+</div>
+
+---
+
+# What is Lunox?
+
+![Demo](.screenshots/Lunox.png)
+
+<details>
+
+  <summary>View More Screenshots</summary>
+
+  ![Settings](.screenshots/Settings.png)
+  ![404](.screenshots/404.png)
+
+</details>
+
+Lunox is a bla bla bla. Some Lunox's features in summary are:
+
+-   It looks modern
+-   Easy to use
+-   Customizable
+-   Most importantly, It's an Open Source Software (OSS)!
+
+Lunox is currently under heavy development. You can give your suggestions and feedback on our [Discussions](https://github.com/Soferity/Lunox/discussions/) page. If you feel comfortable in writing code using C# (.NET), we highly encourage you to [contribute to this project](https://github.com/Soferity/Lunox/graphs/contributors).
+
+---
+
+## System Requirements
+
+- **Windows 11**
+- **Windows 10 1809 and above**
+
+---
+
+## Installation
+
+Lunox is available for you to install via [Microsoft Store](https://www.microsoft.com/store/apps/9PC06S6LW868), [GitHub](https://github.com/Soferity/Lunox/releases/latest).
+
+All the distribution methods mentioned above are supported, however installing the app from the **Microsoft Store** is **recommended** as it is easier to install and will automatically remain up to date.
+
+**Microsoft Store**
+
+<a href='https://www.microsoft.com/store/apps/9PC06S6LW868?ocid=badge'><img src='.images/Badges/English_get it from MS_864X312.png' alt='Microsoft Store' width='160'/></a>
+
+**GitHub**
+
+**If Windows Prompts about Untrusted Application**
+
+* Simply right click the MSIX and click Properties
+* Go to Digital signatures Tab
+* Select BAEB534D-BC36-4432-8EEF-E0088D896FB9 and click Details
+* In next popup select View Certificate
+* In next popup select Install Certificate
+* In next step select Local machine (If a user account prompt appear click yes)
+* Select Place all certificates in Following store and click browse select Trusted People and click OK and Next
+* Click Finish
+* Confirmation windows will appear After that Try Installing the MSIXBUNDLE
+
+---

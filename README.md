@@ -3,7 +3,7 @@
 </div>
 
 <p align="center">
-  <span><b>Lunox</b>, a customizable, modern and windows platform File Converter.</span>
+  <span><b>Lunox</b>, a customizable, modern and Windows File Converter.</span>
 </p>
 <h4 align="center">
   <span><a href="https://soferity.com/support">Supports</a></span>
@@ -50,10 +50,26 @@
 
   <summary>View More Screenshots</summary>
 
-  ![Demo](.screenshots/Settings.png)
-  ![Demo](.screenshots/404.png)
+  ![Settings](.screenshots/Settings.png)
+  ![404](.screenshots/404.png)
 
 </details>
+
+Lunox is a bla bla bla. Some Lunox's features in summary are:
+
+-   It looks modern
+-   Easy to use
+-   Customizable
+-   Most importantly, It's an Open Source Software (OSS)!
+
+Lunox is currently under heavy development. You can give your suggestions and feedback on our [Discussions](https://github.com/Soferity/Lunox/discussions/) page. If you feel comfortable in writing code using C# (.NET), we highly encourage you to [contribute to this project](https://github.com/Soferity/Lunox/graphs/contributors).
+
+---
+
+## System Requirements
+
+- **Windows 11**
+- **Windows 10 1809 and above**
 
 ---
 
