@@ -119,6 +119,14 @@ namespace Lunox.Library.Value
         /// <summary>
         /// 
         /// </summary>
+        public static Type[] NotRefresh => new[]
+        {
+            typeof(Nullable)
+        };
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static Dictionary<EventType, string> Events => new()
         {
             { EventType.Page, "Page-" },
@@ -153,7 +161,7 @@ namespace Lunox.Library.Value
         /// <summary>
         /// 
         /// </summary>
-        public static Uri Discord => new($"https://discord.com/widget?id=587709969852268564&theme={ThemeSelectorService.Theme.ToString().ToLowerInvariant()}");
+        public static Uri Discord => new($"https://discord.com/widget?id=932386235538878534&theme={ThemeSelectorService.Theme.ToString().ToLowerInvariant()}");
 
         #endregion
     }

@@ -188,7 +188,6 @@ namespace Lunox.Core.Services
             await ThemeSelectorService.SetRequestedThemeAsync();
             await FirstRunDisplayService.ShowIfAppropriateAsync();
             await WhatsNewDisplayService.ShowIfAppropriateAsync();
-            await LanguageSelectorService.SetRequestedLanguageAsync();
         }
 
         /// <summary>

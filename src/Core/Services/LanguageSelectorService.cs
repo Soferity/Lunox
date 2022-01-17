@@ -63,7 +63,7 @@ namespace Lunox.Core.Services
         {
             Language = language;
 
-            await SetRequestedLanguageAsync();
+            await SetRequestedLanguageAsync(true);
             await SaveLanguageInSettingsAsync(Language);
         }
 
@@ -71,7 +71,7 @@ namespace Lunox.Core.Services
         /// 
         /// </summary>
         /// <returns></returns>
-        public static async Task SetRequestedLanguageAsync()
+        public static async Task SetRequestedLanguageAsync(bool Mode = false)
         {
             string Lang = Language.ToString().Replace("_", "-");
 
@@ -89,7 +89,7 @@ namespace Lunox.Core.Services
                 });
             }
 
-            await NavigationSelectorService.SetNavigationLanguage(true);
+            await NavigationSelectorService.SetNavigationLanguage(Mode);
 
             ResourceContext.GetForCurrentView().Reset();
             ResourceContext.GetForViewIndependentUse().Reset();

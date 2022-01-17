@@ -109,7 +109,7 @@ namespace Lunox.Core.Services
         /// <param name="Mode"></param>
         public static void SetFrameLanguage(bool Mode)
         {
-            if (Mode && NavigationService.Frame.SourcePageType != null)
+            if (Mode && NavigationService.Frame.SourcePageType != null && !Default.NotRefresh.Contains(NavigationService.Frame.SourcePageType))
             {
                 NavigationService.Frame.NavigateToType(NavigationService.Frame.SourcePageType, null, new FrameNavigationOptions() { IsNavigationStackEnabled = false, TransitionInfoOverride = Default.ShellTransition });
             }
