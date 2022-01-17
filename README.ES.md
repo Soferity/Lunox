@@ -3,8 +3,9 @@
 </div>
 
 <p align="center">
-  <span><b>Lunox</b>, a customizable, modern and Windows File Converter.</span>
+  <span><b>Lunox</b>, a customizable, modern and windows File Converter.</span>
 </p>
+
 <h4 align="center">
   <span><a href="https://soferity.com/support">Supports</a></span>
   •
@@ -81,7 +82,7 @@ All the distribution methods mentioned above are supported, however installing t
 
 **Microsoft Store**
 
-<a href='https://www.microsoft.com/store/apps/9PC06S6LW868?ocid=badge'><img src='.images/Badges/English_get it from MS_864X312.png' alt='Microsoft Store' width='160'/></a>
+<a href='https://www.microsoft.com/store/apps/9PC06S6LW868'><img src='.images/Badges/English_get it from MS_864X312.png' alt='Microsoft Store' width='160'/></a>
 
 **GitHub**
 
