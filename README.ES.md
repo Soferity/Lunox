@@ -7,11 +7,11 @@
 </p>
 
 <h4 align="center">
-  <span><a href="https://soferity.com/support">Supports</a></span>
+  <span><a href="https://github.com/Soferity/Lunox/issues">Issues</a></span>
   •
   <span><a href="https://github.com/Soferity/Lunox/discussions">Discussions</a></span>
   •
-  <span><a href="https://soferity.com/documentation">Documentation</a></span>
+  <span><a href="https://github.com/Soferity/Lunox/wiki">Documentation</a></span>
   •
   <span><a href="https://discord.gg/nxG977byXb">Discord</a></span>
 </h4>
@@ -32,8 +32,6 @@
   [![Xbox Support](https://img.shields.io/badge/Xbox-107C10?style=for-the-badge&logo=xbox&logoColor=white)](https://www.microsoft.com/store/apps/9PC06S6LW868)
 
   <!--
-  [![Windows Support](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Soferity/Lunox/releases)
-  [![Xbox Support](https://img.shields.io/badge/Xbox-107C10?style=for-the-badge&logo=xbox&logoColor=white)](https://github.com/Soferity/Lunox/releases)
   [![Ubuntu Support](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://github.com/Soferity/Lunox/releases)
   [![Arch Linux Support](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)](https://github.com/Soferity/Lunox/releases)
   [![MacOS Support](https://img.shields.io/badge/MACOS-adb8c5?style=for-the-badge&logo=macos&logoColor=white)](https://github.com/Soferity/Lunox/releases)
@@ -82,7 +80,9 @@ All the distribution methods mentioned above are supported, however installing t
 
 **Microsoft Store**
 
-<a href='https://www.microsoft.com/store/apps/9PC06S6LW868'><img src='.images/Badges/English_get it from MS_864X312.png' alt='Microsoft Store' width='160'/></a>
+<a href='https://www.microsoft.com/store/apps/9PC06S6LW868'>
+	<img src='.images/Badges/English_get it from MS_864X312.png' alt='Microsoft Store' width='160'/>
+</a>
 
 **GitHub**
 
