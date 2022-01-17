@@ -150,6 +150,15 @@
   <data name="AudioWMA.Content" xml:space="preserve">
     <value>WMA Dönüştürme</value>
   </data>
+  <data name="CascadingStyleSheets.Content" xml:space="preserve">
+    <value>CSS İşleme</value>
+  </data>
+  <data name="CascadingStyleSheetsBeautify.Content" xml:space="preserve">
+    <value>Güzelleştirme</value>
+  </data>
+  <data name="CascadingStyleSheetsMinify.Content" xml:space="preserve">
+    <value>Küçültme</value>
+  </data>
   <data name="Discord.Content" xml:space="preserve">
     <value>Discord</value>
   </data>
@@ -236,6 +245,15 @@
   </data>
   <data name="ImageTIFF.Content" xml:space="preserve">
     <value>TIFF Dönüştürme</value>
+  </data>
+  <data name="JavaScript.Content" xml:space="preserve">
+    <value>JavaScript İşleme</value>
+  </data>
+  <data name="JavaScriptBeautify.Content" xml:space="preserve">
+    <value>Güzelleştirme</value>
+  </data>
+  <data name="JavaScriptMinify.Content" xml:space="preserve">
+    <value>Küçültme</value>
   </data>
   <data name="Json.Content" xml:space="preserve">
     <value>Json İşleme</value>

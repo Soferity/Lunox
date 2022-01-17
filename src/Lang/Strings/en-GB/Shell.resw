@@ -150,6 +150,15 @@
   <data name="AudioWMA.Content" xml:space="preserve">
     <value>WMA Conversion</value>
   </data>
+  <data name="CascadingStyleSheets.Content" xml:space="preserve">
+    <value>CSS Processing</value>
+  </data>
+  <data name="CascadingStyleSheetsBeautify.Content" xml:space="preserve">
+    <value>Beautify</value>
+  </data>
+  <data name="CascadingStyleSheetsMinify.Content" xml:space="preserve">
+    <value>Minify</value>
+  </data>
   <data name="Discord.Content" xml:space="preserve">
     <value>Discord</value>
   </data>
@@ -236,6 +245,15 @@
   </data>
   <data name="ImageTIFF.Content" xml:space="preserve">
     <value>TIFF Conversion</value>
+  </data>
+  <data name="JavaScript.Content" xml:space="preserve">
+    <value>JavaScript Processing</value>
+  </data>
+  <data name="JavaScriptBeautify.Content" xml:space="preserve">
+    <value>Beautify</value>
+  </data>
+  <data name="JavaScriptMinify.Content" xml:space="preserve">
+    <value>Minify</value>
   </data>
   <data name="Json.Content" xml:space="preserve">
     <value>Json Processing</value>

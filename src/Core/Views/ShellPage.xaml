@@ -379,6 +379,44 @@
                     </muxc:NavigationViewItem.MenuItems>
                 </muxc:NavigationViewItem>
 
+                <muxc:NavigationViewItem Tag="JavaScript" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
+                    <muxc:NavigationViewItem.Icon>
+                        <PathIcon Data="{StaticResource LogoJavascript}" />
+                    </muxc:NavigationViewItem.Icon>
+
+                    <muxc:NavigationViewItem.MenuItems>
+                        <muxc:NavigationViewItem Tag="JavaScriptMinify">
+                            <muxc:NavigationViewItem.Icon>
+                                <PathIcon Data="{StaticResource CompressArrowsAltSolid}" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="JavaScriptBeautify">
+                            <muxc:NavigationViewItem.Icon>
+                                <PathIcon Data="{StaticResource CompressSolid}" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                    </muxc:NavigationViewItem.MenuItems>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem Tag="CascadingStyleSheets" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
+                    <muxc:NavigationViewItem.Icon>
+                        <PathIcon Data="{StaticResource Css3}" />
+                    </muxc:NavigationViewItem.Icon>
+
+                    <muxc:NavigationViewItem.MenuItems>
+                        <muxc:NavigationViewItem Tag="CascadingStyleSheetsMinify">
+                            <muxc:NavigationViewItem.Icon>
+                                <PathIcon Data="{StaticResource ArrowCollapseVertical}" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="CascadingStyleSheetsBeautify">
+                            <muxc:NavigationViewItem.Icon>
+                                <PathIcon Data="{StaticResource Compress}" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                    </muxc:NavigationViewItem.MenuItems>
+                </muxc:NavigationViewItem>
+
             </muxc:NavigationView.MenuItems>
 
             <muxc:NavigationView.AutoSuggestBox>
