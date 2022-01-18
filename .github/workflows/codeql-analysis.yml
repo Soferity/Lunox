@@ -29,7 +29,7 @@ jobs:
     # Command-line programs to run using the OS shell.
     # https://git.io/JvXDl
 
-    - run: msbuild Lunox.sln
+    - run: msbuild src/Lunox.sln
       working-directory: src
 
     - name: Perform CodeQL Analysis
