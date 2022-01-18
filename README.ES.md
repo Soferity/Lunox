@@ -108,7 +108,7 @@ Todos los métodos de distribución mencionados anteriormente son compatibles, s
 
 * Simplemente haga clic derecho en MSIX y haga clic en Propiedades
 * Ir a la pestaña Firmas Digitales
-* Seleccione Taiizor y haga clic en Detalles
+* Seleccione Taiizor(BAEB534D-BC36-4432-8EEF-E0088D896FB9) y haga clic en Detalles
 * En la siguiente ventana emergente, seleccione Ver Certificado
 * En la siguiente ventana emergente, seleccione Instalar Certificado
 * En el siguiente paso, seleccione Máquina Local (Si aparece una solicitud de cuenta de usuario, haga clic en Sí)

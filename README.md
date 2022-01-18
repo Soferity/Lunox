@@ -108,7 +108,7 @@ All the distribution methods mentioned above are supported, however installing t
 
 * Simply right click the MSIX and click Properties
 * Go to Digital Signatures Tab
-* Select Taiizor and click Details
+* Select Taiizor(BAEB534D-BC36-4432-8EEF-E0088D896FB9) and click Details
 * In next popup select View Certificate
 * In next popup select Install Certificate
 * In next step select Local machine (If a user account prompt appear click yes)
