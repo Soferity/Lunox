@@ -68,8 +68,10 @@
                         <PathIcon Data="{StaticResource BiohazardSolid}" />
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
-                
+
                 <muxc:NavigationViewItemHeader Tag="Actions" />
+
+                <muxc:NavigationViewItemHeader Tag="Coming" />
 
                 <muxc:NavigationViewItem Tag="Matrix" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
                     <muxc:NavigationViewItem.Icon>
@@ -358,7 +360,7 @@
                     <muxc:NavigationViewItem.MenuItems>
                         <muxc:NavigationViewItem Tag="JsonMinify">
                             <muxc:NavigationViewItem.Icon>
-                                <PathIcon Data="{StaticResource CodeJson}" />
+                                <PathIcon Data="{StaticResource ArrowCompressH}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                         <muxc:NavigationViewItem Tag="JsonValidate">
@@ -398,18 +400,37 @@
                     </muxc:NavigationViewItem.MenuItems>
                 </muxc:NavigationViewItem>
 
-                <muxc:NavigationViewItem Tag="CascadingStyleSheets" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
+                <muxc:NavigationViewItem Tag="HTML" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
+                    <muxc:NavigationViewItem.Icon>
+                        <PathIcon Data="{StaticResource Html5}" />
+                    </muxc:NavigationViewItem.Icon>
+
+                    <muxc:NavigationViewItem.MenuItems>
+                        <muxc:NavigationViewItem Tag="HTMLMinify">
+                            <muxc:NavigationViewItem.Icon>
+                                <PathIcon Data="{StaticResource ArrowsMerge}" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="HTMLBeautify">
+                            <muxc:NavigationViewItem.Icon>
+                                <PathIcon Data="{StaticResource ArrowCollapseAll}" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                    </muxc:NavigationViewItem.MenuItems>
+                </muxc:NavigationViewItem>
+
+                <muxc:NavigationViewItem Tag="CSS" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
                     <muxc:NavigationViewItem.Icon>
                         <PathIcon Data="{StaticResource Css3}" />
                     </muxc:NavigationViewItem.Icon>
 
                     <muxc:NavigationViewItem.MenuItems>
-                        <muxc:NavigationViewItem Tag="CascadingStyleSheetsMinify">
+                        <muxc:NavigationViewItem Tag="CSSMinify">
                             <muxc:NavigationViewItem.Icon>
                                 <PathIcon Data="{StaticResource ArrowCollapseVertical}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
-                        <muxc:NavigationViewItem Tag="CascadingStyleSheetsBeautify">
+                        <muxc:NavigationViewItem Tag="CSSBeautify">
                             <muxc:NavigationViewItem.Icon>
                                 <PathIcon Data="{StaticResource Compress}" />
                             </muxc:NavigationViewItem.Icon>

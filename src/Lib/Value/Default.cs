@@ -156,7 +156,7 @@ namespace Lunox.Library.Value
         /// <summary>
         /// 
         /// </summary>
-        public static Uri GitHub => new("https://github.com/Taiizor/ReaLTaiizor");
+        public static Uri GitHub => new("https://github.com/Soferity/Lunox");
 
         /// <summary>
         /// 

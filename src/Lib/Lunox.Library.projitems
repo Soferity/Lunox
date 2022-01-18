@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Enum\BrowserType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enum\HyperTextMarkupLanguageType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enum\CascadingStyleSheetsType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enum\JavaScriptType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enum\JsonType.cs" />

@@ -150,13 +150,16 @@
   <data name="AudioWMA.Content" xml:space="preserve">
     <value>WMA Conversion</value>
   </data>
-  <data name="CascadingStyleSheets.Content" xml:space="preserve">
+  <data name="Coming.Content" xml:space="preserve">
+    <value>Coming Soon</value>
+  </data>
+  <data name="CSS.Content" xml:space="preserve">
     <value>CSS Processing</value>
   </data>
-  <data name="CascadingStyleSheetsBeautify.Content" xml:space="preserve">
+  <data name="CSSBeautify.Content" xml:space="preserve">
     <value>Beautify</value>
   </data>
-  <data name="CascadingStyleSheetsMinify.Content" xml:space="preserve">
+  <data name="CSSMinify.Content" xml:space="preserve">
     <value>Minify</value>
   </data>
   <data name="Discord.Content" xml:space="preserve">
@@ -182,6 +185,15 @@
   </data>
   <data name="Help.Content" xml:space="preserve">
     <value>Help</value>
+  </data>
+  <data name="HTML.Content" xml:space="preserve">
+    <value>HTML Processing</value>
+  </data>
+  <data name="HTMLBeautify.Content" xml:space="preserve">
+    <value>Beautify</value>
+  </data>
+  <data name="HTMLMinify.Content" xml:space="preserve">
+    <value>Minify</value>
   </data>
   <data name="Image.Content" xml:space="preserve">
     <value>Image Conversion</value>
