@@ -41,6 +41,8 @@
   [![Xbox Support](https://img.shields.io/badge/Xbox-107C10?style=for-the-badge&logo=xbox&logoColor=white)](https://www.microsoft.com/store/apps/9PC06S6LW868)
 
   <!--
+  [![iOS Support](https://img.shields.io/badge/iOS-A3AAAE?style=for-the-badge&logo=ios&logoColor=white)](https://github.com/Soferity/Lunox/releases)
+  [![Android Support](https://img.shields.io/badge/Android-32DE84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/Soferity/Lunox/releases)
   [![Ubuntu Support](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://github.com/Soferity/Lunox/releases)
   [![Arch Linux Support](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)](https://github.com/Soferity/Lunox/releases)
   [![MacOS Support](https://img.shields.io/badge/MACOS-adb8c5?style=for-the-badge&logo=macos&logoColor=white)](https://github.com/Soferity/Lunox/releases)
