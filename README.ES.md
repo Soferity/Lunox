@@ -50,7 +50,7 @@
 
 ---
 
-# What is Lunox?
+# ¿Qué es Lunox?
 
 ![Demo](.screenshots/Lunox.ES.png)
 
@@ -63,30 +63,30 @@
 
 </details>
 
-Lunox allows you to easily perform unit conversions, file conversions, OCR operations, QR operations, HTML-CSS-JS-JSON operations and many other leading operations with the various infrastructure it offers. Some Lunox's features in summary are:
+Lunox le permite realizar fácilmente conversiones de unidades, conversiones de archivos, operaciones OCR, operaciones QR, operaciones HTML-CSS-JS-JSON y muchas otras operaciones líderes con la diversa infraestructura que ofrece. Algunas características de Lunox en resumen son:
 
--   It looks modern
--   Wide variety
--   Customizable
--   Easy to use
--   Most importantly, It's an Open Source Software (OSS)!
+-   Se ve moderno
+-   Amplia variedad
+-   Personalizable
+-   Fácil de usar
+-   Lo más importante, ¡Es un Software de Código Abierto (OSS)!
 
 Lunox is currently under heavy development. You can give your suggestions and feedback on our [Discussions](https://github.com/Soferity/Lunox/discussions) page. If you feel comfortable in writing code using C# (.NET), we highly encourage you to [contribute to this project](https://github.com/Soferity/Lunox/graphs/contributors).
 
 ---
 
-## System Requirements
+## Requisitos del Sistema
 
 - **Windows 11**
-- **Windows 10 1809 and above**
+- **Windows 10 1809 y superior**
 
 ---
 
-## Installation
+## Instalación
 
-Lunox is available for you to install via [Microsoft Store](https://www.microsoft.com/store/apps/9PC06S6LW868), [GitHub](https://github.com/Soferity/Lunox/releases/latest).
+Lunox está disponible para que lo instales a través de [Microsoft Store](https://www.microsoft.com/store/apps/9PC06S6LW868), [GitHub](https://github.com/Soferity/Lunox/releases/latest).
 
-All the distribution methods mentioned above are supported, however installing the app from the **Microsoft Store** is **recommended** as it is easier to install and will automatically remain up to date.
+Todos los métodos de distribución mencionados anteriormente son compatibles, sin embargo, se **recomienda** instalar la aplicación desde **Microsoft Store**, ya que es más fácil de instalar y se mantendrá actualizada automáticamente.
 
 **Microsoft Store**
 
@@ -98,16 +98,16 @@ All the distribution methods mentioned above are supported, however installing t
 
 **GitHub**
 
-**If Windows Prompts about Untrusted Application**
+**Si Windows Pregunta acerca de la Aplicación que no es de Confianza**
 
-* Simply right click the MSIX and click Properties
-* Go to Digital Signatures Tab
-* Select Taiizor and click Details
-* In next popup select View Certificate
-* In next popup select Install Certificate
-* In next step select Local machine (If a user account prompt appear click yes)
-* Select Place all certificates in Following store and click browse select Trusted People and click OK and Next
-* Click Finish
-* Confirmation windows will appear After that Try Installing the MSIXBUNDLE
+* Simplemente haga clic derecho en MSIX y haga clic en Propiedades
+* Ir a la pestaña Firmas Digitales
+* Seleccione Taiizor y haga clic en Detalles
+* En la siguiente ventana emergente, seleccione Ver Certificado
+* En la siguiente ventana emergente, seleccione Instalar Certificado
+* En el siguiente paso, seleccione Máquina Local (Si aparece una solicitud de cuenta de usuario, haga clic en Sí)
+* Seleccione Colocar todos los certificados en el siguiente almacén y haga clic en Examinar, seleccione Personas de confianza y haga clic en Aceptar y Siguiente
+* Haga clic en Finalizar
+* Aparecerán ventanas de confirmación Después de eso, Intente Instalar MSIXBUNDLE
 
 ---

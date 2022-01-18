@@ -50,7 +50,7 @@
 
 ---
 
-# What is Lunox?
+# Lunox Nedir?
 
 ![Demo](.screenshots/Lunox.TR.png)
 
@@ -106,7 +106,7 @@ Yukarıda belirtilen tüm dağıtım yöntemleri desteklenir, ancak kurulumu dah
 * Açılan pencereden Sertifikayı Göster'e tıklayın
 * Açılan pencereden Sertifika Yükle'ye tıklayın
 * Açılan pencereden Yerel Makine'yi seçin (Kullanıcı Hesabı Denetimi görüntülenirse Evet'e tıklayın)
-* Tüm sertifikaları aşağıdaki depolama alanına yerleştir'i seçin ve Gözat'a tıklayın Güvenilir Kişiler'i seçin ve Tamam'a tıklayın. Ardından Sonraki'ne ve Son'a tıklayın
+* Tüm sertifikaları aşağıdaki depolama alanına yerleştir'i seçin ve Gözat'a tıklayın, Güvenilir Kişiler'i seçin ve Tamam'a tıklayın. Ardından Sonraki'ne ve Son'a tıklayın
 * Tamam'a tıklayın
 * Bundan sonra onay pencereleri görünecektir, MSIXBUNDLE'yi Yüklemeyi Deneyin
 
