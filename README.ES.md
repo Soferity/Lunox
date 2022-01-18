@@ -34,7 +34,7 @@
   [![Release](https://img.shields.io/github/v/release/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/releases/latest)
   [![Release Date](https://img.shields.io/github/release-date/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/releases/latest)
 
-  [![Code Size](https://img.shields.io/github/languages/code-size/Taiizor/ReaLTaiizor?style=for-the-badge)](x-github-client://openRepo/https://github.com/Soferity/Lunox)
+  [![Code Size](https://img.shields.io/github/languages/code-size/Taiizor/ReaLTaiizor?style=for-the-badge)](https://github.com/Soferity/Lunox/archive/refs/heads/develop.zip)
   [![Repo Size](https://img.shields.io/github/repo-size/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/archive/refs/heads/develop.zip)
 
   [![Windows Support](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/store/apps/9PC06S6LW868)
@@ -52,14 +52,14 @@
 
 # What is Lunox?
 
-![Demo](.screenshots/Lunox.png)
+![Demo](.screenshots/Lunox.ES.png)
 
 <details>
 
   <summary>View More Screenshots</summary>
 
-  ![Settings](.screenshots/Settings.png)
-  ![404](.screenshots/404.png)
+  ![Settings](.screenshots/Settings.ES.png)
+  ![404](.screenshots/404.ES.png)
 
 </details>
 
@@ -91,7 +91,7 @@ All the distribution methods mentioned above are supported, however installing t
 **Microsoft Store**
 
 <a href='https://www.microsoft.com/store/apps/9PC06S6LW868'>
-  <img src='.images/Badges/English_get it from MS_864X312.png' alt='Microsoft Store' width='160'/>
+  <img src='.images/Badges/Spanish_get it from MS_864X312.png' alt='Microsoft Store' width='160'/>
 </a>
 
 <p></p>
