@@ -3,15 +3,15 @@
 </div>
 
 <p align="center">
-  <span><b>Lunox</b> is a customizable, modern and advanced Universal Utility Toolkit.</span>
+  <span><b>Lunox</b>, özelleştirilebilir, modern ve gelişmiş bir Evrensel Yardımcı Araç Kitidir..</span>
 </p>
 
 <h4 align="center">
-  <span><a href="https://github.com/Soferity/Lunox/issues">Issues</a></span>
+  <span><a href="https://github.com/Soferity/Lunox/issues">Sorunlar</a></span>
   •
-  <span><a href="https://github.com/Soferity/Lunox/discussions">Discussions</a></span>
+  <span><a href="https://github.com/Soferity/Lunox/discussions">Tartışmalar</a></span>
   •
-  <span><a href="https://github.com/Soferity/Lunox/wiki">Documentation</a></span>
+  <span><a href="https://github.com/Soferity/Lunox/wiki">Dökümantasyon</a></span>
   •
   <span><a href="https://discord.gg/nxG977byXb">Discord</a></span>
 </h4>
@@ -56,37 +56,37 @@
 
 <details>
 
-  <summary>View More Screenshots</summary>
+  <summary>Daha Fazla Ekran Görüntüsü Görüntüle</summary>
 
   ![Settings](.screenshots/Settings.TR.png)
   ![404](.screenshots/404.TR.png)
 
 </details>
 
-Lunox allows you to easily perform unit conversions, file conversions, OCR operations, QR operations, HTML-CSS-JS-JSON operations and many other leading operations with the various infrastructure it offers. Some Lunox's features in summary are:
+Lunox sunduğu çeşitli altyapısı ile birim dönüşümleri, dosya dönüşümleri, OCR işlemleri, QR işlemleri, HTML-CSS-JS-JSON işlemleri ve daha bir çok önde gelen işlemleri kolaylıkla yapmanıza olanak sağlar. Özetle bazı Lunox özellikleri şunlardır:
 
--   It looks modern
--   Wide variety
--   Customizable
--   Easy to use
--   Most importantly, It's an Open Source Software (OSS)!
+-   Modern görünüm
+-   Çok çeşitli
+-   Özelleştirilebilir
+-   Kolay kullanım
+-   En önemlisi, Açık Kaynaklı Yazılımdır (OSS)!
 
-Lunox is currently under heavy development. You can give your suggestions and feedback on our [Discussions](https://github.com/Soferity/Lunox/discussions/) page. If you feel comfortable in writing code using C# (.NET), we highly encourage you to [contribute to this project](https://github.com/Soferity/Lunox/graphs/contributors).
+Lunox şu anda yoğun bir geliştirme aşamasındadır. Öneri ve görüşlerinizi [Tartışmalar](https://github.com/Soferity/Lunox/discussions) sayfamızdan iletebilirsiniz. C# (.NET) kullanarak kod yazarken kendinizi rahat hissediyorsanız, [bu projeye katkıda bulunmanızı](https://github.com/Soferity/Lunox/graphs/contributors) şiddetle tavsiye ederiz.
 
 ---
 
-## System Requirements
+## Sistem Gereksinimleri
 
 - **Windows 11**
-- **Windows 10 1809 and above**
+- **Windows 10 1809 ve yukarısı**
 
 ---
 
-## Installation
+## Kurulum
 
-Lunox is available for you to install via [Microsoft Store](https://www.microsoft.com/store/apps/9PC06S6LW868), [GitHub](https://github.com/Soferity/Lunox/releases/latest).
+Lunox, [Microsoft Store](https://www.microsoft.com/store/apps/9PC06S6LW868), [GitHub](https://github.com/Soferity/Lunox/releases/latest) üzerinden yüklenebilir.
 
-All the distribution methods mentioned above are supported, however installing the app from the **Microsoft Store** is **recommended** as it is easier to install and will automatically remain up to date.
+Yukarıda belirtilen tüm dağıtım yöntemleri desteklenir, ancak kurulumu daha kolay olduğu ve otomatik olarak güncel kalacağı için uygulamanın **Microsoft Store**'dan yüklenmesi **önerilir**.
 
 **Microsoft Store**
 
@@ -98,16 +98,16 @@ All the distribution methods mentioned above are supported, however installing t
 
 **GitHub**
 
-**If Windows Prompts about Untrusted Application**
+**Windows Güvenilmeyen Uygulama hakkında bilgi isterse**
 
-* Simply right click the MSIX and click Properties
-* Go to Digital signatures Tab
-* Select BAEB534D-BC36-4432-8EEF-E0088D896FB9 and click Details
-* In next popup select View Certificate
-* In next popup select Install Certificate
-* In next step select Local machine (If a user account prompt appear click yes)
-* Select Place all certificates in Following store and click browse select Trusted People and click OK and Next
-* Click Finish
-* Confirmation windows will appear After that Try Installing the MSIXBUNDLE
+* MSIX'e sağ tıklayın ve Özellikler'e tıklayın
+* Dijital İmzalar sekmesini açın
+* Taiizor'u seçin ve Ayrıntılar'a tıklayın
+* Açılan pencereden Sertifikayı Göster'e tıklayın
+* Açılan pencereden Sertifika Yükle'ye tıklayın
+* Açılan pencereden Yerel Makine'yi seçin (Kullanıcı Hesabı Denetimi görüntülenirse Evet'e tıklayın)
+* Tüm sertifikaları aşağıdaki depolama alanına yerleştir'i seçin ve Gözat'a tıklayın Güvenilir Kişiler'i seçin ve Tamam'a tıklayın. Ardından Sonraki'ne ve Son'a tıklayın
+* Tamam'a tıklayın
+* Bundan sonra onay pencereleri görünecektir, MSIXBUNDLE'yi Yüklemeyi Deneyin
 
 ---

@@ -3,15 +3,15 @@
 </div>
 
 <p align="center">
-  <span><b>Lunox</b> is a customizable, modern and advanced Universal Utility Toolkit.</span>
+  <span><b>Lunox</b> es un Kit de Herramientas de Utilidad Universal personalizable, moderno y avanzado.</span>
 </p>
 
 <h4 align="center">
-  <span><a href="https://github.com/Soferity/Lunox/issues">Issues</a></span>
+  <span><a href="https://github.com/Soferity/Lunox/issues">Cuestiónes</a></span>
   •
-  <span><a href="https://github.com/Soferity/Lunox/discussions">Discussions</a></span>
+  <span><a href="https://github.com/Soferity/Lunox/discussions">Discusiónes</a></span>
   •
-  <span><a href="https://github.com/Soferity/Lunox/wiki">Documentation</a></span>
+  <span><a href="https://github.com/Soferity/Lunox/wiki">Documentación</a></span>
   •
   <span><a href="https://discord.gg/nxG977byXb">Discord</a></span>
 </h4>
@@ -56,7 +56,7 @@
 
 <details>
 
-  <summary>View More Screenshots</summary>
+  <summary>Ver Más Capturas de Pantalla</summary>
 
   ![Settings](.screenshots/Settings.ES.png)
   ![404](.screenshots/404.ES.png)
@@ -71,7 +71,7 @@ Lunox allows you to easily perform unit conversions, file conversions, OCR opera
 -   Easy to use
 -   Most importantly, It's an Open Source Software (OSS)!
 
-Lunox is currently under heavy development. You can give your suggestions and feedback on our [Discussions](https://github.com/Soferity/Lunox/discussions/) page. If you feel comfortable in writing code using C# (.NET), we highly encourage you to [contribute to this project](https://github.com/Soferity/Lunox/graphs/contributors).
+Lunox is currently under heavy development. You can give your suggestions and feedback on our [Discussions](https://github.com/Soferity/Lunox/discussions) page. If you feel comfortable in writing code using C# (.NET), we highly encourage you to [contribute to this project](https://github.com/Soferity/Lunox/graphs/contributors).
 
 ---
 
@@ -101,8 +101,8 @@ All the distribution methods mentioned above are supported, however installing t
 **If Windows Prompts about Untrusted Application**
 
 * Simply right click the MSIX and click Properties
-* Go to Digital signatures Tab
-* Select BAEB534D-BC36-4432-8EEF-E0088D896FB9 and click Details
+* Go to Digital Signatures Tab
+* Select Taiizor and click Details
 * In next popup select View Certificate
 * In next popup select Install Certificate
 * In next step select Local machine (If a user account prompt appear click yes)
