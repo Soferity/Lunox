@@ -277,7 +277,14 @@ namespace Lunox.Core.ViewModels
                     _launchPrivacyTermsCommand = new RelayCommand(
                         async () =>
                         {
-                            await Launcher.LaunchUriAsync(Default.PrivacyTerms);
+                            Uri Uri = Default.PrivacyTerms[LanguageType.en_GB];
+
+                            if (Default.PrivacyTerms.ContainsKey(LanguageSelectorService.Language))
+                            {
+                                Uri = Default.PrivacyTerms[LanguageSelectorService.Language];
+                            }
+
+                            await Launcher.LaunchUriAsync(Uri);
                         });
                 }
 

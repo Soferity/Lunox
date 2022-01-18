@@ -146,12 +146,17 @@ namespace Lunox.Library.Value
         /// <summary>
         /// 
         /// </summary>
-        public static Visibility PrivacyLinkVisibility => Visibility.Collapsed;
+        public static Visibility PrivacyLinkVisibility => Visibility.Visible;
 
         /// <summary>
         /// 
         /// </summary>
-        public static Uri PrivacyTerms => new("https://github.com/Soferity/Lunox/blob/develop/CODE_OF_CONDUCT.md");
+        public static Dictionary<LanguageType, Uri> PrivacyTerms => new()
+        {
+            { LanguageType.en_GB, new("https://github.com/Soferity/Lunox/blob/develop/PRIVACY_POLICY.md") },
+            { LanguageType.tr_TR, new("https://github.com/Soferity/Lunox/blob/develop/PRIVACY_POLICY.TR.md") },
+            { LanguageType.es_ES, new("https://github.com/Soferity/Lunox/blob/develop/PRIVACY_POLICY.ES.md") }
+        };
 
         /// <summary>
         /// 

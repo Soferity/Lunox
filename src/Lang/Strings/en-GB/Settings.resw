@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About.Text" xml:space="preserve">
-    <value>Uygulama Hakkında</value>
+    <value>Application About</value>
   </data>
   <data name="About_Description.Text" xml:space="preserve">
-    <value>Best with fast and convenient file conversions.
+    <value>Universal Utility Toolkit
 Copyright © 2022 Soferity LLC</value>
   </data>
   <data name="About_FeedbackHub.Content" xml:space="preserve">
@@ -131,7 +131,7 @@ Copyright © 2022 Soferity LLC</value>
     <value>Privacy Statement</value>
   </data>
   <data name="Language.Text" xml:space="preserve">
-    <value>Uygulama Arayüzü</value>
+    <value>Application Interface</value>
   </data>
   <data name="Language_English.Content" xml:space="preserve">
     <value>English</value>
@@ -152,7 +152,7 @@ Copyright © 2022 Soferity LLC</value>
     <value>Turkish</value>
   </data>
   <data name="Navigation.Text" xml:space="preserve">
-    <value>Uygulama Çubuğu</value>
+    <value>Application Sidebar</value>
   </data>
   <data name="Navigation_Auto.Content" xml:space="preserve">
     <value>Auto</value>
@@ -173,7 +173,7 @@ Copyright © 2022 Soferity LLC</value>
     <value>Personalization</value>
   </data>
   <data name="Theme.Text" xml:space="preserve">
-    <value>Uygulama Teması</value>
+    <value>Application Theme</value>
   </data>
   <data name="Theme_Dark.Content" xml:space="preserve">
     <value>Dark</value>
@@ -185,7 +185,7 @@ Copyright © 2022 Soferity LLC</value>
     <value>Light</value>
   </data>
   <data name="WebView.Text" xml:space="preserve">
-    <value>Uygulama Tarayıcısı</value>
+    <value>Application Browser</value>
   </data>
   <data name="WebView_New.Content" xml:space="preserve">
     <value>Advanced</value>

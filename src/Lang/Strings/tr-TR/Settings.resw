@@ -121,14 +121,14 @@
     <value>Uygulama Hakkında</value>
   </data>
   <data name="About_Description.Text" xml:space="preserve">
-    <value>Best with fast and convenient file conversions.
+    <value>Evrensel Yardımcı Araç Kiti
 Copyright © 2022 Soferity LLC</value>
   </data>
   <data name="About_FeedbackHub.Content" xml:space="preserve">
     <value>Feedback</value>
   </data>
   <data name="About_PrivacyTerms.Content" xml:space="preserve">
-    <value>Privacy Statement</value>
+    <value>Gizlilik Bildirimi</value>
   </data>
   <data name="Language.Text" xml:space="preserve">
     <value>Uygulama Arayüzü</value>
