@@ -20,13 +20,22 @@
 
   [![License](https://img.shields.io/github/license/Soferity/Lunox.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/blob/develop/LICENSE)
   [![Download Counts](https://img.shields.io/github/downloads/Soferity/Lunox/total.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/releases)
+  [![Contributors](https://img.shields.io/github/contributors/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/graphs/contributors)
   [![Stars Count](https://img.shields.io/github/stars/Soferity/Lunox.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/stargazers)
   [![Forks Count](https://img.shields.io/github/forks/Soferity/Lunox.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/network/members)
   [![Watchers Count](https://img.shields.io/github/watchers/Soferity/Lunox.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/watchers)
   [![Issues Count](https://img.shields.io/github/issues/Soferity/Lunox.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/issues)
   [![Pull Request Count](https://img.shields.io/github/issues-pr/Soferity/Lunox.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/pulls)
-  [![Follow](https://img.shields.io/github/followers/Taiizor.svg?style=for-the-badge&label=Follow&maxAge=2592000)](https://github.com/Taiizor)
-  [![Discord Server](https://img.shields.io/discord/932386235538878534?style=for-the-badge)](https://discord.gg/nxG977byXb)
+  [![Follow](https://img.shields.io/github/followers/Taiizor.svg?style=for-the-badge&label=Follow)](https://github.com/Taiizor)
+  [![Discord Server](https://img.shields.io/discord/932386235538878534?label=Discord&style=for-the-badge)](https://discord.gg/nxG977byXb)
+
+  [![Pre-Release](https://img.shields.io/github/v/release/Soferity/Lunox?include_prereleases&label=Pre-Release&style=for-the-badge)](https://github.com/Soferity/Lunox/releases/latest)
+  [![Pre-Release Date](https://img.shields.io/github/release-date-pre/Soferity/Lunox?label=Pre-Release%20Date&style=for-the-badge)](https://github.com/Soferity/Lunox/releases/latest)
+  [![Release](https://img.shields.io/github/v/release/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/releases/latest)
+  [![Release Date](https://img.shields.io/github/release-date/Taiizor/ReaLTaiizor?style=for-the-badge)](https://github.com/Soferity/Lunox/releases/latest)
+
+  [![Code Size](https://img.shields.io/github/languages/code-size/Taiizor/ReaLTaiizor?style=for-the-badge)](x-github-client://openRepo/https://github.com/Soferity/Lunox)
+  [![Repo Size](https://img.shields.io/github/repo-size/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/archive/refs/heads/develop.zip)
 
   [![Windows Support](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/store/apps/9PC06S6LW868)
   [![Xbox Support](https://img.shields.io/badge/Xbox-107C10?style=for-the-badge&logo=xbox&logoColor=white)](https://www.microsoft.com/store/apps/9PC06S6LW868)
@@ -82,7 +91,7 @@ All the distribution methods mentioned above are supported, however installing t
 **Microsoft Store**
 
 <a href='https://www.microsoft.com/store/apps/9PC06S6LW868'>
-	<img src='.images/Badges/English_get it from MS_864X312.png' alt='Microsoft Store' width='160'/>
+  <img src='.images/Badges/English_get it from MS_864X312.png' alt='Microsoft Store' width='160'/>
 </a>
 
 <p></p>
