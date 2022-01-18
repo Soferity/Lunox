@@ -3,7 +3,7 @@
 </div>
 
 <p align="center">
-  <span><b>Lunox</b>, özelleştirilebilir, modern ve gelişmiş bir Evrensel Yardımcı Araç Kitidir..</span>
+  <span><b>Lunox</b>, özelleştirilebilir, modern ve gelişmiş bir Evrensel Yardımcı Araç Kitidir.</span>
 </p>
 
 <h4 align="center">
