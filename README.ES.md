@@ -24,6 +24,7 @@
   [![Stars Count](https://img.shields.io/github/stars/Soferity/Lunox.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/stargazers)
   [![Forks Count](https://img.shields.io/github/forks/Soferity/Lunox.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/network/members)
   [![Watchers Count](https://img.shields.io/github/watchers/Soferity/Lunox.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/watchers)
+
   [![Issues Count](https://img.shields.io/github/issues/Soferity/Lunox.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/issues)
   [![Pull Request Count](https://img.shields.io/github/issues-pr/Soferity/Lunox.svg?style=for-the-badge)](https://github.com/Soferity/Lunox/pulls)
   [![Follow](https://img.shields.io/github/followers/Taiizor.svg?style=for-the-badge&label=Follow)](https://github.com/Taiizor)
@@ -31,11 +32,14 @@
 
   [![Pre-Release](https://img.shields.io/github/v/release/Soferity/Lunox?include_prereleases&label=Pre-Release&style=for-the-badge)](https://github.com/Soferity/Lunox/releases/latest)
   [![Pre-Release Date](https://img.shields.io/github/release-date-pre/Soferity/Lunox?label=Pre-Release%20Date&style=for-the-badge)](https://github.com/Soferity/Lunox/releases/latest)
+
   [![Release](https://img.shields.io/github/v/release/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/releases/latest)
   [![Release Date](https://img.shields.io/github/release-date/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/releases/latest)
 
   [![Code Size](https://img.shields.io/github/languages/code-size/Taiizor/ReaLTaiizor?style=for-the-badge)](https://github.com/Soferity/Lunox/archive/refs/heads/develop.zip)
   [![Repo Size](https://img.shields.io/github/repo-size/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/archive/refs/heads/develop.zip)
+
+  [![Build](https://img.shields.io/visual-studio-app-center/builds/Soferity/Lunox-Store/develop/e35051a0289ae2e9786643c8816d8f9e6f18512b?style=for-the-badge)](https://github.com/Soferity/Lunox)
 
   [![Windows Support](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/store/apps/9PC06S6LW868)
   [![Xbox Support](https://img.shields.io/badge/Xbox-107C10?style=for-the-badge&logo=xbox&logoColor=white)](https://www.microsoft.com/store/apps/9PC06S6LW868)
