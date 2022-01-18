@@ -32,7 +32,7 @@
   [![Pre-Release](https://img.shields.io/github/v/release/Soferity/Lunox?include_prereleases&label=Pre-Release&style=for-the-badge)](https://github.com/Soferity/Lunox/releases/latest)
   [![Pre-Release Date](https://img.shields.io/github/release-date-pre/Soferity/Lunox?label=Pre-Release%20Date&style=for-the-badge)](https://github.com/Soferity/Lunox/releases/latest)
   [![Release](https://img.shields.io/github/v/release/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/releases/latest)
-  [![Release Date](https://img.shields.io/github/release-date/Taiizor/ReaLTaiizor?style=for-the-badge)](https://github.com/Soferity/Lunox/releases/latest)
+  [![Release Date](https://img.shields.io/github/release-date/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/releases/latest)
 
   [![Code Size](https://img.shields.io/github/languages/code-size/Taiizor/ReaLTaiizor?style=for-the-badge)](x-github-client://openRepo/https://github.com/Soferity/Lunox)
   [![Repo Size](https://img.shields.io/github/repo-size/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/archive/refs/heads/develop.zip)
