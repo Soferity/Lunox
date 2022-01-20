@@ -63,10 +63,17 @@ namespace Lunox.Core.Activation
                 return;
             }
 
-            NameValueCollection uriQuery = HttpUtility.ParseQueryString(activationUri.Query);
-            foreach (string paramKey in uriQuery.AllKeys)
+            try
             {
-                Parameters.Add(paramKey, uriQuery.Get(paramKey));
+                NameValueCollection uriQuery = HttpUtility.ParseQueryString(activationUri.Query);
+                foreach (string paramKey in uriQuery.AllKeys)
+                {
+                    Parameters.Add(paramKey, uriQuery.Get(paramKey));
+                }
+            }
+            catch
+            {
+                //
             }
         }
 
