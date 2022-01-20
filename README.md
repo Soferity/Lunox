@@ -36,7 +36,7 @@
   [![Release](https://img.shields.io/github/v/release/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/releases/latest)
   [![Release Date](https://img.shields.io/github/release-date/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/releases/latest)
 
-  [![Code Size](https://img.shields.io/github/languages/code-size/Taiizor/ReaLTaiizor?style=for-the-badge)](https://github.com/Soferity/Lunox/archive/refs/heads/develop.zip)
+  [![Code Size](https://img.shields.io/github/languages/code-size/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/archive/refs/heads/develop.zip)
   [![Repo Size](https://img.shields.io/github/repo-size/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/archive/refs/heads/develop.zip)
 
   [![Build](https://img.shields.io/visual-studio-app-center/builds/Soferity/Lunox-Store/develop/e35051a0289ae2e9786643c8816d8f9e6f18512b?style=for-the-badge)](https://github.com/Soferity/Lunox)
