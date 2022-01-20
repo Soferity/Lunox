@@ -1,0 +1,105 @@
+﻿<Page
+	x:Class="Lunox.Core.Views.HelpPage"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+	mc:Ignorable="d"
+	xmlns:behaviors="using:Lunox.Core.Behaviors"
+	behaviors:NavigationViewHeaderBehavior.HeaderMode="Never"
+>
+	
+	<Page.Background>
+		<ImageBrush ImageSource="ms-appx:///Assets/Core/Views/Help/Back.jpg" Stretch="UniformToFill" Opacity="0.075"/>
+	</Page.Background>
+
+	<ScrollViewer VerticalScrollBarVisibility="Auto" Margin="{StaticResource MediumLeftTopRightBottomMargin}">
+		<Grid>
+			<StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
+				<TextBlock x:Uid="/Help/Information" Text="Bilgilendirme" TextAlignment="Center" Margin="{StaticResource MediumBottomMargin}" Style="{ThemeResource SubtitleTextBlockStyle}" FontSize="36" />
+				<muxc:Expander
+					IsExpanded="False"
+					ExpandDirection="Down"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Stretch">
+					<muxc:Expander.Header>
+						<TextBlock Text="Lunox Nedir?" TextAlignment="Center"/>
+					</muxc:Expander.Header>
+					<muxc:Expander.Content>
+						<Grid>
+							<RichTextBlock IsTextSelectionEnabled="False">
+								<Paragraph TextAlignment="Center">Lunox özelleştirilebilir, modern ve gelişmiş bir Evrensel Yardımcı Araç Kitidir.</Paragraph>
+							</RichTextBlock>
+						</Grid>
+					</muxc:Expander.Content>
+				</muxc:Expander>
+				<muxc:Expander
+					IsExpanded="False"
+					ExpandDirection="Down"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Stretch">
+					<muxc:Expander.Header>
+						<TextBlock Text="Lunox Ne İşe Yarar?" TextAlignment="Center"/>
+					</muxc:Expander.Header>
+					<muxc:Expander.Content>
+						<Grid>
+							<RichTextBlock IsTextSelectionEnabled="False">
+								<Paragraph TextAlignment="Center">Lunox sunduğu çeşitli altyapısı ile birim dönüşümleri, dosya dönüşümleri, OCR işlemleri, QR işlemleri, HTML-CSS-JS-JSON işlemleri ve daha bir çok önde gelen işlemleri kolaylıkla yapmanıza olanak sağlar. Özetle bazı Lunox özellikleri şunlardır:</Paragraph>
+								<Paragraph TextAlignment="Center">• Modern görünüm</Paragraph>
+								<Paragraph TextAlignment="Center">• Çok çeşitli</Paragraph>
+								<Paragraph TextAlignment="Center">• Özelleştirilebilir</Paragraph>
+								<Paragraph TextAlignment="Center">• Kolay kullanım</Paragraph>
+								<Paragraph TextAlignment="Center">• En önemlisi, Açık Kaynaklı Yazılımdır (OSS)!</Paragraph>
+							</RichTextBlock>
+						</Grid>
+					</muxc:Expander.Content>
+				</muxc:Expander>
+				<muxc:Expander
+					IsExpanded="False"
+					ExpandDirection="Down"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Stretch">
+					<muxc:Expander.Header>
+						<TextBlock Text="Sistem Gereksinimleri Nelerdir?" TextAlignment="Center"/>
+					</muxc:Expander.Header>
+					<muxc:Expander.Content>
+						<Grid>
+							<RichTextBlock IsTextSelectionEnabled="False">
+								<Paragraph TextAlignment="Center">• İşletim Sistemi: Windows 11, Windows 10 1809 ve üzeri</Paragraph>
+								<Paragraph TextAlignment="Center">• Mimari: ARM, ARM64, x64, x86</Paragraph>
+								<Paragraph TextAlignment="Center">• Dokunmatik: İsteğe Bağlı</Paragraph>
+								<Paragraph TextAlignment="Center">• DirectX: Sürüm 9 ve üzeri</Paragraph>
+								<Paragraph TextAlignment="Center">• Kamera: İsteğe Bağlı</Paragraph>
+								<Paragraph TextAlignment="Center">• Klave: İsteğe Bağlı</Paragraph>
+								<Paragraph TextAlignment="Center">• Fare: İsteğe Bağlı</Paragraph>
+							</RichTextBlock>
+						</Grid>
+					</muxc:Expander.Content>
+				</muxc:Expander>
+				<muxc:Expander
+					IsExpanded="True"
+					ExpandDirection="Down"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Stretch">
+					<muxc:Expander.Header>
+						<TextBlock Text="İpucu" TextAlignment="Center"/>
+					</muxc:Expander.Header>
+					<muxc:Expander.Content>
+						<Grid>
+							<RichTextBlock IsTextSelectionEnabled="False">
+								<Paragraph TextAlignment="Center">Lunox şu anda yoğun bir geliştirme aşamasındadır. Öneri ve görüşlerinizi
+									<Hyperlink NavigateUri="https://github.com/Soferity/Lunox/discussions">Tartışmalar</Hyperlink>
+									sayfamızdan iletebilirsiniz. C# (.NET) kullanarak kod yazarken kendinizi rahat hissediyorsanız,
+									<Hyperlink NavigateUri="https://github.com/Soferity/Lunox/graphs/contributors">bu projeye katkıda bulunmanızı</Hyperlink>
+									şiddetle tavsiye ederiz.
+								</Paragraph>
+							</RichTextBlock>
+						</Grid>
+					</muxc:Expander.Content>
+				</muxc:Expander>
+			</StackPanel>
+		</Grid>
+	</ScrollViewer>
+
+</Page>

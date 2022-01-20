@@ -42,6 +42,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\WhatsNewDisplayService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TemplateSelectors\SharedContentTemplateSelector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\GitHubViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HelpViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\NotFoundViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\GlanceViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SchemeActivationSampleViewModel.cs" />
@@ -63,6 +64,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\GlancePage.xaml.cs">
       <DependentUpon>GlancePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\HelpPage.xaml.cs">
+      <DependentUpon>HelpPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\NotFoundPage.xaml.cs">
       <DependentUpon>NotFoundPage.xaml</DependentUpon>
@@ -100,6 +104,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)Views\GlancePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\HelpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

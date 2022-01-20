@@ -3,7 +3,7 @@
 </div>
 
 <p align="center">
-  <span><b>Lunox</b>, özelleştirilebilir, modern ve gelişmiş bir Evrensel Yardımcı Araç Kitidir.</span>
+  <span><b>Lunox</b> özelleştirilebilir, modern ve gelişmiş bir Evrensel Yardımcı Araç Kitidir.</span>
 </p>
 
 <h4 align="center">
@@ -84,7 +84,7 @@ Lunox şu anda yoğun bir geliştirme aşamasındadır. Öneri ve görüşlerini
 ## Sistem Gereksinimleri
 
 - **Windows 11**
-- **Windows 10 1809 ve yukarısı**
+- **Windows 10 1809 ve üzeri**
 
 ---
 

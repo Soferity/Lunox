@@ -27,7 +27,7 @@
         <helper:EnumToBooleanConverter x:Key="EnumToBooleanNavigationConverter" EnumType="muxc:NavigationViewPaneDisplayMode" />
     </Page.Resources>
 
-    <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="{StaticResource MediumLeftRightMargin}">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="{StaticResource MediumLeftTopRightBottomMargin}">
 
         <Grid>
             <Grid.ColumnDefinitions>

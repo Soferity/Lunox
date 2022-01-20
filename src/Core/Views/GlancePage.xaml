@@ -14,69 +14,19 @@
 		<ImageBrush ImageSource="ms-appx:///Assets/Core/Views/Glance/Back.jpg" Stretch="UniformToFill" Opacity="0.075"/>
 	</Page.Background>
 
-	<ScrollViewer VerticalScrollBarVisibility="Auto" Margin="{StaticResource MediumLeftRightMargin}">
-		<Grid>
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="*" />
-				<ColumnDefinition Width="*" />
-				<ColumnDefinition Width="*" />
-			</Grid.ColumnDefinitions>
-			<Grid.RowDefinitions>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="10" />
-				<RowDefinition Height="400" />
-				<RowDefinition Height="10" />
-				<RowDefinition Height="Auto" />
-			</Grid.RowDefinitions>
-
-			<StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Center">
-				<Image Source="ms-appx:///Assets/Core/Views/Glance/Logo.png" Width="128" Height="128" />
-				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-					<TextBlock x:Uid="/Glance/Welcome" Style="{ThemeResource SubtitleTextBlockStyle}" FontSize="36" />
-					<muxc:InfoBar
-						x:Uid="/Glance/Build"
-						IsOpen="True"
-						IsIconVisible="True"
-						IsClosable="True"
-						Severity="Informational"/>
-				</StackPanel>
+	<Grid Margin="{StaticResource MediumLeftTopRightBottomMargin}">
+		<StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
+			<Image Source="ms-appx:///Assets/Core/Views/Glance/Logo.png" Width="128" Height="128" />
+			<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+				<TextBlock x:Uid="/Glance/Welcome" Style="{ThemeResource SubtitleTextBlockStyle}" FontSize="36" />
 			</StackPanel>
-
-			<StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
-				<FlipView Background="Transparent">
-					<Image Source="ms-appx:///Assets/Core/Views/Glance/1.jpg" AutomationProperties.Name="Cliff"/>
-					<Image Source="ms-appx:///Assets/Core/Views/Glance/2.jpg" AutomationProperties.Name="Grapes"/>
-					<Image Source="ms-appx:///Assets/Core/Views/Glance/3.jpg" AutomationProperties.Name="Rainier"/>
-					<Image Source="ms-appx:///Assets/Core/Views/Glance/4.jpg" AutomationProperties.Name="Sunset"/>
-					<Image Source="ms-appx:///Assets/Core/Views/Glance/5.jpg" AutomationProperties.Name="Valley"/>
-				</FlipView>
-			</StackPanel>
-
-			<StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-				<muxc:Expander
-					IsExpanded="False"
-					ExpandDirection="Down"
-					VerticalAlignment="Center"
-					Header="This text is in the header"
-					Content="This is in the content" />
-				<muxc:Expander
-					IsExpanded="False"
-					ExpandDirection="Down"
-					VerticalAlignment="Center"
-					Header="This text is in the header"
-					Content="This is in the content" />
-				<muxc:Expander>
-					<muxc:Expander.Header>
-						<TextBlock Text="This text is in the header"/>
-					</muxc:Expander.Header>
-					<muxc:Expander.Content>
-						<Grid>
-							<TextBlock Text="This is in the content"/>
-						</Grid>
-					</muxc:Expander.Content>
-				</muxc:Expander>
-			</StackPanel>
-		</Grid>
-	</ScrollViewer>
+			<muxc:InfoBar
+				x:Uid="/Glance/Build"
+				IsOpen="True"
+				IsIconVisible="True"
+				IsClosable="True"
+				Severity="Informational"/>
+		</StackPanel>
+	</Grid>
 
 </Page>
