@@ -36,7 +36,7 @@ namespace Lunox.Core.Views
         /// <param name="e"></param>
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
-            await ViewModel.InitializeAsync();
+            await ViewModel.InitializeAsync(Glance);
         }
 
         #endregion

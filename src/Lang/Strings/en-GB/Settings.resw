@@ -130,6 +130,9 @@ Copyright © 2022 Soferity LLC</value>
   <data name="About_PrivacyTerms.Content" xml:space="preserve">
     <value>Privacy Statement</value>
   </data>
+  <data name="Glance.Text" xml:space="preserve">
+    <value>Application Welcome Page</value>
+  </data>
   <data name="Language.Text" xml:space="preserve">
     <value>Application Interface</value>
   </data>

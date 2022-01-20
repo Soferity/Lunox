@@ -8,13 +8,16 @@ using Lunox.Library.Value;
 using Microsoft.Services.Store.Engagement;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
-using Microsoft.UI.Xaml.Controls;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.ApplicationModel;
 using Windows.System;
 using Windows.UI.Xaml;
+using MUXC = Microsoft.UI.Xaml.Controls;
+using WUXC = Windows.UI.Xaml.Controls;
 
 #endregion
 
@@ -47,7 +50,12 @@ namespace Lunox.Core.ViewModels
         /// <summary>
         /// 
         /// </summary>
-        private NavigationViewPaneDisplayMode _navigationType = NavigationSelectorService.Navigation;
+        private MUXC.NavigationViewPaneDisplayMode _navigationType = NavigationSelectorService.Navigation;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private WUXC.ComboBox _glance;
 
         /// <summary>
         /// 
@@ -82,7 +90,7 @@ namespace Lunox.Core.ViewModels
         /// <summary>
         /// 
         /// </summary>
-        public NavigationViewPaneDisplayMode NavigationType
+        public MUXC.NavigationViewPaneDisplayMode NavigationType
         {
             get => _navigationType;
 
@@ -208,7 +216,7 @@ namespace Lunox.Core.ViewModels
             {
                 if (_switchNavigationCommand == null)
                 {
-                    _switchNavigationCommand = new RelayCommand<NavigationViewPaneDisplayMode>(
+                    _switchNavigationCommand = new RelayCommand<MUXC.NavigationViewPaneDisplayMode>(
                         async (param) =>
                         {
                             if (NavigationType != param)
@@ -222,6 +230,40 @@ namespace Lunox.Core.ViewModels
 
                 return _switchNavigationCommand;
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private ICommand _glanceSelectionChanged;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public ICommand GlanceSelectionChangedCommand
+        {
+            get
+            {
+                if (_glanceSelectionChanged == null)
+                {
+                    _glanceSelectionChanged = new RelayCommand<WUXC.SelectionChangedEventArgs>(GlanceSelectionChanged);
+                }
+
+                return _glanceSelectionChanged;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        private async void GlanceSelectionChanged(WUXC.SelectionChangedEventArgs e)
+        {
+            WUXC.ComboBoxItem Item = (_glance.SelectedItem as WUXC.ComboBoxItem);
+
+            AppCenterService.TrackEvent(Default.Events[EventType.Glance], GlanceSelectorService.Glance.ToString().Split('.').LastOrDefault().Replace("Page", ""), Item.Tag.ToString().Split('.').LastOrDefault().Replace("Page", ""));
+
+            await GlanceSelectorService.SetGlanceAsync($"{Item.Tag}");
         }
 
         /// <summary>
@@ -302,11 +344,89 @@ namespace Lunox.Core.ViewModels
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="Glance"></param>
         /// <returns></returns>
-        public async Task InitializeAsync()
+        public async Task InitializeAsync(WUXC.ComboBox Glance)
         {
+            GlanceSetProperties(Glance);
             VersionDescription = GetVersionDescription();
             await Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private List<MUXC.NavigationViewItem> Navigation_Item
+        {
+            get
+            {
+                List<MUXC.NavigationViewItem> Items = new();
+
+                if (NavigationService.Navigation.MenuItems.Count > 0)
+                {
+                    foreach (MUXC.NavigationViewItem Item in NavigationService.Navigation.MenuItems.OfType<MUXC.NavigationViewItem>().Concat(NavigationService.Navigation.FooterMenuItems.OfType<MUXC.NavigationViewItem>()))
+                    {
+                        Items.Add(Item);
+                    }
+                }
+
+                return Items;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Glance"></param>
+        private void GlanceSetProperties(WUXC.ComboBox Glance)
+        {
+            _glance = Glance;
+
+            foreach (MUXC.NavigationViewItem Item in Navigation_Item)
+            {
+                if (Item.MenuItems.Count > 0)
+                {
+                    foreach (MUXC.NavigationViewItem Menu in Item.MenuItems.OfType<MUXC.NavigationViewItem>())
+                    {
+                        Type Page = NavHelper.GetNavigateTo(Menu);
+
+                        if (Page != null)
+                        {
+                            GlanceAddItem(Page, string.Concat(Item.Content, Default.NavigationSplit, Menu.Content));
+                        }
+                    }
+                }
+                else
+                {
+                    Type Page = NavHelper.GetNavigateTo(Item);
+
+                    if (Page != null)
+                    {
+                        GlanceAddItem(Page, Item.Content);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Tag"></param>
+        /// <param name="Content"></param>
+        private void GlanceAddItem(Type Tag, object Content)
+        {
+            WUXC.ComboBoxItem Item = new()
+            {
+                Tag = Tag,
+                Content = Content
+            };
+
+            _glance.Items.Add(Item);
+
+            if (GlanceSelectorService.Glance == Tag)
+            {
+                _glance.SelectedItem = Item;
+            }
         }
 
         /// <summary>
