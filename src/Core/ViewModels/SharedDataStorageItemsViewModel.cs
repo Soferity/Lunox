@@ -49,15 +49,12 @@ namespace Lunox.Core.ViewModels
             System.Collections.Generic.IReadOnlyList<IStorageItem> files = await shareOperation.GetStorageItemsAsync();
             foreach (IStorageItem file in files)
             {
-                StorageFile storageFile = file as StorageFile;
-                if (storageFile != null)
+                if (file is StorageFile storageFile)
                 {
-                    using (Windows.Storage.Streams.IRandomAccessStreamWithContentType inputStream = await storageFile.OpenReadAsync())
-                    {
-                        BitmapImage img = new BitmapImage();
-                        img.SetSource(inputStream);
-                        Images.Add(img);
-                    }
+                    using Windows.Storage.Streams.IRandomAccessStreamWithContentType inputStream = await storageFile.OpenReadAsync();
+                    BitmapImage img = new();
+                    img.SetSource(inputStream);
+                    Images.Add(img);
                 }
             }
         }

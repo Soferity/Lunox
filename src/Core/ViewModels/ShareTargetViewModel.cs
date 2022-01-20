@@ -47,7 +47,7 @@ namespace Lunox.Core.ViewModels
         /// <summary>
         /// 
         /// </summary>
-        public ICommand CompleteCommand => _completeCommand ?? (_completeCommand = new RelayCommand(OnComplete));
+        public ICommand CompleteCommand => _completeCommand ??= new RelayCommand(OnComplete);
 
         /// <summary>
         /// 

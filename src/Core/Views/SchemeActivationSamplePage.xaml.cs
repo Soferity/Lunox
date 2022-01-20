@@ -41,8 +41,7 @@ namespace Lunox.Core.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            Dictionary<string, string> parameters = e.Parameter as Dictionary<string, string>;
-            if (parameters != null)
+            if (e.Parameter is Dictionary<string, string> parameters)
             {
                 ViewModel.Initialize(parameters);
             }

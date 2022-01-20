@@ -23,7 +23,7 @@ namespace Lunox.Core.Services
         public void ShowToastNotificationSample()
         {
             // Create the toast content
-            ToastContent content = new ToastContent()
+            ToastContent content = new()
             {
                 // More about the Launch property at https://docs.microsoft.com/dotnet/api/microsoft.toolkit.uwp.notifications.toastcontent
                 Launch = "ToastContentActivationParams",
@@ -63,7 +63,7 @@ namespace Lunox.Core.Services
             };
 
             // Add the content to the toast
-            ToastNotification toast = new ToastNotification(content.GetXml())
+            ToastNotification toast = new(content.GetXml())
             {
                 // TODO WTS: Set a unique identifier for this notification within the notification group. (optional)
                 // More details at https://docs.microsoft.com/uwp/api/windows.ui.notifications.toastnotification.tag

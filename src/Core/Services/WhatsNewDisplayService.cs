@@ -42,7 +42,7 @@ namespace Lunox.Core.Services
                     if (SystemInformation.Instance.IsAppUpdated && !shown)
                     {
                         shown = true;
-                        WhatsNewDialog dialog = new WhatsNewDialog();
+                        WhatsNewDialog dialog = new();
                         await dialog.ShowAsync();
                     }
                 }

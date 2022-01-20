@@ -177,12 +177,12 @@ namespace Lunox.Core.ViewModels
         /// <summary>
         /// 
         /// </summary>
-        public ICommand LoadedCommand => _loadedCommand ?? (_loadedCommand = new RelayCommand(OnLoaded));
+        public ICommand LoadedCommand => _loadedCommand ??= new RelayCommand(OnLoaded);
 
         /// <summary>
         /// 
         /// </summary>
-        public ICommand ItemInvokedCommand => _itemInvokedCommand ?? (_itemInvokedCommand = new RelayCommand<MUXC.NavigationViewItemInvokedEventArgs>(OnItemInvoked));
+        public ICommand ItemInvokedCommand => _itemInvokedCommand ??= new RelayCommand<MUXC.NavigationViewItemInvokedEventArgs>(OnItemInvoked);
 
         /// <summary>
         /// 
@@ -450,7 +450,7 @@ namespace Lunox.Core.ViewModels
         /// <returns></returns>
         private static KeyboardAccelerator BuildKeyboardAccelerator(VirtualKey key, VirtualKeyModifiers? modifiers = null)
         {
-            KeyboardAccelerator keyboardAccelerator = new KeyboardAccelerator() { Key = key };
+            KeyboardAccelerator keyboardAccelerator = new() { Key = key };
             if (modifiers.HasValue)
             {
                 keyboardAccelerator.Modifiers = modifiers.Value;

@@ -42,7 +42,7 @@ namespace Lunox.Core.Services
                     if (SystemInformation.Instance.IsFirstRun && !shown)
                     {
                         shown = true;
-                        FirstRunDialog dialog = new FirstRunDialog();
+                        FirstRunDialog dialog = new();
                         await dialog.ShowAsync();
                     }
                 }

@@ -125,13 +125,13 @@
 Copyright © 2022 Soferity LLC</value>
   </data>
   <data name="About_FeedbackHub.Content" xml:space="preserve">
-    <value>Feedback</value>
+    <value>Geri Bildirim Merkezi</value>
   </data>
   <data name="About_PrivacyTerms.Content" xml:space="preserve">
     <value>Gizlilik Bildirimi</value>
   </data>
   <data name="Glance.Text" xml:space="preserve">
-    <value>Uygulama Karşılama Ekranı</value>
+    <value>Uygulama Başlangıç Sayfası</value>
   </data>
   <data name="Language.Text" xml:space="preserve">
     <value>Uygulama Arayüzü</value>

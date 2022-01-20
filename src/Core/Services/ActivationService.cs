@@ -171,7 +171,7 @@ namespace Lunox.Core.Services
 
             if (IsInteractive(activationArgs))
             {
-                DefaultActivationHandler defaultHandler = new DefaultActivationHandler(_defaultNavItem);
+                DefaultActivationHandler defaultHandler = new(_defaultNavItem);
                 if (defaultHandler.CanHandle(activationArgs))
                 {
                     await defaultHandler.HandleAsync(activationArgs);

@@ -96,7 +96,7 @@ namespace Lunox.Core.Activation
         private Uri BuildUri()
         {
             string pageKey = SchemeActivationConfig.GetPageKey(PageType);
-            UriBuilder uriBuilder = new UriBuilder($"{ProtocolName}:{pageKey}");
+            UriBuilder uriBuilder = new($"{ProtocolName}:{pageKey}");
             NameValueCollection query = HttpUtility.ParseQueryString(string.Empty);
 
             foreach (KeyValuePair<string, string> parameter in Parameters)

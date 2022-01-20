@@ -26,7 +26,7 @@ namespace Lunox.Core.Activation
         protected override async Task HandleInternalAsync(ProtocolActivatedEventArgs args)
         {
             // Create data from activation Uri in ProtocolActivatedEventArgs
-            SchemeActivationData data = new SchemeActivationData(args.Uri);
+            SchemeActivationData data = new(args.Uri);
             if (data.IsValid)
             {
                 NavigationService.Navigate(data.PageType, data.Parameters);

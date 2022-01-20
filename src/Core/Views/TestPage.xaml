@@ -9,7 +9,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-        <TextBox x:Name="Glance" TextChanged="Glance_TextChanged" />
         <Button x:Name="Button" Content="Göster" Click="Button_Click"/>
     </StackPanel>
 </Page>

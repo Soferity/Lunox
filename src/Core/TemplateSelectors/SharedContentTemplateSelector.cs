@@ -48,8 +48,7 @@ namespace Lunox.Core.TemplateSelectors
         /// <returns></returns>
         protected override DataTemplate SelectTemplateCore(object item, DependencyObject container)
         {
-            SharedDataViewModelBase sharedData = item as SharedDataViewModelBase;
-            if (sharedData != null)
+            if (item is SharedDataViewModelBase sharedData)
             {
                 if (sharedData.DataFormat == StandardDataFormats.WebLink)
                 {

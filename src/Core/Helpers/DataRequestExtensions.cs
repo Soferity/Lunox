@@ -46,7 +46,7 @@ namespace Lunox.Core.Helpers
                     requestData.Properties.Description = config.Description;
                 }
 
-                List<IStorageItem> storageItems = new List<IStorageItem>();
+                List<IStorageItem> storageItems = new();
                 foreach (ShareSourceItem dataItem in config.Items)
                 {
                     switch (dataItem.DataType)

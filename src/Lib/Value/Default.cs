@@ -141,7 +141,7 @@ namespace Lunox.Library.Value
         /// <summary>
         /// 
         /// </summary>
-        public static Visibility FeedbackLinkVisibility => StoreServicesFeedbackLauncher.IsSupported() ? Visibility.Collapsed : Visibility.Collapsed;
+        public static Visibility FeedbackLinkVisibility => StoreServicesFeedbackLauncher.IsSupported() ? Visibility.Visible : Visibility.Collapsed;
 
         /// <summary>
         /// 

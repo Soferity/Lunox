@@ -18,7 +18,7 @@ namespace Lunox.Core.Helpers
         /// <summary>
         /// 
         /// </summary>
-        private static readonly ResourceLoader _resLoader = new ResourceLoader();
+        private static readonly ResourceLoader _resLoader = new();
 
         #endregion
 
@@ -130,7 +130,7 @@ namespace Lunox.Core.Helpers
                 {
                     string[] Keygen = Key.Split('|');
 
-                    ResourceLoader Loader = new ResourceLoader(Keygen[0]);
+                    ResourceLoader Loader = new(Keygen[0]);
                     Value = Loader.GetString(Keygen[1]);
                 }
             }

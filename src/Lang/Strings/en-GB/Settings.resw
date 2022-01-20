@@ -125,13 +125,13 @@
 Copyright © 2022 Soferity LLC</value>
   </data>
   <data name="About_FeedbackHub.Content" xml:space="preserve">
-    <value>Feedback</value>
+    <value>Feedback Hub</value>
   </data>
   <data name="About_PrivacyTerms.Content" xml:space="preserve">
     <value>Privacy Statement</value>
   </data>
   <data name="Glance.Text" xml:space="preserve">
-    <value>Application Welcome Page</value>
+    <value>Application Startup Page</value>
   </data>
   <data name="Language.Text" xml:space="preserve">
     <value>Application Interface</value>

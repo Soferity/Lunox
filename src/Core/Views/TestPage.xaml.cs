@@ -1,5 +1,4 @@
-﻿using Lunox.Core.Services;
-using Lunox.Library.Helper;
+﻿using Lunox.Library.Helper;
 using Windows.UI.Xaml.Controls;
 
 // Boş Sayfa öğe şablonu https://go.microsoft.com/fwlink/?LinkId=234238 adresinde açıklanmaktadır
@@ -17,17 +16,6 @@ namespace Lunox.Core.Views
         public TestPage()
         {
             InitializeComponent();
-            Glance.Text = GlanceSelectorService.GlanceClass.Replace("Page", "");
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private async void Glance_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            await GlanceSelectorService.SetGlanceAsync(Glance.Text + "Page");
         }
 
         /// <summary>

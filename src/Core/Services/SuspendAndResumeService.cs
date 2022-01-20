@@ -71,13 +71,13 @@ namespace Lunox.Core.Services
 
             try
             {
-                SuspensionState suspensionState = new SuspensionState()
+                SuspensionState suspensionState = new()
                 {
                     SuspensionDate = DateTime.Now
                 };
 
                 Type target = OnBackgroundEntering?.Target.GetType();
-                SuspendAndResumeArgs onBackgroundEnteringArgs = new SuspendAndResumeArgs(suspensionState, target);
+                SuspendAndResumeArgs onBackgroundEnteringArgs = new(suspensionState, target);
 
                 OnBackgroundEntering?.Invoke(this, onBackgroundEnteringArgs);
 

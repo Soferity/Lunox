@@ -28,7 +28,7 @@ namespace Lunox.Core.Activation
         protected override async Task HandleInternalAsync(ShareTargetActivatedEventArgs args)
         {
             // Activation from ShareTarget opens the app as a new modal window which requires a new activation.
-            Frame frame = new Frame();
+            Frame frame = new();
             Window.Current.Content = frame;
             frame.Navigate(typeof(ShareTargetPage), args.ShareOperation);
             Window.Current.Activate();

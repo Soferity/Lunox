@@ -78,9 +78,8 @@
     <uap:Capability Name="videosLibrary"/>
     <Capability Name="internetClient"/>
     <uap:Capability Name="musicLibrary"/>
-    <uap:Capability Name="removableStorage"/>
     <uap:Capability Name="objects3D"/>
-    <uap:Capability Name="userAccountInformation"/>
+    <uap:Capability Name="removableStorage"/>
     <DeviceCapability Name="webcam"/>
   </Capabilities>
 </Package>

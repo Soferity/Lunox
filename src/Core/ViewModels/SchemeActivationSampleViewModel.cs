@@ -44,8 +44,8 @@ namespace Lunox.Core.ViewModels
             {
                 if (param.Key == "ticks" && long.TryParse(param.Value, out long ticks))
                 {
-                    DateTime dateTime = new DateTime(ticks);
-                    Parameters.Add($"{param.Key}: {dateTime.ToString()}");
+                    DateTime dateTime = new(ticks);
+                    Parameters.Add($"{param.Key}: {dateTime}");
                 }
                 else
                 {
