@@ -30,8 +30,8 @@
 					<muxc:Expander.Content>
 						<Grid>
 							<RichTextBlock IsTextSelectionEnabled="False">
-								<Paragraph TextAlignment="Center">
-									<Run x:Uid="/Help/What_Text" />
+                                <Paragraph TextAlignment="Center">
+                                    <Run x:Uid="/Help/What_Text" />
 								</Paragraph>
 							</RichTextBlock>
 						</Grid>

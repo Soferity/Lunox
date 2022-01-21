@@ -57,12 +57,6 @@
                     </muxc:NavigationViewItem.InfoBadge>
                 </muxc:NavigationViewItem>
 
-                <muxc:NavigationViewItem Tag="Test" helpers:NavHelper.NavigateTo="views:TestPage">
-                    <muxc:NavigationViewItem.Icon>
-                        <PathIcon Data="{StaticResource FlaskSolid}" />
-                    </muxc:NavigationViewItem.Icon>
-                </muxc:NavigationViewItem>
-
                 <muxc:NavigationViewItem Tag="SchemeActivation" helpers:NavHelper.NavigateTo="views:SchemeActivationSamplePage">
                     <muxc:NavigationViewItem.Icon>
                         <PathIcon Data="{StaticResource BiohazardSolid}" />

@@ -318,9 +318,6 @@
   <data name="Suggest.PlaceholderText" xml:space="preserve">
     <value>Sayfa Bul</value>
   </data>
-  <data name="Test.Content" xml:space="preserve">
-    <value>Deneme</value>
-  </data>
   <data name="Transactions.Content" xml:space="preserve">
     <value>İşlemler</value>
   </data>

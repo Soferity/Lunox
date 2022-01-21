@@ -435,8 +435,8 @@ namespace Lunox.Core.ViewModels
         /// <returns></returns>
         private string GetVersionDescription()
         {
-            string appName = "AppDisplayName".GetLocalized();
             Package package = Package.Current;
+            string appName = package.DisplayName;
             PackageId packageId = package.Id;
             PackageVersion version = packageId.Version;
 

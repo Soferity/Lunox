@@ -318,9 +318,6 @@
   <data name="Suggest.PlaceholderText" xml:space="preserve">
     <value>Find Page</value>
   </data>
-  <data name="Test.Content" xml:space="preserve">
-    <value>Test</value>
-  </data>
   <data name="Transactions.Content" xml:space="preserve">
     <value>Transactions</value>
   </data>

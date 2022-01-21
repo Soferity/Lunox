@@ -83,9 +83,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\ShellPage.xaml.cs">
       <DependentUpon>ShellPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\TestPage.xaml.cs">
-      <DependentUpon>TestPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\WhatsNewDialog.xaml.cs">
       <DependentUpon>WhatsNewDialog.xaml</DependentUpon>
     </Compile>
@@ -131,13 +128,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="$(MSBuildThisFileDirectory)Views\TestPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Views\WhatsNewDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Views\JS\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\CSS\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\HTML\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\JSON\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\AUDIO\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\IMAGE\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\DOCUMENT\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\VIDEO\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\QR\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\OCR\" />
   </ItemGroup>
 </Project>

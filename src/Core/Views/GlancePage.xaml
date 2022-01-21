@@ -32,26 +32,41 @@
 				<TextBlock x:Uid="/Glance/News" Text="What's New" HorizontalAlignment="Center" Style="{ThemeResource SubtitleTextBlockStyle}" FontSize="24" />
 
 				<StackPanel HorizontalAlignment="Center">
-					<StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
-						<TextBlock Text="JSON küçültme, doğrulama, seri hâle getirme ve seri hâlden çıkartma tamamlandı." Margin="{StaticResource SmallLeftTopRightBottomMargin}"/>
+					<StackPanel Orientation="Horizontal" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
+                        <Viewbox Width="24" VerticalAlignment="Center" Margin="{StaticResource SmallLeftMargin}">
+                            <PathIcon Data="{StaticResource Json}" />
+                        </Viewbox>
+                        <TextBlock Text="JSON küçültme, doğrulama, seri hâle getirme ve seri hâlden çıkartma tamamlandı." Margin="{StaticResource SmallLeftTopRightBottomMargin}"/>
 					</StackPanel>
 
-					<StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
-						<TextBlock Text="JSON küçültme, doğrulama, seri hâle getirme ve seri hâlden çıkartma tamamlandı." Margin="{StaticResource SmallLeftTopRightBottomMargin}"/>
-					</StackPanel>
+                    <StackPanel Orientation="Horizontal" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
+                        <Viewbox Width="24" VerticalAlignment="Center" Margin="{StaticResource SmallLeftMargin}">
+                            <PathIcon Data="{StaticResource Json}" />
+                        </Viewbox>
+                        <TextBlock Text="JSON küçültme, doğrulama, seri hâle getirme ve seri hâlden çıkartma tamamlandı." Margin="{StaticResource SmallLeftTopRightBottomMargin}"/>
+                    </StackPanel>
 
-					<StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
-						<TextBlock Text="JSON küçültme, doğrulama, seri hâle getirme ve seri hâlden çıkartma tamamlandı." Margin="{StaticResource SmallLeftTopRightBottomMargin}"/>
-					</StackPanel>
+                    <StackPanel Orientation="Horizontal" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
+                        <Viewbox Width="24" VerticalAlignment="Center" Margin="{StaticResource SmallLeftMargin}">
+                            <PathIcon Data="{StaticResource Json}" />
+                        </Viewbox>
+                        <TextBlock Text="JSON küçültme, doğrulama, seri hâle getirme ve seri hâlden çıkartma tamamlandı." Margin="{StaticResource SmallLeftTopRightBottomMargin}"/>
+                    </StackPanel>
 
-					<StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
-						<TextBlock Text="JSON küçültme, doğrulama, seri hâle getirme ve seri hâlden çıkartma tamamlandı." Margin="{StaticResource SmallLeftTopRightBottomMargin}"/>
-					</StackPanel>
+                    <StackPanel Orientation="Horizontal" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
+                        <Viewbox Width="24" VerticalAlignment="Center" Margin="{StaticResource SmallLeftMargin}">
+                            <PathIcon Data="{StaticResource Json}" />
+                        </Viewbox>
+                        <TextBlock Text="JSON küçültme, doğrulama, seri hâle getirme ve seri hâlden çıkartma tamamlandı." Margin="{StaticResource SmallLeftTopRightBottomMargin}"/>
+                    </StackPanel>
 
-					<StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
-						<TextBlock Text="JSON küçültme, doğrulama, seri hâle getirme ve seri hâlden çıkartma tamamlandı." Margin="{StaticResource SmallLeftTopRightBottomMargin}"/>
-					</StackPanel>
-				</StackPanel>
+                    <StackPanel Orientation="Horizontal" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
+                        <Viewbox Width="24" VerticalAlignment="Center" Margin="{StaticResource SmallLeftMargin}">
+                            <PathIcon Data="{StaticResource Json}" />
+                        </Viewbox>
+                        <TextBlock Text="JSON küçültme, doğrulama, seri hâle getirme ve seri hâlden çıkartma tamamlandı." Margin="{StaticResource SmallLeftTopRightBottomMargin}"/>
+                    </StackPanel>
+                </StackPanel>
 			</StackPanel>
 		</Grid>
 	</ScrollViewer>
