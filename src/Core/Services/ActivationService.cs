@@ -153,6 +153,11 @@ namespace Lunox.Core.Services
             await NavigationSelectorService.SetNavigationLanguage();
 
             _defaultNavItem = GlanceSelectorService.Glance;
+
+            //Sounds
+            ElementSoundPlayer.Volume = 1.0;
+            ElementSoundPlayer.State = ElementSoundPlayerState.On;
+            ElementSoundPlayer.SpatialAudioMode = ElementSpatialAudioMode.On;
         }
 
         /// <summary>

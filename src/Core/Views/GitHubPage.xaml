@@ -19,7 +19,6 @@
                 <ResourceDictionary x:Key="Default">
                     <media:AcrylicBrush x:Key="CustomAcrylicBackgroundBrush" BackgroundSource="Backdrop"
                         TintOpacity="0" TintColor="#FF000000" FallbackColor="#FF008000" />
-
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
         </ResourceDictionary>

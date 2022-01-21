@@ -16,11 +16,42 @@
 
 	<ScrollViewer VerticalScrollBarVisibility="Auto" Margin="{StaticResource MediumLeftTopRightBottomMargin}">
 		<Grid>
-			<StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+
+			<StackPanel Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center">
 				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
 					<TextBlock x:Uid="/Glance/Welcome" Style="{ThemeResource SubtitleTextBlockStyle}" FontSize="36" />
 				</StackPanel>
 				<Image Source="ms-appx:///Assets/Core/Views/Glance/Logo.png" Margin="{StaticResource MediumTopMargin}" Width="128" Height="128" />
+			</StackPanel>
+
+			<StackPanel Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="{StaticResource MediumTopMargin}">
+				<TextBlock x:Uid="/Glance/News" Text="What's New" HorizontalAlignment="Center" Style="{ThemeResource SubtitleTextBlockStyle}" FontSize="24" />
+
+				<StackPanel HorizontalAlignment="Center">
+					<StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
+						<TextBlock Text="JSON küçültme, doğrulama, seri hâle getirme ve seri hâlden çıkartma tamamlandı." Margin="{StaticResource SmallLeftTopRightBottomMargin}"/>
+					</StackPanel>
+
+					<StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
+						<TextBlock Text="JSON küçültme, doğrulama, seri hâle getirme ve seri hâlden çıkartma tamamlandı." Margin="{StaticResource SmallLeftTopRightBottomMargin}"/>
+					</StackPanel>
+
+					<StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
+						<TextBlock Text="JSON küçültme, doğrulama, seri hâle getirme ve seri hâlden çıkartma tamamlandı." Margin="{StaticResource SmallLeftTopRightBottomMargin}"/>
+					</StackPanel>
+
+					<StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
+						<TextBlock Text="JSON küçültme, doğrulama, seri hâle getirme ve seri hâlden çıkartma tamamlandı." Margin="{StaticResource SmallLeftTopRightBottomMargin}"/>
+					</StackPanel>
+
+					<StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
+						<TextBlock Text="JSON küçültme, doğrulama, seri hâle getirme ve seri hâlden çıkartma tamamlandı." Margin="{StaticResource SmallLeftTopRightBottomMargin}"/>
+					</StackPanel>
+				</StackPanel>
 			</StackPanel>
 		</Grid>
 	</ScrollViewer>
