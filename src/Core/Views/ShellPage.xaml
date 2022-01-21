@@ -9,6 +9,7 @@
     xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     xmlns:helpers="using:Lunox.Core.Helpers"
     xmlns:views="using:Lunox.Core.Views"
+    xmlns:json="using:Lunox.Core.Views.Json"
     xmlns:ic="using:Microsoft.Xaml.Interactions.Core"
     xmlns:i="using:Microsoft.Xaml.Interactivity"
     Style="{StaticResource PageStyle}"
@@ -64,6 +65,35 @@
                 </muxc:NavigationViewItem>
 
                 <muxc:NavigationViewItemHeader Tag="Actions" />
+
+                <muxc:NavigationViewItem Tag="Json" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
+                    <muxc:NavigationViewItem.Icon>
+                        <PathIcon Data="{StaticResource Json}" />
+                    </muxc:NavigationViewItem.Icon>
+
+                    <muxc:NavigationViewItem.MenuItems>
+                        <muxc:NavigationViewItem Tag="JsonMinify">
+                            <muxc:NavigationViewItem.Icon>
+                                <PathIcon Data="{StaticResource ArrowCompressH}" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="JsonValidate">
+                            <muxc:NavigationViewItem.Icon>
+                                <PathIcon Data="{StaticResource Jsonld}" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="JsonSerialize" helpers:NavHelper.NavigateTo="json:SerializePage">
+                            <muxc:NavigationViewItem.Icon>
+                                <PathIcon Data="{StaticResource CodeSolid}" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                        <muxc:NavigationViewItem Tag="JsonDeserialize">
+                            <muxc:NavigationViewItem.Icon>
+                                <PathIcon Data="{StaticResource Json5}" />
+                            </muxc:NavigationViewItem.Icon>
+                        </muxc:NavigationViewItem>
+                    </muxc:NavigationViewItem.MenuItems>
+                </muxc:NavigationViewItem>
 
                 <muxc:NavigationViewItemHeader Tag="Coming" />
 
@@ -341,35 +371,6 @@
                         <muxc:NavigationViewItem Tag="AudioOGG">
                             <muxc:NavigationViewItem.Icon>
                                 <PathIcon Data="{StaticResource VolumeDownSolid}" />
-                            </muxc:NavigationViewItem.Icon>
-                        </muxc:NavigationViewItem>
-                    </muxc:NavigationViewItem.MenuItems>
-                </muxc:NavigationViewItem>
-
-                <muxc:NavigationViewItem Tag="Json" SelectsOnInvoked="False" IsSelected="False" IsChildSelected="False">
-                    <muxc:NavigationViewItem.Icon>
-                        <PathIcon Data="{StaticResource Json}" />
-                    </muxc:NavigationViewItem.Icon>
-
-                    <muxc:NavigationViewItem.MenuItems>
-                        <muxc:NavigationViewItem Tag="JsonMinify">
-                            <muxc:NavigationViewItem.Icon>
-                                <PathIcon Data="{StaticResource ArrowCompressH}" />
-                            </muxc:NavigationViewItem.Icon>
-                        </muxc:NavigationViewItem>
-                        <muxc:NavigationViewItem Tag="JsonValidate">
-                            <muxc:NavigationViewItem.Icon>
-                                <PathIcon Data="{StaticResource Jsonld}" />
-                            </muxc:NavigationViewItem.Icon>
-                        </muxc:NavigationViewItem>
-                        <muxc:NavigationViewItem Tag="JsonSerialize">
-                            <muxc:NavigationViewItem.Icon>
-                                <PathIcon Data="{StaticResource CodeSolid}" />
-                            </muxc:NavigationViewItem.Icon>
-                        </muxc:NavigationViewItem>
-                        <muxc:NavigationViewItem Tag="JsonDeserialize">
-                            <muxc:NavigationViewItem.Icon>
-                                <PathIcon Data="{StaticResource Json5}" />
                             </muxc:NavigationViewItem.Icon>
                         </muxc:NavigationViewItem>
                     </muxc:NavigationViewItem.MenuItems>

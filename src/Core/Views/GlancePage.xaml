@@ -29,10 +29,10 @@
 			</StackPanel>
 
 			<StackPanel Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="{StaticResource MediumTopMargin}">
-				<TextBlock x:Uid="/Glance/News" Text="What's New" HorizontalAlignment="Center" Style="{ThemeResource SubtitleTextBlockStyle}" FontSize="24" />
+				<TextBlock x:Uid="/Glance/News" HorizontalAlignment="Center" Style="{ThemeResource SubtitleTextBlockStyle}" FontSize="24" />
 
 				<StackPanel HorizontalAlignment="Center">
-					<StackPanel Orientation="Horizontal" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
+                    <StackPanel Orientation="Horizontal" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
                         <Viewbox Width="24" VerticalAlignment="Center" Margin="{StaticResource SmallLeftMargin}">
                             <PathIcon Data="{StaticResource Json}" />
                         </Viewbox>

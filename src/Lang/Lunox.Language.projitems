@@ -23,6 +23,7 @@
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\es-ES\Resources.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\pl-PL\Resources.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\fr-FR\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\tr-TR\Json.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\tr-TR\WhatsNew.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\tr-TR\FirstRun.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\tr-TR\Toast.resw" />

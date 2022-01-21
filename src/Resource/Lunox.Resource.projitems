@@ -69,6 +69,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\Glance\Back.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\Glance\Logo.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\Help\Back.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\Json\Serialize\Back.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\NotFound\404.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\NotFound\Back.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\Core\Views\Settings\Back.jpg" />

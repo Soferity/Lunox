@@ -43,6 +43,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)TemplateSelectors\SharedContentTemplateSelector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\GitHubViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HelpViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Json\SerializeViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\NotFoundViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\GlanceViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SchemeActivationSampleViewModel.cs" />
@@ -67,6 +68,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\HelpPage.xaml.cs">
       <DependentUpon>HelpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Json\SerializePage.xaml.cs">
+      <DependentUpon>SerializePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\NotFoundPage.xaml.cs">
       <DependentUpon>NotFoundPage.xaml</DependentUpon>
@@ -108,6 +112,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\Json\SerializePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Views\NotFoundPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -134,14 +142,22 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Audio\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\CSS\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Document\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\HTML\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Image\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\JS\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\OCR\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\QR\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Video\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\JS\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\CSS\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\HTML\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Views\JSON\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Views\AUDIO\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Views\IMAGE\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Views\DOCUMENT\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Views\VIDEO\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Audio\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Image\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Document\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Video\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\QR\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\OCR\" />
   </ItemGroup>
