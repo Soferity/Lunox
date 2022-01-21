@@ -118,14 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Body.Text" xml:space="preserve">
-    <value>Replace the content of this dialog with whatever content is appropriate to your app.
-You might want to consider lists of bug fixes and new features.
-Don't feel restricted to just text. You can also include images and animations if you wish too.
+    <value>Yenilikler ve Hata Düzeltmelerinin bir kısmı aşağıda listelenmiştir:
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
-Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.
-Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.</value>
+Karşılama ekranı düzenlendi.
+Fare olaylarına ses efektleri eklendi.
+Discord sayfası hataları giderildi.
+GitHub sayfası hataları giderildi.
+Yardım sayfası hazırlandı.
+Ayarlara Başlangıç Sayfası eklendi.
+Çeviriler düzenlendi.</value>
   </data>
   <data name="Dialog.PrimaryButtonText" xml:space="preserve">
     <value>Tamam</value>
