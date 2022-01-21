@@ -17,66 +17,87 @@
 	<ScrollViewer VerticalScrollBarVisibility="Auto" Margin="{StaticResource MediumLeftTopRightBottomMargin}">
 		<Grid>
 			<StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
-				<TextBlock x:Uid="/Help/Information" Text="Bilgilendirme" TextAlignment="Center" Margin="{StaticResource MediumBottomMargin}" Style="{ThemeResource SubtitleTextBlockStyle}" FontSize="36" />
+				<TextBlock x:Uid="/Help/Information" TextAlignment="Center" Margin="{StaticResource MediumBottomMargin}" Style="{ThemeResource SubtitleTextBlockStyle}" FontSize="36" />
+				
 				<muxc:Expander
 					IsExpanded="False"
 					ExpandDirection="Down"
 					VerticalAlignment="Center"
 					HorizontalAlignment="Stretch">
 					<muxc:Expander.Header>
-						<TextBlock Text="Lunox Nedir?" TextAlignment="Center"/>
+						<TextBlock x:Uid="/Help/What" TextAlignment="Center"/>
 					</muxc:Expander.Header>
 					<muxc:Expander.Content>
 						<Grid>
 							<RichTextBlock IsTextSelectionEnabled="False">
-								<Paragraph TextAlignment="Center">Lunox özelleştirilebilir, modern ve gelişmiş bir Evrensel Yardımcı Araç Kitidir.</Paragraph>
+								<Paragraph TextAlignment="Center">
+									<Run x:Uid="/Help/What_Text" />
+								</Paragraph>
 							</RichTextBlock>
 						</Grid>
 					</muxc:Expander.Content>
 				</muxc:Expander>
+				
 				<muxc:Expander
 					IsExpanded="False"
 					ExpandDirection="Down"
 					VerticalAlignment="Center"
 					HorizontalAlignment="Stretch">
 					<muxc:Expander.Header>
-						<TextBlock Text="Lunox Ne İşe Yarar?" TextAlignment="Center"/>
+						<TextBlock x:Uid="/Help/Does" TextAlignment="Center"/>
 					</muxc:Expander.Header>
 					<muxc:Expander.Content>
 						<Grid>
 							<RichTextBlock IsTextSelectionEnabled="False">
-								<Paragraph TextAlignment="Center">Lunox sunduğu çeşitli altyapısı ile birim dönüşümleri, dosya dönüşümleri, OCR işlemleri, QR işlemleri, HTML-CSS-JS-JSON işlemleri ve daha bir çok önde gelen işlemleri kolaylıkla yapmanıza olanak sağlar. Özetle bazı Lunox özellikleri şunlardır:</Paragraph>
-								<Paragraph TextAlignment="Center">• Modern görünüm</Paragraph>
-								<Paragraph TextAlignment="Center">• Çok çeşitli</Paragraph>
-								<Paragraph TextAlignment="Center">• Özelleştirilebilir</Paragraph>
-								<Paragraph TextAlignment="Center">• Kolay kullanım</Paragraph>
-								<Paragraph TextAlignment="Center">• En önemlisi, Açık Kaynaklı Yazılımdır (OSS)!</Paragraph>
+								<Paragraph TextAlignment="Center">
+									<Run x:Uid="/Help/Does_Text" />
+								</Paragraph>
 							</RichTextBlock>
 						</Grid>
 					</muxc:Expander.Content>
 				</muxc:Expander>
+				
 				<muxc:Expander
 					IsExpanded="False"
 					ExpandDirection="Down"
 					VerticalAlignment="Center"
 					HorizontalAlignment="Stretch">
 					<muxc:Expander.Header>
-						<TextBlock Text="Sistem Gereksinimleri Nelerdir?" TextAlignment="Center"/>
+						<TextBlock x:Uid="/Help/Requirements" TextAlignment="Center"/>
 					</muxc:Expander.Header>
 					<muxc:Expander.Content>
 						<Grid>
 							<RichTextBlock IsTextSelectionEnabled="False">
-								<Paragraph TextAlignment="Center">• İşletim Sistemi: Windows 11, Windows 10 1809 ve üzeri</Paragraph>
-								<Paragraph TextAlignment="Center">• Mimari: ARM, ARM64, x64, x86</Paragraph>
-								<Paragraph TextAlignment="Center">• Dokunmatik: İsteğe Bağlı</Paragraph>
-								<Paragraph TextAlignment="Center">• DirectX: Sürüm 9 ve üzeri</Paragraph>
-								<Paragraph TextAlignment="Center">• Kamera: İsteğe Bağlı</Paragraph>
-								<Paragraph TextAlignment="Center">• Klave: İsteğe Bağlı</Paragraph>
-								<Paragraph TextAlignment="Center">• Fare: İsteğe Bağlı</Paragraph>
+								<Paragraph TextAlignment="Center">
+									<Run x:Uid="/Help/Requirements_Text" />
+								</Paragraph>
 							</RichTextBlock>
 						</Grid>
 					</muxc:Expander.Content>
 				</muxc:Expander>
+				
+				<muxc:Expander
+					IsExpanded="False"
+					ExpandDirection="Down"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Stretch">
+					<muxc:Expander.Header>
+						<TextBlock Text="Bug Mu Buldunuz? Öneriniz Mi Var?" TextAlignment="Center"/>
+					</muxc:Expander.Header>
+					<muxc:Expander.Content>
+						<Grid>
+							<RichTextBlock IsTextSelectionEnabled="False">
+								<Paragraph TextAlignment="Center">Lunox'da bir hata bulduysanız, lütfen
+									<Hyperlink NavigateUri="https://github.com/Soferity/Lunox/issues/new?assignees=&amp;labels=&amp;template=bug_report.md&amp;title=">GitHub</Hyperlink>
+									araclığıyla bize bu sorunu bildirin. Eğer yeni bir özellik isteğiniz veya öneriniz varsa yine bize
+									<Hyperlink NavigateUri="https://github.com/Soferity/Lunox/issues/new?assignees=&amp;labels=&amp;template=feature_request.md&amp;title=">GitHub</Hyperlink>
+									aracılığıyla bildirin.
+								</Paragraph>
+							</RichTextBlock>
+						</Grid>
+					</muxc:Expander.Content>
+				</muxc:Expander>
+				
 				<muxc:Expander
 					IsExpanded="True"
 					ExpandDirection="Down"
