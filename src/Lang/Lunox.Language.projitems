@@ -13,6 +13,7 @@
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-GB\Discord.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-GB\GitHub.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-GB\Glance.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-GB\Help.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-GB\Resources.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-GB\Settings.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-GB\Shell.resw" />

@@ -166,6 +166,26 @@ namespace Lunox.Library.Value
         /// <summary>
         /// 
         /// </summary>
+        public static Uri Discussions => new("https://github.com/Soferity/Lunox/discussions");
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Uri Contribute => new("https://github.com/Soferity/Lunox/graphs/contributors");
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Uri Bug => new("https://github.com/Soferity/Lunox/issues/new?assignees=&labels=&template=bug_report.md&title=");
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Uri Feature => new("https://github.com/Soferity/Lunox/issues/new?assignees=&labels=&template=feature_request.md&title=");
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static Uri Discord => new($"https://discord.com/widget?id=932386235538878534&theme={ThemeSelectorService.Theme.ToString().ToLowerInvariant()}");
 
         #endregion

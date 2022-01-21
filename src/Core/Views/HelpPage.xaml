@@ -82,16 +82,17 @@
 					VerticalAlignment="Center"
 					HorizontalAlignment="Stretch">
 					<muxc:Expander.Header>
-						<TextBlock Text="Bug Mu Buldunuz? Öneriniz Mi Var?" TextAlignment="Center"/>
+						<TextBlock x:Uid="/Help/Bug_Suggestion" TextAlignment="Center"/>
 					</muxc:Expander.Header>
 					<muxc:Expander.Content>
 						<Grid>
 							<RichTextBlock IsTextSelectionEnabled="False">
-								<Paragraph TextAlignment="Center">Lunox'da bir hata bulduysanız, lütfen
-									<Hyperlink NavigateUri="https://github.com/Soferity/Lunox/issues/new?assignees=&amp;labels=&amp;template=bug_report.md&amp;title=">GitHub</Hyperlink>
-									araclığıyla bize bu sorunu bildirin. Eğer yeni bir özellik isteğiniz veya öneriniz varsa yine bize
-									<Hyperlink NavigateUri="https://github.com/Soferity/Lunox/issues/new?assignees=&amp;labels=&amp;template=feature_request.md&amp;title=">GitHub</Hyperlink>
-									aracılığıyla bildirin.
+								<Paragraph TextAlignment="Center">
+									<Run x:Uid="/Help/Bug_Suggestion_Text_First" />
+									<Hyperlink NavigateUri="{x:Bind ViewModel.Bug, Mode=OneWay}">GitHub</Hyperlink>
+									<Run x:Uid="/Help/Bug_Suggestion_Text_Middle" />
+									<Hyperlink NavigateUri="{x:Bind ViewModel.Feature, Mode=OneWay}">GitHub</Hyperlink>
+									<Run x:Uid="/Help/Bug_Suggestion_Text_Last" />
 								</Paragraph>
 							</RichTextBlock>
 						</Grid>
@@ -104,16 +105,21 @@
 					VerticalAlignment="Center"
 					HorizontalAlignment="Stretch">
 					<muxc:Expander.Header>
-						<TextBlock Text="İpucu" TextAlignment="Center"/>
+						<TextBlock x:Uid="/Help/Hint" TextAlignment="Center"/>
 					</muxc:Expander.Header>
 					<muxc:Expander.Content>
 						<Grid>
 							<RichTextBlock IsTextSelectionEnabled="False">
-								<Paragraph TextAlignment="Center">Lunox şu anda yoğun bir geliştirme aşamasındadır. Öneri ve görüşlerinizi
-									<Hyperlink NavigateUri="https://github.com/Soferity/Lunox/discussions">Tartışmalar</Hyperlink>
-									sayfamızdan iletebilirsiniz. C# (.NET) kullanarak kod yazarken kendinizi rahat hissediyorsanız,
-									<Hyperlink NavigateUri="https://github.com/Soferity/Lunox/graphs/contributors">bu projeye katkıda bulunmanızı</Hyperlink>
-									şiddetle tavsiye ederiz.
+								<Paragraph TextAlignment="Center">
+									<Run x:Uid="/Help/Hint_Text_First" />
+									<Hyperlink NavigateUri="{x:Bind ViewModel.Discussions, Mode=OneWay}">
+										<Run x:Uid="/Help/Hint_Text_Discussions" />
+									</Hyperlink>
+									<Run x:Uid="/Help/Hint_Text_Middle" />
+									<Hyperlink NavigateUri="{x:Bind ViewModel.Contribute, Mode=OneWay}">
+										<Run x:Uid="/Help/Hint_Text_Contribute" />
+									</Hyperlink>
+									<Run x:Uid="/Help/Hint_Text_Last" />
 								</Paragraph>
 							</RichTextBlock>
 						</Grid>

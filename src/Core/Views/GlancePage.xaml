@@ -16,16 +16,19 @@
 
 	<Grid Margin="{StaticResource MediumLeftTopRightBottomMargin}">
 		<StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
-			<Image Source="ms-appx:///Assets/Core/Views/Glance/Logo.png" Width="128" Height="128" />
 			<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
 				<TextBlock x:Uid="/Glance/Welcome" Style="{ThemeResource SubtitleTextBlockStyle}" FontSize="36" />
 			</StackPanel>
+			<Image Source="ms-appx:///Assets/Core/Views/Glance/Logo.png" Margin="{StaticResource MediumTopMargin}" Width="128" Height="128" />
+		</StackPanel>
+
+		<StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center">
 			<muxc:InfoBar
-				x:Uid="/Glance/Build"
-				IsOpen="True"
-				IsIconVisible="True"
-				IsClosable="True"
-				Severity="Informational"/>
+					x:Uid="/Glance/Build"
+					IsOpen="True"
+					IsIconVisible="True"
+					IsClosable="True"
+					Severity="Informational"/>
 		</StackPanel>
 	</Grid>
 
