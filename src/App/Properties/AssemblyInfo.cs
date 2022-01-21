@@ -24,7 +24,7 @@ using System.Runtime.InteropServices;
 // Tüm değerleri belirtebilir veya varsayılan Derleme ve Düzeltme Numaralarını kullanmak için 
 // aşağıda gösterildiği gibi '*' kullanabilirsiniz:
 // [derleme: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.15.0")]
-[assembly: AssemblyFileVersion("1.0.15.0")]
+[assembly: AssemblyVersion("1.0.16.0")]
+[assembly: AssemblyFileVersion("1.0.16.0")]
 [assembly: ComVisible(false)]
 [assembly: NeutralResourcesLanguage("en-GB")] 
