@@ -39,9 +39,59 @@ namespace Lunox.Core.Helpers
         /// </summary>
         /// <param name="resourceKey"></param>
         /// <returns></returns>
+        public static string GetLocalizedTag(this object resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.Tag");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
         public static string GetLocalizedText(this object resourceKey)
         {
             return GetLocalized($"{resourceKey}.Text");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
+        public static string GetLocalizedTitle(this object resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.Title");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
+        public static string GetLocalizedLaunch(this object resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.Launch");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
+        public static string GetLocalizedMessage(this object resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.Message");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
+        public static string GetLocalizedArgument(this object resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.Argument");
         }
 
         /// <summary>
@@ -79,9 +129,59 @@ namespace Lunox.Core.Helpers
         /// </summary>
         /// <param name="resourceKey"></param>
         /// <returns></returns>
+        public static string GetLocalizedTag(this string resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.Tag");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
         public static string GetLocalizedText(this string resourceKey)
         {
             return GetLocalized($"{resourceKey}.Text");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
+        public static string GetLocalizedTitle(this string resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.Title");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
+        public static string GetLocalizedLaunch(this string resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.Launch");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
+        public static string GetLocalizedMessage(this string resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.Message");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="resourceKey"></param>
+        /// <returns></returns>
+        public static string GetLocalizedArgument(this string resourceKey)
+        {
+            return GetLocalized($"{resourceKey}.Argument");
         }
 
         /// <summary>

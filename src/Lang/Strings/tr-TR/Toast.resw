@@ -117,7 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Test.Text" xml:space="preserve">
-    <value>Test</value>
+  <data name="Dismiss.Content" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="Okay.Argument" xml:space="preserve">
+    <value>ToastButtonActivationArguments</value>
+  </data>
+  <data name="Okay.Content" xml:space="preserve">
+    <value>Tamam</value>
+  </data>
+  <data name="Reminder.Launch" xml:space="preserve">
+    <value>ToastContentActivationParams</value>
+  </data>
+  <data name="Reminder.Message" xml:space="preserve">
+    <value>Lütfen hâla yapım aşamasında olduğunu unutmayın.</value>
+  </data>
+  <data name="Reminder.Tag" xml:space="preserve">
+    <value>Reminder</value>
+  </data>
+  <data name="Reminder.Title" xml:space="preserve">
+    <value>Hatırlatma</value>
+  </data>
+  <data name="Sample.Launch" xml:space="preserve">
+    <value>ToastContentActivationParams</value>
+  </data>
+  <data name="Sample.Message" xml:space="preserve">
+    <value>Bir tost bildiriminden etkinleştirmenin ToastNotificationService'de nasıl işlenebileceğini görmek için Tamam'ı tıklayın.</value>
+  </data>
+  <data name="Sample.Tag" xml:space="preserve">
+    <value>Sample</value>
+  </data>
+  <data name="Sample.Title" xml:space="preserve">
+    <value>Örnek Tost Bildirimi</value>
+  </data>
+  <data name="Snooze.Content" xml:space="preserve">
+    <value>Ertele</value>
   </data>
 </root>

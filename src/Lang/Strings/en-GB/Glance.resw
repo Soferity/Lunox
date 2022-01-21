@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Build.Message" xml:space="preserve">
-    <value>Please note that it is still under construction.</value>
-  </data>
-  <data name="Build.Title" xml:space="preserve">
-    <value>Reminder</value>
-  </data>
   <data name="Welcome.Text" xml:space="preserve">
     <value>Lunox Greets You</value>
   </data>

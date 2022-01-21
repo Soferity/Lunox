@@ -20,34 +20,22 @@ namespace Lunox.Core.ViewModels
         /// <summary>
         /// 
         /// </summary>
-        public Uri Bug
-        {
-            get => Default.Bug;
-        }
+        public Uri Bug => Default.Bug;
 
         /// <summary>
         /// 
         /// </summary>
-        public Uri Feature
-        {
-            get => Default.Feature;
-        }
+        public Uri Feature => Default.Feature;
 
         /// <summary>
         /// 
         /// </summary>
-        public Uri Discussions
-        {
-            get => Default.Discussions;
-        }
+        public Uri Discussions => Default.Discussions;
 
         /// <summary>
         /// 
         /// </summary>
-        public Uri Contribute
-        {
-            get => Default.Contribute;
-        }
+        public Uri Contribute => Default.Contribute;
 
         /// <summary>
         /// 

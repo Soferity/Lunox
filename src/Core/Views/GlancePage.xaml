@@ -14,22 +14,15 @@
 		<ImageBrush ImageSource="ms-appx:///Assets/Core/Views/Glance/Back.jpg" Stretch="UniformToFill" Opacity="0.075"/>
 	</Page.Background>
 
-	<Grid Margin="{StaticResource MediumLeftTopRightBottomMargin}">
-		<StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
-			<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-				<TextBlock x:Uid="/Glance/Welcome" Style="{ThemeResource SubtitleTextBlockStyle}" FontSize="36" />
+	<ScrollViewer VerticalScrollBarVisibility="Auto" Margin="{StaticResource MediumLeftTopRightBottomMargin}">
+		<Grid>
+			<StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
+				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+					<TextBlock x:Uid="/Glance/Welcome" Style="{ThemeResource SubtitleTextBlockStyle}" FontSize="36" />
+				</StackPanel>
+				<Image Source="ms-appx:///Assets/Core/Views/Glance/Logo.png" Margin="{StaticResource MediumTopMargin}" Width="128" Height="128" />
 			</StackPanel>
-			<Image Source="ms-appx:///Assets/Core/Views/Glance/Logo.png" Margin="{StaticResource MediumTopMargin}" Width="128" Height="128" />
-		</StackPanel>
-
-		<StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center">
-			<muxc:InfoBar
-					x:Uid="/Glance/Build"
-					IsOpen="True"
-					IsIconVisible="True"
-					IsClosable="True"
-					Severity="Informational"/>
-		</StackPanel>
-	</Grid>
+		</Grid>
+	</ScrollViewer>
 
 </Page>
