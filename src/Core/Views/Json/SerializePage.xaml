@@ -25,18 +25,170 @@
                 <TextBlock x:Uid="/Json/Serialize_Title" Style="{ThemeResource SubtitleTextBlockStyle}" FontSize="36" />
             </StackPanel>
 
-            <StackPanel Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="{StaticResource MediumTopMargin}">
-                <TextBlock Text="Neler Yeni" HorizontalAlignment="Center" Style="{ThemeResource SubtitleTextBlockStyle}" FontSize="24" />
+            <RelativePanel Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="{StaticResource MediumTopMargin}">
+                <RelativePanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="BorderThickness" Value="0" />
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Margin" Value="0,0,8,0" />
+                    </Style>
+                </RelativePanel.Resources>
+                
+                <Button x:Name="openFileButton" Click="OpenButton_Click" AutomationProperties.Name="Open file" ToolTipService.ToolTip="Open file">
+                    <Button.Content>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8E5;"/>
+                    </Button.Content>
+                </Button>
 
-                <StackPanel HorizontalAlignment="Center">
-                    <StackPanel Orientation="Horizontal" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="{StaticResource SmallTopBottomMargin}" CornerRadius="15">
-                        <Viewbox Width="24" VerticalAlignment="Center" Margin="{StaticResource SmallLeftMargin}">
-                            <PathIcon Data="{StaticResource Json}" />
-                        </Viewbox>
-                        <TextBlock Text="JSON küçültme, doğrulama, seri hâle getirme ve seri hâlden çıkartma tamamlandı." Margin="{StaticResource SmallLeftTopRightBottomMargin}"/>
-                    </StackPanel>
+                <Button x:Name="saveFileButton" Click="SaveButton_Click" AutomationProperties.Name="Save file" ToolTipService.ToolTip="Save file"
+                    RelativePanel.RightOf="openFileButton">
+                    <Button.Content>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE74E;"/>
+                    </Button.Content>
+                </Button>
+
+                <StackPanel
+                    Orientation="Horizontal"
+                    RelativePanel.RightOf="saveFileButton"
+                    Margin="0,3,0,0">
+
+                    <StackPanel.Resources>
+                        <ResourceDictionary Source="ms-appx:///Microsoft.UI.Xaml/DensityStyles/Compact.xaml" />
+                    </StackPanel.Resources>
+                    
+                    <TextBlock x:Name="findBoxLabel" Text="Bul:" Height="20"/>
+
+                    <TextBox x:Name="findBox" Width="150" PlaceholderText="Arama metnini girin" Margin="10,0,0,0"
+                        TextChanged="{x:Bind FindBoxHighlightMatches}"
+                        GotFocus="{x:Bind FindBoxHighlightMatches}"
+                        LostFocus="{x:Bind FindBoxRemoveHighlights}"/>
                 </StackPanel>
-            </StackPanel>
+
+                <Button x:Name="Serialize" RelativePanel.AlignHorizontalCenterWithPanel="True" Click="Serialize_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Viewbox Width="18" VerticalAlignment="Center">
+                            <PathIcon Data="{StaticResource CodeSolid}" />
+                        </Viewbox>
+                        <TextBlock Text="Serileştir" Margin="10,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="boldButton" AutomationProperties.Name="Bold" ToolTipService.ToolTip="Bold" Click="BoldButton_Click"
+                    RelativePanel.LeftOf="italicButton" >
+                    <Button.Content>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8DD;"/>
+                    </Button.Content>
+                </Button>
+                
+                <Button x:Name="italicButton" Click="ItalicButton_Click" AutomationProperties.Name="Italic" ToolTipService.ToolTip="Italic"
+                    RelativePanel.LeftOf="fontColorButton">
+                    <Button.Content>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8DB;"/>
+                    </Button.Content>
+                </Button>
+
+                <muxc:DropDownButton
+                    x:Name="fontColorButton"
+                    AutomationProperties.Name="Font color"
+                    BorderThickness="0" ToolTipService.ToolTip="Font color"
+                    Background="Transparent"
+                    RelativePanel.AlignRightWithPanel="True">
+                    <SymbolIcon Symbol="FontColor"/>
+                    <muxc:DropDownButton.Flyout>
+                        <Flyout Placement="Bottom">
+                            <VariableSizedWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="3">
+                                <VariableSizedWrapGrid.Resources>
+                                    <Style TargetType="Rectangle">
+                                        <Setter Property="Width" Value="32"/>
+                                        <Setter Property="Height" Value="32"/>
+                                    </Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Padding" Value="0"/>
+                                        <Setter Property="MinWidth" Value="0"/>
+                                        <Setter Property="MinHeight" Value="0"/>
+                                        <Setter Property="Margin" Value="6"/>
+                                    </Style>
+                                </VariableSizedWrapGrid.Resources>
+                                <Button Click="ColorButton_Click" AutomationProperties.Name="Red">
+                                    <Button.Content>
+                                        <Rectangle Fill="Red"/>
+                                    </Button.Content>
+                                </Button>
+                                <Button Click="ColorButton_Click" AutomationProperties.Name="Orange">
+                                    <Button.Content>
+                                        <Rectangle Fill="Orange"/>
+                                    </Button.Content>
+                                </Button>
+                                <Button Click="ColorButton_Click" AutomationProperties.Name="Yellow">
+                                    <Button.Content>
+                                        <Rectangle Fill="Yellow"/>
+                                    </Button.Content>
+                                </Button>
+                                <Button Click="ColorButton_Click" AutomationProperties.Name="Green">
+                                    <Button.Content>
+                                        <Rectangle Fill="Green"/>
+                                    </Button.Content>
+                                </Button>
+                                <Button Click="ColorButton_Click" AutomationProperties.Name="DodgerBlue">
+                                    <Button.Content>
+                                        <Rectangle Fill="DodgerBlue"/>
+                                    </Button.Content>
+                                </Button>
+                                <Button Click="ColorButton_Click" AutomationProperties.Name="Blue">
+                                    <Button.Content>
+                                        <Rectangle Fill="Blue"/>
+                                    </Button.Content>
+                                </Button>
+                                <Button Click="ColorButton_Click" AutomationProperties.Name="Indigo">
+                                    <Button.Content>
+                                        <Rectangle Fill="Indigo"/>
+                                    </Button.Content>
+                                </Button>
+                                <Button Click="ColorButton_Click" AutomationProperties.Name="Violet">
+                                    <Button.Content>
+                                        <Rectangle Fill="Violet"/>
+                                    </Button.Content>
+                                </Button>
+                                <Button Click="ColorButton_Click" AutomationProperties.Name="Gray">
+                                    <Button.Content>
+                                        <Rectangle Fill="Gray"/>
+                                    </Button.Content>
+                                </Button>
+                                <Button Click="ColorButton_Click" AutomationProperties.Name="White">
+                                    <Button.Content>
+                                        <Rectangle Fill="White"/>
+                                    </Button.Content>
+                                </Button>
+                                <Button Click="ColorButton_Click" AutomationProperties.Name="Black">
+                                    <Button.Content>
+                                        <Rectangle Fill="Black"/>
+                                    </Button.Content>
+                                </Button>
+                            </VariableSizedWrapGrid>
+                        </Flyout>
+                    </muxc:DropDownButton.Flyout>
+                </muxc:DropDownButton>
+
+                <RichEditBox
+                    x:Name="editor"
+                    AutomationProperties.Name="Custom editor"
+                    RelativePanel.Below="openFileButton"
+                    RelativePanel.AlignLeftWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True"
+                    RelativePanel.AlignBottomWithPanel="True"
+                    IsSpellCheckEnabled="False"
+                    IsHandwritingViewEnabled="True"
+                    IsTextScaleFactorEnabled="True"
+                    IsTextPredictionEnabled="True"
+                    IsTapEnabled="True"
+                    IsTabStop="True"
+                    IsDoubleTapEnabled="True"
+                    IsHoldingEnabled="True"
+                    IsFocusEngagementEnabled="True"
+                    TextChanged="Editor_TextChanged"
+                    GotFocus="Editor_GotFocus"/>
+            </RelativePanel>
+
         </Grid>
     </ScrollViewer>
 
