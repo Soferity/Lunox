@@ -72,7 +72,7 @@ namespace Lunox.Tests.XUnit
     }
 
     // This type is defined to force the compiler to add the necessary references and allows tests to run
-    public class WinUiReference : Windows.UI.Xaml.Controls.Button
+    public class WinUiReference : Button
     {
     }
 }

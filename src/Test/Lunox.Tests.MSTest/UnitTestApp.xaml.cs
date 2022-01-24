@@ -1,5 +1,5 @@
-﻿
-using System;
+﻿using System;
+
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
@@ -72,7 +72,7 @@ namespace Lunox.Tests.MSTest
     }
 
     // This type is defined to force the compiler to add the necessary references and allows tests to run
-    public class WinUiReference : Windows.UI.Xaml.Controls.Button
+    public class WinUiReference : Button
     {
     }
 }

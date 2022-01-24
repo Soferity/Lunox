@@ -1,4 +1,4 @@
-﻿using Lunox.ViewModels;
+﻿using Lunox.Core.ViewModels;
 using Xunit;
 
 namespace Lunox.Tests.XUnit
@@ -12,12 +12,12 @@ namespace Lunox.Tests.XUnit
             //TODO WTS: xXx
         }
 
-        // TODO WTS: Add tests for functionality you add to MainViewModel.
+        // TODO WTS: Add tests for functionality you add to GlanceViewModel.
         [Fact]
-        public void TestMainViewModelCreation()
+        public void TestGlanceViewModelCreation()
         {
             // This test is trivial. Add your own tests for the logic you add to the ViewModel.
-            MainViewModel vm = new MainViewModel();
+            GlanceViewModel vm = new GlanceViewModel();
             Assert.NotNull(vm);
         }
 
@@ -30,12 +30,12 @@ namespace Lunox.Tests.XUnit
             Assert.NotNull(vm);
         }
 
-        // TODO WTS: Add tests for functionality you add to WebViewViewModel.
+        // TODO WTS: Add tests for functionality you add to HelpViewModel.
         [Fact]
-        public void TestWebViewViewModelCreation()
+        public void TestHelpViewModelCreation()
         {
             // This test is trivial. Add your own tests for the logic you add to the ViewModel.
-            WebViewViewModel vm = new WebViewViewModel();
+            HelpViewModel vm = new HelpViewModel();
             Assert.NotNull(vm);
         }
     }

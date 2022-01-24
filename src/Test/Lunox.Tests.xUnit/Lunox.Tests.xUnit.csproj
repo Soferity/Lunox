@@ -102,7 +102,7 @@
       <Version>17.1.0-preview-20211130-02</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
-      <Version>2.8.0-prerelease.210927001</Version>
+      <Version>2.8.0-prerelease.220118001</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Xaml.Behaviors.Uwp.Managed">
       <Version>2.0.1</Version>
@@ -111,7 +111,7 @@
       <Version>2.4.2-pre.12</Version>
     </PackageReference>
     <PackageReference Include="xunit.runner.visualstudio">
-      <Version>2.4.1</Version>
+      <Version>2.4.3</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
@@ -139,25 +139,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\UnitTestApp.rd.xml" />
-    <Content Include="..\..\App\Assets\App\BadgeLogo.scale-200.png">
+    <Content Include="..\..\Resource\Assets\App\BadgeLogo.scale-200.png">
       <Link>Assets\BadgeLogo.scale-200.png</Link>
     </Content>
-    <Content Include="..\..\App\Assets\App\SplashScreen.scale-200.png">
+    <Content Include="..\..\Resource\Assets\App\SplashScreen.scale-200.png">
       <Link>Assets\SplashScreen.scale-200.png</Link>
     </Content>
-    <Content Include="..\..\App\Assets\App\MediumTile.scale-200.png">
+    <Content Include="..\..\Resource\Assets\App\MediumTile.scale-200.png">
       <Link>Assets\MediumTile.scale-200.png</Link>
     </Content>
-    <Content Include="..\..\App\Assets\App\AppLogo.scale-200.png">
+    <Content Include="..\..\Resource\Assets\App\AppLogo.scale-200.png">
       <Link>Assets\AppLogo.scale-200.png</Link>
     </Content>
-    <Content Include="..\..\App\Assets\App\AppLogo.altform-unplated_targetsize-24.png">
+    <Content Include="..\..\Resource\Assets\App\AppLogo.altform-unplated_targetsize-24.png">
       <Link>Assets\AppLogo.altform-unplated_targetsize-24.png</Link>
     </Content>
-    <Content Include="..\..\App\Assets\App\StoreLogo.scale-200.png">
+    <Content Include="..\..\Resource\Assets\App\StoreLogo.scale-200.png">
       <Link>Assets\StoreLogo.scale-200.png</Link>
     </Content>
-    <Content Include="..\..\App\Assets\App\WideTile.scale-200.png">
+    <Content Include="..\..\Resource\Assets\App\WideTile.scale-200.png">
       <Link>Assets\WideTile.scale-200.png</Link>
     </Content>
   </ItemGroup>

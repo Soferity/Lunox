@@ -1,4 +1,4 @@
-﻿using Lunox.ViewModels;
+﻿using Lunox.Core.ViewModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lunox.Tests.MSTest
@@ -13,12 +13,12 @@ namespace Lunox.Tests.MSTest
             //TODO WTS: xXx
         }
 
-        // TODO WTS: Add tests for functionality you add to MainViewModel.
+        // TODO WTS: Add tests for functionality you add to GlanceViewModel.
         [TestMethod]
         public void TestMainViewModelCreation()
         {
             // This test is trivial. Add your own tests for the logic you add to the ViewModel.
-            MainViewModel vm = new MainViewModel();
+            GlanceViewModel vm = new GlanceViewModel();
             Assert.IsNotNull(vm);
         }
 
@@ -31,12 +31,12 @@ namespace Lunox.Tests.MSTest
             Assert.IsNotNull(vm);
         }
 
-        // TODO WTS: Add tests for functionality you add to WebViewViewModel.
+        // TODO WTS: Add tests for functionality you add to HelpViewModel.
         [TestMethod]
-        public void TestWebViewViewModelCreation()
+        public void TestHelpViewModelCreation()
         {
             // This test is trivial. Add your own tests for the logic you add to the ViewModel.
-            WebViewViewModel vm = new WebViewViewModel();
+            HelpViewModel vm = new HelpViewModel();
             Assert.IsNotNull(vm);
         }
     }
