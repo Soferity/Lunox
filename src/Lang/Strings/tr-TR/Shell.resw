@@ -258,6 +258,9 @@
   <data name="ImageTIFF.Content" xml:space="preserve">
     <value>TIFF Dönüştürme</value>
   </data>
+  <data name="ImageWEBP.Content" xml:space="preserve">
+    <value>WEBP Dönüştürme</value>
+  </data>
   <data name="JavaScript.Content" xml:space="preserve">
     <value>JavaScript İşleme</value>
   </data>
