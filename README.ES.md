@@ -65,6 +65,7 @@
   <summary>Ver Más Capturas de Pantalla</summary>
 
   ![Settings](.screenshots/Settings.ES.png)
+  ![Help](.screenshots/Help.ES.png)
   ![404](.screenshots/404.ES.png)
 
 </details>

@@ -65,6 +65,7 @@
   <summary>View More Screenshots</summary>
 
   ![Settings](.screenshots/Settings.EN.png)
+  ![Help](.screenshots/Help.EN.png)
   ![404](.screenshots/404.EN.png)
 
 </details>

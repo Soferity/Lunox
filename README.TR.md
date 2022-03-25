@@ -65,6 +65,7 @@
   <summary>Daha Fazla Ekran Görüntüsü Görüntüle</summary>
 
   ![Settings](.screenshots/Settings.TR.png)
+  ![Help](.screenshots/Help.TR.png)
   ![404](.screenshots/404.TR.png)
 
 </details>
