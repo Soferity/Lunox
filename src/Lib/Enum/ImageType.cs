@@ -136,7 +136,14 @@
         /// to the final sharp image. PJPEG files may also fill alternating horizontal lines until the
         /// full picture is revealed.
         /// </summary>
-        PJPEG
+        PJPEG,
+        /// <summary>
+        /// A WEBP file is an image saved in the WebP (pronounced "Weppy") raster image format developed
+        /// by Google for web graphics. The WebP format reduces file size more than standard JPEG compression
+        /// while maintaining similar or better image quality. It supports both lossy and lossless compression
+        /// and includes an alpha channel for transparency, similar to the PNG format.
+        /// </summary>
+        WEBP
     }
 
     #endregion
