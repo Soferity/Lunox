@@ -88,7 +88,7 @@ namespace Lunox.Core.Helpers
         /// <returns></returns>
         public static async Task<Uri> GetWebLinkAsync(this ShareOperation shareOperation)
         {
-            return await GetOperationDataAsync<Uri>(shareOperation, StandardDataFormats.WebLink) as Uri;
+            return await GetOperationDataAsync<Uri>(shareOperation, StandardDataFormats.WebLink);
         }
 
         /// <summary>

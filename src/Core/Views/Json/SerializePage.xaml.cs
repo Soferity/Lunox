@@ -178,8 +178,8 @@ namespace Lunox.Core.Views.Json
         {
             // Extract the color of the button that was clicked.
             Button clickedColor = (Button)sender;
-            var rectangle = (Rectangle)clickedColor.Content;
-            var color = ((SolidColorBrush)rectangle.Fill).Color;
+            Rectangle rectangle = (Rectangle)clickedColor.Content;
+            Color color = ((SolidColorBrush)rectangle.Fill).Color;
 
             editor.Document.Selection.CharacterFormat.ForegroundColor = color;
 
