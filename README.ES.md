@@ -98,12 +98,18 @@ Todos los métodos de distribución mencionados anteriormente son compatibles, s
 **Microsoft Store**
 
 <a href='https://www.microsoft.com/store/apps/9PC06S6LW868'>
-  <img src='.images/Badges/Spanish_get it from MS_864X312.png' alt='Microsoft Store' width='160'/>
+  <img src='.images/Badges/Microsoft/Spanish_get it from MS_864X312.png' alt='Microsoft Store' width='160'/>
 </a>
 
 <p></p>
 
 **GitHub**
+
+<a href='https://github.com/Soferity/Lunox/releases/download/v1.0.16.0/Lunox_1.0.16.0_x86_x64_arm_arm64.msixbundle'>
+  <img src='.images/Badges/GitHub/Spanish_get it from GH_228X86.png' alt='GitHub Release' width='160'/>
+</a>
+
+<p></p>
 
 **Si Windows Pregunta acerca de la Aplicación que no es de Confianza**
 

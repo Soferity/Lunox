@@ -98,12 +98,18 @@ Yukarıda belirtilen tüm dağıtım yöntemleri desteklenir, ancak kurulumu dah
 **Microsoft Store**
 
 <a href='https://www.microsoft.com/store/apps/9PC06S6LW868'>
-  <img src='.images/Badges/Turkish-Get-It-From-864x312.png' alt='Microsoft Store' width='160'/>
+  <img src='.images/Badges/Microsoft/Turkish-Get-It-From-864x312.png' alt='Microsoft Store' width='160'/>
 </a>
 
 <p></p>
 
 **GitHub**
+
+<a href='https://github.com/Soferity/Lunox/releases/download/v1.0.16.0/Lunox_1.0.16.0_x86_x64_arm_arm64.msixbundle'>
+  <img src='.images/Badges/GitHub/Turkish_get it from GH_228X86.png' alt='GitHub Release' width='160'/>
+</a>
+
+<p></p>
 
 **Windows Güvenilmeyen Uygulama hakkında bilgi isterse**
 
