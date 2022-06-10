@@ -27,7 +27,7 @@ namespace Lunox.Core.Services
         /// <summary>
         /// 
         /// </summary>
-        private const string SECRET = "e9e63317-6348-4bca-82d1-6756998cd803";
+        private const string SECRET = "APP-SECRET";
 
         #endregion
 
