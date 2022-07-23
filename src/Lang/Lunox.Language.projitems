@@ -9,6 +9,8 @@
     <Import_RootNamespace>Lunox.Language</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\de-DE\Discord.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\de-DE\GitHub.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\de-DE\Resources.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-GB\Discord.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-GB\FirstRun.resw" />
@@ -20,7 +22,19 @@
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-GB\Settings.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-GB\Shell.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-GB\WhatsNew.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\es-ES\Discord.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\es-ES\GitHub.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\es-ES\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\fr-FR\Discord.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\fr-FR\FirstRun.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\fr-FR\GitHub.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\fr-FR\Glance.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\fr-FR\Help.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\fr-FR\Json.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\fr-FR\Settings.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\fr-FR\Shell.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\fr-FR\Toast.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\fr-FR\WhatsNew.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\pl-PL\Discord.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\pl-PL\FirstRun.resw" />
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\pl-PL\GitHub.resw" />

@@ -117,23 +117,83 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SchemeActivationSamplePage_Description.Text" xml:space="preserve">
-    <value>This is a sample page that will show activation parameters if the app is activated from Deep Linking.</value>
-    <comment>Description text for SchemeActivationSamplePage</comment>
+  <data name="About.Text" xml:space="preserve">
+    <value>À Propos De L'Application</value>
   </data>
-  <data name="ShareTarget_CompleteButton.Content" xml:space="preserve">
-    <value>Complete</value>
-    <comment>Complete button content text in ShareTarget page</comment>
+  <data name="About_Description.Text" xml:space="preserve">
+    <value>Kit de Voiture Utilitaire Universelle
+Droits d’auteur © 2022 Soferity LLC</value>
   </data>
-  <data name="ShareTarget_ImagesTitle" xml:space="preserve">
-    <value>Images shared with the application</value>
-    <comment>Page title for ShareTarget when images are shared</comment>
+  <data name="About_FeedbackHub.Content" xml:space="preserve">
+    <value>Centre de Rétroaction</value>
   </data>
-  <data name="ShareTarget_WebLinkTitle" xml:space="preserve">
-    <value>Web link shared with the application</value>
-    <comment>Page title for ShareTarget when web link is shared</comment>
+  <data name="About_PrivacyTerms.Content" xml:space="preserve">
+    <value>Déclaration de Confidentialité</value>
   </data>
-  <data name="Shell_Test.Content" xml:space="preserve">
-    <value>Test</value>
+  <data name="Glance.Text" xml:space="preserve">
+    <value>Page de Démarrage de l'Application</value>
+  </data>
+  <data name="Language.Text" xml:space="preserve">
+    <value>Interface D'Application</value>
+  </data>
+  <data name="Language_English.Content" xml:space="preserve">
+    <value>Anglais</value>
+  </data>
+  <data name="Language_French.Content" xml:space="preserve">
+    <value>Français</value>
+  </data>
+  <data name="Language_German.Content" xml:space="preserve">
+    <value>Allemand</value>
+  </data>
+  <data name="Language_Polish.Content" xml:space="preserve">
+    <value>Polonais</value>
+  </data>
+  <data name="Language_Spanish.Content" xml:space="preserve">
+    <value>Espagnol</value>
+  </data>
+  <data name="Language_Turkish.Content" xml:space="preserve">
+    <value>Turc</value>
+  </data>
+  <data name="Navigation.Text" xml:space="preserve">
+    <value>Barre d'Application</value>
+  </data>
+  <data name="Navigation_Auto.Content" xml:space="preserve">
+    <value>Automatique</value>
+  </data>
+  <data name="Navigation_Left.Content" xml:space="preserve">
+    <value>Gauche</value>
+  </data>
+  <data name="Navigation_LeftCompact.Content" xml:space="preserve">
+    <value>Compact Gauche</value>
+  </data>
+  <data name="Navigation_LeftMinimal.Content" xml:space="preserve">
+    <value>Minimal Gauche</value>
+  </data>
+  <data name="Navigation_Top.Content" xml:space="preserve">
+    <value>Haut</value>
+  </data>
+  <data name="Personalization.Text" xml:space="preserve">
+    <value>Personnalisation</value>
+  </data>
+  <data name="Theme.Text" xml:space="preserve">
+    <value>Thème D'Application</value>
+  </data>
+  <data name="Theme_Dark.Content" xml:space="preserve">
+    <value>Sombre</value>
+  </data>
+  <data name="Theme_Default.Content" xml:space="preserve">
+    <value>Défaut</value>
+  </data>
+  <data name="Theme_Light.Content" xml:space="preserve">
+    <value>Lumière</value>
+  </data>
+  <data name="WebView.Text" xml:space="preserve">
+    <value>Navigateur D'applications</value>
+  </data>
+  <data name="WebView_New.Content" xml:space="preserve">
+    <value>Avancé</value>
+  </data>
+  <data name="WebView_Old.Content" xml:space="preserve">
+    <value>Défaut</value>
   </data>
 </root>

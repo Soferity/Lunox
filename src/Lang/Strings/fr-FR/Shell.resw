@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Actions.Content" xml:space="preserve">
+    <value>Aksiyonlar</value>
+  </data>
+  <data name="Audio.Content" xml:space="preserve">
+    <value>Ses Dönüştürme</value>
+  </data>
+  <data name="AudioAAC.Content" xml:space="preserve">
+    <value>AAC Dönüştürme</value>
+  </data>
+  <data name="AudioAIFF.Content" xml:space="preserve">
+    <value>AIFF Dönüştürme</value>
+  </data>
+  <data name="AudioALAC.Content" xml:space="preserve">
+    <value>ALAC Dönüştürme</value>
+  </data>
+  <data name="AudioFLAC.Content" xml:space="preserve">
+    <value>FLAC Dönüştürme</value>
+  </data>
+  <data name="AudioM4A.Content" xml:space="preserve">
+    <value>M4A Dönüştürme</value>
+  </data>
+  <data name="AudioMP3.Content" xml:space="preserve">
+    <value>MP3 Dönüştürme</value>
+  </data>
+  <data name="AudioOGG.Content" xml:space="preserve">
+    <value>OGG Dönüştürme</value>
+  </data>
+  <data name="AudioWAV.Content" xml:space="preserve">
+    <value>WAV Dönüştürme</value>
+  </data>
+  <data name="AudioWMA.Content" xml:space="preserve">
+    <value>WMA Dönüştürme</value>
+  </data>
+  <data name="Coming.Content" xml:space="preserve">
+    <value>Çok Yakında</value>
+  </data>
+  <data name="CSS.Content" xml:space="preserve">
+    <value>CSS İşleme</value>
+  </data>
+  <data name="CSSBeautify.Content" xml:space="preserve">
+    <value>Güzelleştirme</value>
+  </data>
+  <data name="CSSMinify.Content" xml:space="preserve">
+    <value>Küçültme</value>
+  </data>
+  <data name="Discord.Content" xml:space="preserve">
+    <value>Discord</value>
+  </data>
+  <data name="Document.Content" xml:space="preserve">
+    <value>Döküman Dönüştürme</value>
+  </data>
+  <data name="DocumentDOC.Content" xml:space="preserve">
+    <value>DOC Dönüştürme</value>
+  </data>
+  <data name="DocumentDOCX.Content" xml:space="preserve">
+    <value>DOCX Dönüştürme</value>
+  </data>
+  <data name="DocumentPDF.Content" xml:space="preserve">
+    <value>PDF Dönüştürme</value>
+  </data>
+  <data name="GitHub.Content" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="Glance.Content" xml:space="preserve">
+    <value>Karşılama</value>
+  </data>
+  <data name="Help.Content" xml:space="preserve">
+    <value>Yardım</value>
+  </data>
+  <data name="HTML.Content" xml:space="preserve">
+    <value>HTML İşleme</value>
+  </data>
+  <data name="HTMLBeautify.Content" xml:space="preserve">
+    <value>Güzelleştirme</value>
+  </data>
+  <data name="HTMLMinify.Content" xml:space="preserve">
+    <value>Küçültme</value>
+  </data>
+  <data name="Image.Content" xml:space="preserve">
+    <value>Resim Dönüştürme</value>
+  </data>
+  <data name="ImageARW.Content" xml:space="preserve">
+    <value>ARW Dönüştürme</value>
+  </data>
+  <data name="ImageBMP.Content" xml:space="preserve">
+    <value>BMP Dönüştürme</value>
+  </data>
+  <data name="ImageCR2.Content" xml:space="preserve">
+    <value>CR2 Dönüştürme</value>
+  </data>
+  <data name="ImageDNG.Content" xml:space="preserve">
+    <value>DNG Dönüştürme</value>
+  </data>
+  <data name="ImageGIF.Content" xml:space="preserve">
+    <value>GIF Dönüştürme</value>
+  </data>
+  <data name="ImageHEIC.Content" xml:space="preserve">
+    <value>HEICC Dönüştürme</value>
+  </data>
+  <data name="ImageJPEG.Content" xml:space="preserve">
+    <value>JPEG Dönüştürme</value>
+  </data>
+  <data name="ImageJPG.Content" xml:space="preserve">
+    <value>JPG Dönüştürme</value>
+  </data>
+  <data name="ImageJXR.Content" xml:space="preserve">
+    <value>JXR Dönüştürme</value>
+  </data>
+  <data name="ImageNEF.Content" xml:space="preserve">
+    <value>NEF Dönüştürme</value>
+  </data>
+  <data name="ImageORF.Content" xml:space="preserve">
+    <value>ORF Dönüştürme</value>
+  </data>
+  <data name="ImagePJP.Content" xml:space="preserve">
+    <value>PJP Dönüştürme</value>
+  </data>
+  <data name="ImagePJPEG.Content" xml:space="preserve">
+    <value>PJPEG Dönüştürme</value>
+  </data>
+  <data name="ImagePJPG.Content" xml:space="preserve">
+    <value>PJPG Dönüştürme</value>
+  </data>
+  <data name="ImagePNG.Content" xml:space="preserve">
+    <value>PNG Dönüştürme</value>
+  </data>
+  <data name="ImageRW2.Content" xml:space="preserve">
+    <value>RW2 Dönüştürme</value>
+  </data>
+  <data name="ImageSRW.Content" xml:space="preserve">
+    <value>SRW Dönüştürme</value>
+  </data>
+  <data name="ImageSVG.Content" xml:space="preserve">
+    <value>SVG Dönüştürme</value>
+  </data>
+  <data name="ImageTIF.Content" xml:space="preserve">
+    <value>TIF Dönüştürme</value>
+  </data>
+  <data name="ImageTIFF.Content" xml:space="preserve">
+    <value>TIFF Dönüştürme</value>
+  </data>
+  <data name="ImageWEBP.Content" xml:space="preserve">
+    <value>WEBP Dönüştürme</value>
+  </data>
+  <data name="JavaScript.Content" xml:space="preserve">
+    <value>JavaScript İşleme</value>
+  </data>
+  <data name="JavaScriptBeautify.Content" xml:space="preserve">
+    <value>Güzelleştirme</value>
+  </data>
+  <data name="JavaScriptMinify.Content" xml:space="preserve">
+    <value>Küçültme</value>
+  </data>
+  <data name="Json.Content" xml:space="preserve">
+    <value>Json İşleme</value>
+  </data>
+  <data name="JsonDeserialize.Content" xml:space="preserve">
+    <value>Seri Durumdan Çıkartma</value>
+  </data>
+  <data name="JsonMinify.Content" xml:space="preserve">
+    <value>Küçültme</value>
+  </data>
+  <data name="JsonSerialize.Content" xml:space="preserve">
+    <value>Seri Hâle Getirme</value>
+  </data>
+  <data name="JsonValidate.Content" xml:space="preserve">
+    <value>Doğrulama</value>
+  </data>
+  <data name="Matrix.Content" xml:space="preserve">
+    <value>QR Kodu</value>
+  </data>
+  <data name="MatrixCreate.Content" xml:space="preserve">
+    <value>Kodu Oluştur</value>
+  </data>
+  <data name="MatrixRead.Content" xml:space="preserve">
+    <value>Kameradan Okut</value>
+  </data>
+  <data name="MatrixScan.Content" xml:space="preserve">
+    <value>Resimden Okut</value>
+  </data>
+  <data name="Recognition.Content" xml:space="preserve">
+    <value>Optik Karakter Tanıma</value>
+  </data>
+  <data name="RecognitionRead.Content" xml:space="preserve">
+    <value>Resimden Tanıma</value>
+  </data>
+  <data name="RecognitionScan.Content" xml:space="preserve">
+    <value>Kameradan Tanıma</value>
+  </data>
+  <data name="SchemeActivation.Content" xml:space="preserve">
+    <value>Şema Aktivasyonu</value>
+  </data>
+  <data name="Settings.Content" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="Shortcuts.Content" xml:space="preserve">
+    <value>Kısayollar</value>
+  </data>
+  <data name="Suggest.Custom" xml:space="preserve">
+    <value>Sayfa bulunamadı</value>
+  </data>
+  <data name="Suggest.PlaceholderText" xml:space="preserve">
+    <value>Sayfa Bul</value>
+  </data>
+  <data name="Transactions.Content" xml:space="preserve">
+    <value>İşlemler</value>
+  </data>
+  <data name="Video.Content" xml:space="preserve">
+    <value>Video Dönüştürme</value>
+  </data>
+  <data name="VideoAVI.Content" xml:space="preserve">
+    <value>AVI Dönüştürme</value>
+  </data>
+  <data name="VideoHEVC.Content" xml:space="preserve">
+    <value>HEVC Dönüştürme</value>
+  </data>
+  <data name="VideoMP4.Content" xml:space="preserve">
+    <value>MP4 Dönüştürme</value>
+  </data>
+  <data name="VideoMPEG.Content" xml:space="preserve">
+    <value>MPEG Dönüştürme</value>
+  </data>
+  <data name="VideoMPEG1.Content" xml:space="preserve">
+    <value>MPEG1 Dönüştürme</value>
+  </data>
+  <data name="VideoMPEG2.Content" xml:space="preserve">
+    <value>MPEG2 Dönüştürme</value>
+  </data>
+  <data name="VideoMPEG4.Content" xml:space="preserve">
+    <value>MPEG4 Dönüştürme</value>
+  </data>
+  <data name="VideoWMV.Content" xml:space="preserve">
+    <value>WMV Dönüştürme</value>
+  </data>
+</root>
