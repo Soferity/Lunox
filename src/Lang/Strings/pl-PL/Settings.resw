@@ -117,69 +117,83 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Bug_Suggestion.Text" xml:space="preserve">
-    <value>Bug Mu Buldunuz? Öneriniz Mi Var?</value>
+  <data name="About.Text" xml:space="preserve">
+    <value>O Aplikacji</value>
   </data>
-  <data name="Bug_Suggestion_Text_First.Text" xml:space="preserve">
-    <value>Lunox'da bir hata bulduysanız, lütfen</value>
+  <data name="About_Description.Text" xml:space="preserve">
+    <value>Uniwersalny Zestaw Narzędzi Pomocniczych
+Prawa Autorskie © 2022 Soferity LLC</value>
   </data>
-  <data name="Bug_Suggestion_Text_Last.Text" xml:space="preserve">
-    <value>aracılığıyla bildirin.</value>
+  <data name="About_FeedbackHub.Content" xml:space="preserve">
+    <value>Centrum Opinii</value>
   </data>
-  <data name="Bug_Suggestion_Text_Middle.Text" xml:space="preserve">
-    <value>aracılığıyla bize bu sorunu bildirin.
-Eğer yeni bir özellik isteğiniz veya öneriniz varsa yine bize</value>
+  <data name="About_PrivacyTerms.Content" xml:space="preserve">
+    <value>Polityka Prywatności</value>
   </data>
-  <data name="Does.Text" xml:space="preserve">
-    <value>Lunox Ne İşe Yarar?</value>
+  <data name="Glance.Text" xml:space="preserve">
+    <value>Strona Startowa Aplikacji</value>
   </data>
-  <data name="Does_Text.Text" xml:space="preserve">
-    <value>Lunox sunduğu çeşitli altyapısı ile birim dönüşümleri, dosya dönüşümleri, OCR işlemleri, QR işlemleri, HTML-CSS-JS-JSON işlemleri ve daha bir çok önde gelen işlemleri kolaylıkla yapmanıza olanak sağlar. Özetle bazı Lunox özellikleri şunlardır:
-• Modern görünüm
-• Çok çeşitli
-• Özelleştirilebilir
-• Kolay kullanım
-• En önemlisi, Açık Kaynaklı Yazılımdır (OSS)!</value>
+  <data name="Language.Text" xml:space="preserve">
+    <value>Interfejs Aplikacji</value>
   </data>
-  <data name="Hint.Text" xml:space="preserve">
-    <value>İpucu</value>
+  <data name="Language_English.Content" xml:space="preserve">
+    <value>Angielski</value>
   </data>
-  <data name="Hint_Text_Contribute.Text" xml:space="preserve">
-    <value>bu projeye katkıda bulunmanızı</value>
+  <data name="Language_French.Content" xml:space="preserve">
+    <value>Francuski</value>
   </data>
-  <data name="Hint_Text_Discussions.Text" xml:space="preserve">
-    <value>Tartışmalar</value>
+  <data name="Language_German.Content" xml:space="preserve">
+    <value>Niemiecki</value>
   </data>
-  <data name="Hint_Text_First.Text" xml:space="preserve">
-    <value>Lunox şu anda yoğun bir geliştirme aşamasındadır. Öneri ve görüşlerinizi</value>
+  <data name="Language_Polish.Content" xml:space="preserve">
+    <value>Polski</value>
   </data>
-  <data name="Hint_Text_Last.Text" xml:space="preserve">
-    <value>şiddetle tavsiye ederiz.</value>
+  <data name="Language_Spanish.Content" xml:space="preserve">
+    <value>Hiszpański</value>
   </data>
-  <data name="Hint_Text_Middle.Text" xml:space="preserve">
-    <value>sayfamızdan iletebilirsiniz. C# (.NET) kullanarak kod yazarken kendinizi rahat hissediyorsanız,</value>
+  <data name="Language_Turkish.Content" xml:space="preserve">
+    <value>Turecki</value>
   </data>
-  <data name="Information.Text" xml:space="preserve">
-    <value>Bilgilendirme</value>
+  <data name="Navigation.Text" xml:space="preserve">
+    <value>Pasek Aplikacji</value>
   </data>
-  <data name="Requirements.Text" xml:space="preserve">
-    <value>Sistem Gereksinimleri Nelerdir?</value>
+  <data name="Navigation_Auto.Content" xml:space="preserve">
+    <value>Automatyczne</value>
   </data>
-  <data name="Requirements_Text.Text" xml:space="preserve">
-    <value>• İşletim Sistemi: Windows 11, Windows 10 1809 ve üzeri
-• Mimari: ARM, ARM64, x64, x86
-• Dokunmatik: İsteğe Bağlı
-• DirectX: Sürüm 9 ve üzeri
-• Kamera: İsteğe Bağlı
-• Video Belleği: 1 GB ve üzeri
-• Klave: İsteğe Bağlı
-• Fare: İsteğe Bağlı
-• Bellek: 1 GB ve üzeri</value>
+  <data name="Navigation_Left.Content" xml:space="preserve">
+    <value>Lewy</value>
   </data>
-  <data name="What.Text" xml:space="preserve">
-    <value>Lunox Nedir?</value>
+  <data name="Navigation_LeftCompact.Content" xml:space="preserve">
+    <value>Lewy Kompakt</value>
   </data>
-  <data name="What_Text.Text" xml:space="preserve">
-    <value>Lunox özelleştirilebilir, modern ve gelişmiş bir Evrensel Yardımcı Araç Kitidir.</value>
+  <data name="Navigation_LeftMinimal.Content" xml:space="preserve">
+    <value>Lewy Malutki</value>
+  </data>
+  <data name="Navigation_Top.Content" xml:space="preserve">
+    <value>W Górę</value>
+  </data>
+  <data name="Personalization.Text" xml:space="preserve">
+    <value>Personalizacja</value>
+  </data>
+  <data name="Theme.Text" xml:space="preserve">
+    <value>Motyw Aplikacji</value>
+  </data>
+  <data name="Theme_Dark.Content" xml:space="preserve">
+    <value>Ciemny</value>
+  </data>
+  <data name="Theme_Default.Content" xml:space="preserve">
+    <value>Domyślna</value>
+  </data>
+  <data name="Theme_Light.Content" xml:space="preserve">
+    <value>Jasny</value>
+  </data>
+  <data name="WebView.Text" xml:space="preserve">
+    <value>Przeglądarka Aplikacji</value>
+  </data>
+  <data name="WebView_New.Content" xml:space="preserve">
+    <value>Rozwinięty</value>
+  </data>
+  <data name="WebView_Old.Content" xml:space="preserve">
+    <value>Domyślna</value>
   </data>
 </root>

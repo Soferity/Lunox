@@ -118,237 +118,237 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Actions.Content" xml:space="preserve">
-    <value>Actions</value>
+    <value>Działania</value>
   </data>
   <data name="Audio.Content" xml:space="preserve">
-    <value>Audio Conversion</value>
+    <value>Konwersja Audio</value>
   </data>
   <data name="AudioAAC.Content" xml:space="preserve">
-    <value>AAC Conversion</value>
+    <value>Konwersja AAC</value>
   </data>
   <data name="AudioAIFF.Content" xml:space="preserve">
-    <value>AIFF Conversion</value>
+    <value>Konwersja AIFF</value>
   </data>
   <data name="AudioALAC.Content" xml:space="preserve">
-    <value>ALAC Conversion</value>
+    <value>Konwersja ALAC</value>
   </data>
   <data name="AudioFLAC.Content" xml:space="preserve">
-    <value>FLAC Conversion</value>
+    <value>Konwersja FLAC</value>
   </data>
   <data name="AudioM4A.Content" xml:space="preserve">
-    <value>M4A Conversion</value>
+    <value>Konwersja M4A</value>
   </data>
   <data name="AudioMP3.Content" xml:space="preserve">
-    <value>MP3 Conversion</value>
+    <value>Konwersja MP3</value>
   </data>
   <data name="AudioOGG.Content" xml:space="preserve">
-    <value>OGG Conversion</value>
+    <value>Konwersja OGG</value>
   </data>
   <data name="AudioWAV.Content" xml:space="preserve">
-    <value>WAV Conversion</value>
+    <value>Konwersja WAV</value>
   </data>
   <data name="AudioWMA.Content" xml:space="preserve">
-    <value>WMA Conversion</value>
+    <value>Konwersja WMA</value>
   </data>
   <data name="Coming.Content" xml:space="preserve">
-    <value>Coming Soon</value>
+    <value>Wkrótce</value>
   </data>
   <data name="CSS.Content" xml:space="preserve">
-    <value>CSS Processing</value>
+    <value>Renderowanie CSS</value>
   </data>
   <data name="CSSBeautify.Content" xml:space="preserve">
-    <value>Beautify</value>
+    <value>Upiększanie</value>
   </data>
   <data name="CSSMinify.Content" xml:space="preserve">
-    <value>Minify</value>
+    <value>Zmniejszyć</value>
   </data>
   <data name="Discord.Content" xml:space="preserve">
     <value>Discord</value>
   </data>
   <data name="Document.Content" xml:space="preserve">
-    <value>Document Conversion</value>
+    <value>Konwersja Dokumentów</value>
   </data>
   <data name="DocumentDOC.Content" xml:space="preserve">
-    <value>DOC Conversion</value>
+    <value>Konwersja DOC</value>
   </data>
   <data name="DocumentDOCX.Content" xml:space="preserve">
-    <value>DOCX Conversion</value>
+    <value>Konwersja DOCX</value>
   </data>
   <data name="DocumentPDF.Content" xml:space="preserve">
-    <value>PDF Conversion</value>
+    <value>Konwersja PDF</value>
   </data>
   <data name="GitHub.Content" xml:space="preserve">
     <value>GitHub</value>
   </data>
   <data name="Glance.Content" xml:space="preserve">
-    <value>Glance</value>
+    <value>Zerknąć</value>
   </data>
   <data name="Help.Content" xml:space="preserve">
-    <value>Help</value>
+    <value>Pomoc</value>
   </data>
   <data name="HTML.Content" xml:space="preserve">
-    <value>HTML Processing</value>
+    <value>Przetwarzanie HTML</value>
   </data>
   <data name="HTMLBeautify.Content" xml:space="preserve">
-    <value>Beautify</value>
+    <value>Upiększanie</value>
   </data>
   <data name="HTMLMinify.Content" xml:space="preserve">
-    <value>Minify</value>
+    <value>Zmniejszyć</value>
   </data>
   <data name="Image.Content" xml:space="preserve">
-    <value>Image Conversion</value>
+    <value>Konwersja Obrazów</value>
   </data>
   <data name="ImageARW.Content" xml:space="preserve">
-    <value>ARW Conversion</value>
+    <value>Konwersja ARW</value>
   </data>
   <data name="ImageBMP.Content" xml:space="preserve">
-    <value>BMP Conversion</value>
+    <value>Konwersja BMP</value>
   </data>
   <data name="ImageCR2.Content" xml:space="preserve">
-    <value>CR2 Conversion</value>
+    <value>Konwersja CR2</value>
   </data>
   <data name="ImageDNG.Content" xml:space="preserve">
-    <value>DNG Conversion</value>
+    <value>Konwersja DNG</value>
   </data>
   <data name="ImageGIF.Content" xml:space="preserve">
-    <value>GIF Conversion</value>
+    <value>Konwersja GIF</value>
   </data>
   <data name="ImageHEIC.Content" xml:space="preserve">
-    <value>HEICC Conversion</value>
+    <value>Konwersja HEICC</value>
   </data>
   <data name="ImageJPEG.Content" xml:space="preserve">
-    <value>JPEG Conversion</value>
+    <value>Konwersja JPEG</value>
   </data>
   <data name="ImageJPG.Content" xml:space="preserve">
-    <value>JPG Conversion</value>
+    <value>Konwersja JPG</value>
   </data>
   <data name="ImageJXR.Content" xml:space="preserve">
-    <value>JXR Conversion</value>
+    <value>Konwersja JXR</value>
   </data>
   <data name="ImageNEF.Content" xml:space="preserve">
-    <value>NEF Conversion</value>
+    <value>Konwersja NEF</value>
   </data>
   <data name="ImageORF.Content" xml:space="preserve">
-    <value>ORF Conversion</value>
+    <value>Konwersja ORF</value>
   </data>
   <data name="ImagePJP.Content" xml:space="preserve">
-    <value>PJP Conversion</value>
+    <value>Konwersja PJP</value>
   </data>
   <data name="ImagePJPEG.Content" xml:space="preserve">
-    <value>PJPEG Conversion</value>
+    <value>Konwersja PJPEG</value>
   </data>
   <data name="ImagePJPG.Content" xml:space="preserve">
-    <value>PJPG Conversion</value>
+    <value>Konwersja PJPG</value>
   </data>
   <data name="ImagePNG.Content" xml:space="preserve">
-    <value>PNG Conversion</value>
+    <value>Konwersja PNG</value>
   </data>
   <data name="ImageRW2.Content" xml:space="preserve">
-    <value>RW2 Conversion</value>
+    <value>Konwersja RW2</value>
   </data>
   <data name="ImageSRW.Content" xml:space="preserve">
-    <value>SRW Conversion</value>
+    <value>Konwersja SRW</value>
   </data>
   <data name="ImageSVG.Content" xml:space="preserve">
-    <value>SVG Conversion</value>
+    <value>Konwersja SVG</value>
   </data>
   <data name="ImageTIF.Content" xml:space="preserve">
-    <value>TIF Conversion</value>
+    <value>Konwersja TIF</value>
   </data>
   <data name="ImageTIFF.Content" xml:space="preserve">
-    <value>TIFF Conversion</value>
+    <value>Konwersja TIFF</value>
   </data>
   <data name="ImageWEBP.Content" xml:space="preserve">
-    <value>WEBP Conversion</value>
+    <value>Konwersja WEBP</value>
   </data>
   <data name="JavaScript.Content" xml:space="preserve">
-    <value>JavaScript Processing</value>
+    <value>Przetwarzanie JavaScript</value>
   </data>
   <data name="JavaScriptBeautify.Content" xml:space="preserve">
-    <value>Beautify</value>
+    <value>Upiększanie</value>
   </data>
   <data name="JavaScriptMinify.Content" xml:space="preserve">
-    <value>Minify</value>
+    <value>Zmniejszyć</value>
   </data>
   <data name="Json.Content" xml:space="preserve">
-    <value>Json Processing</value>
+    <value>Przetwarzanie Json</value>
   </data>
   <data name="JsonDeserialize.Content" xml:space="preserve">
-    <value>Deserialize</value>
+    <value>Deserializacja</value>
   </data>
   <data name="JsonMinify.Content" xml:space="preserve">
-    <value>Minify</value>
+    <value>Zmniejszenie</value>
   </data>
   <data name="JsonSerialize.Content" xml:space="preserve">
-    <value>Serialize</value>
+    <value>Serializacja</value>
   </data>
   <data name="JsonValidate.Content" xml:space="preserve">
-    <value>Validate</value>
+    <value>Potwierdzenie</value>
   </data>
   <data name="Matrix.Content" xml:space="preserve">
-    <value>QR Code</value>
+    <value>Kod QR</value>
   </data>
   <data name="MatrixCreate.Content" xml:space="preserve">
-    <value>Create Code</value>
+    <value>Utwórz Kod</value>
   </data>
   <data name="MatrixRead.Content" xml:space="preserve">
-    <value>Read from Camera</value>
+    <value>Odczyt z Aparatu</value>
   </data>
   <data name="MatrixScan.Content" xml:space="preserve">
-    <value>Read from Picture</value>
+    <value>Przeczytaj z Obrazka</value>
   </data>
   <data name="Recognition.Content" xml:space="preserve">
-    <value>Optical Character Recognition</value>
+    <value>Optyczne Rozpoznawanie Znaków</value>
   </data>
   <data name="RecognitionRead.Content" xml:space="preserve">
-    <value>Recognition from Picture</value>
+    <value>Rozpoznawanie Obrazu</value>
   </data>
   <data name="RecognitionScan.Content" xml:space="preserve">
-    <value>Recognition from Camera</value>
+    <value>Rozpoznawanie Kamery</value>
   </data>
   <data name="SchemeActivation.Content" xml:space="preserve">
-    <value>Scheme Activation</value>
+    <value>Aktywacja Schematu</value>
   </data>
   <data name="Settings.Content" xml:space="preserve">
-    <value>Settings</value>
+    <value>Ustawienia</value>
   </data>
   <data name="Shortcuts.Content" xml:space="preserve">
-    <value>Shortcuts</value>
+    <value>Skróty</value>
   </data>
   <data name="Suggest.Custom" xml:space="preserve">
-    <value>Page not found</value>
+    <value>Nie znaleziono strony</value>
   </data>
   <data name="Suggest.PlaceholderText" xml:space="preserve">
-    <value>Find Page</value>
+    <value>Znajdź Stronę</value>
   </data>
   <data name="Transactions.Content" xml:space="preserve">
-    <value>Transactions</value>
+    <value>Transakcje</value>
   </data>
   <data name="Video.Content" xml:space="preserve">
-    <value>Video Conversion</value>
+    <value>Konwersja Wideo</value>
   </data>
   <data name="VideoAVI.Content" xml:space="preserve">
-    <value>AVI Conversion</value>
+    <value>Konwersja AVI</value>
   </data>
   <data name="VideoHEVC.Content" xml:space="preserve">
-    <value>HEVC Conversion</value>
+    <value>Konwersja HEVC</value>
   </data>
   <data name="VideoMP4.Content" xml:space="preserve">
-    <value>MP4 Conversion</value>
+    <value>Konwersja MP4</value>
   </data>
   <data name="VideoMPEG.Content" xml:space="preserve">
-    <value>MPEG Conversion</value>
+    <value>Konwersja MPEG</value>
   </data>
   <data name="VideoMPEG1.Content" xml:space="preserve">
-    <value>MPEG1 Conversion</value>
+    <value>Konwersja MPEG1</value>
   </data>
   <data name="VideoMPEG2.Content" xml:space="preserve">
-    <value>MPEG2 Conversion</value>
+    <value>Konwersja MPEG2</value>
   </data>
   <data name="VideoMPEG4.Content" xml:space="preserve">
-    <value>MPEG4 Conversion</value>
+    <value>Konwersja MPEG4</value>
   </data>
   <data name="VideoWMV.Content" xml:space="preserve">
-    <value>WMV Conversion</value>
+    <value>Konwersja WMV</value>
   </data>
 </root>

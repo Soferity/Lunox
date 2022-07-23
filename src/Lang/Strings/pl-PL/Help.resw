@@ -118,68 +118,68 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Bug_Suggestion.Text" xml:space="preserve">
-    <value>Bug Mu Buldunuz? Öneriniz Mi Var?</value>
+    <value>Znalazłeś Błąd? Masz Sugestię?</value>
   </data>
   <data name="Bug_Suggestion_Text_First.Text" xml:space="preserve">
-    <value>Lunox'da bir hata bulduysanız, lütfen</value>
+    <value>Jeśli znalazłeś błąd w Lunox, proszę</value>
   </data>
   <data name="Bug_Suggestion_Text_Last.Text" xml:space="preserve">
-    <value>aracılığıyla bildirin.</value>
+    <value>zgłoś się przez.</value>
   </data>
   <data name="Bug_Suggestion_Text_Middle.Text" xml:space="preserve">
-    <value>aracılığıyla bize bu sorunu bildirin.
-Eğer yeni bir özellik isteğiniz veya öneriniz varsa yine bize</value>
+    <value>poinformuj nas o tym problemie przez.
+Jeśli masz prośbę lub sugestię dotyczącą nowej funkcji, skontaktuj się z nami ponownie</value>
   </data>
   <data name="Does.Text" xml:space="preserve">
-    <value>Lunox Ne İşe Yarar?</value>
+    <value>Co Robi Lunox?</value>
   </data>
   <data name="Does_Text.Text" xml:space="preserve">
-    <value>Lunox sunduğu çeşitli altyapısı ile birim dönüşümleri, dosya dönüşümleri, OCR işlemleri, QR işlemleri, HTML-CSS-JS-JSON işlemleri ve daha bir çok önde gelen işlemleri kolaylıkla yapmanıza olanak sağlar. Özetle bazı Lunox özellikleri şunlardır:
-• Modern görünüm
-• Çok çeşitli
-• Özelleştirilebilir
-• Kolay kullanım
-• En önemlisi, Açık Kaynaklı Yazılımdır (OSS)!</value>
+    <value>Dzięki różnej infrastrukturze Lunox umożliwia łatwe wykonywanie konwersji jednostek, konwersji plików, operacji OCR, operacji QR, operacji HTML-CSS-JS-JSON i wielu innych wiodących operacji. Podsumowując, oto kilka funkcji Lunox:
+• Nowoczesny wygląd
+• Szeroka gama
+• Konfigurowalny
+• Łatwy w użyciu
+• Co najważniejsze, jest to Oprogramowanie Open Source (OSS)!</value>
   </data>
   <data name="Hint.Text" xml:space="preserve">
-    <value>İpucu</value>
+    <value>Wskazówka</value>
   </data>
   <data name="Hint_Text_Contribute.Text" xml:space="preserve">
-    <value>bu projeye katkıda bulunmanızı</value>
+    <value>przyczynić się do tego projektu</value>
   </data>
   <data name="Hint_Text_Discussions.Text" xml:space="preserve">
-    <value>Tartışmalar</value>
+    <value>Dyskusja</value>
   </data>
   <data name="Hint_Text_First.Text" xml:space="preserve">
-    <value>Lunox şu anda yoğun bir geliştirme aşamasındadır. Öneri ve görüşlerinizi</value>
+    <value>Lunox jest obecnie intensywnie rozwijany. Sugestie i opinie</value>
   </data>
   <data name="Hint_Text_Last.Text" xml:space="preserve">
-    <value>şiddetle tavsiye ederiz.</value>
+    <value>gorąco polecamy.</value>
   </data>
   <data name="Hint_Text_Middle.Text" xml:space="preserve">
-    <value>sayfamızdan iletebilirsiniz. C# (.NET) kullanarak kod yazarken kendinizi rahat hissediyorsanız,</value>
+    <value>możesz go wysłać na naszej stronie. Jeśli czujesz się komfortowo pisząc kod w C# (.NET),</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Bilgilendirme</value>
+    <value>Informacja</value>
   </data>
   <data name="Requirements.Text" xml:space="preserve">
-    <value>Sistem Gereksinimleri Nelerdir?</value>
+    <value>Jakie Są Wymagania Systemowe?</value>
   </data>
   <data name="Requirements_Text.Text" xml:space="preserve">
-    <value>• İşletim Sistemi: Windows 11, Windows 10 1809 ve üzeri
-• Mimari: ARM, ARM64, x64, x86
-• Dokunmatik: İsteğe Bağlı
-• DirectX: Sürüm 9 ve üzeri
-• Kamera: İsteğe Bağlı
-• Video Belleği: 1 GB ve üzeri
-• Klave: İsteğe Bağlı
-• Fare: İsteğe Bağlı
-• Bellek: 1 GB ve üzeri</value>
+    <value>• System operacyjny: Windows 11, Windows 10 1809 i nowsze
+• Architektura: ARM, ARM64, x64, x86
+• Dotyk: opcjonalny
+• DirectX: wersja 9 i nowsze
+• Aparat: Opcjonalny
+• Pamięć wideo: 1 GB lub więcej
+• Klawiatura: opcjonalna
+• Mysz: opcjonalna
+• Pamięć: 1 GB i więcej</value>
   </data>
   <data name="What.Text" xml:space="preserve">
-    <value>Lunox Nedir?</value>
+    <value>Co To Jest Lunox?</value>
   </data>
   <data name="What_Text.Text" xml:space="preserve">
-    <value>Lunox özelleştirilebilir, modern ve gelişmiş bir Evrensel Yardımcı Araç Kitidir.</value>
+    <value>Lunox to konfigurowalny, nowoczesny i zaawansowany uniwersalny zestaw narzędzi narzędzi.</value>
   </data>
 </root>
