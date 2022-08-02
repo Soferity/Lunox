@@ -108,7 +108,7 @@
       <Version>2.0.1</Version>
     </PackageReference>
     <PackageReference Include="xunit">
-      <Version>2.4.2-pre.12</Version>
+      <Version>2.4.2</Version>
     </PackageReference>
     <PackageReference Include="xunit.runner.visualstudio">
       <Version>2.4.5</Version>
