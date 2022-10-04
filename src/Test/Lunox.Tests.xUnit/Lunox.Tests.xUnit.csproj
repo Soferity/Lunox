@@ -99,7 +99,7 @@
       <Version>6.2.13</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.NET.Test.Sdk">
-      <Version>17.3.0-preview-20220426-02</Version>
+      <Version>17.4.0-preview-20221003-03</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
       <Version>2.8.0</Version>
