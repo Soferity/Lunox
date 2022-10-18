@@ -99,19 +99,19 @@
       <Version>6.2.14</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.NET.Test.Sdk">
-      <Version>17.4.0-preview-20220707-01</Version>
+      <Version>17.5.0-preview-20221003-04</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
-      <Version>2.8.0</Version>
+      <Version>2.8.2-prerelease.220830001</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Xaml.Behaviors.Uwp.Managed">
       <Version>2.0.1</Version>
     </PackageReference>
     <PackageReference Include="MSTest.TestAdapter">
-      <Version>2.2.10</Version>
+      <Version>2.3.0-preview-20220810-02</Version>
     </PackageReference>
     <PackageReference Include="MSTest.TestFramework">
-      <Version>2.2.10</Version>
+      <Version>2.3.0-preview-20220810-02</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,4 @@
 ﻿using Lunox.Core.ViewModels;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lunox.Tests.MSTest
 {

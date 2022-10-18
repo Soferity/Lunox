@@ -27,7 +27,24 @@ namespace Lunox.Core.Services
         /// <summary>
         /// 
         /// </summary>
-        private const string SECRET = "APP-SECRET";
+        private static string SECRET
+        {
+            get
+            {
+                try
+                {
+#if DEBUG
+                    return Environment.GetEnvironmentVariable("LUNOX_DEBUG_TARGET_TOKEN");
+#else
+                    return Environment.GetEnvironmentVariable("LUNOX_RELEASE_TARGET_TOKEN");
+#endif
+                }
+                catch
+                {
+                    return "APP-SECRET";
+                }
+            }
+        }
 
         #endregion
 
