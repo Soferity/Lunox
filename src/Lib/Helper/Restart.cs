@@ -25,7 +25,7 @@ namespace Lunox.Library.Helper
         {
             AppRestartFailureReason Result = await CoreApplication.RequestRestartAsync(Settings.Restart);
 
-            if (Result == AppRestartFailureReason.NotInForeground || Result == AppRestartFailureReason.RestartPending || Result == AppRestartFailureReason.Other)
+            if (Result is AppRestartFailureReason.NotInForeground or AppRestartFailureReason.RestartPending or AppRestartFailureReason.Other)
             {
                 Debug.WriteLine("RequestRestartAsync failed: {0}", Result);
             }

@@ -1,12 +1,10 @@
 ﻿#region Imports
 
 using Lunox.Core.ViewModels.Json;
-using Lunox.Library.Helper;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.Storage.Pickers;
@@ -75,7 +73,7 @@ namespace Lunox.Core.Views.Json
             string text = string.Empty;
             using (IInputStream inputStream = stream.GetInputStreamAt(0))
             {
-                using DataReader dataReader = new DataReader(inputStream);
+                using DataReader dataReader = new(inputStream);
                 uint numBytesLoaded = await dataReader.LoadAsync((uint)size);
                 text = dataReader.ReadString(numBytesLoaded);
             }
@@ -118,7 +116,7 @@ namespace Lunox.Core.Views.Json
 
         private async void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            FileSavePicker savePicker = new FileSavePicker
+            FileSavePicker savePicker = new()
             {
                 SuggestedStartLocation = PickerLocationId.DocumentsLibrary
             };
@@ -158,7 +156,7 @@ namespace Lunox.Core.Views.Json
                 FileUpdateStatus status = await CachedFileManager.CompleteUpdatesAsync(file);
                 if (status != FileUpdateStatus.Complete)
                 {
-                    MessageDialog errorBox = new MessageDialog("File " + file.Name + " couldn't be saved.");
+                    MessageDialog errorBox = new("File " + file.Name + " couldn't be saved.");
                     await errorBox.ShowAsync();
                 }
             }

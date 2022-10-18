@@ -259,7 +259,7 @@ namespace Lunox.Core.ViewModels
         /// <param name="e"></param>
         private async void GlanceSelectionChanged(WUXC.SelectionChangedEventArgs e)
         {
-            WUXC.ComboBoxItem Item = (_glance.SelectedItem as WUXC.ComboBoxItem);
+            WUXC.ComboBoxItem Item = _glance.SelectedItem as WUXC.ComboBoxItem;
 
             AppCenterService.TrackEvent(Default.Events[EventType.Glance], GlanceSelectorService.Glance.ToString().Split('.').LastOrDefault().Replace("Page", ""), Item.Tag.ToString().Split('.').LastOrDefault().Replace("Page", ""));
 

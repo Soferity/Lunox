@@ -39,11 +39,6 @@ namespace Lunox.Core.Services
         /// <summary>
         /// 
         /// </summary>
-        private static MUXC.NavigationView _navigation;
-
-        /// <summary>
-        /// 
-        /// </summary>
         private static object _lastParamUsed;
 
         #endregion
@@ -77,11 +72,7 @@ namespace Lunox.Core.Services
         /// <summary>
         /// 
         /// </summary>
-        public static MUXC.NavigationView Navigation
-        {
-            get => _navigation;
-            set => _navigation = value;
-        }
+        public static MUXC.NavigationView Navigation { get; set; }
 
         /// <summary>
         /// 
