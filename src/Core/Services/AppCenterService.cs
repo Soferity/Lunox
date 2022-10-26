@@ -275,6 +275,7 @@ namespace Lunox.Core.Services
         private static void Enabled()
         {
             Crashes.SetEnabledAsync(true);
+            Analytics.SetEnabledAsync(true);
         }
 
         #endregion
