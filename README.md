@@ -39,7 +39,7 @@
   [![Code Size](https://img.shields.io/github/languages/code-size/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/archive/refs/heads/develop.zip)
   [![Repo Size](https://img.shields.io/github/repo-size/Soferity/Lunox?style=for-the-badge)](https://github.com/Soferity/Lunox/archive/refs/heads/develop.zip)
 
-  [![Build](https://img.shields.io/visual-studio-app-center/builds/Soferity/Lunox-Store/develop/e35051a0289ae2e9786643c8816d8f9e6f18512b?style=for-the-badge)](https://github.com/Soferity/Lunox)
+  [![Build](https://img.shields.io/visual-studio-app-center/builds/Soferity/Lunox-Store/develop/d2b0955197957ea68a10db87b87f1892063258b9?style=for-the-badge)](https://github.com/Soferity/Lunox)
 
   [![Windows Support](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/store/apps/9PC06S6LW868)
   [![Xbox Support](https://img.shields.io/badge/Xbox-107C10?style=for-the-badge&logo=xbox&logoColor=white)](https://www.microsoft.com/store/apps/9PC06S6LW868)
