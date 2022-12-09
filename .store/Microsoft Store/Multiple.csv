@@ -1,0 +1,208 @@
+﻿Field,ID,Type (Type),default,en
+Description,2,Text,,"Lunox allows you to easily perform unit conversions, file conversions, OCR operations, QR operations, HTML-CSS-JS-JSON operations and many other leading operations with the various infrastructure it offers."
+ReleaseNotes,3,Text,,"Some of What's New and Bug Fixes are listed below:
+
+The Glance screen has been edited.
+Added sound effects to mouse events.
+Discord page bugs fixed.
+GitHub page bugs fixed.
+Help page has been prepared.
+Added Startup Page to settings.
+Translations have been edited."
+Title,4,Text,,Lunox
+ShortTitle,5,Text,,Lunox
+SortTitle,6,Text,,Lunox
+VoiceTitle,7,Text,,Lunox
+ShortDescription,8,Text,,Lunox
+DevStudio,9,Text,,Soferity LLC
+CopyrightTrademarkInformation,12,Text,,Copyright © 2022 Soferity LLC
+AdditionalLicenseTerms,13,Text,,
+DesktopScreenshot1,100,Relative path (or URL to file in Partner Center),,https://developer.microsoft.com/en-us/dashboard/apps/9PC06S6LW868/submissions/1152921505695268159/listings/1152922700008841134/listingassets/3034764966473753088
+DesktopScreenshot2,101,Relative path (or URL to file in Partner Center),,https://developer.microsoft.com/en-us/dashboard/apps/9PC06S6LW868/submissions/1152921505695268159/listings/1152922700008841134/listingassets/3040708572647635372
+DesktopScreenshot3,102,Relative path (or URL to file in Partner Center),,https://developer.microsoft.com/en-us/dashboard/apps/9PC06S6LW868/submissions/1152921505695268159/listings/1152922700008841134/listingassets/3060193325630139788
+DesktopScreenshot4,103,Relative path (or URL to file in Partner Center),,
+DesktopScreenshot5,104,Relative path (or URL to file in Partner Center),,
+DesktopScreenshot6,105,Relative path (or URL to file in Partner Center),,
+DesktopScreenshot7,106,Relative path (or URL to file in Partner Center),,
+DesktopScreenshot8,107,Relative path (or URL to file in Partner Center),,
+DesktopScreenshot9,108,Relative path (or URL to file in Partner Center),,
+DesktopScreenshot10,109,Relative path (or URL to file in Partner Center),,
+DesktopScreenshotCaption1,150,Text,,Settings
+DesktopScreenshotCaption2,151,Text,,404
+DesktopScreenshotCaption3,152,Text,,Glance
+DesktopScreenshotCaption4,153,Text,,
+DesktopScreenshotCaption5,154,Text,,
+DesktopScreenshotCaption6,155,Text,,
+DesktopScreenshotCaption7,156,Text,,
+DesktopScreenshotCaption8,157,Text,,
+DesktopScreenshotCaption9,158,Text,,
+DesktopScreenshotCaption10,159,Text,,
+MobileScreenshot1,200,Relative path (or URL to file in Partner Center),,https://developer.microsoft.com/en-us/dashboard/apps/9PC06S6LW868/submissions/1152921505695268159/listings/1152922700008841134/listingassets/3047059292266401781
+MobileScreenshot2,201,Relative path (or URL to file in Partner Center),,https://developer.microsoft.com/en-us/dashboard/apps/9PC06S6LW868/submissions/1152921505695268159/listings/1152922700008841134/listingassets/3010277342514172123
+MobileScreenshot3,202,Relative path (or URL to file in Partner Center),,https://developer.microsoft.com/en-us/dashboard/apps/9PC06S6LW868/submissions/1152921505695268159/listings/1152922700008841134/listingassets/3046186383514392795
+MobileScreenshot4,203,Relative path (or URL to file in Partner Center),,
+MobileScreenshot5,204,Relative path (or URL to file in Partner Center),,
+MobileScreenshot6,205,Relative path (or URL to file in Partner Center),,
+MobileScreenshot7,206,Relative path (or URL to file in Partner Center),,
+MobileScreenshot8,207,Relative path (or URL to file in Partner Center),,
+MobileScreenshot9,208,Relative path (or URL to file in Partner Center),,
+MobileScreenshot10,209,Relative path (or URL to file in Partner Center),,
+MobileScreenshotCaption1,250,Text,,Glance
+MobileScreenshotCaption2,251,Text,,Settings
+MobileScreenshotCaption3,252,Text,,404
+MobileScreenshotCaption4,253,Text,,
+MobileScreenshotCaption5,254,Text,,
+MobileScreenshotCaption6,255,Text,,
+MobileScreenshotCaption7,256,Text,,
+MobileScreenshotCaption8,257,Text,,
+MobileScreenshotCaption9,258,Text,,
+MobileScreenshotCaption10,259,Text,,
+XboxScreenshot1,300,Relative path (or URL to file in Partner Center),,https://developer.microsoft.com/en-us/dashboard/apps/9PC06S6LW868/submissions/1152921505695268159/listings/1152922700008841134/listingassets/3044558794747364303
+XboxScreenshot2,301,Relative path (or URL to file in Partner Center),,https://developer.microsoft.com/en-us/dashboard/apps/9PC06S6LW868/submissions/1152921505695268159/listings/1152922700008841134/listingassets/3048454918852223913
+XboxScreenshot3,302,Relative path (or URL to file in Partner Center),,https://developer.microsoft.com/en-us/dashboard/apps/9PC06S6LW868/submissions/1152921505695268159/listings/1152922700008841134/listingassets/3040233502456273196
+XboxScreenshot4,303,Relative path (or URL to file in Partner Center),,
+XboxScreenshot5,304,Relative path (or URL to file in Partner Center),,
+XboxScreenshot6,305,Relative path (or URL to file in Partner Center),,
+XboxScreenshot7,306,Relative path (or URL to file in Partner Center),,
+XboxScreenshot8,307,Relative path (or URL to file in Partner Center),,
+XboxScreenshot9,308,Relative path (or URL to file in Partner Center),,
+XboxScreenshot10,309,Relative path (or URL to file in Partner Center),,
+XboxScreenshotCaption1,350,Text,,
+XboxScreenshotCaption2,351,Text,,Settings
+XboxScreenshotCaption3,352,Text,,Glance
+XboxScreenshotCaption4,353,Text,,
+XboxScreenshotCaption5,354,Text,,
+XboxScreenshotCaption6,355,Text,,
+XboxScreenshotCaption7,356,Text,,
+XboxScreenshotCaption8,357,Text,,
+XboxScreenshotCaption9,358,Text,,
+XboxScreenshotCaption10,359,Text,,
+HolographicScreenshot1,400,Relative path (or URL to file in Partner Center),,https://developer.microsoft.com/en-us/dashboard/apps/9PC06S6LW868/submissions/1152921505695268159/listings/1152922700008841134/listingassets/3030162873126165216
+HolographicScreenshot2,401,Relative path (or URL to file in Partner Center),,https://developer.microsoft.com/en-us/dashboard/apps/9PC06S6LW868/submissions/1152921505695268159/listings/1152922700008841134/listingassets/3046642333959724415
+HolographicScreenshot3,402,Relative path (or URL to file in Partner Center),,https://developer.microsoft.com/en-us/dashboard/apps/9PC06S6LW868/submissions/1152921505695268159/listings/1152922700008841134/listingassets/3029970883488300844
+HolographicScreenshot4,403,Relative path (or URL to file in Partner Center),,
+HolographicScreenshot5,404,Relative path (or URL to file in Partner Center),,
+HolographicScreenshot6,405,Relative path (or URL to file in Partner Center),,
+HolographicScreenshot7,406,Relative path (or URL to file in Partner Center),,
+HolographicScreenshot8,407,Relative path (or URL to file in Partner Center),,
+HolographicScreenshot9,408,Relative path (or URL to file in Partner Center),,
+HolographicScreenshot10,409,Relative path (or URL to file in Partner Center),,
+HolographicScreenshotCaption1,450,Text,,Glance
+HolographicScreenshotCaption2,451,Text,,Settings
+HolographicScreenshotCaption3,452,Text,,404
+HolographicScreenshotCaption4,453,Text,,
+HolographicScreenshotCaption5,454,Text,,
+HolographicScreenshotCaption6,455,Text,,
+HolographicScreenshotCaption7,456,Text,,
+HolographicScreenshotCaption8,457,Text,,
+HolographicScreenshotCaption9,458,Text,,
+HolographicScreenshotCaption10,459,Text,,
+StoreLogo720x1080,600,Relative path (or URL to file in Partner Center),,
+StoreLogo1080x1080,601,Relative path (or URL to file in Partner Center),,
+StoreLogo300x300,602,Relative path (or URL to file in Partner Center),,https://developer.microsoft.com/en-us/dashboard/apps/9PC06S6LW868/submissions/1152921505695268159/listings/1152922700008841134/listingassets/3025066152087644348
+OverrideLogosForWin10,603,True/False,,True
+StoreLogoOverride150x150,604,Relative path (or URL to file in Partner Center),,https://developer.microsoft.com/en-us/dashboard/apps/9PC06S6LW868/submissions/1152921505695268159/listings/1152922700008841134/listingassets/3002483308368720106
+StoreLogoOverride71x71,605,Relative path (or URL to file in Partner Center),,https://developer.microsoft.com/en-us/dashboard/apps/9PC06S6LW868/submissions/1152921505695268159/listings/1152922700008841134/listingassets/3034114612245890384
+PromoImage1920x1080,606,Relative path (or URL to file in Partner Center),,
+PromoImage2400x1200,607,Relative path (or URL to file in Partner Center),,
+XboxBrandedKeyArt584x800,608,Relative path (or URL to file in Partner Center),,
+XboxTitledHero1920x1080,609,Relative path (or URL to file in Partner Center),,
+XboxFeaturedPromo1080x1080,610,Relative path (or URL to file in Partner Center),,
+OptionalPromo358x358,611,Relative path (or URL to file in Partner Center),,https://developer.microsoft.com/en-us/dashboard/apps/9PC06S6LW868/submissions/1152921505695268159/listings/1152922700008841134/listingassets/3050399439856524228
+OptionalPromo1000x800,612,Relative path (or URL to file in Partner Center),,
+OptionalPromo414x180,613,Relative path (or URL to file in Partner Center),,
+Feature1,700,Text,,Image Conversion
+Feature2,701,Text,,Audio Conversion
+Feature3,702,Text,,Video Conversion
+Feature4,703,Text,,CSS Processing
+Feature5,704,Text,,HTML Processing
+Feature6,705,Text,,JSON Processing
+Feature7,706,Text,,JS Processing
+Feature8,707,Text,,Document Conversion
+Feature9,708,Text,,QR Processing
+Feature10,709,Text,,OCR Processing
+Feature11,710,Text,,Unit Conversion
+Feature12,711,Text,,File Conversion
+Feature13,712,Text,,
+Feature14,713,Text,,
+Feature15,714,Text,,
+Feature16,715,Text,,
+Feature17,716,Text,,
+Feature18,717,Text,,
+Feature19,718,Text,,
+Feature20,719,Text,,
+MinimumHardwareReq1,800,Text,,
+MinimumHardwareReq2,801,Text,,
+MinimumHardwareReq3,802,Text,,
+MinimumHardwareReq4,803,Text,,
+MinimumHardwareReq5,804,Text,,
+MinimumHardwareReq6,805,Text,,
+MinimumHardwareReq7,806,Text,,
+MinimumHardwareReq8,807,Text,,
+MinimumHardwareReq9,808,Text,,
+MinimumHardwareReq10,809,Text,,
+MinimumHardwareReq11,810,Text,,
+RecommendedHardwareReq1,850,Text,,
+RecommendedHardwareReq2,851,Text,,
+RecommendedHardwareReq3,852,Text,,
+RecommendedHardwareReq4,853,Text,,
+RecommendedHardwareReq5,854,Text,,
+RecommendedHardwareReq6,855,Text,,
+RecommendedHardwareReq7,856,Text,,
+RecommendedHardwareReq8,857,Text,,
+RecommendedHardwareReq9,858,Text,,
+RecommendedHardwareReq10,859,Text,,
+RecommendedHardwareReq11,860,Text,,
+SearchTerm1,900,Text,,json minify serialize
+SearchTerm2,901,Text,,image png jpg gif svg bmp
+SearchTerm3,902,Text,,audio mp3 wav ogg
+SearchTerm4,903,Text,,document pdf doc
+SearchTerm5,904,Text,,qr
+SearchTerm6,905,Text,,ocr
+SearchTerm7,906,Text,,video mp4 avi
+TrailerToPlayAtTopOfListing,999,Relative path (or URL to file in Partner Center),,
+Trailer1,1000,Relative path (or URL to file in Partner Center),,
+Trailer2,1001,Relative path (or URL to file in Partner Center),,
+Trailer3,1002,Relative path (or URL to file in Partner Center),,
+Trailer4,1003,Relative path (or URL to file in Partner Center),,
+Trailer5,1004,Relative path (or URL to file in Partner Center),,
+Trailer6,1005,Relative path (or URL to file in Partner Center),,
+Trailer7,1006,Relative path (or URL to file in Partner Center),,
+Trailer8,1007,Relative path (or URL to file in Partner Center),,
+Trailer9,1008,Relative path (or URL to file in Partner Center),,
+Trailer10,1009,Relative path (or URL to file in Partner Center),,
+Trailer11,1010,Relative path (or URL to file in Partner Center),,
+Trailer12,1011,Relative path (or URL to file in Partner Center),,
+Trailer13,1012,Relative path (or URL to file in Partner Center),,
+Trailer14,1013,Relative path (or URL to file in Partner Center),,
+Trailer15,1014,Relative path (or URL to file in Partner Center),,
+TrailerTitle1,1020,Text,,
+TrailerTitle2,1021,Text,,
+TrailerTitle3,1022,Text,,
+TrailerTitle4,1023,Text,,
+TrailerTitle5,1024,Text,,
+TrailerTitle6,1025,Text,,
+TrailerTitle7,1026,Text,,
+TrailerTitle8,1027,Text,,
+TrailerTitle9,1028,Text,,
+TrailerTitle10,1029,Text,,
+TrailerTitle11,1030,Text,,
+TrailerTitle12,1031,Text,,
+TrailerTitle13,1032,Text,,
+TrailerTitle14,1033,Text,,
+TrailerTitle15,1034,Text,,
+TrailerThumbnail1,1040,Relative path (or URL to file in Partner Center),,
+TrailerThumbnail2,1041,Relative path (or URL to file in Partner Center),,
+TrailerThumbnail3,1042,Relative path (or URL to file in Partner Center),,
+TrailerThumbnail4,1043,Relative path (or URL to file in Partner Center),,
+TrailerThumbnail5,1044,Relative path (or URL to file in Partner Center),,
+TrailerThumbnail6,1045,Relative path (or URL to file in Partner Center),,
+TrailerThumbnail7,1046,Relative path (or URL to file in Partner Center),,
+TrailerThumbnail8,1047,Relative path (or URL to file in Partner Center),,
+TrailerThumbnail9,1048,Relative path (or URL to file in Partner Center),,
+TrailerThumbnail10,1049,Relative path (or URL to file in Partner Center),,
+TrailerThumbnail11,1050,Relative path (or URL to file in Partner Center),,
+TrailerThumbnail12,1051,Relative path (or URL to file in Partner Center),,
+TrailerThumbnail13,1052,Relative path (or URL to file in Partner Center),,
+TrailerThumbnail14,1053,Relative path (or URL to file in Partner Center),,
+TrailerThumbnail15,1054,Relative path (or URL to file in Partner Center),,
