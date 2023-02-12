@@ -3,6 +3,7 @@
 using Lunox.Core.ViewModels.Json;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Skylark.Extension;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -57,11 +58,16 @@ namespace Lunox.Core.Views.Json
             return JToken.Parse(json).ToString();
         }
 
+        private static string FormatJson3(string json)
+        {
+            return JsonExtension.ToBeauty(json);
+        }
+
         private void Serialize_Click(object sender, RoutedEventArgs e)
         {
             editor.Document.GetText(TextGetOptions.None, out string text);
 
-            editor.Document.SetText(TextSetOptions.None, FormatJson2(text));
+            editor.Document.SetText(TextSetOptions.None, FormatJson3(text));
 
             editor.Document.Selection.CharacterFormat.ForegroundColor = currentColor;
         }
