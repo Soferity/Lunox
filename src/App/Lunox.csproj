@@ -195,7 +195,7 @@
       <Version>2.0.1</Version>
     </PackageReference>
     <PackageReference Include="Skylark">
-      <Version>3.0.0.4</Version>
+      <Version>3.0.0.5</Version>
     </PackageReference>
     <PackageReference Include="Skylark.Standard">
       <Version>3.0.0.4</Version>
