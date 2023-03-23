@@ -32,7 +32,7 @@
     <AppInstallerUri>https://github.com/Soferity/Lunox/releases</AppInstallerUri>
     <PackageCertificateKeyFile>
     </PackageCertificateKeyFile>
-    <PackageCertificateThumbprint>A3CB5279FC1E683A1B2364E52E8F3D28FF1D80BA</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>5ED656F9DB0E85DC5307CE0A2202D1AA8CA83B58</PackageCertificateThumbprint>
     <AppxPackageSigningTimestampServerUrl />
     <GenerateTemporaryStoreCertificate>True</GenerateTemporaryStoreCertificate>
   </PropertyGroup>
