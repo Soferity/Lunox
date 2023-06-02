@@ -99,7 +99,7 @@
       <Version>6.2.14</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.NET.Test.Sdk">
-      <Version>17.7.0-preview.23266.6</Version>
+      <Version>17.7.0-preview.23302.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
       <Version>2.8.4</Version>
@@ -108,7 +108,7 @@
       <Version>2.0.1</Version>
     </PackageReference>
     <PackageReference Include="xunit">
-      <Version>2.5.0-pre.11</Version>
+      <Version>2.5.0-pre.22</Version>
     </PackageReference>
     <PackageReference Include="xunit.runner.visualstudio">
       <Version>2.4.5</Version>
