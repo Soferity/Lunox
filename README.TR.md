@@ -11,7 +11,7 @@
   •
   <span><a href="https://github.com/Soferity/Lunox/discussions">Tartışmalar</a></span>
   •
-  <span><a href="https://github.com/Soferity/Lunox/wiki">Dökümantasyon</a></span>
+  <span><a href="https://github.com/Soferity/Lunox/wiki">Dokümantasyon</a></span>
   •
   <span><a href="https://discord.gg/nxG977byXb">Discord</a></span>
 </h4>
